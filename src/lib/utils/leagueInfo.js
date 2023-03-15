@@ -7,12 +7,10 @@ export const enableBlog = true; // requires VITE_CONTENTFUL_ACCESS_TOKEN and VIT
 
 /*   STEP 2   */
 export const homepageText = `
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-  <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-  <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-  <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  <p>This is something that I have always wanted for us. Everyone of you has agreed to not just a commitment to your team, but also this league. And based on the fact that every year has felt more and more fun, you all have lived up to that commitment.</p>
+  <p>We have told you all from the start that it’s the League Leaders position that we want to do things that separate this league not from just our big redraft league, but all the other leagues you all might be in. This site is a product of that belief, and I think it will do nothing but help everyone of you feel the same way that I do, which is that the “Brandon and 11 Losers Dynasty League” is your MAIN league and something special.</p>
+  <p>This webpage will update with every transaction and every event as they happen. The matchup page will even keep up with scores as they happen! I’ll try to keep up with a weekly blog, and there are links to useful tools to help you, and a link to the league podcast that Brandon and I do (more episodes coming soon).  There are some additional links that I am looking at putting up, but for right now those are being kept under wraps. </p>
+  <p>This page is for you! Now browser around, and have fun!!</p>
 `;
 
 /*   STEP 3   */
