@@ -126,7 +126,7 @@
 	<!-- PLEASE DO NOT REMOVE THE COPYRIGHT -->
 	<span class="copyright">&copy; 2021 - {year} <a href="https://github.com/nmelhado/league-page">League Page</a></span>
 	<br />
-	<Found and customized by Casey>
+	Found and customized by Casey,
 	<!-- PLEASE DO NOT REMOVE THE BUILT BY -->
 	<span class="creator">Built and maintained by <a href="http://www.nmelhado.com/">Nicholas Melhado</a><br /></span> 
 	<!-- You can remove the donation link (although any donations to help
