@@ -42,7 +42,7 @@ export const managers = [
        "tradingScale": null, // 1 - 10
        "preferredContact": null, // 'Text', 'WhatsApp', 'Sleeper', 'Email', 'Phone', 'Discord', and 'Carrier Pigeon' are currently supplied in the template
      },
-  {
+     {
        "roster": null,  // ID of the roster that the manager manages (look at the order of the power rankings graph)
        "managerID" : "589583197881278464",
        "name": "Frank AKA: TankYeltrab84",
@@ -70,7 +70,7 @@ export const managers = [
   and will allow updates without causing merge conflicts
   */
   
-   {
+     {
        "roster": null,  // ID of the roster that the manager manages (look at the order of the power rankings graph)
        "managerID" : "728441693690527744",
        "name": "Brandon AKA: SkipMiller21",
@@ -89,7 +89,7 @@ export const managers = [
        "tradingScale": null, // 1 - 10
        "preferredContact": null, // 'Text', 'WhatsApp', 'Sleeper', 'Email', 'Phone', 'Discord', and 'Carrier Pigeon' are currently supplied in the template
      },
-    {
+     {
        "roster": null,  // ID of the roster that the manager manages (look at the order of the power rankings graph)
        "managerID" : "589597408539750400",
        "name": "Reyes AKA: Goldhorn92",
@@ -108,7 +108,7 @@ export const managers = [
        "tradingScale": null, // 1 - 10
        "preferredContact": null, // 'Text', 'WhatsApp', 'Sleeper', 'Email', 'Phone', 'Discord', and 'Carrier Pigeon' are currently supplied in the template
      },
-{
+     {
        "roster": null,  // ID of the roster that the manager manages (look at the order of the power rankings graph)
        "managerID" : "589601150253174784",
        "name": "Wesley AKA: yelsewnosredna",
@@ -127,12 +127,12 @@ export const managers = [
        "tradingScale": null, // 1 - 10
        "preferredContact": null, // 'Text', 'WhatsApp', 'Sleeper', 'Email', 'Phone', 'Discord', and 'Carrier Pigeon' are currently supplied in the template
      },
-  {
+     {
        "roster": null,  // ID of the roster that the manager manages (look at the order of the power rankings graph)
        "managerID" : "600715849812205568",
        "name": "Kevin AKA: kmwilson1979",
        "tookOver": null, // (optional) used if a manager took over a team, delete this line or change to null otherwise
-       "location": "Pflugerville, TX", // (optional)
+       "location": "Round Rock, TX", // (optional)
        "bio": null,
        "photo": null, // square ratio recommended (no larger than 500x500)
        "fantasyStart": null, // (optional) when did the manager start playing fantasy football
@@ -146,7 +146,7 @@ export const managers = [
        "tradingScale": null, // 1 - 10
        "preferredContact": null, // 'Text', 'WhatsApp', 'Sleeper', 'Email', 'Phone', 'Discord', and 'Carrier Pigeon' are currently supplied in the template
      },
-  {
+     {
        "roster": null,  // ID of the roster that the manager manages (look at the order of the power rankings graph)
        "managerID" : "600756890296721408",
        "name": "John AKA: texfsu",
@@ -165,7 +165,7 @@ export const managers = [
        "tradingScale": null, // 1 - 10
        "preferredContact": null, // 'Text', 'WhatsApp', 'Sleeper', 'Email', 'Phone', 'Discord', and 'Carrier Pigeon' are currently supplied in the template
      },
-  {
+     {
        "roster": null,  // ID of the roster that the manager manages (look at the order of the power rankings graph)
        "managerID" : "601781454250250240",
        "name": "Will AKA: willebrill",
@@ -184,7 +184,7 @@ export const managers = [
        "tradingScale": null, // 1 - 10
        "preferredContact": null, // 'Text', 'WhatsApp', 'Sleeper', 'Email', 'Phone', 'Discord', and 'Carrier Pigeon' are currently supplied in the template
      },
-  {
+     {
        "roster": null,  // ID of the roster that the manager manages (look at the order of the power rankings graph)
        "managerID" : "602288488179638272",
        "name": "Josh AKA: Lamarjackedson",
@@ -203,7 +203,7 @@ export const managers = [
        "tradingScale": null, // 1 - 10
        "preferredContact": null, // 'Text', 'WhatsApp', 'Sleeper', 'Email', 'Phone', 'Discord', and 'Carrier Pigeon' are currently supplied in the template
      },
-  {
+     {
        "roster": null,  // ID of the roster that the manager manages (look at the order of the power rankings graph)
        "managerID" : "714591495570685952",
        "name": "Jason AKA: kucerajd",
@@ -222,7 +222,7 @@ export const managers = [
        "tradingScale": null, // 1 - 10
        "preferredContact": null, // 'Text', 'WhatsApp', 'Sleeper', 'Email', 'Phone', 'Discord', and 'Carrier Pigeon' are currently supplied in the template
      },
-  {
+     {
        "roster": null,  // ID of the roster that the manager manages (look at the order of the power rankings graph)
        "managerID" : "733433398265257984",
        "name": "Keller AKA: KillerRook",
@@ -241,12 +241,12 @@ export const managers = [
        "tradingScale": null, // 1 - 10
        "preferredContact": null, // 'Text', 'WhatsApp', 'Sleeper', 'Email', 'Phone', 'Discord', and 'Carrier Pigeon' are currently supplied in the template
      },
-  {
+     {
        "roster": null,  // ID of the roster that the manager manages (look at the order of the power rankings graph)
        "managerID" : "603362066274783232",
        "name": "Sheldon AKA: sheldoneden",
        "tookOver": null, // (optional) used if a manager took over a team, delete this line or change to null otherwise
-       "location": "Austin, TX", // (optional)
+       "location": "Georgewest, TX", // (optional)
        "bio": null,
        "photo": null, // square ratio recommended (no larger than 500x500)
        "fantasyStart": null, // (optional) when did the manager start playing fantasy football
