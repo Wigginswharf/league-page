@@ -260,3 +260,4 @@ export const managers = [
        "tradingScale": null, // 1 - 10
        "preferredContact": null, // 'Text', 'WhatsApp', 'Sleeper', 'Email', 'Phone', 'Discord', and 'Carrier Pigeon' are currently supplied in the template
      },
+]
