@@ -180,7 +180,7 @@
     <h3 class="subSectionHeading" bind:this={oneTwo}>1.2 Trading</h3>
     
     <p>Trading of players and draft picks (up to 3 drafts away) are allowed. Trades will process after two days out of season and 1 day with in the season during which time a league vote will take place to determine if the League Leaders need to review for possible collusion, six or more votes for review will trigger a leadership review. League Leaders reserve the right to review any and all trades.</p> 
-    <p>If one or more of the League Leaders is involved in the trade and a review is called for by either league vote or the remaining League Leader, the league representative and or their alternate (as of 2023 Wesley Andersonn is the league representative, and Kevin Wilson the alternate) will take the place of the League Leaders involved with the trade that is in review.</p>  
+    <p>If one or more of the League Leaders is involved in the trade and a review is called for by either league vote or the remaining League Leader, the league representative and or their alternate (as of 2023 Wesley Anderson is the league representative, and Kevin Wilson the alternate) will take the place of the League Leaders involved with the trade that is in review.</p>  
     <p>In the event that a trade needs to be pushed through faster than the alloted review time, the League Leaders (or if needed League Representatives) will determine the validity of the trade and rule to process or veto the trade.</p>
     <p>Tradable assets include players, draft picks, and FAAB $.</p>
     
@@ -217,9 +217,9 @@
         <p>You will not be able to trade draft picks that are more than 3 drafts away. For example, during the 2023 season you cannot trade any picks in or after the 2027 draft. You may only trade FAAB $ from the current season.</p>
     </div>
     
-    <h4 bind:this={oneTwoFive}>1.2.5 Veto/Trade Process</h4>
+    <h4 bind:this={oneTwoFive}>1.2.5 Trade Review</h4>
     <div class="subBlock">
-        <p>A total of 6 veto votes are required to veto a trade. Vetoes are only appropriate in instances of collusion or an egregious mismatch of value (i.e. CMC for a backup kicker). Not liking a trade does not warrant a veto.</p>
+        <p>A total of 6 votes are required for a trade to be reviewed by the League Leaders. Votes for review are only appropriate in instances of collusion or an egregious mismatch of value. Not liking a trade does not warrant a voting for a trade to be reviewed.</p>
     </div>
     
     
