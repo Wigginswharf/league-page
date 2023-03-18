@@ -149,7 +149,7 @@
     
     <h3 class="subSectionHeading" bind:this={oneOne}>1.1 Positional Breakdown</h3>
     
-    <p>28 Total Players</p>
+    <p>29 Total Players</p>
     
     <p class="underscore">Starters</p>
     <ul>
@@ -172,9 +172,8 @@
         <h4 bind:this={oneOneOne}>1.1.1 Position Maximums</h4>
         
         <div class="subBlock">
-            <table class="positionMaximums">
-                <As of 2023 we do not have any Position Maximums, if brought up as a possible change, it would take a league vote of 7 managers or more agreeing to add them.  The League Leaders will make final decision on roster counts but reserve the right to put each up for a league wide vote.> 
-            </table>
+             <p>As of 2023 we do not have any Position Maximums, if brought up as a possible change, it would take a league vote of 7 managers or more agreeing to add them.  The League Leaders will make final decision on roster counts but reserve the right to put each up for a league wide vote.</p> 
+            
         </div>
 
 
