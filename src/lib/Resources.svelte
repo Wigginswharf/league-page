@@ -145,7 +145,7 @@ import { dynasty } from './utils/helper';
 
 <div class="pageBody">
     <div class="banner">
-        <h4>Links For League & Helpful Dynasty Resources</h4>
+        <h4>Links For Our League & Helpful Dynasty Resources</h4>
     </div>
 
     <List class="list" dense>
