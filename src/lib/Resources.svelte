@@ -5,13 +5,6 @@ import { dynasty } from './utils/helper';
     const today = new Date();
     const resources = [
         {
-            name: "FTN Fantasy",
-            url: "https://www.ftnfantasy.com/nfl",
-            icon: "insights",
-            premium: true,
-            separator: true,
-        },
-        {
             name: "The Fantasy Footballers",
             url: "https://www.thefantasyfootballers.com/",
             icon: "podcasts",
@@ -23,6 +16,20 @@ import { dynasty } from './utils/helper';
             url: "https://youtube.com/@TheFantasyFootballers",
             icon: "podcasts",
             premium: false,
+            separator: true,
+        },
+        {
+            name: "Our League's Podcast",
+            url: "https://www.mixcloud.com/FFCoOp/",
+            icon: "podcast",
+            premium: true,
+            separator: true,
+        },
+        {
+            name: "FTN Fantasy",
+            url: "https://www.ftnfantasy.com/nfl",
+            icon: "insights",
+            premium: true,
             separator: true,
         },
         {
@@ -138,7 +145,7 @@ import { dynasty } from './utils/helper';
 
 <div class="pageBody">
     <div class="banner">
-        <h4>Entertainment & Helpful Dynasty Resources</h4>
+        <h4>Links For League & Helpful Dynasty Resources</h4>
     </div>
 
     <List class="list" dense>
