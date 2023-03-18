@@ -26,13 +26,13 @@ export const managers = [
      {
        "roster": null,  // ID of the roster that the manager manages (look at the order of the power rankings graph)
        "managerID" : "583155865675145216",
-       "name": "Casey AKA: Wigginswharf",
-       "tookOver": "2020", // (optional) used if a manager took over a team, delete this line or change to null otherwise
-       "location": "Kyle, TX", // (optional)
+       "name" : "Casey AKA: Wigginswharf",
+       "tookOver" : "2020", // (optional) used if a manager took over a team, delete this line or change to null otherwise
+       "location" : "Kyle, TX", // (optional)
        "bio": null,
        "photo" : "/managers/Casey.jpg", // square ratio recommended (no larger than 500x500)
        "fantasyStart": null, // (optional) when did the manager start playing fantasy football
-       "favoriteTeam": "Texans", // (optional) favorite NFL team, (follows convention: nyj, sea, mia, etc.) MUST BE LOWERCASE
+       "favoriteTeam" : "Texans", // (optional) favorite NFL team, (follows convention: nyj, sea, mia, etc.) MUST BE LOWERCASE
        "mode": null, // (optional) 'Win Now', 'Dynasty', or 'Rebuild' (anything else and you will need to add a new png to /static/ similar to the 'Rebuild.png' and 'Win Now.png' currently in there)
        "rival": null, 
        "favoritePlayer": null, // (optional) this corresponds to the Sleeper player ID (https://api.sleeper.app/v1/players/nfl)
@@ -45,9 +45,9 @@ export const managers = [
      {
        "roster": null,  // ID of the roster that the manager manages (look at the order of the power rankings graph)
        "managerID" : "589583197881278464",
-       "name": "Frank AKA: TankYeltrab84",
-       "tookOver": "2020", // (optional) used if a manager took over a team, delete this line or change to null otherwise
-       "location": "Columbus, OH", // (optional)
+       "name" : "Frank AKA: TankYeltrab84",
+       "tookOver" : "2020", // (optional) used if a manager took over a team, delete this line or change to null otherwise
+       "location" : "Columbus, OH", // (optional)
        "bio": null,
        "photo" : "/managers/Frank.jpg", // square ratio recommended (no larger than 500x500)
        "fantasyStart": null, // (optional) when did the manager start playing fantasy football
@@ -73,13 +73,13 @@ export const managers = [
      {
        "roster": null,  // ID of the roster that the manager manages (look at the order of the power rankings graph)
        "managerID" : "728441693690527744",
-       "name": "Brandon AKA: SkipMiller21",
-       "tookOver": "2021", // (optional) used if a manager took over a team, delete this line or change to null otherwise
-       "location": "Martinsville, VA", // (optional)
+       "name" : "Brandon AKA: SkipMiller21",
+       "tookOver" : "2021", // (optional) used if a manager took over a team, delete this line or change to null otherwise
+       "location" : "Martinsville, VA", // (optional)
        "bio": null,
        "photo" : "/managers/Brandon.jpg", // square ratio recommended (no larger than 500x500)
        "fantasyStart": null, // (optional) when did the manager start playing fantasy football
-       "favoriteTeam": "49ers", // (optional) favorite NFL team, (follows convention: nyj, sea, mia, etc.) MUST BE LOWERCASE
+       "favoriteTeam" : "49ers", // (optional) favorite NFL team, (follows convention: nyj, sea, mia, etc.) MUST BE LOWERCASE
        "mode": null, // (optional) 'Win Now', 'Dynasty', or 'Rebuild' (anything else and you will need to add a new png to /static/ similar to the 'Rebuild.png' and 'Win Now.png' currently in there)
        "rival": null, 
        "favoritePlayer": null, // (optional) this corresponds to the Sleeper player ID (https://api.sleeper.app/v1/players/nfl)
@@ -92,13 +92,13 @@ export const managers = [
      {
        "roster": null,  // ID of the roster that the manager manages (look at the order of the power rankings graph)
        "managerID" : "589597408539750400",
-       "name": "Reyes AKA: Goldhorn92",
-       "tookOver": "2020", // (optional) used if a manager took over a team, delete this line or change to null otherwise
-       "location": "Austin, TX", // (optional)
+       "name" : "Reyes AKA: Goldhorn92",
+       "tookOver" : "2020", // (optional) used if a manager took over a team, delete this line or change to null otherwise
+       "location" : "Austin, TX", // (optional)
        "bio": null,
        "photo" : "/managers/Reyes.jpg", // square ratio recommended (no larger than 500x500)
        "fantasyStart": null, // (optional) when did the manager start playing fantasy football
-       "favoriteTeam": "Cowboys", // (optional) favorite NFL team, (follows convention: nyj, sea, mia, etc.) MUST BE LOWERCASE
+       "favoriteTeam" : "Cowboys", // (optional) favorite NFL team, (follows convention: nyj, sea, mia, etc.) MUST BE LOWERCASE
        "mode": null, // (optional) 'Win Now', 'Dynasty', or 'Rebuild' (anything else and you will need to add a new png to /static/ similar to the 'Rebuild.png' and 'Win Now.png' currently in there)
        "rival": null, 
        "favoritePlayer": null, // (optional) this corresponds to the Sleeper player ID (https://api.sleeper.app/v1/players/nfl)
@@ -111,13 +111,13 @@ export const managers = [
      {
        "roster": null,  // ID of the roster that the manager manages (look at the order of the power rankings graph)
        "managerID" : "589601150253174784",
-       "name": "Wesley AKA: yelsewnosredna",
-       "tookOver": "2020", // (optional) used if a manager took over a team, delete this line or change to null otherwise
-       "location": "Corpus Christi, TX", // (optional)
+       "name" : "Wesley AKA: yelsewnosredna",
+       "tookOver" : "2020", // (optional) used if a manager took over a team, delete this line or change to null otherwise
+       "location" : "Corpus Christi, TX", // (optional)
        "bio": null,
        "photo" : "/managers/Wesley.jpg", // square ratio recommended (no larger than 500x500)
        "fantasyStart": null, // (optional) when did the manager start playing fantasy football
-       "favoriteTeam": "A Good Game", // (optional) favorite NFL team, (follows convention: nyj, sea, mia, etc.) MUST BE LOWERCASE
+       "favoriteTeam" : "A Good Game", // (optional) favorite NFL team, (follows convention: nyj, sea, mia, etc.) MUST BE LOWERCASE
        "mode": null, // (optional) 'Win Now', 'Dynasty', or 'Rebuild' (anything else and you will need to add a new png to /static/ similar to the 'Rebuild.png' and 'Win Now.png' currently in there)
        "rival": null, 
        "favoritePlayer": null, // (optional) this corresponds to the Sleeper player ID (https://api.sleeper.app/v1/players/nfl)
@@ -130,13 +130,13 @@ export const managers = [
      {
        "roster": null,  // ID of the roster that the manager manages (look at the order of the power rankings graph)
        "managerID" : "600715849812205568",
-       "name": "Kevin AKA: kmwilson1979",
-       "tookOver": "2023", // (optional) used if a manager took over a team, delete this line or change to null otherwise
-       "location": "Round Rock, TX", // (optional)
+       "name" : "Kevin AKA: kmwilson1979",
+       "tookOver" : "2023", // (optional) used if a manager took over a team, delete this line or change to null otherwise
+       "location" : "Round Rock, TX", // (optional)
        "bio": null,
        "photo" : "/managers/Kevin.jpg", // square ratio recommended (no larger than 500x500)
        "fantasyStart": null, // (optional) when did the manager start playing fantasy football
-       "favoriteTeam": "Lions", // (optional) favorite NFL team, (follows convention: nyj, sea, mia, etc.) MUST BE LOWERCASE
+       "favoriteTeam" : "Lions", // (optional) favorite NFL team, (follows convention: nyj, sea, mia, etc.) MUST BE LOWERCASE
        "mode": null, // (optional) 'Win Now', 'Dynasty', or 'Rebuild' (anything else and you will need to add a new png to /static/ similar to the 'Rebuild.png' and 'Win Now.png' currently in there)
        "rival": null, 
        "favoritePlayer": null, // (optional) this corresponds to the Sleeper player ID (https://api.sleeper.app/v1/players/nfl)
@@ -149,13 +149,13 @@ export const managers = [
      {
        "roster": null,  // ID of the roster that the manager manages (look at the order of the power rankings graph)
        "managerID" : "600756890296721408",
-       "name": "John AKA: texfsu",
-       "tookOver": "2020", // (optional) used if a manager took over a team, delete this line or change to null otherwise
-       "location": "Kyle, TX", // (optional)
+       "name" : "John AKA: texfsu",
+       "tookOver" : "2020", // (optional) used if a manager took over a team, delete this line or change to null otherwise
+       "location" : "Kyle, TX", // (optional)
        "bio": null,
        "photo" : "/managers/John.jpg", // square ratio recommended (no larger than 500x500)
        "fantasyStart": null, // (optional) when did the manager start playing fantasy football
-       "favoriteTeam": "Cowboys", // (optional) favorite NFL team, (follows convention: nyj, sea, mia, etc.) MUST BE LOWERCASE
+       "favoriteTeam" : "Cowboys", // (optional) favorite NFL team, (follows convention: nyj, sea, mia, etc.) MUST BE LOWERCASE
        "mode": null, // (optional) 'Win Now', 'Dynasty', or 'Rebuild' (anything else and you will need to add a new png to /static/ similar to the 'Rebuild.png' and 'Win Now.png' currently in there)
        "rival": null, 
        "favoritePlayer": null, // (optional) this corresponds to the Sleeper player ID (https://api.sleeper.app/v1/players/nfl)
@@ -168,9 +168,9 @@ export const managers = [
      {
        "roster": null,  // ID of the roster that the manager manages (look at the order of the power rankings graph)
        "managerID" : "601781454250250240",
-       "name": "Will AKA: willebrill",
-       "tookOver": "2020", // (optional) used if a manager took over a team, delete this line or change to null otherwise
-       "location": "Austin, TX", // (optional)
+       "name" : "Will AKA: willebrill",
+       "tookOver" : "2020", // (optional) used if a manager took over a team, delete this line or change to null otherwise
+       "location" : "Austin, TX", // (optional)
        "bio": null,
        "photo" : "/managers/Will.jpg", // square ratio recommended (no larger than 500x500)
        "fantasyStart": null, // (optional) when did the manager start playing fantasy football
@@ -187,9 +187,9 @@ export const managers = [
      {
        "roster": null,  // ID of the roster that the manager manages (look at the order of the power rankings graph)
        "managerID" : "602288488179638272",
-       "name": "Josh AKA: Lamarjackedson",
-       "tookOver": "2020", // (optional) used if a manager took over a team, delete this line or change to null otherwise
-       "location": "Austin, TX", // (optional)
+       "name" : "Josh AKA: Lamarjackedson",
+       "tookOver" : "2020", // (optional) used if a manager took over a team, delete this line or change to null otherwise
+       "location" : "Austin, TX", // (optional)
        "bio": null,
        "photo" : "/managers/Josh.jpg", // square ratio recommended (no larger than 500x500)
        "fantasyStart": null, // (optional) when did the manager start playing fantasy football
@@ -206,9 +206,9 @@ export const managers = [
      {
        "roster": null,  // ID of the roster that the manager manages (look at the order of the power rankings graph)
        "managerID" : "714591495570685952",
-       "name": "Jason AKA: kucerajd",
-       "tookOver": "2021", // (optional) used if a manager took over a team, delete this line or change to null otherwise
-       "location": "Houston, TX", // (optional)
+       "name" : "Jason AKA: kucerajd",
+       "tookOver" : "2021", // (optional) used if a manager took over a team, delete this line or change to null otherwise
+       "location" : "Houston, TX", // (optional)
        "bio": null,
        "photo" : "/managers/Jason.jpg", // square ratio recommended (no larger than 500x500)
        "fantasyStart": null, // (optional) when did the manager start playing fantasy football
@@ -225,9 +225,9 @@ export const managers = [
      {
        "roster": null,  // ID of the roster that the manager manages (look at the order of the power rankings graph)
        "managerID" : "733433398265257984",
-       "name": "Keller AKA: KillerRook",
-       "tookOver": "2020", // (optional) used if a manager took over a team, delete this line or change to null otherwise
-       "location": "Robstown, TX", // (optional)
+       "name" : "Keller AKA: KillerRook",
+       "tookOver" : "2020", // (optional) used if a manager took over a team, delete this line or change to null otherwise
+       "location" : "Robstown, TX", // (optional)
        "bio": null,
        "photo" : "/managers/Keller.jpg", // square ratio recommended (no larger than 500x500)
        "fantasyStart": null, // (optional) when did the manager start playing fantasy football
@@ -244,9 +244,9 @@ export const managers = [
      {
        "roster": null,  // ID of the roster that the manager manages (look at the order of the power rankings graph)
        "managerID" : "603362066274783232",
-       "name": "Sheldon AKA: sheldoneden",
-       "tookOver": "2020", // (optional) used if a manager took over a team, delete this line or change to null otherwise
-       "location": "Georgewest, TX", // (optional)
+       "name" : "Sheldon AKA: sheldoneden",
+       "tookOver" : "2020", // (optional) used if a manager took over a team, delete this line or change to null otherwise
+       "location" : "Georgewest, TX", // (optional)
        "bio": null,
        "photo" : "/managers/Sheldon.jpg", // square ratio recommended (no larger than 500x500)
        "fantasyStart": null, // (optional) when did the manager start playing fantasy football
