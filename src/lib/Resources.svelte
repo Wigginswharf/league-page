@@ -19,6 +19,13 @@ import { dynasty } from './utils/helper';
             separator: true,
         },
         {
+            name: "The Fantasy Footballers Podcast Show",
+            url: "https://youtube.com/@TheFantasyFootballers",
+            icon: "podcasts",
+            premium: false,
+            separator: true,
+        },
+        {
             name: "FantasyPros Dynasty Trade Value Chart",
             url: `https://www.fantasypros.com/${today.getFullYear()}/${today.getMonth() + 1}/fantasy-football-rankings-dynasty-trade-value-chart-${today.toLocaleString('default', { month: 'long' }).toLowerCase()}-${today.getFullYear()}-update/`,
             icon: "assessment",
@@ -131,7 +138,7 @@ import { dynasty } from './utils/helper';
 
 <div class="pageBody">
     <div class="banner">
-        <h4>Helpful Dynasty Resources</h4>
+        <h4>Entertainment & Helpful Dynasty Resources</h4>
     </div>
 
     <List class="list" dense>
