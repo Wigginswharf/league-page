@@ -32,7 +32,7 @@ export const managers = [
        "bio": null,
        "photo" : "/managers/Casey.jpg", // square ratio recommended (no larger than 500x500)
        "fantasyStart": null, // (optional) when did the manager start playing fantasy football
-       "favoriteTeam" : "hst", // (optional) favorite NFL team, (follows convention: nyj, sea, mia, etc.) MUST BE LOWERCASE
+       "favoriteTeam" : "hou", // (optional) favorite NFL team, (follows convention: nyj, sea, mia, etc.) MUST BE LOWERCASE
        "mode": null, // (optional) 'Win Now', 'Dynasty', or 'Rebuild' (anything else and you will need to add a new png to /static/ similar to the 'Rebuild.png' and 'Win Now.png' currently in there)
        "rival": null, 
        "favoritePlayer": null, // (optional) this corresponds to the Sleeper player ID (https://api.sleeper.app/v1/players/nfl)
@@ -51,7 +51,7 @@ export const managers = [
        "bio": null,
        "photo" : "/managers/Frank.jpg", // square ratio recommended (no larger than 500x500)
        "fantasyStart": null, // (optional) when did the manager start playing fantasy football
-       "favoriteTeam": "hst", // (optional) favorite NFL team, (follows convention: nyj, sea, mia, etc.) MUST BE LOWERCASE
+       "favoriteTeam": "hou", // (optional) favorite NFL team, (follows convention: nyj, sea, mia, etc.) MUST BE LOWERCASE
        "mode": null, // (optional) 'Win Now', 'Dynasty', or 'Rebuild' (anything else and you will need to add a new png to /static/ similar to the 'Rebuild.png' and 'Win Now.png' currently in there)
        "rival": null, 
        "favoritePlayer": null, // (optional) this corresponds to the Sleeper player ID (https://api.sleeper.app/v1/players/nfl)
@@ -193,7 +193,7 @@ export const managers = [
        "bio": null,
        "photo" : "/managers/Josh.jpg", // square ratio recommended (no larger than 500x500)
        "fantasyStart": null, // (optional) when did the manager start playing fantasy football
-       "favoriteTeam": "blt", // (optional) favorite NFL team, (follows convention: nyj, sea, mia, etc.) MUST BE LOWERCASE
+       "favoriteTeam": "bal", // (optional) favorite NFL team, (follows convention: nyj, sea, mia, etc.) MUST BE LOWERCASE
        "mode": null, // (optional) 'Win Now', 'Dynasty', or 'Rebuild' (anything else and you will need to add a new png to /static/ similar to the 'Rebuild.png' and 'Win Now.png' currently in there)
        "rival": null, 
        "favoritePlayer": null, // (optional) this corresponds to the Sleeper player ID (https://api.sleeper.app/v1/players/nfl)
@@ -212,7 +212,7 @@ export const managers = [
        "bio": null,
        "photo" : "/managers/Jason.jpg", // square ratio recommended (no larger than 500x500)
        "fantasyStart": null, // (optional) when did the manager start playing fantasy football
-       "favoriteTeam": "hst", // (optional) favorite NFL team, (follows convention: nyj, sea, mia, etc.) MUST BE LOWERCASE
+       "favoriteTeam": "hou", // (optional) favorite NFL team, (follows convention: nyj, sea, mia, etc.) MUST BE LOWERCASE
        "mode": null, // (optional) 'Win Now', 'Dynasty', or 'Rebuild' (anything else and you will need to add a new png to /static/ similar to the 'Rebuild.png' and 'Win Now.png' currently in there)
        "rival": null, 
        "favoritePlayer": null, // (optional) this corresponds to the Sleeper player ID (https://api.sleeper.app/v1/players/nfl)
