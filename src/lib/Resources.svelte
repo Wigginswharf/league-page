@@ -21,8 +21,8 @@ import { dynasty } from './utils/helper';
         {
             name: "Our League's Podcast",
             url: "https://www.mixcloud.com/FFCoOp/",
-            icon: "podcast",
-            premium: true,
+            icon: "podcasts",
+            premium: false,
             separator: true,
         },
         {
