@@ -305,6 +305,6 @@
 
     <h2 class="sectionHeading" bind:this={eight}>Section 8 League Communications</h2>
     <h3 bind:this={eightOne}>8.1 League Slack</h3>
-    <p>Starting with the 2023 offseason, all main league communications have been moved to Slack. This is not to say that there will bed no texting regarding the league, but the league slack will be the main communication hub.</p>
-    <p>In order to insure the health communication amoungst our league, managers should keep push alerts for direct messages active.</p> 
+    <p>Starting with the 2023 offseason, all league communications have been moved to Slack. This does not mean that there won't be texting regarding the league, but the league slack will be the main communication hub.</p>
+    <p>In order to insure healthy communication amoungst our league and help expidite trade offers, managers are expected to keep push alerts for direct messages active.</p> 
 </div>
