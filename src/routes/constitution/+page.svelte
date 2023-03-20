@@ -7,6 +7,7 @@
     let five, fiveOne;
     let six, sixOne, sixTwo, sixThree;
     let seven, sevenOne, sevenTwo, sevenThree;
+    let eight, eightOne;
 
     const goToSection = (section) => {
         const top = section.getBoundingClientRect().top + window.pageYOffset;
@@ -141,6 +142,10 @@
         <h4 class="noUnderscore clickable" on:click={() => goToSection(sevenOne)}>7.1 League Dues</h4>
         <h4 class="noUnderscore clickable" on:click={() => goToSection(sixTwo)}>7.2 Payout</h4>
         <h4 class="noUnderscore clickable" on:click={() => goToSection(sixThree)}>7.3 Raising Dues</h4>
+    
+    <h3 class="noUnderscore clickable" on:click={() => goToSection(eight)}>Section 8: League Communications</h3>
+    
+        <h4 class="noUnderscore clickable" on:click={() => goToSection(eightOne)}>8.1 League Slack</h4>
     
     
     <hr />
@@ -298,4 +303,8 @@
     <h3 bind:this={sevenThree}>7.3 Raising Dues</h3>
     <p>A majority vote of 8 is required in order to raise league dues. In the event that a manager is no longer financially comfortable with the buyin, finding a co-manager to split the cost is reccomended.</p>
 
+    <h2 class="sectionHeading" bind:this={eight}>Section 8 League Communications</h2>
+    <h3 bind:this={eightOne}>8.1 League Slack</h3>
+    <p>Starting with the 2023 offseason, all main league communications have been moved to Slack. This is not to say that there will bed no texting regarding the league, but the league slack will be the main communication hub.</p>
+    <p>In order to insure the health communication amoungst our league, managers should keep push alerts for direct messages active.</p> 
 </div>
