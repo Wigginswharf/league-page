@@ -91,14 +91,14 @@ export const managers = [
      },
      {
        "roster": null,  // ID of the roster that the manager manages (look at the order of the power rankings graph)
-       "managerID" : "589597408539750400",
-       "name" : "Reyes AKA: Goldhorn92",
-       "tookOver" : null, // (optional) used if a manager took over a team, delete this line or change to null otherwise
+       "managerID" : "944682001481756672",
+       "name" : "Dustin AKA: AustinsFinest",
+       "tookOver" : "2023", // (optional) used if a manager took over a team, delete this line or change to null otherwise
        "location" : "Austin, TX", // (optional)
        "bio": null,
-       "photo" : "/managers/Reyes.jpg", // square ratio recommended (no larger than 500x500)
+       "photo" : "/managers/Dustin.png", // square ratio recommended (no larger than 500x500)
        "fantasyStart": null, // (optional) when did the manager start playing fantasy football
-       "favoriteTeam" : "dal", // (optional) favorite NFL team, (follows convention: nyj, sea, mia, etc.) MUST BE LOWERCASE
+       "favoriteTeam" : "lar", // (optional) favorite NFL team, (follows convention: nyj, sea, mia, etc.) MUST BE LOWERCASE
        "mode": null, // (optional) 'Win Now', 'Dynasty', or 'Rebuild' (anything else and you will need to add a new png to /static/ similar to the 'Rebuild.png' and 'Win Now.png' currently in there)
        "rival": null, 
        "favoritePlayer": null, // (optional) this corresponds to the Sleeper player ID (https://api.sleeper.app/v1/players/nfl)
