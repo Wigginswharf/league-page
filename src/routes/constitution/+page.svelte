@@ -170,32 +170,32 @@
         <li>K</li>
     </ul>
     
-    <p>19 Bench (Will Expand to 20 permanent bench spots in the 2023/2024 offseason, and afterward it will take a league vote of 7 managers or more agreeing to expand the benches by no more than 1 spot. to expand again. In season IR spots are converted to bench spots once the Sleeper app allows us to progress to the next year, and will last until the Monday before the NFL regular season, at which point they will convert back to IR spots.)</p>
+    <p>19 Bench (Will Expand to 20 permanent bench spots in the 2023/2024 offseason, and afterward it will take a league vote of 7 managers or more to expand the benches by one spot. IR spots are converted to bench at the end of the season, and will stay that way until the Monday before the NFL regular season, at which point they will convert back to IR spots.)</p>
 
     <p>4 IR Spots (Players holding out or listed as questionable are not allowed on IR)</p>
     
         <h4 bind:this={oneOneOne}>1.1.1 Position Maximums</h4>
         
         <div class="subBlock">
-             <p>As of 2023 we do not have any Position Maximums, if brought up as a possible change, it would take a league vote of 7 managers or more agreeing to add them.  The League Leaders will make final decision on roster counts but reserve the right to put each up for a league wide vote.</p> 
+             <p>As of 2023 we do not have any Position Maximums, if brought up as a possible change, it would take a league vote of 7 managers or more agreeing to add them.  The League Leaders will make the final decision on roster counts but reserve the right to put each up for a league wide vote.</p> 
             
         </div>
 
 
     <h3 class="subSectionHeading" bind:this={oneTwo}>1.2 Trading</h3>
     
-    <p>Trading of players and draft picks (up to 3 drafts away) are allowed. Trades will process after two days out of season and 1 day with in the season during which time a league vote will take place to determine if the League Leaders need to review for possible collusion, six or more votes for review will trigger a leadership review. League Leaders reserve the right to review any and all trades.</p> 
-    <p>If one or more of the League Leaders is involved in the trade and a review is called for by either league vote or the remaining League Leader, the league representative and or their alternate (as of 2023 Wesley Anderson is the league representative, and Kevin Wilson the alternate) will take the place of the League Leaders involved with the trade that is in review.</p>  
-    <p>In the event that a trade needs to be pushed through faster than the alloted review time, the League Leaders (or if needed League Representatives) will determine the validity of the trade and rule to process or veto the trade.</p>
+    <p>Trading of players and draft picks (up to 3 drafts away) is allowed. In the off season, trades will process after two days, and 1 day during the season. During the processing time a league vote will take place to determine if the League Leaders need to review the trade for possible collusion, six or more votes are needed to trigger a leadership review. League Leaders reserve the right to review any and all trades.</p> 
+    <p>If one or more of the League Leaders is involved in the trade, and a review is called for by either league vote or the remaining League Leaders, the league representative and/or their alternate (as of 2023 Wesley Anderson is the league representative, and Kevin Wilson the alternate) will take the place of the League Leaders that are involved with the trade.</p>  
+    <p>In the event that a trade needs to be pushed through faster than the alloted review time, the League Leaders (or if needed, the League Representatives) will determine the validity of the trade and rule to process or veto the trade.</p>
     <p>Tradable assets include players, draft picks, and FAAB $.</p>
     
     <h4 bind:this={oneTwoOne}>1.2.1 Trade Collusion</h4>
     <div class="subBlock">
-        <p>If any owners are suspected of accepting bribes/offering bribes to enhance their/another owners team via trade, trading any assets other than fantasy players, draft picks, FAAB $, or otherwise found guilty of engaging in any form of collusion*, all parties involved in the trade will be susceptible to punishment. The punishments will go as followed:</p>
+        <p>If any owners are suspected of accepting bribes/offering bribes to enhance their/another owners team via trade, trading any assets other than fantasy players, draft picks, FAAB $, or otherwise found guilty of engaging in any form of collusion*, all parties involved in the trade are susceptible to punishment. The punishments will go as followed:</p>
         
         <ul>
-            <li>First Offense – Immediate reduction of FAAB budget by 50% for a total of 18 in season weeks, as well as a 50% FAAB budget penality for the end of season FA signing period In the event the participants are out of FAAB at the time of being found guilty, the penality will take in to effect at the start of the next season.</li>
-            <li>Second Offense – Immediate freeze on all transactions, with a league vote on if the manager should be expelled from the league. If the vote allows for the manager to stay in league, the manager will face the penality of having transactions frozen for the next 4 in season weeks AND a loss of their next available 1st round draft pick.</li>
+            <li>First Offense – Immediate reduction of FAAB budget by 50% for a total of 18 in season weeks, as well as a 50% FAAB budget penality for the end of season FA signing period. In the event the participants are out of FAAB at the time of being found guilty, the penality will take in to effect at the start of the next season.</li>
+            <li>Second Offense – Immediate freeze on all transactions and a league vote will be held on if the manager should be expelled from the league. If the vote allows for the manager to stay in league, the manager will face the penality of having transactions frozen for the next 4 in season weeks AND a loss of their next available 1st round draft pick.</li>
             <li>Third Offense – *Immediate expulsion.</li>
             <li>In the event a Manager leaves the league, any penality they are facing WILL NOT carry over to the new manager.</li>
         </ul>
@@ -209,12 +209,12 @@
 
     <h4 bind:this={oneTwoTwo}>1.2.2 Lending Players Prohibition</h4>
     <div class="subBlock">
-        <p>Any player traded from a team may not be re-acquired via trade within 4 weeks of the original trade unless a managers roster health has been altered AND the compensation is differnt. Any teams involved in this behavior will be subject to the aforementioned collusion punishments.</p>
+        <p>Any player traded in season from a team may not be re-acquired via trade within 4 weeks of the original trade unless a managers roster health has been altered AND the compensation is different. Any teams involved in this behavior will be subject to the aforementioned collusion punishments.</p>
     </div>
     
     <h4 bind:this={oneTwoThree}>1.2.3 Trade Deadline</h4>
     <div class="subBlock">
-        <p>Week 12 is the last week trades can be made during the NFL and Fantasy season. Trades will be unlocked after the final round of waivers run and the league has progressed in to the new year.</p>
+        <p>Week 11 is the last week trades can be made during the NFL and Fantasy season. Trades will be unlocked after the final round of waivers run and the league has progressed in to the new year.</p>
     </div>
     
     <h4 bind:this={oneTwoFour}>1.2.4 Trade Restrictions</h4>
@@ -239,8 +239,8 @@
     <h2 class="sectionHeading" bind:this={two}>Section 2 Drafting</h2>
     
     <h3 bind:this={twoOne}>2.1 Draft Order</h3>
-    <p>The draft order each year will be a linear draft in reverse order of the previous year’s regular season standings.</p>
-    <p>The winner of the consolation bracket (Toilet Bowl) will be granted the untradeable asset of the 13th pick of the 1st round.</p> 
+    <p>The draft order of the first six picks each year will be a linear draft in reverse order of the previous year’s regular season standings. Picks 7-10 will be based on playoff performance. 5th place will be granted the 7th pick, 6th place granted the 8th pick, 3rd placed granted 9th pick, and 4th placed granted the 10th pick. As 2nd and 1st earn prize money, 2nd place is granted the 11th pick, and 1st is granted the 12th.</p>
+    <p>The bottom 6 teams will compete in the Toilet Bowl bracket. The winner of the consolation bracket will be granted the untradeable asset of the 13th pick of the 1st round.</p> 
 
     <h3 bind:this={twoTwo}>2.2 Rookie Drafts</h3>
     <p>Rookie drafts will consist of 3 round of drafting, with 2 minutes alotted for each pick.</p>
@@ -252,7 +252,7 @@
     <h2 class="sectionHeading" bind:this={three}>Section 3 Scoring System</h2>
 
     <h3 bind:this={threeOne}>3.1 Scoring System</h3>
-    <p>The league scoring system breakdown is listed on the Sleeper fantasy app. The scoring system will only change after a majority league vote at which point the Commissioner and Vice Commissioner will adjust the scoring system and submit the changes to the President of League Engagment and Communication for review and they will either approve or reject and ask for continued revision.</p>
+    <p>The league scoring system breakdown is listed on the Sleeper fantasy app. The scoring system will only change after a majority league vote at which point the Commissioner and Vice Commissioner will adjust the scoring system and submit the changes to the President of League Engagment and Communication where they will either approve or reject the changes and ask for continued revision.</p>
     
     <h2 class="sectionHeading" bind:this={four}>Section 4 Postseason</h2>
     
@@ -279,13 +279,13 @@
     <h2 class="sectionHeading" bind:this={six}>Section 6 Replacing Managers</h2>
     
     <h3 bind:this={sixOne}>6.1 Removing Managers</h3>
-    <p>Short of continuously failing to set a valid lineup, or confirmed collusion, no manager can be removed against their will. Participation, through trade offers, and the waiver wire, is strongly encouraged but generally not grounds for removal unless you have become a clear detriment to your team and ergo effecting the integrity of the league.</p>
+    <p>Short of continuously failing to set a valid lineup, or confirmed collusion, no manager can be removed against their will. Participation through trade offers and the waiver wire is strongly encouraged but generally not grounds for removal unless you have become a clear detriment to your team, therefore effecting the integrity of the league.</p>
     
     <h3 bind:this={sixTwo}>6.2 Replacing Managers</h3>
     <p>When a manager needs to be replaced, the League Leaders will try to find a suitable candidate with some connection to at least a portion of the existing managers. Priority will be placed on managers who are eager to take on a dynasty commitment and will be very active within the league.</p>
     
     <h3 bind:this={sixThree}>6.3 Replacement Incentive</h3>
-    <p>In the event that a manager chooses to quit the league or is removed by a comissioner, an incoming manager is offered a 50% reductioon on their first year buy-in.</p>
+    <p>In the event that a manager chooses to quit the league or is removed by the league leaders, the incoming manager is offered a 50% reductioon on their first year buy-in.</p>
 
     <h2 class="sectionHeading" bind:this={seven}>Section 7 League Finances</h2>
     
@@ -298,10 +298,10 @@
         <li>1st place: $300</li>
         <li>2nd place: $60</li>
     </ul>
-    <p>In the event that a new manager is added and given 50% off on their entry fee, the League Leaders will make up the difference unless the new manager wins 1st or 2nd, at which time the remaining 50% will be subtracted from their winnings.</p>
+    <p>In the event that a new manager is added and given 50% off on their entry fee, the departing manager will be asked to pay a 50% exit fee to cover the discount. If the former manager refuses, then League Leaders will make up the difference. In the case of the new manager winning first or second, and the exiting manager refused to pay the exit fee, the new manager's winning will be be reduced by 50% of the league due.</p>
     
     <h3 bind:this={sevenThree}>7.3 Raising Dues</h3>
-    <p>A majority vote of 8 is required in order to raise league dues. In the event that a manager is no longer financially comfortable with the buyin, finding a co-manager to split the cost is reccomended.</p>
+    <p>A 3/4th majority of managers (8) is needed to approve a raise league dues. In the event that a manager is no longer financially comfortable with the buy-in, finding a co-manager to split the cost is reccomended.</p>
 
     <h2 class="sectionHeading" bind:this={eight}>Section 8 League Communications</h2>
     <h3 bind:this={eightOne}>8.1 League Slack</h3>
