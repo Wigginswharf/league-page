@@ -274,7 +274,7 @@
     <h2 class="sectionHeading" bind:this={five}>Section 5 Tanking Policy</h2>
     
     <h3 bind:this={fiveOne}>5.1 League Tanking Policy</h3>
-    <p>No team may intentionally leave starting roster spots empty. Any evidence of intentionally leaving roster spots empty in order to improve your draft position may be subject to punishment, including but not limited to the forfeiture of draft selections.</p>
+<p>In order to maintain the integrity of the league, and to keep a fun competitive atmosphere, all mangers must field a starting line up that displays a willingness to win and does not put their opponent at an intentional competitive advantage. Any manager who does not make a reasonable effort to win their game including but not limited to intentionally starting a player who is not on an active NFL roster, or leaving a starting line up spot empty, in order to improve their draft position may be subject to punishment, including but not limited to the forfeiture of draft selections.</p>
 
     <h2 class="sectionHeading" bind:this={six}>Section 6 Replacing Managers</h2>
     
