@@ -170,7 +170,7 @@
         <li>K</li>
     </ul>
     
-    <p>19 Bench (Will Expand to 20 permanent bench spots in the 2023/2024 offseason, and afterward it will take a league vote of 7 managers or more to expand the benches by one spot. IR spots are converted to bench at the end of the season, and will stay that way until the Monday before the NFL regular season, at which point they will convert back to IR spots.)</p>
+    <p>20 Bench (League vote of 7 managers or more to expand the benches by one spot. IR spots are converted to bench at the end of the season, and will stay that way until the Monday before the NFL regular season, at which point they will convert back to IR spots.)</p>
 
     <p>4 IR Spots (Players holding out or listed as questionable are not allowed on IR)</p>
     
@@ -233,7 +233,7 @@
     
     <p>FAAB Waiver wire system. Each team will begin the season with $100. $0 bids are allowed. Bids will process every days with the exception of Tuesday and Fridays at 3AM EST.</p>
 
-    <p>FAAB budgets will reset once the leauge has transfered to the new year.</p>
+    <p>FAAB budgets will reset once the league has transfered to the new year and we will have our "End of Season Free Agent run". After words FAAB will reset back to $100.</p>
     
     
     <h2 class="sectionHeading" bind:this={two}>Section 2 Drafting</h2>
@@ -243,21 +243,21 @@
     <p>The bottom 6 teams will compete in the Toilet Bowl bracket. The winner of the consolation bracket will be granted the untradeable asset of the 13th pick of the 1st round.</p> 
 
     <h3 bind:this={twoTwo}>2.2 Rookie Drafts</h3>
-    <p>Rookie drafts will consist of 3 round of drafting, with 2 minutes alotted for each pick.</p>
-    <p>Any spots not filled during the draft, can be filled immediately afterwards from the waiver wire.</p>
+    <p>Rookie drafts will consist of 3 round of drafting, 4 hours per pick.</p>
+    <p>Any spots not filled during the draft, can be filled when when waivers reopen.</p>
     
     <h3 bind:this={twoThree}>2.3 Draft Day Trades</h3>
-    <p>If a trade is being made during the draft, one or both parties can alert the commissioner to pause the draft to allow for extra time to negotiate the trade.</p>
+    <p>As of 2023, draft was voted to be expanded to a "long draft" to increase draft day trading.</p>
     
     <h2 class="sectionHeading" bind:this={three}>Section 3 Scoring System</h2>
 
     <h3 bind:this={threeOne}>3.1 Scoring System</h3>
-    <p>The league scoring system breakdown is listed on the Sleeper fantasy app. The scoring system will only change after a majority league vote at which point the Commissioner and Vice Commissioner will adjust the scoring system and submit the changes to the President of League Engagment and Communication where they will either approve or reject the changes and ask for continued revision.</p>
+    <p>The league scoring system breakdown is listed on the Sleeper fantasy app. Minor tweaks can be done as needed by leadership to maintain league health. Major scoring system changes will only change after a majority league vote at which point the Commissioner and Vice Commissioner will adjust the scoring system and submit the changes to the President of League Engagment and Communication where they will either approve or reject the changes and ask for continued revision.</p>
     
     <h2 class="sectionHeading" bind:this={four}>Section 4 Postseason</h2>
     
     <h3 bind:this={fourOne}>4.1 Playoffs</h3>
-    <p>At the end of the season 6 teams will make the playoffs. The first round of playoffs will commence in week 15. Each team that wins their division and the 3 wild card teams that finish with the best records, will receive a playoff berth. The 2 division winners with the best record, will receive a bye week in the first round of the playoffs. Each playoff matchup will only last one week and the winner will advance. Week 18 will not be used.</p>
+    <p>The first round of playoffs will commence in week 15. Each team that wins their division and the 3 wild card teams that finish with the best records, will receive a playoff berth. The 2 division winners with the best record, will receive a bye week. Each playoff matchup will only last one week and the winner will advance. Outside of extenuating circumstances, week 18 will not be used.</p>
     
     <h3 bind:this={fourTwo}>4.2 Seeding Tiebreakers</h3>
     <p>If two teams finish with the same record the tiebreakers will go as followed:</p>
@@ -279,18 +279,18 @@
     <h2 class="sectionHeading" bind:this={six}>Section 6 Replacing Managers</h2>
     
     <h3 bind:this={sixOne}>6.1 Removing Managers</h3>
-    <p>Short of continuously failing to set a valid lineup, or confirmed collusion, no manager can be removed against their will. Participation through trade offers and the waiver wire is strongly encouraged but generally not grounds for removal unless you have become a clear detriment to your team, therefore effecting the integrity of the league.</p>
+    <p>Short of continuously failing to set a valid lineup, or confirmed collusion, no manager can be removed against their will without league vote. Participation through trade offers and the waiver wire is strongly encouraged but generally not grounds for removal unless you have become a clear detriment to your team, therefore effecting the integrity of the league.</p>
     
     <h3 bind:this={sixTwo}>6.2 Replacing Managers</h3>
     <p>When a manager needs to be replaced, the League Leaders will try to find a suitable candidate with some connection to at least a portion of the existing managers. Priority will be placed on managers who are eager to take on a dynasty commitment and will be very active within the league.</p>
     
     <h3 bind:this={sixThree}>6.3 Replacement Incentive</h3>
-    <p>In the event that a manager chooses to quit the league or is removed by the league leaders, the incoming manager is offered a 50% reductioon on their first year buy-in.</p>
+    <p>In the event that a manager chooses to quit the league or is removed by the league leaders, they will be charged a $15 exit fee so the incoming manager is offered a 50% reductioon on their first year buy-in.</p>
 
     <h2 class="sectionHeading" bind:this={seven}>Section 7 League Finances</h2>
     
     <h3 bind:this={sevenOne}>7.1 League Dues</h3>
-    <p>League dues are set at $30. Dues are collected via means best to the managers. League dues should be paid no later than week 1 of the fantasy season</p>
+    <p>League dues are set at $30. Dues are collected by league commisioner via means best to the managers. League dues should be paid no later than week 1 of the fantasy season.</p>
     
     <h3 bind:this={sevenTwo}>7.2 Payout</h3>
     <p>League payout is structured as follows:</p>
@@ -298,7 +298,7 @@
         <li>1st place: $300</li>
         <li>2nd place: $60</li>
     </ul>
-    <p>In the event that a new manager is added and given 50% off on their entry fee, the departing manager will be asked to pay a 50% exit fee to cover the discount. If the former manager refuses, then League Leaders will make up the difference. In the case of the new manager winning first or second, and the exiting manager refused to pay the exit fee, the new manager's winning will be be reduced by 50% of the league due.</p>
+    <p>In the event that a new manager is added and given 50% off on their entry fee, the departing manager will be asked to pay a 50% exit fee to cover the discount. If the former manager refuses, then League Leaders will make up the difference. In the case of the new manager winning first or second, and the exiting manager refused to pay the exit fee, the new manager's winning will be be reduced by 50% of the league due to cover the accrued cost of the league leaders. In the case of the new manager does not win any money their first year, league leaders will forfiet right to collect the 50% due accrued for that season.</p>
     
     <h3 bind:this={sevenThree}>7.3 Raising Dues</h3>
     <p>A 3/4th majority of managers (8) is needed to approve a raise league dues. In the event that a manager is no longer financially comfortable with the buy-in, finding a co-manager to split the cost is reccomended.</p>
