@@ -243,6 +243,25 @@ export const managers = [
      },
      {
        "roster": null,  // ID of the roster that the manager manages (look at the order of the power rankings graph)
+       "managerID" : "583155865675145216",
+       "name" : "Tommy AKA: BeardedDingus13",
+       "tookOver" : "2023", // (optional) used if a manager took over a team, delete this line or change to null otherwise
+       "location" : "St. Louis, MO", // (optional)
+       "bio": null,
+       "photo" : null, // square ratio recommended (no larger than 500x500)
+       "fantasyStart": null, // (optional) when did the manager start playing fantasy football
+       "favoriteTeam" : null, // (optional) favorite NFL team, (follows convention: nyj, sea, mia, etc.) MUST BE LOWERCASE
+       "mode": 'Rebuild', // (optional) 'Win Now', 'Dynasty', or 'Rebuild' (anything else and you will need to add a new png to /static/ similar to the 'Rebuild.png' and 'Win Now.png' currently in there)
+       "rival": null, 
+       "favoritePlayer": null, // (optional) this corresponds to the Sleeper player ID (https://api.sleeper.app/v1/players/nfl)
+       "valuePosition": null, // (optional) Favorite position (QB, WR, RB, TE, etc.)
+       "rookieOrVets": null, // (optional) 'Rookies' or 'Vets' (anything else and you will need to add a new png to /static/ similar to the 'Rookies.png' and 'Vets.png' currently in there)
+       "philosophy": null,
+       "tradingScale": null, // 1 - 10
+       "preferredContact": null, // 'Text', 'WhatsApp', 'Sleeper', 'Email', 'Phone', 'Discord', and 'Carrier Pigeon' are currently supplied in the template
+     },
+     {
+       "roster": null,  // ID of the roster that the manager manages (look at the order of the power rankings graph)
        "managerID" : "603362066274783232",
        "name" : "Sheldon AKA: sheldoneden",
        "tookOver" : null, // (optional) used if a manager took over a team, delete this line or change to null otherwise
