@@ -1,13 +1,14 @@
 <script>
     import { dues } from '$lib/utils/helper';
-    let one, oneOne, oneOneOne, oneTwo, oneThree, oneFour, oneTwoOne, oneTwoTwo, oneTwoThree, oneTwoFour, oneTwoFive, oneThree;
-    let two, twoOne, twoTwo, twoThree;
-    let three, threeOne;
+    let one, oneOne, oneTwo, oneThree;
+    let two, twoOne, twoOneOne, twoTwo, twoTwoOne, twoTwoTwo, twoTwoThree, twoTwoFour, twoTwoFive, twoThree;
+    let three, threeOne, threeTwo, threeThree;
     let four, fourOne, fourTwo;
     let five, fiveOne;
     let six, sixOne, sixTwo, sixThree;
     let seven, sevenOne, sevenTwo, sevenThree;
     let eight, eightOne;
+
 
     const goToSection = (section) => {
         const top = section.getBoundingClientRect().top + window.pageYOffset;
