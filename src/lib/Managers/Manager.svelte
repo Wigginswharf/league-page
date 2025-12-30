@@ -221,6 +221,7 @@
 </style>
 
 <div class="managerContainer">
+	{#if viewManager}
     <div class="managerConstrained">
         <img class="managerPhoto" src="{viewManager.photo}" alt="manager"/>
         <h2>
@@ -260,7 +261,7 @@
                 </div>
             {/if}
         </div>
-
+		
         <div class="managerNav upper">
             <Group variant="outlined">
                 {#if manager == 0}
@@ -352,4 +353,5 @@
         </Group>
     </div>
 
+	{/if}
 </div>
