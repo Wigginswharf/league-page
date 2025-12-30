@@ -1,6 +1,6 @@
 <script>
     import { dues } from '$lib/utils/helper';
-    let one, oneOne, oneOneOne, oneTwo, oneTwoOne, oneTwoTwo, oneTwoThree, oneTwoFour, oneTwoFive, oneThree;
+    let one, oneOne, oneOneOne, oneTwo, oneThree, oneFour, oneTwoOne, oneTwoTwo, oneTwoThree, oneTwoFour, oneTwoFive, oneThree;
     let two, twoOne, twoTwo, twoThree;
     let three, threeOne;
     let four, fourOne, fourTwo;
@@ -100,137 +100,198 @@
     <h1 class="noUnderscore">A CHAMPION AND 11 LOSERS DYNASTY LEAGUE CONSTITUTION</h1>
     
     <h2 class="noUnderscore">TABLE OF CONTENTS</h2>
-    
-    <h3 class="noUnderscore clickable" on:click={() => goToSection(one)}>Section 1: Roster</h3>
-        <h4 class="noUnderscore clickable" on:click={() => goToSection(oneOne)}>1.1 Positional Breakdown</h4>
-            <h5 class="noUnderscore clickable" on:click={() => goToSection(oneOneOne)}>1.1.1 Position Maximums</h5>
-        <h4 class="noUnderscore clickable" on:click={() => goToSection(oneTwo)}>1.2 Trading</h4>
-            <h5 class="noUnderscore clickable" on:click={() => goToSection(oneTwoOne)}>1.2.1 Trade Collusion</h5>
-            <h5 class="noUnderscore clickable" on:click={() => goToSection(oneTwoTwo)}>1.2.2 Lending Players Prohibition</h5>
-            <h5 class="noUnderscore clickable" on:click={() => goToSection(oneTwoThree)}>1.2.3 Trade Deadline</h5>
-            <h5 class="noUnderscore clickable" on:click={() => goToSection(oneTwoFour)}>1.2.4 Trade Restrictions</h5>
-            <h5 class="noUnderscore clickable" on:click={() => goToSection(oneTwoFive)}>1.2.5 Veto/Trade Process</h5>
-        <h4 class="noUnderscore clickable" on:click={() => goToSection(oneThree)}>1.3 Waiver Wire</h4>
-    
-    <h3 class="noUnderscore clickable" on:click={() => goToSection(two)}>Section 2: Drafting</h3>
-    
-        <h4 class="noUnderscore clickable" on:click={() => goToSection(twoOne)}>2.1 Draft Order</h4>
-        <h4 class="noUnderscore clickable" on:click={() => goToSection(twoTwo)}>2.2 Rookie Drafts</h4>
-        <h4 class="noUnderscore clickable" on:click={() => goToSection(twoThree)}>2.3 Draft Day Trades</h4>
-    
-    <h3 class="noUnderscore clickable" on:click={() => goToSection(three)}>Section 3: Scoring System</h3>
-    
-        <h4 class="noUnderscore clickable" on:click={() => goToSection(threeOne)}>3.1 Voting on Scoring System</h4>
-    
-    <h3 class="noUnderscore clickable" on:click={() => goToSection(four)}>Section 4: Postseason</h3>
-    
-        <h4 class="noUnderscore clickable" on:click={() => goToSection(fourOne)}>4.1 Playoffs</h4>
-        <h4 class="noUnderscore clickable" on:click={() => goToSection(fourTwo)}>4.2 Playoff Tiebreakers</h4>
+    <h3 class="noUnderscore clickable" on:click={() => goToSection(one)}>Section 1: League Leadership</h3>
+        <h4 class="noUnderscore clickable" on:click={() => goToSection(oneOne)}>1.1 Leadership Roles</h4>
+        <h4 class="noUnderscore clickable" on:click={() => goToSection(oneTwo)}>1.2 Authority and Decision Making</h4>
+        <h4 class="noUnderscore clickable" on:click={() => goToSection(oneThree)}>1.3 Removal of a League Leader</h4>
+        <h4 class="noUnderscore clickable" on:click={() => goToSection(oneFour)}>1.4 Conflict of Interest</h4>
 
-    <h3 class="noUnderscore clickable" on:click={() => goToSection(five)}>Section 5: Tanking Policy</h3>
+    <h3 class="noUnderscore clickable" on:click={() => goToSection(one)}>Section 2: Roster</h3>
+        <h4 class="noUnderscore clickable" on:click={() => goToSection(oneOne)}>2.1 Positional Breakdown</h4>
+            <h5 class="noUnderscore clickable" on:click={() => goToSection(oneOneOne)}>2.1.1 Position Maximums</h5>
+        <h4 class="noUnderscore clickable" on:click={() => goToSection(oneTwo)}>2.2 Trading</h4>
+            <h5 class="noUnderscore clickable" on:click={() => goToSection(oneTwoOne)}>2.2.1 Trade Collusion</h5>
+            <h5 class="noUnderscore clickable" on:click={() => goToSection(oneTwoTwo)}>2.2.2 Lending Players Prohibition</h5>
+            <h5 class="noUnderscore clickable" on:click={() => goToSection(oneTwoThree)}>2.2.3 Trade Deadline</h5>
+            <h5 class="noUnderscore clickable" on:click={() => goToSection(oneTwoFour)}>2.2.4 Trade Restrictions</h5>
+            <h5 class="noUnderscore clickable" on:click={() => goToSection(oneTwoFive)}>2.2.5 Veto/Trade Process</h5>
+        <h4 class="noUnderscore clickable" on:click={() => goToSection(oneThree)}>2.3 Waiver Wire</h4>
     
-        <h4 class="noUnderscore clickable" on:click={() => goToSection(fiveOne)}>5.1 League Tanking Policy</h4>
+    <h3 class="noUnderscore clickable" on:click={() => goToSection(two)}>Section 3: Drafting</h3>
+    
+        <h4 class="noUnderscore clickable" on:click={() => goToSection(twoOne)}>3.1 Draft Order</h4>
+        <h4 class="noUnderscore clickable" on:click={() => goToSection(twoTwo)}>3.2 Rookie Drafts</h4>
+        <h4 class="noUnderscore clickable" on:click={() => goToSection(twoThree)}>3.3 Draft Day Trades</h4>
+    
+    <h3 class="noUnderscore clickable" on:click={() => goToSection(three)}>Section 4: Scoring System</h3>
+    
+        <h4 class="noUnderscore clickable" on:click={() => goToSection(threeOne)}>4.1 Voting on Scoring System</h4>
+    
+    <h3 class="noUnderscore clickable" on:click={() => goToSection(four)}>Section 5: Postseason</h3>
+    
+        <h4 class="noUnderscore clickable" on:click={() => goToSection(fourOne)}>5.1 Playoffs</h4>
+        <h4 class="noUnderscore clickable" on:click={() => goToSection(fourTwo)}>5.2 Playoff Tiebreakers</h4>
 
-    <h3 class="noUnderscore clickable" on:click={() => goToSection(six)}>Section 6: Replacing Managers</h3>
+    <h3 class="noUnderscore clickable" on:click={() => goToSection(five)}>Section 6: Tanking Policy</h3>
     
-        <h4 class="noUnderscore clickable" on:click={() => goToSection(sixOne)}>6.1 Removing Managers</h4>
-        <h4 class="noUnderscore clickable" on:click={() => goToSection(sixTwo)}>6.2 Replacing Managers</h4>
-        <h4 class="noUnderscore clickable" on:click={() => goToSection(sixThree)}>6.3 Replacement Incentive</h4>
+        <h4 class="noUnderscore clickable" on:click={() => goToSection(fiveOne)}>6.1 League Tanking Policy</h4>
 
-    <h3 class="noUnderscore clickable" on:click={() => goToSection(seven)}>Section 7: League Finances</h3>
+    <h3 class="noUnderscore clickable" on:click={() => goToSection(six)}>Section 7: Replacing Managers</h3>
     
-        <h4 class="noUnderscore clickable" on:click={() => goToSection(sevenOne)}>7.1 League Dues</h4>
-        <h4 class="noUnderscore clickable" on:click={() => goToSection(sixTwo)}>7.2 Payout</h4>
-        <h4 class="noUnderscore clickable" on:click={() => goToSection(sixThree)}>7.3 Raising Dues</h4>
+        <h4 class="noUnderscore clickable" on:click={() => goToSection(sixOne)}>7.1 Removing Managers</h4>
+        <h4 class="noUnderscore clickable" on:click={() => goToSection(sixTwo)}>7.2 Replacing Managers</h4>
+        <h4 class="noUnderscore clickable" on:click={() => goToSection(sixThree)}>7.3 Replacement Incentive</h4>
+
+    <h3 class="noUnderscore clickable" on:click={() => goToSection(seven)}>Section 8: League Finances</h3>
+    
+        <h4 class="noUnderscore clickable" on:click={() => goToSection(sevenOne)}>8.1 League Dues</h4>
+        <h4 class="noUnderscore clickable" on:click={() => goToSection(sixTwo)}>8.2 Payout</h4>
+        <h4 class="noUnderscore clickable" on:click={() => goToSection(sixThree)}>8.3 Raising Dues</h4>
     
     
     <hr />
-    
-    <h2 class="sectionHeading" bind:this={one}>Section 1 Roster Breakdown</h2>
-    
-    <h3 class="subSectionHeading" bind:this={oneOne}>1.1 Positional Breakdown</h3>
-    
-    <p>30 Total Players</p>
-    
-    <p class="underscore">Starters</p>
-    <ul>
-        <li>QB</li>
-        <li>RB</li>
-        <li>RB</li>
-        <li>WR</li>
-        <li>WR</li>
-        <li>TE</li>
-        <li>FLEX (RB/WR/TE)</li>
-        <li>FLEX (RB/WR/TE)</li>
-        <li>D/ST</li>
-        <li>K</li>
-    </ul>
-    
-    <p>20 Bench (League vote of 7 managers or more to expand the benches by one spot. IR spots are converted to bench at the end of the season, and will stay that way until the Monday before the NFL regular season, at which point they will convert back to IR spots.)</p>
+    <h2 class="sectionHeading" bind:this={one}>Section 1 League Leadership</h2>
 
-    <p>4 IR Spots (Players holding out or listed as questionable are not allowed on IR)</p>
-    
-        <h4 bind:this={oneOneOne}>1.1.1 Position Maximums</h4>
-        
-        <div class="subBlock">
-             <p>As of 2023 we do not have any Position Maximums, if brought up as a possible change, it would take a league vote of 7 managers or more agreeing to add them.  The League Leaders will make the final decision on roster counts but reserve the right to put each up for a league wide vote.</p> 
-            
-        </div>
+<h3 class="subSectionHeading" bind:this={oneOne}>1.1 Leadership Roles</h3>
 
+<p>The league is overseen by a League Leadership group responsible for maintaining league integrity, enforcing the constitution, resolving disputes, and acting in the best interest of the league as a whole.</p>
 
-    <h3 class="subSectionHeading" bind:this={oneTwo}>1.2 Trading</h3>
-    
-    <p>Trading of players and draft picks (up to 3 drafts away) is allowed. In the off season, trades will process after two days, and one day during the season. During the processing time a league vote will take place to determine if the League Leaders need to review the trade for possible collusion, five or more votes are needed to trigger a leadership review. League Leaders reserve the right to review any and all trades.</p> 
-    <p>If one or more of the League Leaders is involved in the trade, and a review is called for by either league vote or the remaining League Leaders, the league representative and/or their alternate (as of 2023 Wesley Anderson is the league representative, and Kevin Wilson the alternate) will take the place of the League Leaders that are involved with the trade.</p>  
-    <p>In the event that a trade needs to be pushed through faster, such as a trade will not be completed by game time or during the draft, than the alloted review time, the League Leaders (or if needed, the League Representatives) will determine the validity of the trade and rule to process or veto the trade.</p>
-    <p>Tradable assets include players, draft picks, and FAAB $.</p>
-    
-    <h4 bind:this={oneTwoOne}>1.2.1 Trade Collusion</h4>
-    <div class="subBlock">
-        <p>If any owners are suspected of accepting bribes/offering bribes to enhance their/another owners team via trade, trading any assets other than fantasy players, draft picks, FAAB $, or otherwise found guilty of engaging in any form of collusion*, all parties involved in the trade are susceptible to punishment. The punishments will go as followed:</p>
-        
-        <ul>
-            <li>First Offense – Immediate reduction of FAAB budget by 50% for a total of 18 in season weeks, as well as a 50% FAAB budget penality for the end of season FA signing period. In the event the participants are out of FAAB at the time of being found guilty, the penality will take in to effect at the start of the next season.</li>
-            <li>Second Offense – Immediate freeze on all transactions and a league vote will be held on if the manager should be expelled from the league. If the vote allows for the manager to stay in league, the manager will face the penality of having transactions frozen for the next four in season weeks AND a loss of their next available 1st round draft pick.</li>
-            <li>Third Offense – *Immediate expulsion.</li>
-            <li>In the event a Manager leaves the league, any penality they are facing WILL NOT carry over to the new manager.</li>
-        </ul>
+<p>League Leadership consists of the following roles:</p>
 
-        <p>All trades that are found guilty of collusion, will be reversed/denied. If the trade had affected the outcome of previous games, the results of those games will be revised.  </p>
+<ul>
+    <li><strong>Commissioner:</strong> Casey Harvey</li>
+    <li><strong>Vice Commissioner:</strong> Frank Bartley</li>
+    <li><strong>President of League Engagement:</strong> Brandon Miller</li>
+</ul>
 
-        <p>*Collusion includes the organizing of veto votes against an acceptable trade.</p>
+<p>Leadership roles persist year to year unless changed by resignation, removal, or league vote as outlined below.</p>
 
-        <p>The commissioner will err on the side of letting owners manage their teams the way they see fit. Any collusion will need to be clear. The commissioner reserves the right to step in and at the very least assess the thinking of any team involved in a heavily lop-sided trade. </p>
-    </div>
+<h3 class="subSectionHeading" bind:this={oneTwo}>1.2 Authority and Decision Making</h3>
 
-    <h4 bind:this={oneTwoTwo}>1.2.2 Lending Players Prohibition</h4>
-    <div class="subBlock">
-        <p>Any player traded in season from a team may not be re-acquired via trade within 4 weeks of the original trade unless a managers roster health has been altered AND the compensation is different. Any teams involved in this behavior will be subject to the aforementioned collusion punishments.</p>
-    </div>
-    
-    <h4 bind:this={oneTwoThree}>1.2.3 Trade Deadline</h4>
-    <div class="subBlock">
-        <p>Week 11 is the last week trades can be made during the NFL and Fantasy season. Trades will be unlocked after the final round of waivers run and the league has progressed in to the new year.</p>
-    </div>
-    
-    <h4 bind:this={oneTwoFour}>1.2.4 Trade Restrictions</h4>
-    <div class="subBlock">
-        <p>You will not be able to trade draft picks that are more than 3 drafts away. For example, during the 2023 season you cannot trade any picks in or after the 2027 draft. You may only trade FAAB $ from the current season.</p>
-    </div>
-    
-    <h4 bind:this={oneTwoFive}>1.2.5 Trade Review</h4>
-    <div class="subBlock">
-        <p>A total of five votes are required for a trade to be reviewed by the League Leaders. Votes for review are only appropriate in instances of collusion or an egregious mismatch of value. Not liking that a trade occured because it didn't occure with you, it possitively affects your division mates, and/or your scheduled opponent or rival does not warrant a veto vote. The League leaders place trust in the managers that the veto system will not be abused and will only be used when a trade is heavily lopsided and/or collusion is believed to be involved.</p>
-    </div>
-    
-    
-    
-    <h3 bind:this={oneThree}>1.3 Waiver Wire</h3>
-    
-    <p>FAAB Waiver wire system. Each team will begin the season with $100. $0 bids are allowed. Bids will process every days with the exception of Tuesday and Fridays at 3AM EST.</p>
+<p>The Commissioner holds unilateral authority to make time sensitive or emergency decisions when immediate action is required to protect league integrity.</p>
+<p>If the Commissioner is unavailable, authority transfers to the Vice Commissioner. If both the Commissioner and Vice Commissioner are unavailable, authority transfers to the President of League Engagement.</p>
+<p>This authority includes, but is not limited to, resolving platform issues and addressing situations not explicitly covered by this constitution.</p>
+<p>Use of unilateral authority is expected to be rare and exercised in good faith. Whenever practical, decisions may be reviewed or explained to the league after the fact for transparency.</p>
 
-    <p>FAAB budgets will reset once the league has transfered to the new year and we will have our "End of Season Free Agent Extravaganza". After words FAAB will reset back to $100.</p>
-    
+<h3 class="subSectionHeading" bind:this={oneThree}>1.3 Removal of a League Leader</h3>
+
+<p>A League Leader may be removed by agreement of the other two League Leaders.</p>
+<p>Alternatively, the league may call for a vote to remove a League Leader. Such a vote requires approval by a three quarters majority of league managers.</p>
+<p>Any removed leader relinquishes all authority immediately upon removal.</p>
+
+<h3 class="subSectionHeading" bind:this={oneFour}>1.4 Conflict of Interest</h3>
+
+<p>If a League Leader is directly involved in a matter requiring review or enforcement, that individual must recuse themselves from the decision making process.</p>
+<p>In such cases, remaining leadership will assume responsibility according to the established authority order.</p>
+
+    <h2 class="sectionHeading" bind:this={two}>Section 2 Roster Breakdown</h2>
+
+        <h3 class="subSectionHeading" bind:this={twoOne}>2.1 Positional Breakdown</h3>
+
+<p>Each team will maintain up to 30 player active roster during the fantasy season.</p>
+
+<p class="underscore">Starters</p>
+<ul>
+    <li>QB</li>
+    <li>RB</li>
+    <li>RB</li>
+    <li>WR</li>
+    <li>WR</li>
+    <li>TE</li>
+    <li>FLEX (RB/WR/TE)</li>
+    <li>FLEX (RB/WR/TE)</li>
+    <li>D/ST</li>
+    <li>K</li>
+</ul>
+
+<p>Teams will have 20 bench spots. A league vote of seven managers or more is required to expand the bench by one additional spot. At the conclusion of the fantasy season, all IR spots will convert to bench spots, expanding the active roster to 34 players. These additional bench spots will revert back to IR spots on the Monday prior to the start of the NFL regular season.</p>
+<p>Each team will have four IR spots during the fantasy season. Players listed as questionable or holding out are not eligible for IR placement.</p>
+
+            <h4 bind:this={twoOneOne}>2.1.1 Position Maximums</h4>
+
+<div class="subBlock">
+    <p>As of the 2023 season, no position maximums are in place. If position maximums are proposed, implementation will require a league vote with at least seven managers in favor. League Leadership retains the authority to make final determinations on roster structure while reserving the right to submit any changes to a league wide vote.</p>
+</div>
+
+    <h3 class="subSectionHeading" bind:this={twoTwo}>2.2 Trading</h3>
+
+<p>Trading of players, draft picks up to three future drafts, and FAAB dollars is permitted. During the offseason, trades will process after two days. During the fantasy season, trades will process after one day.</p>
+<p>During the processing period, managers may vote to request a trade review for potential collusion. Five votes are required to trigger a leadership review. League Leadership reserves the right to review any trade at their discretion, regardless of whether a vote is triggered.</p>
+<p>If a member of League Leadership is involved in a trade under review, that individual will recuse themselves. In such cases, the League Representative or their designated alternate will assume review responsibilities for that trade.</p>
+<p>If a trade must be processed urgently due to timing constraints related to kickoff or draft progression, League Leadership or the League Representative may expedite review and rule to approve or veto the trade.</p>
+
+        <h4 bind:this={twoTwoOne}>2.2.1 Trade Collusion</h4>
+
+<div class="subBlock">
+    <p>Any form of collusion is strictly prohibited. Collusion includes but is not limited to accepting or offering bribes, trading non approved assets, or coordinating veto activity against otherwise valid trades.</p>
+<p>Violations will be penalized as follows:</p>
+<ul>
+    <li>
+        First Offense: Immediate reduction of FAAB budget by 50 percent for eighteen fantasy season weeks, plus a 50 percent FAAB penalty during the end of season free agent period.
+        If FAAB is exhausted, the penalty will apply at the start of the following season.
+    </li>
+    <li>
+        Second Offense: Immediate freeze on all transactions and a league vote to determine expulsion.
+        If retained, the manager will lose their next available first round draft pick and remain frozen for four fantasy season weeks.
+    </li>
+    <li>
+        Third Offense: Immediate expulsion from the league.
+    </li>
+    <li>
+        Penalties do not carry over to replacement managers.
+    </li>
+</ul>
+
+<p>Trades determined to involve collusion will be reversed. If previous matchups were impacted, results may be retroactively adjusted.</p>
+<p>League Leadership will generally defer to manager autonomy. Intervention will occur only when collusion or extreme imbalance is evident.</p>
+
+</div>
+
+<h4 bind:this={twoTwoTwo}>2.2.2 Lending Players Prohibition</h4>
+
+<div class="subBlock">
+    <p>Any player traded during the fantasy season may not be reacquired by the original team within four weeks of the trade. Exceptions may apply if roster health has materially changed and compensation differs. Violations are subject to collusion penalties.</p>
+</div>
+
+            <h4 bind:this={twoTwoThree}>2.2.3 Trade Deadline</h4>
+
+<div class="subBlock">
+    <p> Week 11 marks the final week for trades during the fantasy season. Trades will reopen after the final waiver run once the league transitions into the new year.</p>
+</div>
+
+<h4 bind:this={twoTwoFour}>2.2.4 Trade Restrictions</h4>
+
+<div class="subBlock">
+    <p>
+    Draft picks may only be traded up to three drafts in advance.
+    FAAB dollars may only be traded from the current season.
+    </p>
+</div>
+
+<h4 bind:this={twoTwoFive}>2.2.5 Trade Review</h4>
+
+<div class="subBlock">
+    <p>
+    Five votes are required to initiate a trade review.
+    Review votes should only be cast in cases of suspected collusion or extreme imbalance.
+    Disapproval based on competitive inconvenience does not justify a review.
+    </p>
+</div>
+
+<h3 bind:this={twoThree}>2.3 Waiver Wire</h3>
+
+<p>
+The league uses a FAAB waiver system.
+Each team begins the fantasy season with one hundred FAAB dollars.
+Zero dollar bids are permitted.
+Waivers process daily at 3:00 AM EST, except on Tuesdays and Fridays.
+</p>
+
+<p>
+FAAB budgets reset when the league transitions into the new year for the End of Season Free Agent Extravaganza.
+Following this period, FAAB budgets reset again to one hundred dollars for the upcoming fantasy season.
+</p>
+
     
     <h2 class="sectionHeading" bind:this={two}>Section 2 Drafting</h2>
     
