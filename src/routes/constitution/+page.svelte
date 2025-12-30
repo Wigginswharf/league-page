@@ -294,73 +294,181 @@ Following this period, FAAB budgets reset again to one hundred dollars for the u
 </p>
 
     
-    <h2 class="sectionHeading" bind:this={two}>Section 2 Drafting</h2>
-    
-    <h3 bind:this={twoOne}>2.1 Draft Order</h3>
-    <p>The draft order of the first six picks each year will be a linear draft in reverse order of the previous year’s regular season standings. Picks 7-10 will be based on playoff performance. 5th place will be granted the 7th pick, and 6th place granted the 8th pick. As of the 2024 season 3rd place was awarded $100 as winnings and it was voted that they should not be granted the 9th pick any longer, the 9th pick now goes to 4th place. As 2nd and 1st earn prize money, 2nd place is granted the 11th pick, and 1st is granted the 12th.</p>
-    <p>The bottom 6 teams will compete in the Toilet Bowl bracket. The winner of the consolation bracket will be granted the untradeable asset of the 13th pick of the 1st round.</p> 
+<h2 class="sectionHeading" bind:this={three}>Section 3 Drafting</h2>
 
-    <h3 bind:this={twoTwo}>2.2 Rookie Drafts</h3>
-    <p>Rookie drafts will consist of 3 round of drafting, 4 hours per pick.</p>
-    
-    <h3 bind:this={twoThree}>2.3 Draft Day Trades</h3>
-    <p>As of 2023, draft was voted to be expanded to a "long draft" to increase draft day trading.</p>
-    <p>Any trade occuring during the draft is put through to league leadership for expedited veto or approval. </p>
+<h3 bind:this={threeOne}>3.1 Draft Order</h3>
 
-    <h2 class="sectionHeading" bind:this={three}>Section 3 Scoring System</h2>
+<p>
+    The draft order for the first six selections each year will be determined by a linear draft in reverse order of the previous season’s regular-season standings. 
+    This structure is intended to promote competitive balance while still rewarding performance.
+</p>
 
-    <h3 bind:this={threeOne}>3.1 Scoring System</h3>
-    <p>The league scoring system breakdown is listed on the Sleeper fantasy app. Minor tweaks can be done as needed by leadership to maintain league health. Major scoring system changes will only change after a majority league vote at which point the Commissioner and Vice Commissioner will adjust the scoring system and submit the changes to the President of League Engagment and Communication where they will either approve or reject the changes and ask for continued revision.</p>
-    
-    <h2 class="sectionHeading" bind:this={four}>Section 4 Postseason</h2>
-    
-    <h3 bind:this={fourOne}>4.1 Playoffs</h3>
-    <p>The first round of playoffs will commence in week 15. Each team that wins their division and the 3 wild card teams that finish with the best records, will receive a playoff berth. The 2 division winners with the best record, will receive a bye week. Each playoff matchup will only last one week and the winner will advance. Outside of extenuating circumstances, week 18 will not be used.</p>
-    
-    <h3 bind:this={fourTwo}>4.2 Seeding Tiebreakers</h3>
-    <p>If two teams finish with the same record the tiebreakers will go as followed:</p>
+<p>
+    Picks seven through ten are determined by playoff results. Fifth place will receive the seventh pick, and sixth place will receive the eighth pick. 
+    Beginning with the 2024 season, third place is awarded prize money and no longer receives the ninth pick. As a result, the ninth pick is now awarded to the fourth-place finisher.
+</p>
 
-    <ol>
-        <li>Points For</li>
-        <li>Head 2 Head Record</li>
-        <li>Division Record</li>
-        <li>Total Points Against</li>
-        <li>Coin Flip</li>
-        <li>Duel to the death</li>
-    </ol>
+<p>
+    Since first- and second-place finishers receive prize payouts, second place will be awarded the eleventh pick, and the league champion will receive the twelfth pick.
+</p>
+
+<p>
+    The bottom six teams will compete in the Toilet Bowl consolation bracket. The winner of the Toilet Bowl will be awarded the untradeable thirteenth pick at the end of the first round.
+</p>
+
+<h3 bind:this={threeTwo}>3.2 Rookie Drafts</h3>
+
+<p>
+    Rookie drafts will consist of three rounds. Each selection will be allotted a four-hour time limit. 
+    The draft will remain active from 9AM to 10PM EST until completion unless paused by league leadership due to technical issues or league-wide scheduling conflicts.
+</p>
+
+<p>
+    Failure to make a selection within the allotted time may result in an automatic pick.
+</p>
+
+<h3 bind:this={threeThree}>3.3 Draft Day Trades</h3>
+
+<p>
+    As of the 2023 season, the league voted to expand the rookie draft into a long-format draft in order to encourage increased draft-day trading and strategic flexibility.
+</p>
+
+<p>
+    Any trades that occur during the draft will be subject to expedited review by league leadership. 
+    Leadership reserves the right to approve or veto draft-day trades immediately to ensure the draft proceeds without unnecessary delay.
+</p>
+
+
+    <h2 class="sectionHeading" bind:this={four}>Section 4 Scoring System</h2>
+
+<h3 bind:this={fourOne}>4.1 Scoring System</h3>
+
+<p>
+The league scoring system is maintained and displayed within the Sleeper fantasy app.
+Minor adjustments may be made by league leadership as needed to preserve competitive balance
+and overall league health.
+</p>
+
+<p>
+Any request for major changes to the scoring system require approval by a 3/4th majority league vote.
+If approved, the Commissioner and Vice Commissioner will make the changes they feel provides the 
+best implimentation of the suggested changes and then will submit the changes to the to the 
+President of League Engagement for final review.
+</p>
+
+<p>
+The President of League Engagement may approve the changes as submitted or request revisions
+before implementation to ensure alignment with league philosophy and long-term stability.
+</p>
+
+    <h2 class="sectionHeading" bind:this={five}>Section 5 Postseason</h2>
+
+<h3 bind:this={fiveOne}>5.1 Playoffs</h3>
+
+<p>
+The league postseason will begin in Week 15 of the NFL regular season.
+</p>
+
+<p>
+Each season, the teams that win their respective divisions will automatically qualify for the playoffs.
+In addition to the division winners, the three remaining teams with the best regular-season records will earn wild card berths.
+</p>
+
+<p>
+The two division winners with the strongest regular-season records will receive a first-round bye.
+All remaining playoff matchups will be single-week eliminations, with the winner advancing to the next round.
+</p>
+
+<p>
+Outside of rare and unforeseen circumstances, Week 18 of the NFL season will not be used for fantasy playoff matchups in order to preserve competitive integrity.
+</p>
+
+<h3 bind:this={fiveTwo}>5.2 Seeding Tiebreakers</h3>
+
+<p>
+If two or more teams finish the regular season with identical records, playoff seeding will be determined using the following tiebreakers, applied in order:
+</p>
+
+<ol>
+    <li>Total Points For</li>
+    <li>Head-to-Head Record</li>
+    <li>Division Record</li>
+    <li>Total Points Against</li>
+    <li>Coin Flip</li>
+    <li>Duel to the death</li>
+</ol>
 
     <h2 class="sectionHeading" bind:this={five}>Section 5 Tanking Policy</h2>
     
-    <h3 bind:this={fiveOne}>5.1 League Tanking Policy</h3>
-    <p>In order to maintain the integrity of the league, and to keep a fun competitive atmosphere, all mangers must field a starting line up that displays a willingness to win and does not put their opponent at an intentional competitive advantage. Any manager who does not make a reasonable effort to win their game including but not limited to intentionally starting a player who is not on an active NFL roster, or leaving a starting line up spot empty, in order to improve their draft position may be subject to punishment, including but not limited to the forfeiture of draft selections.</p>
+   <h3 bind:this={sixOne}>6.1 League Tanking Policy</h3>
 
-    <h2 class="sectionHeading" bind:this={six}>Section 6 Replacing Managers</h2>
+<p>
+In order to maintain the integrity of the league, and to keep a fun competitive atmosphere, 
+all managers must field a starting lineup that displays a willingness to win and does not put 
+their opponent at an intentional competitive advantage. Any manager who does not make a reasonable 
+effort to win their game, including but not limited to intentionally starting a player 
+who is not on an active NFL roster or leaving a starting lineup spot empty, in order to improve their draft 
+position, may be subject to punishment, including but not limited to the forfeiture of draft selections.
+</p>
+    <h2 class="sectionHeading" bind:this={seven}>Section 7 Replacing Managers</h2>
     
-    <h3 bind:this={sixOne}>6.1 Removing Managers</h3>
-    <p>Short of continuously failing to set a valid lineup, or confirmed collusion, no manager can be removed against their will without league vote. Participation through trade offers and the waiver wire is strongly encouraged but lack of participation is generally not grounds for removal unless you have become a clear detriment to your team, therefore effecting the integrity of the league.</p>
+<h3 bind:this={sevenOne}>7.1 Removing Managers</h3>
+<p>
+    Short of continuously failing to set a valid lineup, or confirmed collusion, no manager can be removed 
+    against their will without league vote. Participation through trade offers and the waiver wire is strongly 
+    encouraged but lack of participation is generally not grounds for removal unless you have become a clear detriment 
+    to your team, therefore effecting the integrity of the league.
+</p>
     
-    <h3 bind:this={sixTwo}>6.2 Replacing Managers</h3>
-    <p>When it is determinded that a manager needs to be replaced, the League Leaders will try to find a suitable candidate with some connection to at least a portion of the existing managers. Priority will be placed on managers who are eager to take on a dynasty commitment and will be very active within the league.</p>
+<h3 bind:this={sevenTwo}>7.2 Replacing Managers</h3>
+<p>
+    When it is determinded that a manager needs to be replaced, the League Leaders will try to find a 
+    suitable candidate with some connection to at least a portion of the existing managers. 
+    Priority will be placed on managers who are eager to take on a dynasty commitment and will be very 
+    active within the league.
+</p>
     
-    <h3 bind:this={sixThree}>6.3 Replacement Incentive</h3>
-    <p>In the event that a manager chooses to quit the league or is removed by the league leaders, they will be charged a $25 exit fee so the incoming manager is offered a 50% reductioon on their first year buy-in.</p>
+<h3 bind:this={sevenThree}>7.3 Replacement Incentive</h3>
+<p>
+    In the event that a manager chooses to quit the league or is removed by the league leaders, they will 
+    be charged a $25 exit fee so the incoming manager is offered a 50% reductioon on their first year buy-in.
+</p>
 
-    <h2 class="sectionHeading" bind:this={seven}>Section 7 League Finances</h2>
+    <<h2 class="sectionHeading" bind:this={eight}>Section 8 League Finances</h2>
     
-    <h3 bind:this={sevenOne}>7.1 League Dues</h3>
-    <p>League dues are set at $50. Dues are collected by league commisioner via means best to the managers. League dues should be paid no later than week 1 of the fantasy season and/or as the commissioner sees fit.</p>
-    <p>If the league coffers do not have enough money to cover the winnings, it is the league commissioners sole resposibility to make up the difference.<p>
+<h3 bind:this={eightOne}>8.1 League Dues</h3>
+<p>
+    League dues are set at $50. Dues are collected by the league commissioner via means
+    best to the managers. League dues should be paid no later than week 1 of the fantasy
+    season and/or as the commissioner sees fit.
+</p>
+<p>
+    If the league coffers do not have enough money to cover the winnings, it is the league
+    commissioner's sole responsibility to make up the difference.
+</p>
     
-    <h3 bind:this={sevenTwo}>7.2 Payout</h3>
-    <p>League payout is structured as follows:</p>
-    <ul>
-        <li>1st place: $300</li>
-        <li>2nd place: $200</li>
-        <li>3rd place: $100</li>
-    </ul>
-    <p>In the event that a new manager is added and given 50% off on their entry fee, the departing manager will be asked to pay a 50% exit fee to cover the discount. If the former manager refuses, then League Leaders will make up the difference. In the case of the new manager winning first or second, and the exiting manager refused to pay the exit fee, the new manager's winning will be be reduced by 50% of the league due to cover the accrued cost of the league leaders. In the case of the new manager does not win any money their first year, league leaders will forfiet right to collect the 50% due accrued for that season.</p>
+<h3 bind:this={eightTwo}>8.2 Payout</h3>
+<p>League payout is structured as follows:</p>
+<ul>
+    <li>1st place: $300</li>
+    <li>2nd place: $200</li>
+    <li>3rd place: $100</li>
+</ul>
+<p>
+    In the event that a new manager is added and given 50% off on their entry fee, the
+    departing manager will be asked to pay a 50% exit fee to cover the discount. If the
+    former manager refuses, League Leaders will make up the difference. If the new manager
+    finishes first or second and the exiting manager refused to pay the exit fee, the new
+    manager’s winnings will be reduced by 50% of the league dues to cover the accrued cost.
+    If the new manager does not win any money their first year, League Leaders will forfeit
+    the right to collect the accrued 50% dues for that season.
+</p>
     
-    <h3 bind:this={sevenThree}>7.3 Raising Dues</h3>
-    <p>A 3/4th majority of managers (9) is needed to approve a raise league dues. In the event that a manager is no longer financially comfortable with the buy-in, finding a co-manager to split the cost is reccomended.</p>
- 
+<h3 bind:this={eightThree}>8.3 Raising Dues</h3>
+<p>
+    A 3/4 majority of managers (9) is required to approve an increase in league dues. If a
+    manager is no longer financially comfortable with the buy-in, finding a co-manager to
+    split the cost is recommended.
+</p>
+
 </div>
