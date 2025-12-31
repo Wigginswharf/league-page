@@ -18,22 +18,25 @@
   };
 </script>
 
-h1 {
-  font-size: clamp(1.4rem, 2.5vw + 0.75rem, 2.1rem);
-  line-height: 1.15;
-  text-align: center;
-  margin: 1.25em 0 0.75em;
-}
+<style>
+  h1 {
+    font-size: clamp(1.4rem, 2.5vw + 0.75rem, 2.1rem);
+    line-height: 1.15;
+    text-align: center;
+    margin: 1.25em 0 0.75em;
+  }
 
-h2 {
-  font-size: clamp(1.1rem, 1.5vw + 0.6rem, 1.6rem);
-  line-height: 1.2;
-}
+  h2 {
+    font-size: clamp(1.1rem, 1.5vw + 0.6rem, 1.6rem);
+    line-height: 1.2;
+  }
 
-h3 {
-  font-size: clamp(1.0rem, 1.0vw + 0.65rem, 1.3rem);
-  line-height: 1.2;
-}
+  h3 {
+    font-size: clamp(1.0rem, 1.0vw + 0.65rem, 1.3rem);
+    line-height: 1.2;
+  }
+</style>
+
 
 <div class="constitution">
   <h1 class="noUnderscore">A CHAMPION AND 11 LOSERS DYNASTY LEAGUE CONSTITUTION</h1>
