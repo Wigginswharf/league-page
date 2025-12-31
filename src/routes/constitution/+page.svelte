@@ -29,6 +29,10 @@
   h2 {
     font-size: clamp(1.1rem, 1.5vw + 0.6rem, 1.6rem);
     line-height: 1.2;
+.sectionHeading {
+  text-align: center;
+}
+
   }
 
   h3 {
