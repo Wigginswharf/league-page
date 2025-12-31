@@ -26,14 +26,15 @@
     margin: 1.25em 0 0.75em;
   }
 
-  h2 {
-    font-size: clamp(1.1rem, 1.5vw + 0.6rem, 1.6rem);
-    line-height: 1.2;
+ h2 {
+  font-size: clamp(1.1rem, 1.5vw + 0.6rem, 1.6rem);
+  line-height: 1.2;
+}
+
 .sectionHeading {
   text-align: center;
 }
 
-  }
 
   h3 {
     font-size: clamp(1.0rem, 1.0vw + 0.65rem, 1.3rem);
