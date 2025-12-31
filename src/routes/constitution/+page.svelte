@@ -85,6 +85,10 @@
     <li><strong>Commissioner:</strong> Casey Harvey</li>
     <li><strong>Vice Commissioner:</strong> Frank Bartley</li>
     <li><strong>President of League Engagement:</strong> Brandon Miller</li>
+    <li><strong>League Representative:</strong> Wesley Anderson</li>
+            <li>Alternate: Kevin Wilson</li>
+
+
   </ul>
   <p>Leadership roles persist year to year unless changed by resignation, removal, or league vote as outlined below.</p>
 
@@ -95,7 +99,7 @@
   <p>A League Leader may be removed by agreement of the other two League Leaders. Alternatively, the league may call for a vote to remove a League Leader; such a vote requires approval by a three‑quarters majority of league managers. Any removed leader relinquishes all authority immediately upon removal.</p>
 
   <h3 class="subSectionHeading" bind:this={oneFour}>1.4 Conflict of Interest</h3>
-  <p>If a League Leader is directly involved in a matter requiring review or enforcement, that individual must recuse themselves from the decision‑making process. In such cases, remaining leadership will assume responsibility according to the established authority order.</p>
+  <p>If a League Leader is directly involved in a matter requiring review or enforcement, that individual must recuse themselves from the decision‑making process. In such cases, remaining leadership will assume responsibility according to the established authority order. If the remaining league leaders can not come to an agreement or are unavailable, the league representative will be brought in to resolve the matter.</p>
 
   <!-- Section 2 Body -->
   <h2 class="sectionHeading" bind:this={two}>Section 2 Roster Breakdown</h2>
@@ -114,7 +118,7 @@
     <li>D/ST</li>
     <li>K</li>
   </ul>
-  <p>Teams will have 20 bench spots. A league vote of seven managers or more is required to expand the bench by one additional spot. At the conclusion of the fantasy season, all IR spots will convert to bench spots, expanding the active roster to 34 players. These additional bench spots will revert back to IR spots on the Monday prior to the start of the NFL regular season.</p>
+  <p>Teams will have 20 bench spots. A league majority of two thirds (8) or more is required to expand the bench by one additional spot. After the champion is crowned, free agency will be locked and all IR spots will convert to bench spots, expanding the active roster to 34 players. These additional bench spots will revert back to IR spots on the Monday prior to the start of the NFL regular season.</p>
   <p>Each team will have four IR spots during the fantasy season. Players listed as questionable or holding out are not eligible for IR placement.</p>
 
   <h4 bind:this={twoOneOne}>2.1.1 Position Maximums</h4>
@@ -124,7 +128,7 @@
 
   <h3 class="subSectionHeading" bind:this={twoTwo}>2.2 Trading</h3>
   <p>Trading of players, draft picks up to three future drafts, and FAAB dollars is permitted. During the offseason, trades will process after two days. During the fantasy season, trades will process after one day.</p>
-  <p>During the processing period, managers may vote to request a trade review for potential collusion. Five votes are required to trigger a leadership review. League Leadership reserves the right to review any trade at their discretion, regardless of whether a vote is triggered.</p>
+  <p>During the processing period, managers may vote on the sleeper platform to request a trade review for potential collusion and/or overt value disparagy. Five votes are required to trigger a leadership review. League Leadership reserves the right to review any trade at their discretion, regardless of whether a vote is triggered.</p>
   <p>If a member of League Leadership is involved in a trade under review, that individual will recuse themselves. In such cases, the League Representative or their designated alternate will assume review responsibilities for that trade.</p>
   <p>If a trade must be processed urgently due to timing constraints related to kickoff or draft progression, League Leadership or the League Representative may expedite review and rule to approve or veto the trade.</p>
 
@@ -144,7 +148,7 @@
 
   <h4 bind:this={twoTwoTwo}>2.2.2 Lending Players Prohibition</h4>
   <div class="subBlock">
-    <p>Any player traded during the fantasy season may not be reacquired by the original team within four weeks of the trade. Exceptions may apply if roster health has materially changed and compensation differs. Violations are subject to collusion penalties.</p>
+    <p>Any player traded during the fantasy season may not be reacquired by the original team within four weeks of the trade. Exceptions may apply if roster health has materially changed and compensation differs. Final determination of exceptions rests with League Leadership. Violations are subject to collusion penalties.</p>
   </div>
 
   <h4 bind:this={twoTwoThree}>2.2.3 Trade Deadline</h4>
@@ -164,7 +168,7 @@
 
   <h3 bind:this={twoThree}>2.3 Waiver Wire</h3>
   <p>The league uses a FAAB waiver system. Each team begins the fantasy season with one hundred FAAB dollars. Zero‑dollar bids are permitted. Waivers process daily at 3:00 AM EST, except on Tuesdays and Fridays.</p>
-  <p>FAAB budgets reset when the league transitions into the new year for the End of Season Free Agent Extravaganza. Following this period, FAAB budgets reset again to one hundred dollars for the upcoming fantasy season.</p>
+  <p>FAAB budgets reset when the league transitions into the new year for the End of Season Free Agent Extravaganza. This is a one and only free agent waiver run prior to our league draft. Following this period, FAAB budgets reset again to one hundred dollars for the upcoming fantasy season, and free agency does not open again until after the league's rookie draft.</p>
 
   <!-- Section 3 Body -->
   <h2 class="sectionHeading" bind:this={three}>Section 3 Drafting</h2>
@@ -216,7 +220,7 @@
   <!-- Section 7 Body -->
   <h2 class="sectionHeading" bind:this={seven}>Section 7 Replacing Managers</h2>
   <h3 bind:this={sevenOne}>7.1 Removing Managers</h3>
-  <p>Short of continuously failing to set a valid lineup or confirmed collusion, no manager can be removed against their will without a league vote. Participation through trade offers and the waiver wire is strongly encouraged, but lack of participation is generally not grounds for removal unless you have become a clear detriment to your team, thereby affecting the integrity of the league.</p>
+  <p>Short of continuously failing to set a valid lineup or confirmed collusion, no manager can be removed against their will without a league vote. Participation through trade offers and the waiver wire is strongly encouraged, but lack of participation is generally not grounds for removal unless you have become a clear detriment to your team, thereby affecting the integrity of the league. If a member of leadership has attempted and failed to make contact with a manager multiple times, this would be considered league abandonment and a replacement manager would be found to take their place. The removed manager would receive no refund of any dues paid.</p>
   <h3 bind:this={sevenTwo}>7.2 Replacing Managers</h3>
   <p>When it is determined that a manager needs to be replaced, the League Leaders will try to find a suitable candidate with some connection to at least a portion of the existing managers. Priority will be placed on managers who are eager to take on a dynasty commitment and will be very active within the league.</p>
   <h3 bind:this={sevenThree}>7.3 Replacement Incentive</h3>
