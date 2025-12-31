@@ -128,7 +128,7 @@
 
   <h3 class="subSectionHeading" bind:this={twoTwo}>2.2 Trading</h3>
   <p>Trading of players, draft picks up to three future drafts, and FAAB dollars is permitted. During the offseason, trades will process after two days. During the fantasy season, trades will process after one day.</p>
-  <p>During the processing period, managers may vote on the sleeper platform to request a trade review for potential collusion and/or overt value disparagy. Five votes are required to trigger a leadership review. League Leadership reserves the right to review any trade at their discretion, regardless of whether a vote is triggered.</p>
+  <p>During the processing period, managers may vote on the sleeper platform to request a trade review for potential collusion and/or overt value disparity. Five votes are required to trigger a leadership review. League Leadership reserves the right to review any trade at their discretion, regardless of whether a vote is triggered.</p>
   <p>If a member of League Leadership is involved in a trade under review, that individual will recuse themselves. In such cases, the League Representative or their designated alternate will assume review responsibilities for that trade.</p>
   <p>If a trade must be processed urgently due to timing constraints related to kickoff or draft progression, League Leadership or the League Representative may expedite review and rule to approve or veto the trade.</p>
 
