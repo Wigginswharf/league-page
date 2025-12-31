@@ -19,14 +19,14 @@
 </script>
 
 <style>
-  h1 {
-    font-size: clamp(1.4rem, 2.5vw + 0.75rem, 2.1rem);
-    line-height: 1.15;
-    text-align: center;
-    margin: 1.25em 0 0.75em;
-  }
+ h1 {
+  font-size: clamp(1.4rem, 2.5vw + 0.75rem, 2.1rem);
+  line-height: 1.15;
+  text-align: center;
+  margin: 1.25em 0 0.75em;
+}
 
- h2 {
+h2 {
   font-size: clamp(1.1rem, 1.5vw + 0.6rem, 1.6rem);
   line-height: 1.2;
 }
@@ -35,20 +35,28 @@
   text-align: center;
 }
 
+h3 {
+  font-size: clamp(1.0rem, 1.0vw + 0.65rem, 1.3rem);
+  line-height: 1.2;
+}
 
-  h3 {
-    font-size: clamp(1.0rem, 1.0vw + 0.65rem, 1.3rem);
-    line-height: 1.2;
-  }
-  h4 {
+h4 {
   font-size: clamp(0.95rem, 0.9vw + 0.5rem, 1.15rem);
   line-height: 1.2;
-  }
+}
 
-  h5 {
+h5 {
   font-size: clamp(0.85rem, 0.7vw + 0.45rem, 1.0rem);
   line-height: 1.2;
-  }
+}
+
+/* ⬇️ ADD THIS */
+.constitution {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
 
 </style>
 
