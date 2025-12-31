@@ -19,7 +19,7 @@
 </script>
 
 <style>
- h1 {
+h1 {
   font-size: clamp(1.4rem, 2.5vw + 0.75rem, 2.1rem);
   line-height: 1.15;
   text-align: center;
@@ -31,8 +31,28 @@ h2 {
   line-height: 1.2;
 }
 
+/* Section titles */
 .sectionHeading {
   text-align: center;
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+/* Soft visual divider under section titles */
+.sectionHeading::after {
+  content: "";
+  display: block;
+  width: 70%;
+  max-width: 400px;
+  height: 2px;
+  margin: 1rem auto 0;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(0, 0, 0, 0.2),
+    transparent
+  );
 }
 
 h3 {
@@ -50,12 +70,13 @@ h5 {
   line-height: 1.2;
 }
 
-/* ⬇️ ADD THIS */
+/* Content container */
 .constitution {
   max-width: 900px;
   margin: 0 auto;
   padding: 0 1.25rem;
 }
+
 
 
 </style>
