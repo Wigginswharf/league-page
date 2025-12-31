@@ -35,6 +35,16 @@
     font-size: clamp(1.0rem, 1.0vw + 0.65rem, 1.3rem);
     line-height: 1.2;
   }
+  h4 {
+  font-size: clamp(0.95rem, 0.9vw + 0.5rem, 1.15rem);
+  line-height: 1.2;
+  }
+
+  h5 {
+  font-size: clamp(0.85rem, 0.7vw + 0.45rem, 1.0rem);
+  line-height: 1.2;
+  }
+
 </style>
 
 
