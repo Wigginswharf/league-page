@@ -77,6 +77,22 @@ h5 {
   padding: 0 1.25rem;
 }
 
+ .sectionHeading {
+  text-align: center;
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+/* HARD divider before every section */
+.sectionHeading::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+  margin: 0 auto 2rem;
+}
 
 
 </style>
@@ -136,23 +152,7 @@ h5 {
   <h4 class="noUnderscore clickable" on:click={() => goToSection(eightTwo)}>8.2 Payout</h4>
   <h4 class="noUnderscore clickable" on:click={() => goToSection(eightThree)}>8.3 Raising Dues</h4>
 
-  .sectionHeading {
-  text-align: center;
-  margin-top: 4rem;
-  margin-bottom: 2rem;
-  position: relative;
-}
-
-/* HARD divider before every section */
-.sectionHeading::before {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 2px;
-  background-color: #000;
-  margin: 0 auto 2rem;
-}
-
+ 
 
   <!-- Section 1 Body -->
   <h2 class="sectionHeading" bind:this={one}>Section 1 League Leadership</h2>
