@@ -20,6 +20,12 @@ const ordinal = (rank) => {
     return `${rank}th`;
 };
 
+const formatPlayerNames = (names) => {
+    if(names.length <= 1) return names[0] || 'its best young players';
+    if(names.length === 2) return `${names[0]} and ${names[1]}`;
+    return `${names.slice(0, -1).join(', ')}, and ${names.at(-1)}`;
+};
+
 const rankTeams = (teams, field) => {
     [...teams]
         .sort((a, b) => b[field] - a[field])
@@ -129,6 +135,8 @@ export async function GET() {
             .filter((entry) => entry.player?.sleeperId)
             .map((entry) => [String(entry.player.sleeperId), {
                 id: String(entry.player.sleeperId),
+                name: entry.player.name,
+                age: Number(entry.player.maybeAge || 0),
                 position: entry.player.position,
                 dynastyValue: Number(entry.value || 0),
                 redraftValue: Number(entry.redraftValue || 0),
@@ -155,6 +163,18 @@ export async function GET() {
             playerAssets: Math.round(dynastyPlayerValue),
             draftAssets: draftAssetValue,
             futureStrength: Math.round(dynastyPlayerValue + draftAssetValue),
+            cornerstones: [...playerValues]
+                .sort((a, b) => b.dynastyValue - a.dynastyValue)
+                .slice(0, 3)
+                .map((player) => player.name),
+            youngCornerstones: [...playerValues]
+                .filter((player) => player.age && player.age <= 25.5)
+                .sort((a, b) => b.dynastyValue - a.dynastyValue)
+                .slice(0, 2)
+                .map((player) => player.name),
+            veteranTradeCandidate: [...playerValues]
+                .filter((player) => player.age >= 29 && player.position !== 'QB')
+                .sort((a, b) => b.dynastyValue - a.dynastyValue)[0]?.name || null,
         };
     });
 
@@ -190,28 +210,31 @@ export async function GET() {
             category = 'Retooling';
         }
 
-        const playerAssetsText = team.playerAssetsRank <= 4
-            ? ' The player core is one of the league’s strongest and gives the manager real difference-makers to build around.'
-            : team.playerAssetsRank <= 8
-                ? ' The player core is solid, but adding another dependable difference-maker would raise this team’s ceiling.'
-                : ' The player core still needs more young, dependable building blocks before this team can feel settled.';
+        const cornerstoneNames = formatPlayerNames(team.cornerstones);
+        const youngCornerstoneNames = formatPlayerNames(team.youngCornerstones);
         const draftAssetsText = team.draftAssetsRank <= 4
-            ? ' A healthy supply of draft picks creates options to trade for help or keep building patiently.'
+            ? ' There are enough draft picks available to stay patient or make a move when the right player becomes available.'
             : team.draftAssetsRank <= 8
-                ? ' The draft cupboard is steady, though it may not be deep enough to fix every weakness on its own.'
-                : ' With limited draft capital, smart trades, waiver moves, and player development will matter more than usual.';
+                ? ' The pick supply is workable, but the manager should be selective about spending it.'
+                : ' The pick cupboard is light, so another future pick should only be moved for someone who clearly changes this team’s outlook.';
         const championText = team.defendingChampion
-            ? ' Winning last season also shows this group can finish the job when it matters.'
+            ? ' This group has already shown it can finish the job by winning last season.'
             : '';
         let overview;
         if(category === 'Elite Contender') {
-            overview = `This team is built to chase a championship right now. It can win without everything breaking perfectly, so the goal should be strengthening the edges without disrupting what already works.${playerAssetsText}${draftAssetsText}${championText}`;
+            overview = `${cornerstoneNames} give this roster the star power to chase a championship right now. The manager should protect that foundation and focus on dependable depth instead of making a major shake-up.${draftAssetsText}${championText}`;
         } else if(category === 'Contender') {
-            overview = `This team belongs in the playoff conversation and has a real path to a title. One more dependable starter or a little extra depth could turn a good team into a serious championship threat.${playerAssetsText}${draftAssetsText}${championText}`;
+            overview = `${cornerstoneNames} give this roster a real path to the playoffs. This team does not need an overhaul, but one more weekly starter or a little extra depth could turn it into a serious title threat.${draftAssetsText}${championText}`;
         } else if(category === 'Rebuilding') {
-            overview = `This team is still laying its foundation. The priority should be collecting young players, staying patient, and avoiding short-term moves that sacrifice the next competitive window.${playerAssetsText}${draftAssetsText}${championText}`;
+            const veteranDecision = team.veteranTradeCandidate
+                ? ` ${team.veteranTradeCandidate} can still help a contender, so the manager should listen if someone offers a useful pick or a younger player.`
+                : '';
+            overview = `${youngCornerstoneNames} are the young players this manager should be patient with. The rest of the roster needs time, so chasing short-term wins would only delay the rebuild.${veteranDecision}${draftAssetsText}${championText}`;
         } else {
-            overview = `This team is caught between pushing for a title and starting over. A few focused moves could point it toward contention, so a full teardown is not necessary.${playerAssetsText}${draftAssetsText}${championText}`;
+            const veteranDecision = team.veteranTradeCandidate
+                ? ` If the team starts slowly, ${team.veteranTradeCandidate} is the veteran to consider shopping before the trade market cools.`
+                : ' The manager should keep the main pieces together and look for one or two starters who can make the team steadier each week.';
+            overview = `${cornerstoneNames} are good enough reasons not to tear this roster down.${veteranDecision}${draftAssetsText}${championText}`;
         }
 
         directions[team.rosterID] = {
