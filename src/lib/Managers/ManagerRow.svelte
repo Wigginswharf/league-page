@@ -218,10 +218,6 @@
         }
     }
 
-    .question {
-        background-color: #fff;
-    }
-
     .rivalSlot {
         position: relative;
     }
@@ -319,47 +315,33 @@
     <div class="spacer" />
     <div class="info">
         <!-- Favorite team (optional) -->
-        <div class="infoSlot infoTeam">
-            {#if manager.favoriteTeam}
+        {#if manager.favoriteTeam}
+            <div class="infoSlot infoTeam">
                 <div class="infoIcon">
                     <img class="infoImg" src="https://sleepercdn.com/images/team_logos/nfl/{manager.favoriteTeam}.png" alt="favorite team"/>
                 </div>
-            {:else}
-                <div class="infoIcon question">
-                    <img class="infoImg" src="/managers/question.jpg" alt="favorite team"/>
-                </div>
-            {/if}
-        </div>
+            </div>
+        {/if}
         <!-- Preferred contact -->
-        <div class="infoSlot">
-            {#if manager.preferredContact}
+        {#if manager.preferredContact}
+            <div class="infoSlot">
                 <div class="infoIcon">
                     <img class="infoImg" src="/{manager.preferredContact}.png" alt="{manager.preferredContact}"/>
                 </div>
                 <div class="infoAnswer">
                     {manager.preferredContact}
                 </div>
-            {:else}
-                <div class="infoIcon question">
-                    <img class="infoImg" src="/managers/question.jpg" alt="favorite team"/>
-                </div>
-            {/if}
-        </div>
+            </div>
+        {/if}
         <!-- Rebuild mode (optional and only displayed for dynasty leagues) -->
-        {#if dynasty}
+        {#if dynasty && manager.mode}
             <div class="infoSlot infoRebuild">
-                {#if manager.mode}
-                    <div class="infoIcon">
-                        <img class="infoImg" src="/{manager.mode.replace(' ', '%20')}.png" alt="win now or rebuild"/>
-                    </div>
-                    <div class="infoAnswer">
-                        {manager.mode}
-                    </div>
-                {:else}
-                    <div class="infoIcon question">
-                        <img class="infoImg" src="/managers/question.jpg" alt="favorite team"/>
-                    </div>
-                {/if}
+                <div class="infoIcon">
+                    <img class="infoImg" src="/{manager.mode.replace(' ', '%20')}.png" alt="win now or rebuild"/>
+                </div>
+                <div class="infoAnswer">
+                    {manager.mode}
+                </div>
             </div>
         {/if}
         <!-- Featured rival -->
