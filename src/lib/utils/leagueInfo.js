@@ -38,8 +38,15 @@ export const managers = [
        "photo" : "/managers/Casey.jpg", // square ratio recommended (no larger than 500x500)
        "fantasyStart": null, // (optional) when did the manager start playing fantasy football
        "favoriteTeam" : "hou", // (optional) favorite NFL team, (follows convention: nyj, sea, mia, etc.) MUST BE LOWERCASE
-       "mode": 'Dynasty', // (optional) 'Win Now', 'Dynasty', or 'Rebuild' (anything else and you will need to add a new png to /static/ similar to the 'Rebuild.png' and 'Win Now.png' currently in there)
-       "rival": null, 
+       "mode": 'Win Now', // broad roster mode used by the existing site artwork
+       "direction": 'Elite Contender',
+       "rival": {
+         "name": "Wesley",
+         "link": 4,
+         "image": "/managers/Wesley.jpg",
+         "record": "Casey leads 5–4",
+         "note": "Three meetings were decided by 10 points or fewer, including a 0.22-point finish."
+       },
        "favoritePlayer": null, // (optional) this corresponds to the Sleeper player ID (https://api.sleeper.app/v1/players/nfl)
        "valuePosition": null, // (optional) Favorite position (QB, WR, RB, TE, etc.)
        "rookieOrVets": null, // (optional) 'Rookies' or 'Vets' (anything else and you will need to add a new png to /static/ similar to the 'Rookies.png' and 'Vets.png' currently in there)
@@ -57,8 +64,15 @@ export const managers = [
        "photo" : "/managers/Frank.jpg", // square ratio recommended (no larger than 500x500)
        "fantasyStart": null, // (optional) when did the manager start playing fantasy football
        "favoriteTeam": "hou", // (optional) favorite NFL team, (follows convention: nyj, sea, mia, etc.) MUST BE LOWERCASE
-       "mode": 'Rebuild', // (optional) 'Win Now', 'Dynasty', or 'Rebuild' (anything else and you will need to add a new png to /static/ similar to the 'Rebuild.png' and 'Win Now.png' currently in there)
-       "rival": null, 
+       "mode": 'Rebuild', // broad roster mode used by the existing site artwork
+       "direction": 'Rebuild',
+       "rival": {
+         "name": "Josh",
+         "link": 7,
+         "image": "/managers/Josh.jpg",
+         "record": "Josh leads 5–2",
+         "note": "Four of seven meetings were decided by 10 points or fewer, including a 2.65-point 2023 semifinal."
+       },
        "favoritePlayer": null, // (optional) this corresponds to the Sleeper player ID (https://api.sleeper.app/v1/players/nfl)
        "valuePosition": null, // (optional) Favorite position (QB, WR, RB, TE, etc.)
        "rookieOrVets": null, // (optional) 'Rookies' or 'Vets' (anything else and you will need to add a new png to /static/ similar to the 'Rookies.png' and 'Vets.png' currently in there)
@@ -85,8 +99,15 @@ export const managers = [
        "photo" : "/managers/Brandon.jpg", // square ratio recommended (no larger than 500x500)
        "fantasyStart": null, // (optional) when did the manager start playing fantasy football
        "favoriteTeam" : "sf", // (optional) favorite NFL team, (follows convention: nyj, sea, mia, etc.) MUST BE LOWERCASE
-       "mode": 'Rebuild', // (optional) 'Win Now', 'Dynasty', or 'Rebuild' (anything else and you will need to add a new png to /static/ similar to the 'Rebuild.png' and 'Win Now.png' currently in there)
-       "rival": null, 
+       "mode": 'Dynasty', // broad roster mode used by the existing site artwork
+       "direction": 'Retooling Contender',
+       "rival": {
+         "name": "John",
+         "link": 6,
+         "image": "/managers/John.jpg",
+         "record": "Brandon leads 5–3",
+         "note": "Brandon won the 2021 and 2022 championships; John answered with a 2.95-point playoff win in 2024."
+       },
        "favoritePlayer": null, // (optional) this corresponds to the Sleeper player ID (https://api.sleeper.app/v1/players/nfl)
        "valuePosition": null, // (optional) Favorite position (QB, WR, RB, TE, etc.)
        "rookieOrVets": null, // (optional) 'Rookies' or 'Vets' (anything else and you will need to add a new png to /static/ similar to the 'Rookies.png' and 'Vets.png' currently in there)
@@ -104,8 +125,15 @@ export const managers = [
        "photo" : "/managers/Dustin.png", // square ratio recommended (no larger than 500x500)
        "fantasyStart": null, // (optional) when did the manager start playing fantasy football
        "favoriteTeam" : "lar", // (optional) favorite NFL team, (follows convention: nyj, sea, mia, etc.) MUST BE LOWERCASE
-       "mode": 'Win Now', // (optional) 'Win Now', 'Dynasty', or 'Rebuild' (anything else and you will need to add a new png to /static/ similar to the 'Rebuild.png' and 'Win Now.png' currently in there)
-       "rival": null, 
+       "mode": 'Dynasty', // broad roster mode used by the existing site artwork
+       "direction": 'Retooling, Older Window',
+       "rival": {
+         "name": "Tommy",
+         "link": 11,
+         "image": "/managers/Tommy.jpg",
+         "record": "Dustin leads 3–2",
+         "note": "A balanced, entirely recent five-game series with room to grow."
+       },
        "favoritePlayer": null, // (optional) this corresponds to the Sleeper player ID (https://api.sleeper.app/v1/players/nfl)
        "valuePosition": null, // (optional) Favorite position (QB, WR, RB, TE, etc.)
        "rookieOrVets": null, // (optional) 'Rookies' or 'Vets' (anything else and you will need to add a new png to /static/ similar to the 'Rookies.png' and 'Vets.png' currently in there)
@@ -123,8 +151,15 @@ export const managers = [
        "photo" : "/managers/Wesley.jpg", // square ratio recommended (no larger than 500x500)
        "fantasyStart": null, // (optional) when did the manager start playing fantasy football
        "favoriteTeam" : "pit", // (optional) favorite NFL team, (follows convention: nyj, sea, mia, etc.) MUST BE LOWERCASE
-       "mode": 'Rebuild', // (optional) 'Win Now', 'Dynasty', or 'Rebuild' (anything else and you will need to add a new png to /static/ similar to the 'Rebuild.png' and 'Win Now.png' currently in there)
-       "rival": null, 
+       "mode": 'Dynasty', // broad roster mode used by the existing site artwork
+       "direction": 'Retooling',
+       "rival": {
+         "name": "Casey",
+         "link": 0,
+         "image": "/managers/Casey.jpg",
+         "record": "Casey leads 5–4",
+         "note": "Three meetings were decided by 10 points or fewer, including a 0.22-point finish."
+       },
        "favoritePlayer": null, // (optional) this corresponds to the Sleeper player ID (https://api.sleeper.app/v1/players/nfl)
        "valuePosition": null, // (optional) Favorite position (QB, WR, RB, TE, etc.)
        "rookieOrVets": null, // (optional) 'Rookies' or 'Vets' (anything else and you will need to add a new png to /static/ similar to the 'Rookies.png' and 'Vets.png' currently in there)
@@ -142,8 +177,15 @@ export const managers = [
        "photo" : "/managers/Kevin.jpg", // square ratio recommended (no larger than 500x500)
        "fantasyStart": null, // (optional) when did the manager start playing fantasy football
        "favoriteTeam" : "det", // (optional) favorite NFL team, (follows convention: nyj, sea, mia, etc.) MUST BE LOWERCASE
-       "mode": 'Rebuild', // (optional) 'Win Now', 'Dynasty', or 'Rebuild' (anything else and you will need to add a new png to /static/ similar to the 'Rebuild.png' and 'Win Now.png' currently in there)
-       "rival": null, 
+       "mode": 'Dynasty', // broad roster mode used by the existing site artwork
+       "direction": 'Ascending Young Roster',
+       "rival": {
+         "name": "Jason",
+         "link": 8,
+         "image": "/managers/Jason.jpg",
+         "record": "Series tied 3–3",
+         "note": "Four consecutive regular-season meetings were decided by 21 points or fewer."
+       },
        "favoritePlayer": null, // (optional) this corresponds to the Sleeper player ID (https://api.sleeper.app/v1/players/nfl)
        "valuePosition": null, // (optional) Favorite position (QB, WR, RB, TE, etc.)
        "rookieOrVets": null, // (optional) 'Rookies' or 'Vets' (anything else and you will need to add a new png to /static/ similar to the 'Rookies.png' and 'Vets.png' currently in there)
@@ -161,8 +203,15 @@ export const managers = [
        "photo" : "/managers/John.jpg", // square ratio recommended (no larger than 500x500)
        "fantasyStart": null, // (optional) when did the manager start playing fantasy football
        "favoriteTeam" : "dal", // (optional) favorite NFL team, (follows convention: nyj, sea, mia, etc.) MUST BE LOWERCASE
-       "mode": 'Dynasty', // (optional) 'Win Now', 'Dynasty', or 'Rebuild' (anything else and you will need to add a new png to /static/ similar to the 'Rebuild.png' and 'Win Now.png' currently in there)
-       "rival": null, 
+       "mode": 'Win Now', // broad roster mode used by the existing site artwork
+       "direction": 'Contender, Aging Window',
+       "rival": {
+         "name": "Brandon",
+         "link": 2,
+         "image": "/managers/Brandon.jpg",
+         "record": "Brandon leads 5–3",
+         "note": "Brandon won the 2021 and 2022 championships; John answered with a 2.95-point playoff win in 2024."
+       },
        "favoritePlayer": null, // (optional) this corresponds to the Sleeper player ID (https://api.sleeper.app/v1/players/nfl)
        "valuePosition": null, // (optional) Favorite position (QB, WR, RB, TE, etc.)
        "rookieOrVets": null, // (optional) 'Rookies' or 'Vets' (anything else and you will need to add a new png to /static/ similar to the 'Rookies.png' and 'Vets.png' currently in there)
@@ -180,8 +229,15 @@ export const managers = [
        "photo" : "/managers/Josh.jpg", // square ratio recommended (no larger than 500x500)
        "fantasyStart": null, // (optional) when did the manager start playing fantasy football
        "favoriteTeam": "bal", // (optional) favorite NFL team, (follows convention: nyj, sea, mia, etc.) MUST BE LOWERCASE
-       "mode": 'Win Now', // (optional) 'Win Now', 'Dynasty', or 'Rebuild' (anything else and you will need to add a new png to /static/ similar to the 'Rebuild.png' and 'Win Now.png' currently in there)
-       "rival": null, 
+       "mode": 'Win Now', // broad roster mode used by the existing site artwork
+       "direction": 'Fringe Contender',
+       "rival": {
+         "name": "Frank",
+         "link": 1,
+         "image": "/managers/Frank.jpg",
+         "record": "Josh leads 5–2",
+         "note": "Four of seven meetings were decided by 10 points or fewer, including a 2.65-point 2023 semifinal."
+       },
        "favoritePlayer": null, // (optional) this corresponds to the Sleeper player ID (https://api.sleeper.app/v1/players/nfl)
        "valuePosition": null, // (optional) Favorite position (QB, WR, RB, TE, etc.)
        "rookieOrVets": null, // (optional) 'Rookies' or 'Vets' (anything else and you will need to add a new png to /static/ similar to the 'Rookies.png' and 'Vets.png' currently in there)
@@ -199,8 +255,15 @@ export const managers = [
        "photo" : "/managers/Jason.jpg", // square ratio recommended (no larger than 500x500)
        "fantasyStart": null, // (optional) when did the manager start playing fantasy football
        "favoriteTeam": "hou", // (optional) favorite NFL team, (follows convention: nyj, sea, mia, etc.) MUST BE LOWERCASE
-       "mode": 'Win Now', // (optional) 'Win Now', 'Dynasty', or 'Rebuild' (anything else and you will need to add a new png to /static/ similar to the 'Rebuild.png' and 'Win Now.png' currently in there)
-       "rival": null, 
+       "mode": 'Win Now', // broad roster mode used by the existing site artwork
+       "direction": 'Contender',
+       "rival": {
+         "name": "Kevin",
+         "link": 5,
+         "image": "/managers/Kevin.jpg",
+         "record": "Series tied 3–3",
+         "note": "Four consecutive regular-season meetings were decided by 21 points or fewer."
+       },
        "favoritePlayer": null, // (optional) this corresponds to the Sleeper player ID (https://api.sleeper.app/v1/players/nfl)
        "valuePosition": null, // (optional) Favorite position (QB, WR, RB, TE, etc.)
        "rookieOrVets": null, // (optional) 'Rookies' or 'Vets' (anything else and you will need to add a new png to /static/ similar to the 'Rookies.png' and 'Vets.png' currently in there)
@@ -218,8 +281,15 @@ export const managers = [
        "photo" : "/managers/Keller.jpg", // square ratio recommended (no larger than 500x500)
        "fantasyStart": null, // (optional) when did the manager start playing fantasy football
        "favoriteTeam": "phi", // (optional) favorite NFL team, (follows convention: nyj, sea, mia, etc.) MUST BE LOWERCASE
-       "mode": 'Rebuild', // (optional) 'Win Now', 'Dynasty', or 'Rebuild' (anything else and you will need to add a new png to /static/ similar to the 'Rebuild.png' and 'Win Now.png' currently in there)
-       "rival": null, 
+       "mode": 'Rebuild', // broad roster mode used by the existing site artwork
+       "direction": 'Deep Rebuild',
+       "rival": {
+         "name": "Brittany",
+         "link": 10,
+         "image": "/managers/Brittany.jpg",
+         "record": "Brittany leads 5–2",
+         "note": "Three meetings were decided by 10 points or fewer, with both managers earning close wins."
+       },
        "favoritePlayer": null, // (optional) this corresponds to the Sleeper player ID (https://api.sleeper.app/v1/players/nfl)
        "valuePosition": null, // (optional) Favorite position (QB, WR, RB, TE, etc.)
        "rookieOrVets": null, // (optional) 'Rookies' or 'Vets' (anything else and you will need to add a new png to /static/ similar to the 'Rookies.png' and 'Vets.png' currently in there)
@@ -237,8 +307,15 @@ export const managers = [
        "photo" : "/managers/Brittany.jpg", // square ratio recommended (no larger than 500x500)
        "fantasyStart": null, // (optional) when did the manager start playing fantasy football
        "favoriteTeam" : "ind", // (optional) favorite NFL team, (follows convention: nyj, sea, mia, etc.) MUST BE LOWERCASE
-       "mode": 'Rebuild', // (optional) 'Win Now', 'Dynasty', or 'Rebuild' (anything else and you will need to add a new png to /static/ similar to the 'Rebuild.png' and 'Win Now.png' currently in there)
-       "rival": null, 
+       "mode": 'Dynasty', // broad roster mode used by the existing site artwork
+       "direction": 'Fringe / Retooling',
+       "rival": {
+         "name": "Keller",
+         "link": 9,
+         "image": "/managers/Keller.jpg",
+         "record": "Brittany leads 5–2",
+         "note": "Three meetings were decided by 10 points or fewer, with both managers earning close wins."
+       },
        "favoritePlayer": null, // (optional) this corresponds to the Sleeper player ID (https://api.sleeper.app/v1/players/nfl)
        "valuePosition": null, // (optional) Favorite position (QB, WR, RB, TE, etc.)
        "rookieOrVets": null, // (optional) 'Rookies' or 'Vets' (anything else and you will need to add a new png to /static/ similar to the 'Rookies.png' and 'Vets.png' currently in there)
@@ -256,8 +333,15 @@ export const managers = [
        "photo" : "/managers/Tommy.jpg", // square ratio recommended (no larger than 500x500)
        "fantasyStart": null, // (optional) when did the manager start playing fantasy football
        "favoriteTeam" : "chi", // (optional) favorite NFL team, (follows convention: nyj, sea, mia, etc.) MUST BE LOWERCASE
-       "mode": 'Dynasty', // (optional) 'Win Now', 'Dynasty', or 'Rebuild' (anything else and you will need to add a new png to /static/ similar to the 'Rebuild.png' and 'Win Now.png' currently in there)
-       "rival": null, 
+       "mode": 'Dynasty', // broad roster mode used by the existing site artwork
+       "direction": 'Ascending Contender',
+       "rival": {
+         "name": "Dustin",
+         "link": 3,
+         "image": "/managers/Dustin.png",
+         "record": "Dustin leads 3–2",
+         "note": "A balanced, entirely recent five-game series with room to grow."
+       },
        "favoritePlayer": null, // (optional) this corresponds to the Sleeper player ID (https://api.sleeper.app/v1/players/nfl)
        "valuePosition": null, // (optional) Favorite position (QB, WR, RB, TE, etc.)
        "rookieOrVets": null, // (optional) 'Rookies' or 'Vets' (anything else and you will need to add a new png to /static/ similar to the 'Rookies.png' and 'Vets.png' currently in there)
