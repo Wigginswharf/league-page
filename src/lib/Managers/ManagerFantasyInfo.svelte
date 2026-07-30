@@ -1,8 +1,15 @@
 <script>
     import { goto } from "$app/navigation";
+    import TeamDirectionBadge from './TeamDirectionBadge.svelte';
 
 
-    export let viewManager, players;
+    export let viewManager, players, teamDirection = null;
+
+    $: displayedDirection = teamDirection || (
+        viewManager.direction
+            ? { category: viewManager.direction, summary: 'Approved fallback rating' }
+            : null
+    );
 
     const gotoRival = (rival) => {
         if(!rival) {
@@ -110,8 +117,18 @@
         line-height: 1.4em;
     }
 
-    .rebuildOrWin {
-        height: 70px;
+    .directionIcon {
+        border: 0;
+        overflow: visible;
+        background: transparent;
+    }
+
+    .directionSummary {
+        width: 150px;
+        margin: 0.65em -30px 0;
+        color: var(--g555);
+        font-size: 0.7em;
+        line-height: 1.35;
     }
 
     .valuePosition {
@@ -251,18 +268,27 @@
             </div>
         </div>
     {/if}
-    <!-- Rebuild Mod (optional) -->
-    {#if viewManager.mode}
+    <!-- Live team direction (falls back to the approved static rating) -->
+    {#if displayedDirection}
         <div class="infoSlot">
             <div class="infoLabel">
-                Win Now or Rebuild?
+                Team Direction
             </div>
-            <div class="infoIcon">
-                <img class="rebuildOrWin" src="/{viewManager.mode.replace(' ', '%20')}.png" alt="win now or rebuild"/>
+            <div class="infoIcon directionIcon">
+                <TeamDirectionBadge
+                    category={displayedDirection.category}
+                    summary={displayedDirection.summary}
+                    large
+                />
             </div>
             <div class="infoAnswer">
-                {viewManager.direction || viewManager.mode}
+                {displayedDirection.category}
             </div>
+            {#if displayedDirection.automated}
+                <div class="directionSummary">
+                    {displayedDirection.summary}
+                </div>
+            {/if}
         </div>
     {/if}
     <!-- Rival -->
