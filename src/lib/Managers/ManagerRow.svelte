@@ -221,6 +221,88 @@
     .question {
         background-color: #fff;
     }
+
+    .rivalSlot {
+        position: relative;
+    }
+
+    .rivalButton {
+        display: inline-flex;
+        height: 40px;
+        width: 40px;
+        padding: 0;
+        justify-content: center;
+        align-items: center;
+        border-radius: 100%;
+        border: 1px solid var(--ccc);
+        overflow: visible;
+        background-color: var(--fff);
+        cursor: pointer;
+    }
+
+    .rivalPhoto {
+        height: 100%;
+        width: 100%;
+        border-radius: 100%;
+        object-fit: cover;
+    }
+
+    .rivalTooltip {
+        position: absolute;
+        z-index: 10;
+        right: 0;
+        bottom: calc(100% + 10px);
+        width: 230px;
+        padding: 0.8em 1em;
+        border: 1px solid var(--ccc);
+        border-radius: 0.75em;
+        box-shadow: 0 4px 12px var(--bbb);
+        background: var(--fff);
+        color: var(--g555);
+        font-size: 0.8em;
+        line-height: 1.4em;
+        text-align: left;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(4px);
+        transition: opacity 0.15s ease, transform 0.15s ease, visibility 0.15s;
+        pointer-events: none;
+    }
+
+    .rivalTooltip strong {
+        display: block;
+        margin-bottom: 0.25em;
+        color: var(--blueOne);
+    }
+
+    .rivalSlot:hover .rivalTooltip,
+    .rivalSlot:focus-within .rivalTooltip {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    @media (max-width: 595px) {
+        .rivalButton {
+            height: 30px;
+            width: 30px;
+        }
+    }
+
+    @media (max-width: 475px) {
+        .rivalButton {
+            height: 25px;
+            width: 25px;
+        }
+
+        .rivalTooltip {
+            position: fixed;
+            right: 1em;
+            bottom: 1em;
+            left: 1em;
+            width: auto;
+        }
+    }
 </style>
 
 <div class="manager" style="{retired ? "background-image: url(/retired.png); background-color: var(--ddd)": ""}" on:click={() => goto(`/manager?manager=${key}`)}>
@@ -278,6 +360,25 @@
                         <img class="infoImg" src="/managers/question.jpg" alt="favorite team"/>
                     </div>
                 {/if}
+            </div>
+        {/if}
+        <!-- Featured rival -->
+        {#if manager.rival}
+            <div class="infoSlot rivalSlot">
+                <button
+                    class="rivalButton"
+                    type="button"
+                    aria-label="View {manager.rival.name}, featured rival"
+                    aria-describedby="rival-summary-{key}"
+                    on:click|stopPropagation={() => goto(`/manager?manager=${manager.rival.link}`)}
+                >
+                    <img class="rivalPhoto" src="{manager.rival.image}" alt="{manager.rival.name}" />
+                </button>
+                <div class="infoAnswer">Rival</div>
+                <div class="rivalTooltip" id="rival-summary-{key}" role="tooltip">
+                    <strong>{manager.rival.name} — {manager.rival.record}</strong>
+                    {manager.rival.note}
+                </div>
             </div>
         {/if}
     </div>
