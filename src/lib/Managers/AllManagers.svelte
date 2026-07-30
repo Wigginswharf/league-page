@@ -1,4 +1,5 @@
 <script>
+    import { onMount } from 'svelte';
     import { leagueName } from '$lib/utils/helper';
     import { getDatesActive } from '$lib/utils/helperFunctions/universalFunctions';
     import ManagerRow from './ManagerRow.svelte'
@@ -7,6 +8,19 @@
 
     let innerWidth;
     let showRetired = false;
+    let liveDirections = {};
+
+    onMount(async () => {
+        try {
+            const response = await fetch('/api/team-directions');
+            if(response.ok) {
+                const ratings = await response.json();
+                liveDirections = ratings.directions || {};
+            }
+        } catch(error) {
+            console.warn('Using approved fallback team directions', error);
+        }
+    });
 
     const managerEntries = managers.map((manager, key) => ({manager, key}));
     const activeManagers = managerEntries.filter(({manager}) => {
@@ -80,7 +94,12 @@
     <h2>{leagueName} Managers</h2>
     <div class="managerConstrained">
         {#each activeManagers as {manager, key}}
-            <ManagerRow {manager} {leagueTeamManagers} {key} />
+            <ManagerRow
+                {manager}
+                {leagueTeamManagers}
+                {key}
+                liveDirection={liveDirections[manager.roster]}
+            />
         {/each}
 
         {#if retiredManagers.length}
