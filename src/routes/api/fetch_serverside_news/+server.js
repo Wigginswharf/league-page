@@ -1,127 +1,131 @@
-import {XMLParser, XMLValidator} from 'fast-xml-parser';
-import { waitForAll } from '$lib/utils/helperFunctions/multiPromise';
-import { dynasty } from '$lib/utils/helper';
+import { XMLParser, XMLValidator } from 'fast-xml-parser';
 import { json } from '@sveltejs/kit';
 
-const FF_BALLERS= 'https://thefantasyfootballers.libsyn.com/fantasyfootball';
-const DYNASTY_LEAGUE= 'https://dynastyleaguefootball.com/feed/';
-const DYNASTY_NERDS= 'https://www.dynastynerds.com/feed/';
+const FEEDS = [
+    {
+        name: 'RotoWire',
+        url: 'https://www.rotowire.com/rss/news.php?sport=NFL',
+        focus: 'Fantasy',
+    },
+    {
+        name: 'Dynasty League Football',
+        url: 'https://dynastyleaguefootball.com/feed/',
+        focus: 'Dynasty',
+    },
+    {
+        name: 'Dynasty Nerds',
+        url: 'https://www.dynastynerds.com/feed/',
+        focus: 'Dynasty',
+    },
+    {
+        name: 'Fantasy Footballers',
+        url: 'https://thefantasyfootballers.libsyn.com/fantasyfootball',
+        focus: 'Fantasy',
+    },
+];
+
+const textValue = (value) => {
+    if(typeof value === 'string' || typeof value === 'number') return String(value);
+    if(Array.isArray(value)) return textValue(value[0]);
+    if(value && typeof value === 'object') return String(value['#text'] || value.href || '');
+    return '';
+};
+
+const cleanText = (value) => textValue(value)
+    .replace(/<script[\s\S]*?<\/script>/gi, ' ')
+    .replace(/<style[\s\S]*?<\/style>/gi, ' ')
+    .replace(/<[^>]+>/g, ' ')
+    .replace(/&nbsp;|&#160;/gi, ' ')
+    .replace(/&amp;/gi, '&')
+    .replace(/&quot;|&#34;/gi, '"')
+    .replace(/&#39;|&apos;/gi, "'")
+    .replace(/&hellip;|&#8230;/gi, '…')
+    .replace(/&#(\d+);/g, (_, code) => String.fromCharCode(Number(code)))
+    .replace(/\s+/g, ' ')
+    .replace(/Visit RotoWire\.com.*$/i, '')
+    .trim();
+
+const truncate = (value, length = 260) => {
+    if(value.length <= length) return value;
+    const shortened = value.slice(0, length + 1).replace(/\s+\S*$/, '');
+    return `${shortened}…`;
+};
+
+const categorize = (title, summary, focus) => {
+    const copy = `${title} ${summary}`.toLowerCase();
+    if(/injur|surgery|out for|questionable|doubtful|return from|recover|acl|hamstring|concussion|\b(foot|knee|ankle|shoulder|calf|groin)\b/.test(copy)) {
+        return 'Injuries';
+    }
+    if(/trade|traded|signs|signed|released|waived|claimed|extension|contract|joins|acquire|roster move/.test(copy)) {
+        return 'Moves';
+    }
+    if(focus === 'Dynasty' || /dynasty|rookie|prospect|devy|draft class|breakout|buy low|sell high/.test(copy)) {
+        return 'Dynasty';
+    }
+    return 'Player News';
+};
+
+const getLink = (item) => {
+    const link = item.link;
+    if(Array.isArray(link)) {
+        const alternate = link.find((entry) => entry?.rel === 'alternate') || link[0];
+        return textValue(alternate);
+    }
+    return textValue(link || item.guid);
+};
+
+const parseFeed = async (feed) => {
+    const response = await fetch(feed.url, {
+        headers: { 'user-agent': 'TommyAnd11LosersDynastyNews/1.0' },
+    });
+    if(!response.ok) throw new Error(`${feed.name} returned ${response.status}`);
+
+    const xml = await response.text();
+    if(XMLValidator.validate(xml) !== true) throw new Error(`${feed.name} returned invalid XML`);
+
+    const parsed = new XMLParser({ ignoreAttributes: false }).parse(xml);
+    const items = parsed.rss?.channel?.item || parsed.feed?.entry || [];
+    return (Array.isArray(items) ? items : [items]).slice(0, 18).map((item) => {
+        const title = cleanText(item.title);
+        const summary = truncate(cleanText(item.description || item.summary || item.content || item['content:encoded']));
+        const published = textValue(item.pubDate || item.published || item.updated || item['dc:date']);
+        const ts = Date.parse(published) || Date.now();
+        return {
+            id: `${feed.name}-${textValue(item.guid || item.id || getLink(item) || title)}`,
+            title,
+            summary,
+            link: getLink(item),
+            source: feed.name,
+            category: categorize(title, summary, feed.focus),
+            ts,
+        };
+    }).filter((article) => article.title && article.link);
+};
 
 export async function GET() {
-	const articles = [
-        getXMLArticles(FF_BALLERS, processFF),
-	];
-	if(dynasty) {
-		articles.push(getXMLArticles(DYNASTY_LEAGUE, processDynastyLeague));
-		articles.push(getXMLArticles(DYNASTY_NERDS, processDynastyNerds));
-	}
-    const responses = await waitForAll(...articles).catch((err) => { console.error(err); });
+    const results = await Promise.allSettled(FEEDS.map(parseFeed));
 
-	let finalArticles = [];
+    const seen = new Set();
+    const articles = results
+        .filter((result) => result.status === 'fulfilled')
+        .flatMap((result) => result.value)
+        .sort((a, b) => b.ts - a.ts)
+        .filter((article) => {
+            const key = article.title.toLowerCase().replace(/[^a-z0-9]/g, '');
+            if(seen.has(key)) return false;
+            seen.add(key);
+            return true;
+        })
+        .slice(0, 60);
 
-	for(const response of responses) {
-		finalArticles = [...finalArticles, ...response];
-	}
-
-    return json(finalArticles);
-}
-
-const getXMLArticles = async(url, callback) => {
-    const res = await fetch(url, {compress: true}).catch((err) => { console.error(err); });
-    const text = await res.text().catch((err) => { console.error(err); });
-
-    let xmlData;
-    if(XMLValidator.validate(text) === true){
-        const parser = new XMLParser();
-        xmlData = parser.parse(text);
-    }
-    
-    return callback(xmlData.rss.channel.item);
-}
-
-const processFF = (articles) => {
-	let finalArticles = [];
-	for(const article of articles.slice(0, 5)) {
-		const ts = Date.parse(article.pubDate);
-		const d = new Date(ts);
-		const date = stringDate(d);
-		const icon = 'newsIcons/ffballers.jpeg';
-		finalArticles.push({
-			title: article.title,
-			article: article.description,
-			link: article.link,
-			author: `Fantasy Footballers`,
-			ts,
-			date,
-			icon,
-		});
-	}
-	return finalArticles;
-}
-
-const processFTN = (rawArticles) => {
-	let finalArticles = [];
-	const items = rawArticles.items;
-	for(const article of items) {
-		// only grab important info
-		if(article.priority > 3) continue;
-		const ts = Date.parse(article.datetime);
-		const d = new Date(ts);
-		const date = stringDate(d);
-		const icon = 'newsIcons/ftn.png';
-		finalArticles.push({
-			title: article.short_text,
-			article: article.text,
-			link: `https://www.ftnfantasy.com/nfl${article.link}`,
-			author: `FTN Fantasy`,
-			ts,
-			date,
-			icon,
-		});
-	}
-	return finalArticles;
-}
-
-const processDynastyLeague = (articles) => {
-	let finalArticles = [];
-	for(const article of articles) {
-		const ts = Date.parse(article.pubDate);
-		const d = new Date(ts);
-		const date = stringDate(d);
-		const icon = 'newsIcons/dynastyLeague.png';
-		finalArticles.push({
-			title: article.title,
-			article: article.description,
-			link: article.link,
-			author: `Dynasty League Football`,
-			ts,
-			date,
-			icon,
-		});
-	}
-	return finalArticles;
-}
-
-const processDynastyNerds = (articles) => {
-	let finalArticles = [];
-	for(const article of articles) {
-		const ts = Date.parse(article.pubDate);
-		const d = new Date(ts);
-		const date = stringDate(d);
-		const icon = 'newsIcons/dynastyNerds.jpeg';
-		finalArticles.push({
-			title: article.title,
-			article: article.description,
-			link: article.link,
-			author: `Dynasty Nerds`,
-			ts,
-			date,
-			icon,
-		});
-	}
-	return finalArticles;
-}
-
-const stringDate = (d) => {
-	return `${d.getMonth()+1}/${d.getDate()}/${d.getFullYear()} ${d.getHours()}:${(d.getMinutes() < 10 ? '0' : '') + d.getMinutes()}`;
+    return json({
+        articles,
+        updatedAt: new Date().toISOString(),
+        sourcesOnline: results.filter((result) => result.status === 'fulfilled').length,
+        sourcesTotal: results.length,
+    }, {
+        headers: {
+            'cache-control': 'public, max-age=300, s-maxage=900, stale-while-revalidate=3600',
+        },
+    });
 }
