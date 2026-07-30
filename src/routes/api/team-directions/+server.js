@@ -190,18 +190,28 @@ export async function GET() {
             category = 'Retooling';
         }
 
+        const playerAssetsText = team.playerAssetsRank <= 4
+            ? ' The player core is one of the league’s strongest and gives the manager real difference-makers to build around.'
+            : team.playerAssetsRank <= 8
+                ? ' The player core is solid, but adding another dependable difference-maker would raise this team’s ceiling.'
+                : ' The player core still needs more young, dependable building blocks before this team can feel settled.';
+        const draftAssetsText = team.draftAssetsRank <= 4
+            ? ' A healthy supply of draft picks creates options to trade for help or keep building patiently.'
+            : team.draftAssetsRank <= 8
+                ? ' The draft cupboard is steady, though it may not be deep enough to fix every weakness on its own.'
+                : ' With limited draft capital, smart trades, waiver moves, and player development will matter more than usual.';
         const championText = team.defendingChampion
-            ? ' As the defending champion, it also has recent results supporting that grade.'
+            ? ' Winning last season also shows this group can finish the job when it matters.'
             : '';
         let overview;
         if(category === 'Elite Contender') {
-            overview = `This team earns Elite Contender status with the ${ordinal(team.currentStrengthRank)}-ranked weekly lineup and ${ordinal(team.futureStrengthRank)}-ranked overall asset base. Its player assets rank ${ordinal(team.playerAssetsRank)} and its draft assets rank ${ordinal(team.draftAssetsRank)}, giving it both immediate championship upside and a clear picture of its future flexibility.${championText}`;
+            overview = `This team is built to chase a championship right now. It can win without everything breaking perfectly, so the goal should be strengthening the edges without disrupting what already works.${playerAssetsText}${draftAssetsText}${championText}`;
         } else if(category === 'Contender') {
-            overview = `This team grades as a Contender behind the ${ordinal(team.currentStrengthRank)}-ranked weekly lineup and ${ordinal(team.futureStrengthRank)}-ranked overall asset base. Its ${ordinal(team.playerAssetsRank)}-ranked player assets and ${ordinal(team.draftAssetsRank)}-ranked draft assets keep it in the playoff race, though the profile falls short of the elite tier.${championText}`;
+            overview = `This team belongs in the playoff conversation and has a real path to a title. One more dependable starter or a little extra depth could turn a good team into a serious championship threat.${playerAssetsText}${draftAssetsText}${championText}`;
         } else if(category === 'Rebuilding') {
-            overview = `This team is classified as Rebuilding because its weekly lineup ranks ${ordinal(team.currentStrengthRank)} and its overall asset base ranks ${ordinal(team.futureStrengthRank)}. Player assets rank ${ordinal(team.playerAssetsRank)} and draft assets rank ${ordinal(team.draftAssetsRank)}, so adding young cornerstone players and draft capital should take priority over short-term wins.${championText}`;
+            overview = `This team is still laying its foundation. The priority should be collecting young players, staying patient, and avoiding short-term moves that sacrifice the next competitive window.${playerAssetsText}${draftAssetsText}${championText}`;
         } else {
-            overview = `This team sits in the Retooling tier with the ${ordinal(team.currentStrengthRank)}-ranked weekly lineup and ${ordinal(team.futureStrengthRank)}-ranked overall asset base. Its player assets rank ${ordinal(team.playerAssetsRank)} while its draft assets rank ${ordinal(team.draftAssetsRank)}, suggesting a targeted reshaping rather than a full rebuild.${championText}`;
+            overview = `This team is caught between pushing for a title and starting over. A few focused moves could point it toward contention, so a full teardown is not necessary.${playerAssetsText}${draftAssetsText}${championText}`;
         }
 
         directions[team.rosterID] = {
