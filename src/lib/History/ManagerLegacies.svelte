@@ -36,9 +36,9 @@
     sortDirection = key === "manager" ? "asc" : "desc";
   };
 
-  const compareLegacies = (a, b) => {
-    const aValue = sortValues[sortKey](a);
-    const bValue = sortValues[sortKey](b);
+  const compareLegacies = (a, b, activeSortKey, activeSortDirection) => {
+    const aValue = sortValues[activeSortKey](a);
+    const bValue = sortValues[activeSortKey](b);
     let comparison;
 
     if (typeof aValue === "string") {
@@ -50,14 +50,16 @@
     }
 
     if (comparison !== 0) {
-      return sortDirection === "asc" ? comparison : -comparison;
+      return activeSortDirection === "asc" ? comparison : -comparison;
     }
 
-    if (sortKey === "titles") {
+    if (activeSortKey === "titles") {
       for (const tieBreaker of ["finals", "playoffWins", "regularWins"]) {
         const tieComparison = a[tieBreaker] - b[tieBreaker];
         if (tieComparison !== 0) {
-          return sortDirection === "asc" ? tieComparison : -tieComparison;
+          return activeSortDirection === "asc"
+            ? tieComparison
+            : -tieComparison;
         }
       }
     }
@@ -67,7 +69,9 @@
     });
   };
 
-  $: sortedLegacies = [...legacies].sort(compareLegacies);
+  $: sortedLegacies = [...legacies].sort((a, b) =>
+    compareLegacies(a, b, sortKey, sortDirection),
+  );
 
   const ariaSort = (key) =>
     sortKey === key
