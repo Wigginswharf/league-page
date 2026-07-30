@@ -45,7 +45,7 @@
 
   $: coOwners =
     year && rosterID
-      ? leagueTeamManagers.teamManagersMap[year][rosterID].managers.length > 0
+      ? leagueTeamManagers.teamManagersMap[year][rosterID].managers.length > 1
       : roster.co_owners;
 
   $: commissioner = viewManager.managerID
@@ -166,7 +166,7 @@
           <Button
             disabled
             class="selectionButtons"
-            on:click={() => changeManager(parseInt(manager) - 1, true)}
+            onclick={() => changeManager(parseInt(manager) - 1, true)}
             variant="outlined"
           >
             <Label>Previous Manager</Label>
@@ -174,7 +174,7 @@
         {:else}
           <Button
             class="selectionButtons"
-            on:click={() => changeManager(parseInt(manager) - 1, true)}
+            onclick={() => changeManager(parseInt(manager) - 1, true)}
             variant="outlined"
           >
             <Label>Previous Manager</Label>
@@ -182,7 +182,7 @@
         {/if}
         <Button
           class="selectionButtons"
-          on:click={() => goto("/managers")}
+          onclick={() => goto("/managers")}
           variant="outlined"
         >
           <Label>All Managers</Label>
@@ -191,7 +191,7 @@
           <Button
             disabled
             class="selectionButtons"
-            on:click={() => changeManager(parseInt(manager) + 1, true)}
+            onclick={() => changeManager(parseInt(manager) + 1, true)}
             variant="outlined"
           >
             <Label>Next Manager</Label>
@@ -199,7 +199,7 @@
         {:else}
           <Button
             class="selectionButtons"
-            on:click={() => changeManager(parseInt(manager) + 1, true)}
+            onclick={() => changeManager(parseInt(manager) + 1, true)}
             variant="outlined"
           >
             <Label>Next Manager</Label>
@@ -283,7 +283,7 @@
         <Button
           disabled
           class="selectionButtons"
-          on:click={() => changeManager(parseInt(manager) - 1)}
+          onclick={() => changeManager(parseInt(manager) - 1)}
           variant="outlined"
         >
           <Label>Previous Manager</Label>
@@ -291,7 +291,7 @@
       {:else}
         <Button
           class="selectionButtons"
-          on:click={() => changeManager(parseInt(manager) - 1)}
+          onclick={() => changeManager(parseInt(manager) - 1)}
           variant="outlined"
         >
           <Label>Previous Manager</Label>
@@ -299,7 +299,7 @@
       {/if}
       <Button
         class="selectionButtons"
-        on:click={() => goto("/managers")}
+        onclick={() => goto("/managers")}
         variant="outlined"
       >
         <Label>All Managers</Label>
@@ -308,7 +308,7 @@
         <Button
           disabled
           class="selectionButtons"
-          on:click={() => changeManager(parseInt(manager) + 1)}
+          onclick={() => changeManager(parseInt(manager) + 1)}
           variant="outlined"
         >
           <Label>Next Manager</Label>
@@ -316,7 +316,7 @@
       {:else}
         <Button
           class="selectionButtons"
-          on:click={() => changeManager(parseInt(manager) + 1)}
+          onclick={() => changeManager(parseInt(manager) + 1)}
           variant="outlined"
         >
           <Label>Next Manager</Label>

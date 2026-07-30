@@ -160,7 +160,7 @@ const processRegularSeason = async ({rosters, leagueData, curSeason, week, regul
 		const data = matchupRes.json();
 		matchupsJsonPromises.push(data)
 		if (!matchupRes.ok) {
-			throw new Error(data);
+			console.error(data);
 		}
 	}
 	const matchupsData = await waitForAll(...matchupsJsonPromises).catch((err) => { console.error(err); });
@@ -323,7 +323,11 @@ const processMatchups = ({matchupWeek, seasonPointsRecord, record, startWeek, ma
 		const matchup = matchups[matchupKey];
 		let home = matchup[0];
 		let away = matchup[1];
-		if(matchup[0].fpts < matchup[1].fpts) {
+
+        // if there are no teams or only one, continue
+        if(!away || !home) continue;
+        
+		if(home.fpts < away.fpts) {
 			home = matchup[1];
 			away = matchup[0];
 		}
@@ -398,6 +402,7 @@ const processPlayoffs = async ({curSeason, playoffRecords, year, week, rosters})
 		const fptsPerGame = round(pSD.fptsFor / (pSD.wins + pSD.losses + pSD.ties));
 		pSD.fptsPerGame = fptsPerGame;
 		pSD.year = year;
+		pSD.rosterID = rosterID;
 
 		// add season long points entry
 		playoffRecords.addSeasonLongPoints({
@@ -461,7 +466,6 @@ const digestBracket = ({bracket, playoffRecords, playoffRounds, matchupDifferent
 
 		postSeasonData = meshPostSeasonData(postSeasonData, pSD);
 
-		postSeasonData = meshPostSeasonData(postSeasonData, pSD);
 		seasonPointsRecord = sPR;
 		matchupDifferentials = mD;
 	}

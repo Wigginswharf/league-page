@@ -1,17 +1,15 @@
-import parser from 'fast-xml-parser';
+import {XMLParser, XMLValidator} from 'fast-xml-parser';
 import { waitForAll } from '$lib/utils/helperFunctions/multiPromise';
 import { dynasty } from '$lib/utils/helper';
 import { json } from '@sveltejs/kit';
 
 const FF_BALLERS= 'https://thefantasyfootballers.libsyn.com/fantasyfootball';
-const FTN_NEWS= 'https://www.ftnfantasy.com/content/news?type=news&sport=nfl&limit=30';
 const DYNASTY_LEAGUE= 'https://dynastyleaguefootball.com/feed/';
 const DYNASTY_NERDS= 'https://www.dynastynerds.com/feed/';
 
 export async function GET() {
 	const articles = [
         getXMLArticles(FF_BALLERS, processFF),
-        getJSONArticles(FTN_NEWS, processFTN),
 	];
 	if(dynasty) {
 		articles.push(getXMLArticles(DYNASTY_LEAGUE, processDynastyLeague));
@@ -32,23 +30,13 @@ const getXMLArticles = async(url, callback) => {
     const res = await fetch(url, {compress: true}).catch((err) => { console.error(err); });
     const text = await res.text().catch((err) => { console.error(err); });
 
-    let jsonObj;
-    if( parser.validate(text) === true) { //optional (it'll return an object in case it's not valid)
-        jsonObj = parser.parse(text);
+    let xmlData;
+    if(XMLValidator.validate(text) === true){
+        const parser = new XMLParser();
+        xmlData = parser.parse(text);
     }
     
-    return callback(jsonObj.rss.channel.item);
-}
-
-const getJSONArticles = async (feed, callback) => {
-	const res = await fetch(feed, {compress: true}).catch((err) => { console.error(err); });
-	const data = await res.json().catch((err) => { console.error(err); });
-	
-	if (res.ok) {
-		return callback(data);
-	} else {
-		throw new Error(data);
-	}
+    return callback(xmlData.rss.channel.item);
 }
 
 const processFF = (articles) => {
@@ -62,7 +50,7 @@ const processFF = (articles) => {
 			title: article.title,
 			article: article.description,
 			link: article.link,
-			author: `FTN Fantasy`,
+			author: `Fantasy Footballers`,
 			ts,
 			date,
 			icon,

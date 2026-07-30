@@ -1,5 +1,5 @@
 <script>
-  import { prefetch } from "$app/navigation";
+  import { preloadData } from "$app/navigation";
   import { enableBlog } from "$lib/utils/leagueInfo";
 
   export let active;
@@ -15,7 +15,7 @@
     (tab.nest && visibleChildren(tab).some((child) => child.dest === active));
 
   const prefetchInternal = (item) => {
-    if (!item.external) prefetch(item.dest);
+    if (!item.external) preloadData(item.dest);
   };
 
   const toggleMenu = (label) => {

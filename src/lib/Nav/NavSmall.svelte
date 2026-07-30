@@ -1,5 +1,5 @@
 <script>
-  import { prefetch } from "$app/navigation";
+  import { preloadData } from "$app/navigation";
   import { leagueName } from "$lib/utils/helper";
   import { enableBlog } from "$lib/utils/leagueInfo";
 
@@ -12,7 +12,7 @@
     tab.children.filter((child) => !child.blog || enableBlog);
 
   const prefetchInternal = (item) => {
-    if (!item.external) prefetch(item.dest);
+    if (!item.external) preloadData(item.dest);
   };
 
   const close = () => {
