@@ -27,7 +27,7 @@
 
     ({ rosterID, year } = getRosterIDFromManagerID(
       leagueTeamManagers,
-      manager.managerID,
+      manager.managerID
     ) || { rosterID, year });
   }
 
@@ -412,10 +412,7 @@
     opacity: 0;
     visibility: hidden;
     transform: translateY(4px);
-    transition:
-      opacity 0.15s ease,
-      transform 0.15s ease,
-      visibility 0.15s;
+    transition: opacity 0.15s ease, transform 0.15s ease, visibility 0.15s;
     pointer-events: none;
   }
 
@@ -463,10 +460,7 @@
     margin: 0.75rem 0;
     padding: 1rem 0.8rem;
     position: relative;
-    transition:
-      border-color 0.18s ease,
-      box-shadow 0.18s ease,
-      transform 0.18s ease;
+    transition: border-color 0.18s ease, box-shadow 0.18s ease, transform 0.18s ease;
   }
 
   .manager::before {
