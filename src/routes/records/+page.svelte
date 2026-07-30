@@ -1,4 +1,5 @@
 <script>
+  import { page } from "$app/stores";
   import LinearProgress from "@smui/linear-progress";
   import { Records } from "$lib/components";
   import HistoryNav from "$lib/History/HistoryNav.svelte";
@@ -7,6 +8,11 @@
 
   export let data;
   const recordsInfo = data.recordsInfo;
+
+  $: activeHistorySection =
+    $page.url.hash === "#record-book"
+      ? "League Records"
+      : "Manager Legacies";
 </script>
 
 <div id="main">
@@ -17,7 +23,7 @@
       Manager careers and the league record book now live together, with every
       number tied back to the people who earned it.
     </p>
-    <HistoryNav active="League Records" />
+    <HistoryNav active={activeHistorySection} />
   </header>
   {#await recordsInfo}
     <!-- promise is pending -->
