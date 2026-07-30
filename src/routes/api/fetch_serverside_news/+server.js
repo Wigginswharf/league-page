@@ -1,5 +1,8 @@
 import { XMLParser, XMLValidator } from 'fast-xml-parser';
 import { json } from '@sveltejs/kit';
+import { leagueID, managers } from '$lib/utils/leagueInfo';
+
+const FANTASYCALC_URL = 'https://api.fantasycalc.com/values/current?isDynasty=true&numQbs=1&numTeams=12&ppr=1';
 
 const FEEDS = [
     {
@@ -102,11 +105,77 @@ const parseFeed = async (feed) => {
     }).filter((article) => article.title && article.link);
 };
 
+const normalizeForMatch = (value) => value
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+
+const getLeagueTeams = async () => {
+    const [rostersResponse, valuesResponse] = await Promise.all([
+        fetch(`https://api.sleeper.app/v1/league/${leagueID}/rosters`),
+        fetch(FANTASYCALC_URL),
+    ]);
+    if(!rostersResponse.ok || !valuesResponse.ok) throw new Error('Unable to match league rosters');
+
+    const [rosters, values] = await Promise.all([
+        rostersResponse.json(),
+        valuesResponse.json(),
+    ]);
+    const playerNames = new Map(
+        values
+            .filter((entry) => entry.player?.sleeperId && entry.player?.name)
+            .map((entry) => [String(entry.player.sleeperId), entry.player.name])
+    );
+    const managerNames = new Map(
+        managers
+            .filter((manager) => manager.roster)
+            .map((manager) => [String(manager.roster), manager.name.split(' AKA:')[0]])
+    );
+
+    return rosters.map((roster) => ({
+        rosterID: String(roster.roster_id),
+        managerName: managerNames.get(String(roster.roster_id)) || `Team ${roster.roster_id}`,
+        players: (roster.players || [])
+            .map((playerID) => playerNames.get(String(playerID)))
+            .filter(Boolean),
+    })).sort((a, b) => a.managerName.localeCompare(b.managerName));
+};
+
+const addLeagueMatches = (article, teams) => {
+    const storyText = normalizeForMatch(`${article.title} ${article.summary}`);
+    const matchedPlayers = new Set();
+    const teamMatches = [];
+    const teamPlayerMatches = {};
+
+    for(const team of teams) {
+        const teamPlayers = team.players.filter((playerName) => {
+            const matched = storyText.includes(normalizeForMatch(playerName));
+            if(matched) matchedPlayers.add(playerName);
+            return matched;
+        });
+        if(teamPlayers.length) {
+            teamMatches.push(team.rosterID);
+            teamPlayerMatches[team.rosterID] = teamPlayers;
+        }
+    }
+
+    return {
+        ...article,
+        matchedPlayers: [...matchedPlayers],
+        teamMatches,
+        teamPlayerMatches,
+    };
+};
+
 export async function GET() {
-    const results = await Promise.allSettled(FEEDS.map(parseFeed));
+    const [feedResults, teams] = await Promise.all([
+        Promise.allSettled(FEEDS.map(parseFeed)),
+        getLeagueTeams().catch(() => []),
+    ]);
 
     const seen = new Set();
-    const articles = results
+    const articles = feedResults
         .filter((result) => result.status === 'fulfilled')
         .flatMap((result) => result.value)
         .sort((a, b) => b.ts - a.ts)
@@ -116,13 +185,19 @@ export async function GET() {
             seen.add(key);
             return true;
         })
-        .slice(0, 60);
+        .slice(0, 60)
+        .map((article) => addLeagueMatches(article, teams));
 
     return json({
         articles,
+        teams: teams.map(({ rosterID, managerName, players }) => ({
+            rosterID,
+            managerName,
+            playerCount: players.length,
+        })),
         updatedAt: new Date().toISOString(),
-        sourcesOnline: results.filter((result) => result.status === 'fulfilled').length,
-        sourcesTotal: results.length,
+        sourcesOnline: feedResults.filter((result) => result.status === 'fulfilled').length,
+        sourcesTotal: feedResults.length,
     }, {
         headers: {
             'cache-control': 'public, max-age=300, s-maxage=900, stale-while-revalidate=3600',
