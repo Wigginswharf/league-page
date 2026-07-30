@@ -278,6 +278,9 @@
                 <TeamDirectionBadge
                     category={displayedDirection.category}
                     summary={displayedDirection.summary}
+                    playerAssets={displayedDirection.playerAssets}
+                    draftAssets={displayedDirection.draftAssets}
+                    overview={displayedDirection.overview}
                     large
                 />
             </div>
@@ -286,7 +289,8 @@
             </div>
             {#if displayedDirection.automated}
                 <div class="directionSummary">
-                    {displayedDirection.summary}
+                    <strong>AI Team Overview</strong>
+                    {displayedDirection.overview || displayedDirection.summary}
                 </div>
             {/if}
         </div>

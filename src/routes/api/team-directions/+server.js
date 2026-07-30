@@ -146,16 +146,21 @@ export async function GET() {
             .map((id) => values.get(String(id)))
             .filter(Boolean);
         const dynastyPlayerValue = playerValues.reduce((sum, player) => sum + player.dynastyValue, 0);
+        const draftAssetValue = Math.round(pickValues[roster.roster_id] || 0);
         return {
             rosterID: roster.roster_id,
             ownerID: roster.owner_id,
             defendingChampion: roster.owner_id === defendingChampionOwner,
             currentStrength: optimalLineupValue(roster.players || [], values, league.roster_positions),
-            futureStrength: Math.round(dynastyPlayerValue + (pickValues[roster.roster_id] || 0)),
+            playerAssets: Math.round(dynastyPlayerValue),
+            draftAssets: draftAssetValue,
+            futureStrength: Math.round(dynastyPlayerValue + draftAssetValue),
         };
     });
 
     rankTeams(teams, 'currentStrength');
+    rankTeams(teams, 'playerAssets');
+    rankTeams(teams, 'draftAssets');
     rankTeams(teams, 'futureStrength');
     for(const team of teams) {
         team.windowScore = ((13 - team.currentStrengthRank) * 0.65) + ((13 - team.futureStrengthRank) * 0.35);
@@ -185,10 +190,26 @@ export async function GET() {
             category = 'Retooling';
         }
 
-        const championText = team.defendingChampion ? ' · Defending champion' : '';
+        const championText = team.defendingChampion
+            ? ' As the defending champion, it also has recent results supporting that grade.'
+            : '';
+        let overview;
+        if(category === 'Elite Contender') {
+            overview = `This team earns Elite Contender status with the ${ordinal(team.currentStrengthRank)}-ranked weekly lineup and ${ordinal(team.futureStrengthRank)}-ranked overall asset base. Its player assets rank ${ordinal(team.playerAssetsRank)} and its draft assets rank ${ordinal(team.draftAssetsRank)}, giving it both immediate championship upside and a clear picture of its future flexibility.${championText}`;
+        } else if(category === 'Contender') {
+            overview = `This team grades as a Contender behind the ${ordinal(team.currentStrengthRank)}-ranked weekly lineup and ${ordinal(team.futureStrengthRank)}-ranked overall asset base. Its ${ordinal(team.playerAssetsRank)}-ranked player assets and ${ordinal(team.draftAssetsRank)}-ranked draft assets keep it in the playoff race, though the profile falls short of the elite tier.${championText}`;
+        } else if(category === 'Rebuilding') {
+            overview = `This team is classified as Rebuilding because its weekly lineup ranks ${ordinal(team.currentStrengthRank)} and its overall asset base ranks ${ordinal(team.futureStrengthRank)}. Player assets rank ${ordinal(team.playerAssetsRank)} and draft assets rank ${ordinal(team.draftAssetsRank)}, so adding young cornerstone players and draft capital should take priority over short-term wins.${championText}`;
+        } else {
+            overview = `This team sits in the Retooling tier with the ${ordinal(team.currentStrengthRank)}-ranked weekly lineup and ${ordinal(team.futureStrengthRank)}-ranked overall asset base. Its player assets rank ${ordinal(team.playerAssetsRank)} while its draft assets rank ${ordinal(team.draftAssetsRank)}, suggesting a targeted reshaping rather than a full rebuild.${championText}`;
+        }
+
         directions[team.rosterID] = {
             category,
-            summary: `${ordinal(team.currentStrengthRank)} current lineup · ${ordinal(team.futureStrengthRank)} dynasty assets${championText}`,
+            playerAssets: `${ordinal(team.playerAssetsRank)} of ${teams.length}`,
+            draftAssets: `${ordinal(team.draftAssetsRank)} of ${teams.length}`,
+            overview,
+            summary: overview,
             updatedAt,
             automated: true,
         };

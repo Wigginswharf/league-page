@@ -117,6 +117,9 @@
           <TeamDirectionBadge
             category={teamDirection.category}
             summary={teamDirection.summary}
+            playerAssets={teamDirection.playerAssets}
+            draftAssets={teamDirection.draftAssets}
+            overview={teamDirection.overview}
           />
         </div>
         <div class="infoAnswer">
