@@ -44,7 +44,7 @@
     <IconButton
       toggle
       pressed={lightTheme}
-      on:MDCIconButtonToggle:change={switchTheme}
+      onclick={switchTheme}
       class="lightDark"
     >
       <Icon class="material-icons" on>dark_mode</Icon>

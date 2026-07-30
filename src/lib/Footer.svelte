@@ -1,9 +1,6 @@
 <script>
   import { managers } from "$lib/utils/helper";
   import { leagueID } from "$lib/utils/leagueInfo";
-  import { onMount } from "svelte";
-
-  let outOfDate = false;
 
   let el, footerHeight;
 
@@ -20,13 +17,6 @@
       footerHeight = bottom - top;
     }
   };
-
-  onMount(async () => {
-    const res = await fetch("/api/checkVersion", { compress: true });
-    const needUpdate = await res.json();
-    outOfDate = needUpdate;
-    resize(el?.getBoundingClientRect(), true);
-  });
 
   let managersOutOfDate = false;
   if (managers) {
@@ -60,18 +50,9 @@
 
 <svelte:window bind:innerWidth />
 
-<div class="footerSpacer" style="height: {footerHeight}px;" />
+<div class="footerSpacer" style="height: {footerHeight}px;"></div>
 
-<!-- footer with update notice -->
 <footer bind:this={el}>
-  {#if outOfDate}
-    <p class="updateNotice">
-      There is an update available for your League Page. <a
-        href="https://github.com/nmelhado/league-page/blob/master/TRAINING_WHEELS.md#iv-updates"
-        >Follow the Update Instructions</a
-      > to get all of the newest features!
-    </p>
-  {/if}
   {#if managersOutOfDate}
     <p class="updateNotice">
       Your managers page needs an update, <a

@@ -53,13 +53,9 @@
     }
 
     const validateID = (author) => {
-        for(const yearKey in leagueTeamManagers.teamManagersMap) {
-            for(const rosterKey in leagueTeamManagers.teamManagersMap[yearKey]) {
-                for(const manager of leagueTeamManagers.teamManagersMap[yearKey][rosterKey].managers) {
-                    if(leagueTeamManagers.users[manager].display_name.toLowerCase() == author.toLowerCase()) {
-                        return manager;
-                    }
-                }
+        for(const uID in leagueTeamManagers.users) {
+            if(leagueTeamManagers.users[uID].user_name.toLowerCase() == author.toLowerCase()) {
+                return uID;
             }
         }
         return false;
@@ -139,5 +135,5 @@
             <div class="date"><i>{parseDate(comment.sys.createdAt)}</i></div>
         </div>
     {/each}
-    <CreateComment bind:showWrite={showWrite} on:createComment={addComment}/>
+    <CreateComment bind:showWrite={showWrite} oncreateComment={addComment}/>
 </div>
