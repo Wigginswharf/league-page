@@ -1,87 +1,69 @@
 <script>
-    import { onMount } from "svelte";
-	import LinearProgress from '@smui/linear-progress';
-    import Post from "./Post.svelte";
-    import { getBlogPosts, getLeagueTeamManagers, waitForAll } from "$lib/utils/helper";
+    import { weeklyColumns } from '$lib/data/weeklyColumns';
 
-    const lang = "en-US";
-
-    let post;
-    let createdAt;
-    let id;
-    let loading = true;
-    let leagueTeamManagers = {};
-
-    onMount(async() => {
-        const [{posts, fresh}, leagueTeamManagersData] = await waitForAll(getBlogPosts(null), getLeagueTeamManagers());
-		leagueTeamManagers = leagueTeamManagersData;
-        for(const singlePost of posts) {
-            if(singlePost.fields.featured) {
-                createdAt = singlePost.sys.createdAt;
-                post = singlePost.fields;
-                id = singlePost.sys.id;
-                break;
-            }
-        }
-
-        if(!fresh) {
-		    const {posts} = await getBlogPosts(null, true);
-            for(const singlePost of posts) {
-                if(singlePost.fields.featured) {
-                    createdAt = singlePost.sys.createdAt;
-                    post = singlePost.fields;
-                    id = singlePost.sys.id;
-                    break;
-                }
-            }
-        }
-        
-        loading = false;
-    })
+    const latest = weeklyColumns[0];
 </script>
 
+{#if latest}
+    <aside class="latest-column">
+        <p class="eyebrow">Latest from The Losers Ledger</p>
+        <h2><a href={`/blog/${latest.slug}`}>{latest.title}</a></h2>
+        <p>{latest.dek}</p>
+        <a class="read" href={`/blog/${latest.slug}`}>
+            Read this week’s column <span class="material-icons" aria-hidden="true">arrow_forward</span>
+        </a>
+    </aside>
+{/if}
+
 <style>
-    .loading {
-        display: block;
-        width: 85%;
-        max-width: 500px;
-        margin: 80px auto;
+    .latest-column {
+        background: var(--surface-raised);
+        border-left: 5px solid var(--league-gold);
+        border-radius: 8px;
+        box-shadow: 0 5px 16px rgba(7, 26, 51, 0.09);
+        margin-top: 2rem;
+        padding: 1.2rem 1.3rem;
+    }
+
+    .eyebrow {
+        color: var(--league-blue);
+        font-size: 0.7rem;
+        font-weight: 850;
+        letter-spacing: 0.1em;
+        margin: 0 0 0.4rem;
+        text-transform: uppercase;
     }
 
     h2 {
-        font-size: 2em;
-        text-align: center;
-        margin-bottom: 1.5em;
+        font-family: Georgia, 'Times New Roman', serif;
+        font-size: 1.55rem;
+        line-height: 1.1;
+        margin: 0;
+        text-align: left;
     }
 
-    .center {
-        text-align: center;
-        margin-bottom: 2em;
-    }
-
-    .viewAll {
+    h2 a {
+        color: var(--text-primary);
         text-decoration: none;
-        background-color: #920505;
-        color: #fff;
-        border-radius: 1em;
-        padding: 0.5em 1em;
     }
 
-    .viewAll:hover {
-        background-color: #670404;
+    .latest-column > p:not(.eyebrow) {
+        color: var(--text-muted);
+        line-height: 1.5;
+        margin: 0.65rem 0;
+    }
+
+    .read {
+        align-items: center;
+        color: var(--league-blue);
+        display: inline-flex;
+        font-size: 0.82rem;
+        font-weight: 850;
+        gap: 0.25rem;
+        text-decoration: none;
+    }
+
+    .read .material-icons {
+        font-size: 1rem;
     }
 </style>
-
-{#if loading}
-    <!-- promise is pending -->
-    <div class="loading">
-        <p>Loading Blog Posts...</p>
-        <LinearProgress indeterminate />
-    </div>
-{:else}
-    <h2>League Blog</h2>
-    <Post {leagueTeamManagers} {post} {createdAt} {id} />
-    <div class="center">
-        <a class="viewAll" href="/blog">View More Blog Posts</a>
-    </div>
-{/if}
