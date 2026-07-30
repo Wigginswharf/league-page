@@ -44,6 +44,11 @@ export const tabs = [
     dest: "/managers",
   },
   {
+    icon: "newspaper",
+    label: "Dynasty Wire",
+    dest: "/news",
+  },
+  {
     icon: "emoji_events",
     label: "History",
     nest: true,
