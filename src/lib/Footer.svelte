@@ -82,18 +82,18 @@
     <a href="https://github.com/nmelhado/league-page">League Page</a></span
   >
   <br />
-  Found and customized by Casey,
+  <strong>Redesigned and maintained for Champion and 11 Losers Dynasty League by Casey</strong
+  ><br />
   <!-- PLEASE DO NOT REMOVE THE BUILT BY -->
   <span class="creator"
-    >Built and maintained by <a href="http://www.nmelhado.com/"
-      >Nicholas Melhado</a
-    ><br /></span
+    >Based on the original <a href="https://github.com/nmelhado/league-page"
+      >League Page</a
+    > created by <a href="http://www.nmelhado.com/">Nicholas Melhado</a>.<br /></span
   >
   <!-- You can remove the donation link (although any donations to help
 	 maintain and enhance League Page would be greatly appreciated!) -->
-  Love League Page? Please consider
-  <a href="https://www.buymeacoffee.com/nmelhado">donating</a> to support enhancements
-  or just to say thank you!
+  Appreciate Nicholas's original project? Consider
+  <a href="https://www.buymeacoffee.com/nmelhado">supporting his work</a>.
 </footer>
 
 <style>
