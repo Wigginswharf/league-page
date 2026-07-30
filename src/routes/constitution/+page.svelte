@@ -177,7 +177,7 @@ h5 {
   <p>A League Leader may be removed by agreement of the other two League Leaders. Alternatively, the league may call for a vote to remove a League Leader; such a vote requires approval by a three‑quarters majority of league managers. Any removed leader relinquishes all authority immediately upon removal.</p>
 
   <h3 class="subSectionHeading" bind:this={oneFour}>1.4 Conflict of Interest</h3>
-  <p>If a League Leader is directly involved in a matter requiring review or enforcement, that individual must recuse themselves from the decision‑making process. In such cases, remaining leadership will assume responsibility according to the established authority order. If the remaining league leaders can not come to an agreement or are unavailable, the league representative will be brought in to resolve the matter.</p>
+  <p>If a League Leader is directly involved in a matter requiring review or enforcement, that individual must recuse themselves from the decision‑making process. In such cases, remaining leadership will assume responsibility according to the established authority order. If the remaining League Leaders cannot come to an agreement or are unavailable, the League Representative will be brought in to resolve the matter.</p>
 
   <!-- Section 2 Body -->
   <h2 class="sectionHeading" bind:this={two}>Section 2 Roster Breakdown</h2>
@@ -196,7 +196,7 @@ h5 {
     <li>D/ST</li>
     <li>K</li>
   </ul>
-  <p>Teams will have 20 bench spots. A league majority of two thirds (8) or more is required to expand the bench by one additional spot. After the champion is crowned, free agency will be locked and all IR spots will convert to bench spots, expanding the active roster to 34 players. These additional bench spots will revert back to IR spots on the Monday prior to the start of the NFL regular season.</p>
+  <p>Teams will have 20 bench spots. A league majority of two-thirds (8) or more is required to expand the bench by one additional spot. After the champion is crowned, free agency will be locked and all IR spots will convert to bench spots, expanding the active roster to 34 players. These additional bench spots will revert back to IR spots on the Monday prior to the start of the NFL regular season.</p>
   <p>Each team will have four IR spots during the fantasy season. Players listed as questionable or holding out are not eligible for IR placement.</p>
 
   <h4 bind:this={twoOneOne}>2.1.1 Position Maximums</h4>
@@ -206,7 +206,7 @@ h5 {
 
   <h3 class="subSectionHeading" bind:this={twoTwo}>2.2 Trading</h3>
   <p>Trading of players, draft picks up to three future drafts, and FAAB dollars is permitted. During the offseason, trades will process after two days. During the fantasy season, trades will process after one day.</p>
-  <p>During the processing period, managers may vote on the sleeper platform to request a trade review for potential collusion and/or overt value disparity. Five votes are required to trigger a leadership review. League Leadership reserves the right to review any trade at their discretion, regardless of whether a vote is triggered.</p>
+  <p>During the processing period, managers may vote on the Sleeper platform to request a trade review for potential collusion and/or overt value disparity. Five votes are required to trigger a leadership review. League Leadership reserves the right to review any trade at its discretion, regardless of whether a vote is triggered.</p>
   <p>If a member of League Leadership is involved in a trade under review, that individual will recuse themselves. In such cases, the League Representative or their designated alternate will assume review responsibilities for that trade.</p>
   <p>If a trade must be processed urgently due to timing constraints related to kickoff or draft progression, League Leadership or the League Representative may expedite review and rule to approve or veto the trade.</p>
 
@@ -246,7 +246,7 @@ h5 {
 
   <h3 bind:this={twoThree}>2.3 Waiver Wire</h3>
   <p>The league uses a FAAB waiver system. Each team begins the fantasy season with one hundred FAAB dollars. Zero‑dollar bids are permitted. Waivers process daily at 3:00 AM EST, except on Tuesdays and Fridays.</p>
-  <p>FAAB budgets reset when the league transitions into the new year for the End of Season Free Agent Extravaganza. This is a one and only free agent waiver run prior to our league draft. Following this period, FAAB budgets reset again to one hundred dollars for the upcoming fantasy season, and free agency does not open again until after the league's rookie draft.</p>
+  <p>FAAB budgets reset when the league transitions into the new year for the End of Season Free Agent Extravaganza. This is the one and only free agent waiver run prior to our league draft. Following this period, FAAB budgets reset again to one hundred dollars for the upcoming fantasy season, and free agency does not open again until after the league's rookie draft.</p>
 
   <!-- Section 3 Body -->
   <h2 class="sectionHeading" bind:this={three}>Section 3 Drafting</h2>
@@ -293,16 +293,16 @@ h5 {
   <!-- Section 6 Body -->
   <h2 class="sectionHeading" bind:this={six}>Section 6 Tanking Policy</h2>
   <h3 bind:this={sixOne}>6.1 League Tanking Policy</h3>
-  <p>In order to maintain the integrity of the league and to keep a fun competitive atmosphere, all managers must field a starting lineup that displays a willingness to win and does not put their opponent at an intentional competitive advantage. Any manager who does not make a reasonable effort to win their game, including but not limited to intentionally starting a player who is not on an active NFL roster or leaving a starting lineup spot empty in order to improve their draft position, may be subject to punishment, including but not limited to the forfeiture of draft selections.</p>
+  <p>In order to maintain the integrity of the league and to keep a fun, competitive atmosphere, all managers must field a starting lineup that displays a willingness to win and does not put their opponent at an intentional competitive advantage. Any manager who does not make a reasonable effort to win their game, including, but not limited to, intentionally starting a player who is not on an active NFL roster or leaving a starting lineup spot empty in order to improve their draft position, may be subject to punishment, including, but not limited to, the forfeiture of draft selections.</p>
 
   <!-- Section 7 Body -->
   <h2 class="sectionHeading" bind:this={seven}>Section 7 Replacing Managers</h2>
   <h3 bind:this={sevenOne}>7.1 Removing Managers</h3>
-  <p>Short of continuously failing to set a valid lineup or confirmed collusion, no manager can be removed against their will without a league vote. Participation through trade offers and the waiver wire is strongly encouraged, but lack of participation is generally not grounds for removal unless you have become a clear detriment to your team, thereby affecting the integrity of the league. If a member of leadership has attempted and failed to make contact with a manager multiple times, this would be considered league abandonment and a replacement manager would be found to take their place. The removed manager would receive no refund of any dues paid.</p>
+  <p>Short of continuously failing to set a valid lineup or confirmed collusion, no manager can be removed against their will without a league vote. Participation through trade offers and the waiver wire is strongly encouraged, but lack of participation is generally not grounds for removal unless the manager has become a clear detriment to their team, thereby affecting the integrity of the league. If a member of leadership has attempted and failed to make contact with a manager multiple times, this would be considered league abandonment and a replacement manager would be found to take their place. The removed manager would receive no refund of any dues paid.</p>
   <h3 bind:this={sevenTwo}>7.2 Replacing Managers</h3>
   <p>When it is determined that a manager needs to be replaced, the League Leaders will try to find a suitable candidate with some connection to at least a portion of the existing managers. Priority will be placed on managers who are eager to take on a dynasty commitment and will be very active within the league.</p>
   <h3 bind:this={sevenThree}>7.3 Replacement Incentive</h3>
-  <p>In the event that a manager chooses to quit the league or is removed by the league leaders, they will be charged a $25 exit fee so the incoming manager is offered a 50% reduction on their first‑year buy‑in.</p>
+  <p>In the event that a manager chooses to quit the league or is removed by the League Leaders, they will be charged a $25 exit fee so the incoming manager is offered a 50% reduction on their first‑year buy‑in.</p>
 
   <!-- Section 8 Body -->
   <h2 class="sectionHeading" bind:this={eight}>Section 8 League Finances</h2>
@@ -310,14 +310,13 @@ h5 {
   <p>League dues are set at $50. Dues are collected by the league commissioner via means best suited to the managers. League dues should be paid no later than Week 1 of the fantasy season or as the commissioner sees fit.</p>
   <p>If the league coffers do not have enough money to cover the winnings, it is the league commissioner’s sole responsibility to make up the difference.</p>
   <h3 bind:this={eightTwo}>8.2 Payout</h3>
-  <p>League payout is structured as follows:</p>
+  <p>League payouts are structured as follows:</p>
   <ul>
     <li>1st place: $300</li>
     <li>2nd place: $200</li>
     <li>3rd place: $100</li>
   </ul>
-  <p>In the event that a new manager is added and given 50% off on their entry fee, the departing manager will be asked to pay a 50% exit fee to cover the discount. If the former manager refuses, League Leaders will make up the difference. If the new manager finishes first or second and the exiting manager refused to pay the exit fee, the new manager’s winnings will be reduced by 50% of the league dues to cover the accrued cost. If the new manager does not win any money their first year, League Leaders will forfeit the right to collect the accrued 50% dues for that season.</p>
+  <p>In the event that a new manager is added and given 50% off their entry fee, the departing manager will be asked to pay a 50% exit fee to cover the discount. If the former manager refuses, League Leaders will make up the difference. If the new manager finishes first or second and the exiting manager refused to pay the exit fee, the new manager’s winnings will be reduced by 50% of the league dues to cover the accrued cost. If the new manager does not win any money in their first year, League Leaders will forfeit the right to collect the accrued 50% dues for that season.</p>
   <h3 bind:this={eightThree}>8.3 Raising Dues</h3>
   <p>A three‑quarters majority of managers (9) is required to approve an increase in league dues. If a manager is no longer financially comfortable with the buy‑in, finding a co‑manager to split the cost is recommended.</p>
 </div>
-
