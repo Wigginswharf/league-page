@@ -1,16 +1,9 @@
+import { error } from '@sveltejs/kit';
+import { getWeeklyColumn } from '$lib/data/weeklyColumns';
 
-import { enableBlog, getBlogPosts, getLeagueTeamManagers } from '$lib/utils/helper';
+export function load({ params }) {
+    const column = getWeeklyColumn(params.slug);
+    if(!column) throw error(404, 'That edition could not be found.');
 
-export function load({ fetch, params }) {
-    if(!enableBlog) return false;
-    
-    const postID = params.slug;
-    const postsData = getBlogPosts(fetch);
-    const leagueTeamManagersData = getLeagueTeamManagers();
-
-    return {
-        postsData,
-        postID,
-        leagueTeamManagersData,
-    };
+    return { column };
 }
