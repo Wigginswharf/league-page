@@ -13,6 +13,72 @@
     records,
     leagueTeamManagers,
   });
+  let sortKey = "titles";
+  let sortDirection = "desc";
+
+  const sortValues = {
+    manager: (legacy) => legacy.name,
+    titles: (legacy) => legacy.titles,
+    finals: (legacy) => legacy.finals,
+    playoffRecord: (legacy) => legacy.playoffWins,
+    regularSeason: (legacy) => legacy.regularWins,
+    winPct: (legacy) => legacy.regularWinPct,
+    points: (legacy) => legacy.regularPoints,
+  };
+
+  const setSort = (key) => {
+    if (sortKey === key) {
+      sortDirection = sortDirection === "asc" ? "desc" : "asc";
+      return;
+    }
+
+    sortKey = key;
+    sortDirection = key === "manager" ? "asc" : "desc";
+  };
+
+  const compareLegacies = (a, b) => {
+    const aValue = sortValues[sortKey](a);
+    const bValue = sortValues[sortKey](b);
+    let comparison;
+
+    if (typeof aValue === "string") {
+      comparison = aValue.localeCompare(bValue, undefined, {
+        sensitivity: "base",
+      });
+    } else {
+      comparison = aValue - bValue;
+    }
+
+    if (comparison !== 0) {
+      return sortDirection === "asc" ? comparison : -comparison;
+    }
+
+    if (sortKey === "titles") {
+      for (const tieBreaker of ["finals", "playoffWins", "regularWins"]) {
+        const tieComparison = a[tieBreaker] - b[tieBreaker];
+        if (tieComparison !== 0) {
+          return sortDirection === "asc" ? tieComparison : -tieComparison;
+        }
+      }
+    }
+
+    return a.name.localeCompare(b.name, undefined, {
+      sensitivity: "base",
+    });
+  };
+
+  $: sortedLegacies = [...legacies].sort(compareLegacies);
+
+  const ariaSort = (key) =>
+    sortKey === key
+      ? sortDirection === "asc"
+        ? "ascending"
+        : "descending"
+      : "none";
+
+  const sortIndicator = (key) =>
+    sortKey === key ? (sortDirection === "asc" ? "▲" : "▼") : "↕";
+
   const pct = (value) => `${(value * 100).toFixed(1)}%`;
 </script>
 
@@ -20,25 +86,55 @@
   <table>
     <thead>
       <tr>
-        <th>Manager</th>
-        <th>Titles</th>
-        <th>Finals</th>
-        <th>Playoff Record</th>
-        <th>Regular Season</th>
-        <th>Win %</th>
-        <th>Points</th>
+        <th aria-sort={ariaSort("manager")}>
+          <button type="button" onclick={() => setSort("manager")}>
+            Manager <span aria-hidden="true">{sortIndicator("manager")}</span>
+          </button>
+        </th>
+        <th aria-sort={ariaSort("titles")}>
+          <button type="button" onclick={() => setSort("titles")}>
+            Titles <span aria-hidden="true">{sortIndicator("titles")}</span>
+          </button>
+        </th>
+        <th aria-sort={ariaSort("finals")}>
+          <button type="button" onclick={() => setSort("finals")}>
+            Finals <span aria-hidden="true">{sortIndicator("finals")}</span>
+          </button>
+        </th>
+        <th aria-sort={ariaSort("playoffRecord")}>
+          <button type="button" onclick={() => setSort("playoffRecord")}>
+            Playoff Record
+            <span aria-hidden="true">{sortIndicator("playoffRecord")}</span>
+          </button>
+        </th>
+        <th aria-sort={ariaSort("regularSeason")}>
+          <button type="button" onclick={() => setSort("regularSeason")}>
+            Regular Season
+            <span aria-hidden="true">{sortIndicator("regularSeason")}</span>
+          </button>
+        </th>
+        <th aria-sort={ariaSort("winPct")}>
+          <button type="button" onclick={() => setSort("winPct")}>
+            Win % <span aria-hidden="true">{sortIndicator("winPct")}</span>
+          </button>
+        </th>
+        <th aria-sort={ariaSort("points")}>
+          <button type="button" onclick={() => setSort("points")}>
+            Points <span aria-hidden="true">{sortIndicator("points")}</span>
+          </button>
+        </th>
       </tr>
     </thead>
     <tbody>
-      {#each legacies as legacy}
+      {#each sortedLegacies as legacy}
         <tr>
           <td>
             <div
               class="manager"
               role="link"
               tabindex="0"
-              on:click={() => goto(`/manager?manager=${legacy.managerIndex}`)}
-              on:keydown={(event) =>
+              onclick={() => goto(`/manager?manager=${legacy.managerIndex}`)}
+              onkeydown={(event) =>
                 event.key === "Enter" &&
                 goto(`/manager?manager=${legacy.managerIndex}`)}
             >
@@ -102,6 +198,43 @@
     text-transform: uppercase;
   }
 
+  th button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.35rem;
+    width: 100%;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    letter-spacing: inherit;
+    text-transform: inherit;
+    cursor: pointer;
+  }
+
+  th button:hover {
+    color: var(--blueTwo);
+  }
+
+  th button:focus-visible {
+    border-radius: 0.25rem;
+    outline: 2px solid var(--blueOne);
+    outline-offset: 4px;
+  }
+
+  th button span {
+    min-width: 0.8rem;
+    color: var(--g999);
+    font-size: 0.75em;
+  }
+
+  th[aria-sort="ascending"] button span,
+  th[aria-sort="descending"] button span {
+    color: var(--blueOne);
+  }
+
   td:first-child,
   th:first-child {
     position: sticky;
@@ -109,6 +242,10 @@
     z-index: 1;
     background: var(--fff);
     text-align: left;
+  }
+
+  th:first-child button {
+    justify-content: flex-start;
   }
 
   tr:last-child td {
