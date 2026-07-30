@@ -447,4 +447,79 @@
       width: auto;
     }
   }
+
+  /* League card treatment */
+  .manager {
+    background-color: var(--surface-raised);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--league-shadow-soft);
+    margin: 0.75rem 0;
+    padding: 1rem 0.8rem;
+    position: relative;
+    transition: border-color 0.18s ease, box-shadow 0.18s ease, transform 0.18s ease;
+  }
+
+  .manager::before {
+    background: var(--league-blue);
+    border-radius: var(--radius-lg) 0 0 var(--radius-lg);
+    content: "";
+    inset: 0 auto 0 0;
+    position: absolute;
+    width: 4px;
+  }
+
+  .manager:hover {
+    background-color: var(--surface-raised);
+    border-color: rgba(8, 120, 209, 0.4);
+    box-shadow: var(--league-shadow);
+    transform: translateY(-2px);
+  }
+
+  .photo {
+    border: 3px solid var(--surface-raised);
+    box-shadow: 0 0 0 2px rgba(8, 120, 209, 0.22);
+    height: 48px;
+    object-fit: cover;
+    width: 48px;
+  }
+
+  .name {
+    color: var(--text-primary);
+    font-size: 1rem;
+  }
+
+  .team,
+  .infoAnswer {
+    color: var(--text-muted);
+  }
+
+  .infoIcon,
+  .rivalButton {
+    background-color: var(--surface-muted);
+    border-color: var(--line);
+  }
+
+  .commissionerBadge {
+    background: var(--league-gold);
+    border: 2px solid var(--surface-raised);
+    color: #071a33;
+  }
+
+  .rivalTooltip {
+    background: var(--surface-raised);
+    border-color: var(--line);
+    box-shadow: var(--league-shadow);
+    color: var(--text-muted);
+  }
+
+  @media (max-width: 595px) {
+    .manager {
+      border-radius: 14px;
+    }
+
+    .manager::before {
+      border-radius: 14px 0 0 14px;
+    }
+  }
 </style>

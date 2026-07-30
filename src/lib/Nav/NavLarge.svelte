@@ -115,7 +115,7 @@
     align-items: stretch;
     display: flex;
     justify-content: center;
-    min-height: 52px;
+    min-height: 78px;
   }
 
   .nav-entry {
@@ -129,15 +129,18 @@
     border: 0;
     border-bottom: 3px solid transparent;
     box-sizing: border-box;
-    color: var(--g555);
+    color: rgba(255, 255, 255, 0.74);
     cursor: pointer;
     display: flex;
     font: inherit;
     gap: 0.42rem;
     height: 100%;
-    min-width: 128px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.025em;
+    min-width: 116px;
     justify-content: center;
-    padding: 0.7rem 1rem 0.55rem;
+    padding: 0.7rem 0.85rem 0.55rem;
     text-decoration: none;
   }
 
@@ -147,8 +150,8 @@
   .nav-trigger:focus-visible,
   .nav-entry.active > .nav-link,
   .nav-entry.active > .nav-trigger {
-    border-bottom-color: #920505;
-    color: #00316b;
+    border-bottom-color: var(--league-gold);
+    color: #fff;
     outline: none;
   }
 
@@ -166,10 +169,10 @@
   }
 
   .submenu {
-    background: var(--fff);
-    border: 1px solid #00316b;
-    border-radius: 0 0 8px 8px;
-    box-shadow: 0 7px 16px rgba(0, 49, 107, 0.2);
+    background: var(--surface-raised);
+    border: 1px solid var(--line);
+    border-radius: 0 0 14px 14px;
+    box-shadow: var(--league-shadow);
     left: 50%;
     min-width: 218px;
     opacity: 0;
@@ -190,7 +193,7 @@
 
   .submenu a {
     align-items: center;
-    color: var(--g555);
+    color: var(--text-primary);
     display: flex;
     gap: 0.7rem;
     padding: 0.78rem 1rem;
@@ -198,14 +201,14 @@
   }
 
   .submenu a + a {
-    border-top: 1px solid rgba(0, 49, 107, 0.12);
+    border-top: 1px solid var(--line);
   }
 
   .submenu a:hover,
   .submenu a:focus-visible,
   .submenu a.active {
-    background: rgba(0, 49, 107, 0.08);
-    color: #00316b;
+    background: rgba(8, 120, 209, 0.09);
+    color: var(--league-blue);
     outline: none;
   }
 

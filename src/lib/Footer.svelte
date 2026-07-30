@@ -117,16 +117,19 @@
 
 <style>
   footer {
-    background-color: var(--f8f8f8);
+    background:
+      linear-gradient(135deg, rgba(24, 167, 255, 0.1), transparent 42%),
+      #071a33;
     width: 100%;
     display: block;
     position: absolute;
     bottom: 0;
     z-index: 1;
-    border-top: 1px solid #920505;
-    padding: 30px 0 60px;
+    border-top: 3px solid var(--league-gold);
+    padding: 38px 1rem 52px;
     text-align: center;
-    color: #777;
+    color: rgba(255, 255, 255, 0.62);
+    font-size: 0.88rem;
   }
 
   #navigation {
@@ -146,14 +149,17 @@
   .navLink {
     display: inline-block;
     padding: 6px 10px;
+    color: rgba(255, 255, 255, 0.85);
+    font-weight: 700;
+    text-decoration: none;
   }
 
   .navLink:hover {
-    color: #920505;
+    color: #fff;
   }
 
   .updateNotice {
-    color: var(--g999);
+    color: rgba(255, 255, 255, 0.58);
     font-style: italic;
     font-size: 0.8em;
     margin-top: 0;

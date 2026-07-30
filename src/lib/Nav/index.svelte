@@ -63,22 +63,34 @@
 
 <style>
   a {
-    display: table;
-    margin: 0 auto;
+    display: block;
   }
   nav {
-    background-color: var(--fff);
-    position: relative;
-    z-index: 2;
-    border-bottom: 1px solid #00316b;
-    box-shadow: 0 0 8px 0 #00316b;
+    align-items: center;
+    background:
+      linear-gradient(110deg, rgba(24, 167, 255, 0.13), transparent 35%),
+      #071a33;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 8px 28px rgba(7, 26, 51, 0.22);
+    display: grid;
+    grid-template-columns: 110px 1fr 58px;
+    min-height: 78px;
+    padding: 0 clamp(1rem, 4vw, 3.5rem);
+    position: sticky;
+    top: 0;
+    z-index: 20;
   }
 
   #logo {
-    width: 80px;
+    filter: drop-shadow(0 5px 8px rgba(0, 0, 0, 0.26));
+    width: 76px;
     display: block;
-    margin: 0 auto;
-    padding: 10px;
+    padding: 5px 0;
+    transition: transform 0.2s ease;
+  }
+
+  #logo:hover {
+    transform: translateY(-2px);
   }
 
   .large {
@@ -90,16 +102,41 @@
   }
 
   .container {
-    position: absolute;
-    top: 0.25em;
-    right: 0.25em;
+    grid-column: 3;
+    grid-row: 1;
+    justify-self: end;
   }
 
   :global(.lightDark) {
-    color: var(--g555);
+    color: rgba(255, 255, 255, 0.86);
   }
 
   @media (max-width: 950px) {
+    nav {
+      display: block;
+      min-height: 68px;
+      padding: 0;
+      position: sticky;
+    }
+
+    nav > a {
+      margin: 0 auto;
+      width: max-content;
+    }
+
+    #logo {
+      height: 58px;
+      object-fit: contain;
+      padding: 5px;
+      width: auto;
+    }
+
+    .container {
+      position: absolute;
+      right: 8px;
+      top: 10px;
+    }
+
     /* width of the large navBar */
     .large {
       display: none;

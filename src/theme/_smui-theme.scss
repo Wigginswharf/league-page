@@ -34,26 +34,26 @@
 
 :root {
   --fff: #fff;
-  --f8f8f8: #f8f8f8;
-  --f3f3f3: #f3f3f3;
-  --eee: #eee;
-  --ebebeb: #ebebeb;
-  --ddd: #ddd;
-  --d7d7d7: #d7d7d7;
-  --ccc: #ccc;
-  --bbb: #bbb;
-  --aaa: #aaa;
-  --g999: #999;
-  --g555: #555;
-  --g444: #444;
-  --g333: #333;
-  --g111: #111;
+  --f8f8f8: #f7fafc;
+  --f3f3f3: #f3f7fb;
+  --eee: #eaf0f6;
+  --ebebeb: #e6edf4;
+  --ddd: #d9e2ec;
+  --d7d7d7: #d2dde8;
+  --ccc: #c9d5e2;
+  --bbb: #a9bacb;
+  --aaa: #8ea1b5;
+  --g999: #75879b;
+  --g555: #52647a;
+  --g444: #405269;
+  --g333: #26384d;
+  --g111: #112033;
   --g000: #000;
-  --boxShadowOne: #ccc;
-  --boxShadowTwo: #cacaca;
-  --boxShadowThree: #d4d4d4;
+  --boxShadowOne: rgba(7, 26, 51, 0.12);
+  --boxShadowTwo: rgba(7, 26, 51, 0.1);
+  --boxShadowThree: rgba(7, 26, 51, 0.08);
   --ir: #ddd;
-  --champShadow: #555;
+  --champShadow: rgba(7, 26, 51, 0.2);
   --transactHeader: #f5fcff;
   --draftSwapped: #f8fcff;
   --waiverAdd: #e9fff1;
@@ -64,13 +64,30 @@
   --fadeTwo: rgba(255, 255, 255, 0.7) 50%;
   --fadeThree: rgba(255, 255, 255, 0.9) 90%;
   --fadeFour: rgba(255, 255, 255, 1) 100%;
-  --blueOne: #00316b;
-  --blueTwo: #0082c3;
+  --blueOne: #071a33;
+  --blueTwo: #0878d1;
   --r1: #f7f9fd;
   --r2: #fbf7f7;
   --r3: #f7fbf7;
   --headerPrimary: #ddedfa;
   --borderOverride: rgba(0,0,0,.12);
+  --league-navy: #071a33;
+  --league-navy-soft: #102a4e;
+  --league-blue: #0878d1;
+  --league-blue-bright: #18a7ff;
+  --league-gold: #d8a928;
+  --league-red: #c73c45;
+  --page-bg: #eef3f8;
+  --surface: #ffffff;
+  --surface-muted: #f6f9fc;
+  --surface-raised: #ffffff;
+  --text-primary: #112033;
+  --text-muted: #66758a;
+  --line: #d9e2ec;
+  --league-shadow: 0 14px 34px rgba(7, 26, 51, 0.1);
+  --league-shadow-soft: 0 5px 16px rgba(7, 26, 51, 0.08);
+  --radius-lg: 18px;
+  --radius-md: 12px;
 
   // Chart bar colors
   --barChartOne: #7fc4f5;
@@ -112,12 +129,14 @@ html,
 body {
   position: relative;
   margin: 0;
-  background-color: theme.$surface;
-  color: theme.$on-surface;
+  background-color: var(--page-bg);
+  color: var(--text-primary);
   min-height: 100vh;
-  background: #f4f4f4;
-  background: linear-gradient(to bottom right, #f4f4f4,#ebebeb );
-  background: -webkit-linear-gradient(to bottom right, #f4f4f4,#ebebeb );
+  background-image:
+    radial-gradient(circle at 12% -5%, rgba(24, 167, 255, 0.13), transparent 31rem),
+    linear-gradient(180deg, #f8fbfe 0, var(--page-bg) 34rem);
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  line-height: 1.55;
 }
  
 //
@@ -127,22 +146,41 @@ body {
 //
 html {
   @include typography.typography('body1');
+  scroll-behavior: smooth;
 }
  
 h1 {
   @include typography.typography('headline1');
+  color: var(--league-navy);
+  font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif;
+  font-size: clamp(2.25rem, 5vw, 4.75rem);
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  line-height: 0.95;
+  text-transform: uppercase;
 }
  
 h2 {
   @include typography.typography('headline2');
+  color: var(--league-navy);
+  font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.015em;
+  text-transform: uppercase;
 }
  
 h3 {
   @include typography.typography('headline3');
+  color: var(--league-navy);
+  font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif;
+  font-weight: 700;
 }
  
 h4 {
   @include typography.typography('headline4');
+  color: var(--league-navy);
+  font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif;
+  font-weight: 700;
 }
  
 h5 {
@@ -176,12 +214,50 @@ strong {
 }
 
 a {
-  color: #40b3ff;
+  color: var(--league-blue);
+  text-underline-offset: 0.18em;
 }
 a:visited {
-  color: color.scale(#40b3ff, $lightness: -35%);
+  color: color.scale(#0878d1, $lightness: -15%);
 }
 
 .mdc-button--outlined:not(:disabled) {
-  background-color: #f9f9f9 !important;
+  background-color: var(--surface-raised) !important;
+  border-color: var(--line) !important;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+::selection {
+  background: rgba(24, 167, 255, 0.25);
+}
+
+.mdc-data-table {
+  background: var(--surface-raised) !important;
+  border: 1px solid var(--line) !important;
+  border-radius: var(--radius-lg) !important;
+  box-shadow: var(--league-shadow-soft);
+  overflow: hidden;
+}
+
+.mdc-data-table__header-cell {
+  background: var(--league-navy) !important;
+  color: #fff !important;
+  font-size: 0.75rem !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.07em !important;
+  text-transform: uppercase;
+}
+
+.mdc-data-table__row {
+  border-color: var(--line) !important;
+}
+
+.mdc-data-table__row:hover {
+  background: rgba(8, 120, 209, 0.045) !important;
 }

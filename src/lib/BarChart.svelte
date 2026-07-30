@@ -27,11 +27,14 @@
 
 <style>
     .chartWrapper {
-		background-color: var(--fff);
-        padding: 1em 0 0.5em;
+		background-color: var(--surface-raised);
+        border: 1px solid var(--line);
+        border-radius: var(--radius-lg);
+        padding: 1.4em 1em 1em;
         margin: 0 auto;
         max-width: 950px;
-        box-shadow: 0px 3px 3px -2px var(--boxShadowOne), 0px 3px 4px 0px var(--boxShadowTwo), 0px 1px 8px 0px var(--boxShadowThree);
+        box-shadow: var(--league-shadow-soft);
+        overflow: hidden;
     }
 
     .barChart {
@@ -42,10 +45,15 @@
     }
 
     h6 {
-        font-weight: 400;
+        color: var(--league-navy);
+        font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif;
+        font-size: 1.65rem;
+        font-weight: 800;
+        letter-spacing: 0.035em;
         width: 100%;
         text-align: center;
-        margin: 0 0 1em;
+        margin: 0 0 0.75em;
+        text-transform: uppercase;
     }
 
     .buttonHolderG {
