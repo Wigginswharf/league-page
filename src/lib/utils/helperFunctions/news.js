@@ -1,13 +1,8 @@
-import { get } from 'svelte/store';
 import { news } from '$lib/stores';
 
 const SERVER_API = '/api/fetch_serverside_news';
 
 export const getNews = async (servFetch, bypass = false) => {
-    if(get(news)[0] && !bypass) {
-        return { articles: get(news), fresh: false, updatedAt: null };
-    }
-
     const smartFetch = servFetch ?? fetch;
     const response = await smartFetch(SERVER_API, {
         headers: bypass ? { 'cache-control': 'no-cache' } : {},
@@ -20,6 +15,7 @@ export const getNews = async (servFetch, bypass = false) => {
 
     return {
         articles,
+        teams: payload.teams || [],
         fresh: true,
         updatedAt: payload.updatedAt || new Date().toISOString(),
         sourcesOnline: payload.sourcesOnline,

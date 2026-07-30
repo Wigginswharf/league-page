@@ -1,5 +1,10 @@
 <script>
     export let article;
+    export let selectedRoster = 'all';
+
+    $: displayedPlayers = selectedRoster === 'all'
+        ? article.matchedPlayers || []
+        : article.teamPlayerMatches?.[selectedRoster] || [];
 
     const timeAgo = (timestamp) => {
         const minutes = Math.max(1, Math.round((Date.now() - timestamp) / 60000));
@@ -24,6 +29,15 @@
     <h2>
         <a href={article.link} target="_blank" rel="noopener noreferrer">{article.title}</a>
     </h2>
+
+    {#if displayedPlayers.length}
+        <div class="roster-matches" aria-label="Players on league rosters mentioned in this story">
+            <span class="material-icons" aria-hidden="true">group</span>
+            {#each displayedPlayers as player}
+                <span class="player-chip">{player}</span>
+            {/each}
+        </div>
+    {/if}
 
     {#if article.summary || article.article}
         <p>{article.summary || article.article.replace(/<[^>]+>/g, ' ')}</p>
@@ -100,6 +114,29 @@
         color: var(--league-blue);
         text-decoration: underline;
         text-underline-offset: 3px;
+    }
+
+    .roster-matches {
+        align-items: center;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.35rem;
+        margin: 0.35rem 0 0.65rem;
+    }
+
+    .roster-matches > .material-icons {
+        color: var(--league-blue);
+        font-size: 1.05rem;
+    }
+
+    .player-chip {
+        background: rgba(8, 120, 209, 0.09);
+        border: 1px solid rgba(8, 120, 209, 0.2);
+        border-radius: 999px;
+        color: var(--league-blue);
+        font-size: 0.72rem;
+        font-weight: 800;
+        padding: 0.22rem 0.5rem;
     }
 
     p {

@@ -9,19 +9,25 @@
     const filters = ['All', 'Player News', 'Moves', 'Injuries', 'Dynasty'];
     const perPage = 12;
     let articles = news.articles || [];
+    let teams = news.teams || [];
     let updatedAt = news.updatedAt;
     let sourcesOnline = news.sourcesOnline;
     let sourcesTotal = news.sourcesTotal;
     let activeFilter = 'All';
+    let selectedRoster = 'all';
     let page = 0;
     let refreshing = false;
     let refreshTimer;
     let el;
 
-    $: filteredArticles = activeFilter === 'All'
+    $: rosterArticles = selectedRoster === 'all'
         ? articles
-        : articles.filter((article) => article.category === activeFilter);
+        : articles.filter((article) => article.teamMatches?.includes(selectedRoster));
+    $: filteredArticles = activeFilter === 'All'
+        ? rosterArticles
+        : rosterArticles.filter((article) => article.category === activeFilter);
     $: displayArticles = filteredArticles.slice(page * perPage, (page + 1) * perPage);
+    $: selectedTeam = teams.find((team) => team.rosterID === selectedRoster);
     $: top = el?.getBoundingClientRect() ? el.getBoundingClientRect().top : 0;
 
     const selectFilter = (filter) => {
@@ -29,12 +35,21 @@
         page = 0;
     };
 
+    const selectRoster = () => {
+        page = 0;
+        localStorage.setItem('dynasty-wire-roster', selectedRoster);
+    };
+
+    const storyCountForTeam = (rosterID) => articles
+        .filter((article) => article.teamMatches?.includes(rosterID)).length;
+
     const refresh = async () => {
         if(refreshing) return;
         refreshing = true;
         try {
             const latest = await getNews(null, true);
             articles = latest.articles;
+            teams = latest.teams || [];
             updatedAt = latest.updatedAt;
             sourcesOnline = latest.sourcesOnline;
             sourcesTotal = latest.sourcesTotal;
@@ -53,6 +68,10 @@
     };
 
     onMount(() => {
+        const savedRoster = localStorage.getItem('dynasty-wire-roster');
+        if(savedRoster && (savedRoster === 'all' || teams.some((team) => team.rosterID === savedRoster))) {
+            selectedRoster = savedRoster;
+        }
         if(!news.fresh) refresh();
         refreshTimer = setInterval(refresh, 10 * 60 * 1000);
     });
@@ -71,6 +90,24 @@
             <span class:spinning={refreshing} class="material-icons" aria-hidden="true">refresh</span>
             {refreshing ? 'Refreshing' : 'Refresh'}
         </button>
+    </div>
+
+    <div class="team-filter">
+        <div class="team-filter-copy">
+            <span class="material-icons" aria-hidden="true">person_search</span>
+            <div>
+                <label for="team-news-filter">My team’s news</label>
+                <p>Only show stories that mention players on a selected league roster.</p>
+            </div>
+        </div>
+        <select id="team-news-filter" bind:value={selectedRoster} on:change={selectRoster}>
+            <option value="all">All league news</option>
+            {#each teams as team}
+                <option value={team.rosterID}>
+                    {team.managerName}’s team ({storyCountForTeam(team.rosterID)})
+                </option>
+            {/each}
+        </select>
     </div>
 
     <div class="stream-bar">
@@ -92,15 +129,20 @@
     {#if displayArticles.length}
         <div class="articles">
             {#each displayArticles as article (article.id)}
-                <SingleNews {article} />
+                <SingleNews {article} {selectedRoster} />
             {/each}
         </div>
         <Pagination {perPage} total={filteredArticles.length} bind:page target={top} />
     {:else}
         <div class="empty-state">
             <span class="material-icons" aria-hidden="true">sports_football</span>
-            <h2>No stories in this lane yet</h2>
-            <p>Try another filter or refresh the wire.</p>
+            {#if selectedTeam}
+                <h2>No current stories mention {selectedTeam.managerName}’s players</h2>
+                <p>The selection is saved. New matching stories will appear automatically when the wire refreshes.</p>
+            {:else}
+                <h2>No stories in this lane yet</h2>
+                <p>Try another filter or refresh the wire.</p>
+            {/if}
         </div>
     {/if}
 </section>
@@ -206,6 +248,57 @@
         margin: 1.15rem 0;
     }
 
+    .team-filter {
+        align-items: center;
+        background: var(--surface-raised);
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        display: flex;
+        gap: 1rem;
+        justify-content: space-between;
+        margin-top: 1rem;
+        padding: 0.85rem 1rem;
+    }
+
+    .team-filter-copy {
+        align-items: center;
+        display: flex;
+        gap: 0.75rem;
+    }
+
+    .team-filter-copy > .material-icons {
+        color: var(--league-blue);
+        font-size: 1.8rem;
+    }
+
+    .team-filter label {
+        color: var(--text-primary);
+        display: block;
+        font-weight: 850;
+    }
+
+    .team-filter p {
+        color: var(--text-muted);
+        font-size: 0.78rem;
+        margin: 0.15rem 0 0;
+    }
+
+    .team-filter select {
+        background: var(--surface-raised);
+        border: 1px solid var(--line);
+        border-radius: 9px;
+        color: var(--text-primary);
+        font: inherit;
+        font-weight: 700;
+        max-width: 280px;
+        padding: 0.62rem 2.2rem 0.62rem 0.75rem;
+    }
+
+    .team-filter select:focus-visible {
+        border-color: var(--league-blue);
+        outline: 2px solid rgba(8, 120, 209, 0.2);
+    }
+
     .filters {
         display: flex;
         flex-wrap: wrap;
@@ -278,6 +371,16 @@
             align-items: flex-start;
             flex-direction: column;
             gap: 0.75rem;
+        }
+
+        .team-filter {
+            align-items: stretch;
+            flex-direction: column;
+        }
+
+        .team-filter select {
+            max-width: none;
+            width: 100%;
         }
 
         .feed-status {
