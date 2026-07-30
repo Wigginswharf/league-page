@@ -2,8 +2,9 @@
     import { goto } from "$app/navigation";
 	import { getDatesActive, getRosterIDFromManagerID, getTeamNameFromTeamManagers } from "$lib/utils/helperFunctions/universalFunctions";
     import {dynasty} from "$lib/utils/leagueInfo"
+    import TeamDirectionBadge from './TeamDirectionBadge.svelte';
 
-    export let manager, leagueTeamManagers, key;
+    export let manager, leagueTeamManagers, key, liveDirection = null;
 
     let retired = false;
 
@@ -19,6 +20,11 @@
     }
 
     const commissioner = manager.managerID ? leagueTeamManagers.users[manager.managerID].is_owner : false;
+    $: teamDirection = liveDirection || (
+        manager.direction
+            ? { category: manager.direction, summary: 'Approved fallback rating' }
+            : null
+    );
 </script>
 
 <style>
@@ -98,6 +104,12 @@
 
     .infoImg {
         height: 30px;
+    }
+
+    .directionIcon {
+        border: 0;
+        overflow: visible;
+        background: transparent;
     }
 
     .infoAnswer {
@@ -333,14 +345,17 @@
                 </div>
             </div>
         {/if}
-        <!-- Rebuild mode (optional and only displayed for dynasty leagues) -->
-        {#if dynasty && manager.mode}
+        <!-- Live team direction (falls back to the approved static rating) -->
+        {#if dynasty && teamDirection}
             <div class="infoSlot infoRebuild">
-                <div class="infoIcon">
-                    <img class="infoImg" src="/{manager.mode.replace(' ', '%20')}.png" alt="win now or rebuild"/>
+                <div class="infoIcon directionIcon">
+                    <TeamDirectionBadge
+                        category={teamDirection.category}
+                        summary={teamDirection.summary}
+                    />
                 </div>
                 <div class="infoAnswer">
-                    {manager.mode}
+                    {teamDirection.category}
                 </div>
             </div>
         {/if}
