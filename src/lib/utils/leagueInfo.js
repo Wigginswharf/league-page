@@ -65,7 +65,7 @@ export const managers = [
        "fantasyStart": null, // (optional) when did the manager start playing fantasy football
        "favoriteTeam": "hou", // (optional) favorite NFL team, (follows convention: nyj, sea, mia, etc.) MUST BE LOWERCASE
        "mode": 'Rebuild', // broad roster mode used by the existing site artwork
-       "direction": 'Rebuild',
+       "direction": 'Rebuilding',
        "rival": {
          "name": "Josh",
          "link": 7,
@@ -100,7 +100,7 @@ export const managers = [
        "fantasyStart": null, // (optional) when did the manager start playing fantasy football
        "favoriteTeam" : "sf", // (optional) favorite NFL team, (follows convention: nyj, sea, mia, etc.) MUST BE LOWERCASE
        "mode": 'Dynasty', // broad roster mode used by the existing site artwork
-       "direction": 'Retooling Contender',
+       "direction": 'Retooling',
        "rival": {
          "name": "John",
          "link": 6,
@@ -126,7 +126,7 @@ export const managers = [
        "fantasyStart": null, // (optional) when did the manager start playing fantasy football
        "favoriteTeam" : "lar", // (optional) favorite NFL team, (follows convention: nyj, sea, mia, etc.) MUST BE LOWERCASE
        "mode": 'Dynasty', // broad roster mode used by the existing site artwork
-       "direction": 'Retooling, Older Window',
+       "direction": 'Retooling',
        "rival": {
          "name": "Tommy",
          "link": 11,
@@ -178,7 +178,7 @@ export const managers = [
        "fantasyStart": null, // (optional) when did the manager start playing fantasy football
        "favoriteTeam" : "det", // (optional) favorite NFL team, (follows convention: nyj, sea, mia, etc.) MUST BE LOWERCASE
        "mode": 'Dynasty', // broad roster mode used by the existing site artwork
-       "direction": 'Ascending Young Roster',
+       "direction": 'Contender',
        "rival": {
          "name": "Jason",
          "link": 8,
@@ -204,7 +204,7 @@ export const managers = [
        "fantasyStart": null, // (optional) when did the manager start playing fantasy football
        "favoriteTeam" : "dal", // (optional) favorite NFL team, (follows convention: nyj, sea, mia, etc.) MUST BE LOWERCASE
        "mode": 'Win Now', // broad roster mode used by the existing site artwork
-       "direction": 'Contender, Aging Window',
+       "direction": 'Contender',
        "rival": {
          "name": "Brandon",
          "link": 2,
@@ -230,7 +230,7 @@ export const managers = [
        "fantasyStart": null, // (optional) when did the manager start playing fantasy football
        "favoriteTeam": "bal", // (optional) favorite NFL team, (follows convention: nyj, sea, mia, etc.) MUST BE LOWERCASE
        "mode": 'Win Now', // broad roster mode used by the existing site artwork
-       "direction": 'Fringe Contender',
+       "direction": 'Contender',
        "rival": {
          "name": "Frank",
          "link": 1,
@@ -282,7 +282,7 @@ export const managers = [
        "fantasyStart": null, // (optional) when did the manager start playing fantasy football
        "favoriteTeam": "phi", // (optional) favorite NFL team, (follows convention: nyj, sea, mia, etc.) MUST BE LOWERCASE
        "mode": 'Rebuild', // broad roster mode used by the existing site artwork
-       "direction": 'Deep Rebuild',
+       "direction": 'Rebuilding',
        "rival": {
          "name": "Brittany",
          "link": 10,
@@ -308,7 +308,7 @@ export const managers = [
        "fantasyStart": null, // (optional) when did the manager start playing fantasy football
        "favoriteTeam" : "ind", // (optional) favorite NFL team, (follows convention: nyj, sea, mia, etc.) MUST BE LOWERCASE
        "mode": 'Dynasty', // broad roster mode used by the existing site artwork
-       "direction": 'Fringe / Retooling',
+       "direction": 'Retooling',
        "rival": {
          "name": "Keller",
          "link": 9,
@@ -334,7 +334,7 @@ export const managers = [
        "fantasyStart": null, // (optional) when did the manager start playing fantasy football
        "favoriteTeam" : "chi", // (optional) favorite NFL team, (follows convention: nyj, sea, mia, etc.) MUST BE LOWERCASE
        "mode": 'Dynasty', // broad roster mode used by the existing site artwork
-       "direction": 'Ascending Contender',
+       "direction": 'Elite Contender',
        "rival": {
          "name": "Dustin",
          "link": 3,
