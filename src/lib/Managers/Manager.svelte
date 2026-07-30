@@ -33,6 +33,8 @@
 
     let players, playersInfo;
     let loading = true;
+    let liveDirections = {};
+    $: teamDirection = liveDirections[rosterID] || null;
 
     const refreshTransactions = async () => {
         const newTransactions = await getLeagueTransactions(false, true);
@@ -40,6 +42,13 @@
     }
 
     onMount(async () => {
+        fetch('/api/team-directions')
+            .then((response) => response.ok ? response.json() : null)
+            .then((ratings) => {
+                if(ratings) liveDirections = ratings.directions || {};
+            })
+            .catch((error) => console.warn('Using approved fallback team direction', error));
+
         if(transactionsData.stale) {
             refreshTransactions();
         }
@@ -298,7 +307,7 @@
 
     {#if !loading}
         <!-- Favorite player -->
-        <ManagerFantasyInfo {viewManager} {players} />
+        <ManagerFantasyInfo {viewManager} {players} {teamDirection} />
     {/if}
 
     <ManagerAwards {leagueTeamManagers} tookOver={viewManager.tookOver} {awards} {records} {rosterID} managerID={viewManager.managerID} />
