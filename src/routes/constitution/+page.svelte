@@ -164,10 +164,9 @@ h5 {
     <li><strong>Vice Commissioner:</strong> Frank Bartley</li>
     <li><strong>President of League Engagement:</strong> Brandon Miller</li>
     <li><strong>League Representative:</strong> Wesley Anderson</li>
-            <li>Alternate: Kevin Wilson</li>
-
-
+    <li><strong>Alternate:</strong> Kevin Wilson</li>
   </ul>
+  <p>For purposes of this constitution, “League Leaders” and “League Leadership” refer only to the Commissioner, Vice Commissioner, and President of League Engagement. The League Representative, Alternate, and any other supporting positions are appointed by the Commissioner and serve at the Commissioner’s discretion.</p>
   <p>Leadership roles persist year to year unless changed by resignation, removal, or league vote as outlined below.</p>
 
   <h3 class="subSectionHeading" bind:this={oneTwo}>1.2 Authority and Decision Making</h3>
@@ -201,7 +200,7 @@ h5 {
 
   <h4 bind:this={twoOneOne}>2.1.1 Position Maximums</h4>
   <div class="subBlock">
-    <p>As of the 2023 season, no position maximums are in place. If position maximums are proposed, implementation will require a league vote with at least seven managers in favor. League Leadership retains the authority to make final determinations on roster structure while reserving the right to submit any changes to a league‑wide vote.</p>
+    <p>As of the 2023 season, no position maximums are in place. A proposal supported by at least seven managers may be submitted to League Leadership for implementation. League Leadership retains final approval authority over roster structure and may approve, modify, or reject a proposed change. League Leadership may also implement a roster-structure change without a league vote when it determines that the change is necessary and in the best interest of the league.</p>
   </div>
 
   <h3 class="subSectionHeading" bind:this={twoTwo}>2.2 Trading</h3>
@@ -212,7 +211,7 @@ h5 {
 
   <h4 bind:this={twoTwoOne}>2.2.1 Trade Collusion</h4>
   <div class="subBlock">
-    <p>Any form of collusion is strictly prohibited. Collusion includes, but is not limited to, accepting or offering bribes, trading non‑approved assets, or coordinating veto activity against otherwise valid trades.</p>
+    <p>Any form of collusion is strictly prohibited. Collusion includes, but is not limited to, accepting or offering bribes; exchanging outside money, favors, side agreements, future repayment, or any other asset not included in the official Sleeper transaction; or coordinating veto activity against otherwise valid trades.</p>
     <p>Violations will be penalized as follows:</p>
     <ul>
       <li><strong>First Offense:</strong> Immediate reduction of FAAB budget by 50 percent for eighteen fantasy season weeks, plus a 50 percent FAAB penalty during the end‑of‑season free agent period. If FAAB is exhausted, the penalty will apply at the start of the following season.</li>
@@ -226,12 +225,12 @@ h5 {
 
   <h4 bind:this={twoTwoTwo}>2.2.2 Lending Players Prohibition</h4>
   <div class="subBlock">
-    <p>Any player traded during the fantasy season may not be reacquired by the original team within four weeks of the trade. Exceptions may apply if roster health has materially changed and compensation differs. Final determination of exceptions rests with League Leadership. Violations are subject to collusion penalties.</p>
+    <p>Any player traded during the fantasy season may not be reacquired by the original team within four weeks of the trade. An exception requires prior approval from League Leadership and may be granted if either roster health has materially changed or the compensation in the new transaction differs from the original trade. Final determination of all exceptions rests with League Leadership. Violations are subject to collusion penalties.</p>
   </div>
 
   <h4 bind:this={twoTwoThree}>2.2.3 Trade Deadline</h4>
   <div class="subBlock">
-    <p>Week 11 marks the final week for trades during the fantasy season. Trades will reopen after the final waiver run once the league transitions into the new year.</p>
+    <p>Trades must be accepted in Sleeper before kickoff of the first NFL game of Week 11. A trade accepted before the deadline may complete its normal processing period afterward. Trades will reopen after the final waiver run once the league transitions into the new year.</p>
   </div>
 
   <h4 bind:this={twoTwoFour}>2.2.4 Trade Restrictions</h4>
@@ -245,20 +244,20 @@ h5 {
   </div>
 
   <h3 bind:this={twoThree}>2.3 Waiver Wire</h3>
-  <p>The league uses a FAAB waiver system. Each team begins the fantasy season with one hundred FAAB dollars. Zero‑dollar bids are permitted. Waivers process daily at 3:00 AM EST, except on Tuesdays and Fridays.</p>
+  <p>The league uses a FAAB waiver system. Each team begins the fantasy season with one hundred FAAB dollars. Zero‑dollar bids are permitted. Waivers process daily at 3:00 AM Eastern Time (ET), except on Tuesdays and Fridays.</p>
   <p>FAAB budgets reset when the league transitions into the new year for the End of Season Free Agent Extravaganza. This is the one and only free agent waiver run prior to our league draft. Following this period, FAAB budgets reset again to one hundred dollars for the upcoming fantasy season, and free agency does not open again until after the league's rookie draft.</p>
 
   <!-- Section 3 Body -->
   <h2 class="sectionHeading" bind:this={three}>Section 3 Drafting</h2>
   <h3 bind:this={threeOne}>3.1 Draft Order</h3>
   <p>The draft order for the first six selections each year will be determined by a linear draft in reverse order of the previous season’s regular‑season standings. This structure is intended to promote competitive balance while still rewarding performance.</p>
-  <p>Picks seven through ten are determined by playoff results. Fifth place will receive the seventh pick, and sixth place will receive the eighth pick. Beginning with the 2024 season, third place is awarded prize money and no longer receives the ninth pick. As a result, the ninth pick is now awarded to the fourth‑place finisher.</p>
+  <p>Picks seven through ten are determined by playoff results. Fifth place will receive the seventh pick, sixth place will receive the eighth pick, fourth place will receive the ninth pick, and third place will receive the tenth pick.</p>
   <p>Since first‑ and second‑place finishers receive prize payouts, second place will be awarded the eleventh pick, and the league champion will receive the twelfth pick.</p>
   <p>The bottom six teams will compete in the Toilet Bowl consolation bracket. The winner of the Toilet Bowl will be awarded the untradeable thirteenth pick at the end of the first round.</p>
 
   <h3 bind:this={threeTwo}>3.2 Rookie Drafts</h3>
-  <p>Rookie drafts will consist of three rounds. Each selection will be allotted a four‑hour time limit. The draft will remain active from 9:00 AM to 10:00 PM EST until completion unless paused by league leadership due to technical issues or league‑wide scheduling conflicts.</p>
-  <p>Failure to make a selection within the allotted time may result in an automatic pick.</p>
+  <p>Rookie drafts will consist of three rounds. Each selection will be allotted a four‑hour time limit. The draft will remain active from 9:00 AM to 10:00 PM Eastern Time (ET) until completion unless paused by League Leadership due to technical issues or league‑wide scheduling conflicts.</p>
+  <p>Failure to make a selection within the allotted time may result in an automatic selection of the highest-ranked available rookie according to Sleeper ADP at the time the pick is made.</p>
 
   <h3 bind:this={threeThree}>3.3 Draft Day Trades</h3>
   <p>As of the 2023 season, the league voted to expand the rookie draft into a long‑format draft in order to encourage increased draft‑day trading and strategic flexibility.</p>
@@ -267,7 +266,7 @@ h5 {
   <!-- Section 4 Body -->
   <h2 class="sectionHeading" bind:this={four}>Section 4 Scoring System</h2>
   <h3 bind:this={fourOne}>4.1 Scoring System</h3>
-  <p>The league scoring system is maintained and displayed within the Sleeper fantasy app. Minor adjustments may be made by league leadership as needed to preserve competitive balance and overall league health.</p>
+  <p>The league scoring system is maintained and displayed within the Sleeper fantasy app. League Leadership may make minor clerical or platform corrections when needed. Any change to point values, scoring categories, or lineup strategy is considered a major change.</p>
   <p>Any request for major changes to the scoring system requires approval by a three‑quarters majority league vote. If approved, the Commissioner and Vice Commissioner will implement the changes they feel best reflect the suggested adjustments and will then submit the changes to the President of League Engagement for final review.</p>
   <p>The President of League Engagement may approve the changes as submitted or request revisions before implementation to ensure alignment with league philosophy and long‑term stability.</p>
 
@@ -275,7 +274,7 @@ h5 {
   <h2 class="sectionHeading" bind:this={five}>Section 5 Postseason</h2>
   <h3 bind:this={fiveOne}>5.1 Playoffs</h3>
   <p>The league postseason will begin in Week 15 of the NFL regular season.</p>
-  <p>Each season, the teams that win their respective divisions will automatically qualify for the playoffs. In addition to the division winners, the three remaining teams with the best regular‑season records will earn wild‑card berths.</p>
+  <p>Six teams qualify for the playoffs each season. The three division winners automatically qualify, and the three remaining teams with the best regular‑season records earn wild‑card berths.</p>
   <p>The two division winners with the strongest regular‑season records will receive a first‑round bye. All remaining playoff matchups will be single‑week eliminations, with the winner advancing to the next round.</p>
   <p>Outside of rare and unforeseen circumstances, Week 18 of the NFL season will not be used for fantasy playoff matchups in order to preserve competitive integrity.</p>
 
@@ -293,21 +292,21 @@ h5 {
   <!-- Section 6 Body -->
   <h2 class="sectionHeading" bind:this={six}>Section 6 Tanking Policy</h2>
   <h3 bind:this={sixOne}>6.1 League Tanking Policy</h3>
-  <p>In order to maintain the integrity of the league and to keep a fun, competitive atmosphere, all managers must field a starting lineup that displays a willingness to win and does not put their opponent at an intentional competitive advantage. Any manager who does not make a reasonable effort to win their game, including, but not limited to, intentionally starting a player who is not on an active NFL roster or leaving a starting lineup spot empty in order to improve their draft position, may be subject to punishment, including, but not limited to, the forfeiture of draft selections.</p>
+  <p>In order to maintain the integrity of the league and to keep a fun, competitive atmosphere, all managers must submit a complete, good-faith starting lineup that displays a willingness to win and does not give their opponent an intentional competitive advantage. Managers are not required to start the highest-projected players and may make reasonable lineup decisions. A manager who does not make a reasonable effort to win, including, but not limited to, intentionally starting a player who is not on an active NFL roster or leaving a starting lineup spot empty in order to improve draft position, may be subject to punishment, including, but not limited to, the forfeiture of draft selections.</p>
 
   <!-- Section 7 Body -->
   <h2 class="sectionHeading" bind:this={seven}>Section 7 Replacing Managers</h2>
   <h3 bind:this={sevenOne}>7.1 Removing Managers</h3>
-  <p>Short of continuously failing to set a valid lineup or confirmed collusion, no manager can be removed against their will without a league vote. Participation through trade offers and the waiver wire is strongly encouraged, but lack of participation is generally not grounds for removal unless the manager has become a clear detriment to their team, thereby affecting the integrity of the league. If a member of leadership has attempted and failed to make contact with a manager multiple times, this would be considered league abandonment and a replacement manager would be found to take their place. The removed manager would receive no refund of any dues paid.</p>
+  <p>Short of continuously failing to set a valid lineup, confirmed collusion, or league abandonment, no manager may be removed against their will without approval from at least nine league managers. Participation through trade offers and the waiver wire is strongly encouraged, but lack of participation is generally not grounds for removal unless the manager has become a clear detriment to their team, thereby affecting the integrity of the league. League abandonment occurs when League Leadership makes at least three documented contact attempts over fourteen consecutive days without receiving a response. The removed manager will receive no refund of any dues paid.</p>
   <h3 bind:this={sevenTwo}>7.2 Replacing Managers</h3>
   <p>When it is determined that a manager needs to be replaced, the League Leaders will try to find a suitable candidate with some connection to at least a portion of the existing managers. Priority will be placed on managers who are eager to take on a dynasty commitment and will be very active within the league.</p>
   <h3 bind:this={sevenThree}>7.3 Replacement Incentive</h3>
-  <p>In the event that a manager chooses to quit the league or is removed by the League Leaders, they will be charged a $25 exit fee so the incoming manager is offered a 50% reduction on their first‑year buy‑in.</p>
+  <p>If a manager quits the league or is removed by the League Leaders, the departing manager will be charged a $25 exit fee. The incoming manager will receive a $25 reduction on their first-year buy-in regardless of whether the departing manager pays the fee. If the departing manager refuses to pay, League Leadership will cover the difference under the repayment terms in Section 8.2.</p>
 
   <!-- Section 8 Body -->
   <h2 class="sectionHeading" bind:this={eight}>Section 8 League Finances</h2>
   <h3 bind:this={eightOne}>8.1 League Dues</h3>
-  <p>League dues are set at $50. Dues are collected by the league commissioner via means best suited to the managers. League dues should be paid no later than Week 1 of the fantasy season or as the commissioner sees fit.</p>
+  <p>League dues are set at $50. Dues are collected by the Commissioner via means best suited to the managers. All league dues must be paid no later than the start of Week 3 of the fantasy season.</p>
   <p>If the league coffers do not have enough money to cover the winnings, it is the league commissioner’s sole responsibility to make up the difference.</p>
   <h3 bind:this={eightTwo}>8.2 Payout</h3>
   <p>League payouts are structured as follows:</p>
@@ -316,7 +315,7 @@ h5 {
     <li>2nd place: $200</li>
     <li>3rd place: $100</li>
   </ul>
-  <p>In the event that a new manager is added and given 50% off their entry fee, the departing manager will be asked to pay a 50% exit fee to cover the discount. If the former manager refuses, League Leaders will make up the difference. If the new manager finishes first or second and the exiting manager refused to pay the exit fee, the new manager’s winnings will be reduced by 50% of the league dues to cover the accrued cost. If the new manager does not win any money in their first year, League Leaders will forfeit the right to collect the accrued 50% dues for that season.</p>
+  <p>If a departing manager refuses to pay the $25 exit fee described in Section 7.3, League Leadership will cover the incoming manager’s first-year discount. If the incoming manager wins prize money in their first season, $25 of that prize money will first be used to repay the League Leaders who covered the discount, and the remainder will be paid to the incoming manager. If the incoming manager does not win prize money in their first season, League Leadership will absorb the cost and forfeit the right to collect it later.</p>
   <h3 bind:this={eightThree}>8.3 Raising Dues</h3>
   <p>A three‑quarters majority of managers (9) is required to approve an increase in league dues. If a manager is no longer financially comfortable with the buy‑in, finding a co‑manager to split the cost is recommended.</p>
 </div>
