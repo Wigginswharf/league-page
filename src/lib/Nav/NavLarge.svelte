@@ -1,161 +1,216 @@
 <script>
-	import Tab, { Icon, Label } from '@smui/tab';
-	import List, { Item, Graphic, Text, Separator } from '@smui/list';
-	import TabBar from '@smui/tab-bar';
-	import { goto, prefetch } from '$app/navigation';
-	import { enableBlog, managers } from '$lib/utils/leagueInfo';
+  import { prefetch } from "$app/navigation";
+  import { enableBlog } from "$lib/utils/leagueInfo";
 
-	export let active, tabs;
+  export let active;
+  export let tabs;
 
-	let activeTab = active;
+  let openMenu = null;
 
-	let display;
-	let el, width, height, left, top;
+  const visibleChildren = (tab) =>
+    tab.children.filter((child) => !child.blog || enableBlog);
 
-	const sizeSubMenu = (w) => {
-		top = el?.getBoundingClientRect() ? el?.getBoundingClientRect().top  : 0;
-		const bottom = el?.getBoundingClientRect() ? el?.getBoundingClientRect().bottom  : 0;
+  const isActive = (tab) =>
+    tab.dest === active ||
+    (tab.nest && visibleChildren(tab).some((child) => child.dest === active));
 
-		height = bottom - top + 1;
+  const prefetchInternal = (item) => {
+    if (!item.external) prefetch(item.dest);
+  };
 
-		left = el?.getBoundingClientRect() ? el?.getBoundingClientRect().left  : 0;
-		const right = el?.getBoundingClientRect() ? el?.getBoundingClientRect().right  : 0;
+  const toggleMenu = (label) => {
+    openMenu = openMenu === label ? null : label;
+  };
 
-		width = right - left;
-	}
+  const closeOnFocusOut = (event) => {
+    if (!event.currentTarget.contains(event.relatedTarget)) openMenu = null;
+  };
 
-	let innerWidth;
-
-	$: sizeSubMenu(innerWidth);
-
-	const open = (close = false) => {
-		if(close) {
-			setTimeout(() => {
-				active = activeTab;
-			}, 500)
-		} else {
-			activeTab = active;
-		}
-		display = !display;
-	}
-
-	const subGoto = (dest) => {
-		open(false);
-		goto(dest);
-	}
-
-	let tabChildren = []
-
-	for(const tab of tabs) {
-		if(tab.nest) {
-			tabChildren = tab.children;
-		}
-	}
-
-</script>
-
-<svelte:window bind:innerWidth={innerWidth} />
-
-<style>
-    :global(.navBar) {
-		display: inline-flex;
-		position: relative;
-    	justify-content: center;
+  const handleKeydown = (event, tab) => {
+    if (event.key === "Escape") {
+      openMenu = null;
+      event.currentTarget.querySelector("button")?.focus();
     }
 
-	:global(.navBar .material-icons) {
-		font-size: 1.8em;
-		height: 25px;
-		width: 22px;
-	}
+    if (event.key === "ArrowDown") {
+      event.preventDefault();
+      openMenu = tab.label;
+      setTimeout(
+        () => event.currentTarget.querySelector(".submenu a")?.focus(),
+        0
+      );
+    }
+  };
+</script>
 
-	.parent {
-		position: relative;
-	}
-
-	.subMenu {
-		overflow-y: hidden;
-		display: block;
-		position: absolute;
-		z-index: 5;
-		background-color: var(--fff);
-		transition: all 0.4s;
-	}
-
-	.overlay {
-		display: block;
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		height: 100vh;
-		z-index: 4;
-	}
-
-	:global(.mdc-deprecated-list) {
-		padding: 0;
-	}
-
-	:global(.subText) {
-		font-size: 0.8em;
-	}
-
-	:global(.dontDisplay) {
-		display: none;
-	}
-</style>
-
-<div class="overlay" style="display: {display ? "block" : "none"};" on:click={() => open(true)} />
-
-<div class="parent">
-	<TabBar class="navBar" {tabs} let:tab bind:active>
-		{#if tab.nest}
-			<div bind:this={el}>
-				<Tab
-					{tab}
-					on:click={() => open(display)}
-					minWidth
-				>
-					<Icon class="material-icons">{tab.icon}</Icon>
-					<Label>{tab.label}</Label>
-				</Tab>
-			</div>
-		{:else}
-			<Tab
-				class="{tab.label == 'Blog' && !enableBlog ? 'dontDisplay' : ''}"
-				{tab}
-				on:touchstart={() => prefetch(tab.dest)}
-				on:mouseover={() => prefetch(tab.dest)}
-				on:click={() => goto(tab.dest)}
-				minWidth
-			>
-				<Icon class="material-icons">{tab.icon}</Icon>
-				<Label>{tab.label}</Label>
-			</Tab>
-		{/if}
-	</TabBar>
-	<div class="subMenu" style="max-height: {display ? 49 * tabChildren.length - 1 - (managers.length ? 0 : 48) : 0}px; width: {width}px; top: {height}px; left: {left}px; box-shadow: 0 0 {display ? "3px" : "0"} 0 #00316b; border: {display ? "1px" : "0"} solid #00316b; border-top: none;">
-		<List>
-			{#each tabChildren as subTab, ix}
-				{#if subTab.label == 'Managers'}
-					<Item class="{managers.length ? '' : 'dontDisplay'}" on:SMUI:action={() => subGoto(subTab.dest)} on:touchstart={() => prefetch(subTab.dest)} on:mouseover={() => prefetch(subTab.dest)}>
-						<Graphic class="material-icons">{subTab.icon}</Graphic>
-						<Text class="subText">{subTab.label}</Text>
-					</Item>
-					{#if ix != tabChildren.length - 1}
-						<Separator />
-					{/if}
-				{:else}
-					<Item on:SMUI:action={() => subGoto(subTab.dest)} on:touchstart={() => {if(subTab.label != 'Go to Sleeper') prefetch(subTab.dest)}} on:mouseover={() => {if(subTab.label != 'Go to Sleeper') prefetch(subTab.dest)}}>
-						<Graphic class="material-icons">{subTab.icon}</Graphic>
-						<Text class="subText">{subTab.label}</Text>
-					</Item>
-					{#if ix != tabChildren.length - 1}
-						<Separator />
-					{/if}
-				{/if}
-			{/each}
-		</List>
-	</div>
+<div class="desktop-nav" aria-label="Primary navigation">
+  {#each tabs as tab}
+    <div
+      class:active={isActive(tab)}
+      class="nav-entry"
+      on:mouseenter={() => tab.nest && (openMenu = tab.label)}
+      on:mouseleave={() => tab.nest && (openMenu = null)}
+      on:focusout={closeOnFocusOut}
+      on:keydown={(event) => tab.nest && handleKeydown(event, tab)}
+    >
+      {#if tab.nest}
+        <button
+          class="nav-trigger"
+          type="button"
+          aria-expanded={openMenu === tab.label}
+          aria-haspopup="true"
+          on:click={() => toggleMenu(tab.label)}
+        >
+          <span class="material-icons" aria-hidden="true">{tab.icon}</span>
+          <span>{tab.label}</span>
+          <span
+            class:open={openMenu === tab.label}
+            class="material-icons chevron"
+            aria-hidden="true">expand_more</span
+          >
+        </button>
+        <div
+          class:open={openMenu === tab.label}
+          class="submenu"
+          aria-label={`${tab.label} links`}
+        >
+          {#each visibleChildren(tab) as child}
+            <a
+              class:active={child.dest === active}
+              href={child.dest}
+              target={child.external ? "_blank" : undefined}
+              rel={child.external ? "noopener noreferrer" : undefined}
+              on:mouseenter={() => prefetchInternal(child)}
+              on:focus={() => prefetchInternal(child)}
+              on:click={() => (openMenu = null)}
+            >
+              <span class="material-icons" aria-hidden="true">{child.icon}</span
+              >
+              <span>{child.label}</span>
+              {#if child.external}
+                <span class="material-icons external" aria-hidden="true"
+                  >open_in_new</span
+                >
+              {/if}
+            </a>
+          {/each}
+        </div>
+      {:else}
+        <a
+          class="nav-link"
+          href={tab.dest}
+          on:mouseenter={() => prefetchInternal(tab)}
+          on:focus={() => prefetchInternal(tab)}
+        >
+          <span class="material-icons" aria-hidden="true">{tab.icon}</span>
+          <span>{tab.label}</span>
+        </a>
+      {/if}
+    </div>
+  {/each}
 </div>
+
+<style>
+  .desktop-nav {
+    align-items: stretch;
+    display: flex;
+    justify-content: center;
+    min-height: 52px;
+  }
+
+  .nav-entry {
+    position: relative;
+  }
+
+  .nav-link,
+  .nav-trigger {
+    align-items: center;
+    background: transparent;
+    border: 0;
+    border-bottom: 3px solid transparent;
+    box-sizing: border-box;
+    color: var(--g555);
+    cursor: pointer;
+    display: flex;
+    font: inherit;
+    gap: 0.42rem;
+    height: 100%;
+    min-width: 128px;
+    justify-content: center;
+    padding: 0.7rem 1rem 0.55rem;
+    text-decoration: none;
+  }
+
+  .nav-link:hover,
+  .nav-trigger:hover,
+  .nav-link:focus-visible,
+  .nav-trigger:focus-visible,
+  .nav-entry.active > .nav-link,
+  .nav-entry.active > .nav-trigger {
+    border-bottom-color: #920505;
+    color: #00316b;
+    outline: none;
+  }
+
+  .material-icons {
+    font-size: 1.35rem;
+  }
+
+  .chevron {
+    font-size: 1.1rem;
+    transition: transform 0.18s ease;
+  }
+
+  .chevron.open {
+    transform: rotate(180deg);
+  }
+
+  .submenu {
+    background: var(--fff);
+    border: 1px solid #00316b;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 7px 16px rgba(0, 49, 107, 0.2);
+    left: 50%;
+    min-width: 218px;
+    opacity: 0;
+    overflow: hidden;
+    pointer-events: none;
+    position: absolute;
+    top: 100%;
+    transform: translate(-50%, -6px);
+    transition: opacity 0.16s ease, transform 0.16s ease;
+    z-index: 10;
+  }
+
+  .submenu.open {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, 0);
+  }
+
+  .submenu a {
+    align-items: center;
+    color: var(--g555);
+    display: flex;
+    gap: 0.7rem;
+    padding: 0.78rem 1rem;
+    text-decoration: none;
+  }
+
+  .submenu a + a {
+    border-top: 1px solid rgba(0, 49, 107, 0.12);
+  }
+
+  .submenu a:hover,
+  .submenu a:focus-visible,
+  .submenu a.active {
+    background: rgba(0, 49, 107, 0.08);
+    color: #00316b;
+    outline: none;
+  }
+
+  .external {
+    font-size: 1rem;
+    margin-left: auto;
+  }
+</style>

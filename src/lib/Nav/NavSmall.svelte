@@ -1,104 +1,233 @@
 <script>
-	import Drawer, {
-	  Content,
-	  Header,
-	  Title,
-	} from '@smui/drawer';
-	import { Icon } from '@smui/tab';
-  	import List, { Item, Text, Graphic, Separator, Subheader } from '@smui/list';
-	import { goto, prefetch } from '$app/navigation';
-	import { leagueName } from '$lib/utils/helper';
-	import { enableBlog, managers } from '$lib/utils/leagueInfo';
-	
-	export let active, tabs;
+  import { prefetch } from "$app/navigation";
+  import { leagueName } from "$lib/utils/helper";
+  import { enableBlog } from "$lib/utils/leagueInfo";
 
-	let open = false;
+  export let active;
+  export let tabs;
 
-	const selectTab = (tab) => {
-		open = false;
-		goto(tab.dest);
-	}
+  let open = false;
+
+  const visibleChildren = (tab) =>
+    tab.children.filter((child) => !child.blog || enableBlog);
+
+  const prefetchInternal = (item) => {
+    if (!item.external) prefetch(item.dest);
+  };
+
+  const close = () => {
+    open = false;
+  };
+
+  const handleKeydown = (event) => {
+    if (event.key === "Escape") close();
+  };
 </script>
 
+<svelte:window on:keydown={handleKeydown} />
+
+<button
+  class="menu-button"
+  type="button"
+  aria-label="Open navigation menu"
+  aria-expanded={open}
+  on:click={() => (open = true)}
+>
+  <span class="material-icons" aria-hidden="true">menu</span>
+</button>
+
+<button
+  class:open
+  class="backdrop"
+  type="button"
+  aria-label="Close navigation menu"
+  tabindex={open ? 0 : -1}
+  on:click={close}
+/>
+
+<aside
+  class:open
+  class="drawer"
+  aria-hidden={!open}
+  aria-label="Mobile navigation"
+>
+  <div class="drawer-header">
+    <p class="drawer-title">{leagueName}</p>
+    <button
+      class="close-button"
+      type="button"
+      aria-label="Close navigation menu"
+      on:click={close}
+    >
+      <span class="material-icons" aria-hidden="true">close</span>
+    </button>
+  </div>
+
+  {#each tabs as tab}
+    {#if tab.nest}
+      <p class="group-title">{tab.label}</p>
+      {#each visibleChildren(tab) as child}
+        <a
+          class:active={child.dest === active}
+          class="mobile-link"
+          href={child.dest}
+          target={child.external ? "_blank" : undefined}
+          rel={child.external ? "noopener noreferrer" : undefined}
+          on:mouseenter={() => prefetchInternal(child)}
+          on:focus={() => prefetchInternal(child)}
+          on:click={close}
+        >
+          <span class="material-icons" aria-hidden="true">{child.icon}</span>
+          <span>{child.label}</span>
+          {#if child.external}
+            <span class="material-icons external" aria-hidden="true"
+              >open_in_new</span
+            >
+          {/if}
+        </a>
+      {/each}
+    {:else}
+      <a
+        class:active={tab.dest === active}
+        class="mobile-link"
+        href={tab.dest}
+        on:mouseenter={() => prefetchInternal(tab)}
+        on:focus={() => prefetchInternal(tab)}
+        on:click={close}
+      >
+        <span class="material-icons" aria-hidden="true">{tab.icon}</span>
+        <span>{tab.label}</span>
+      </a>
+    {/if}
+  {/each}
+</aside>
+
 <style>
-	:global(.menuIcon) {
-		position: absolute;
-		top: 15px;
-		left: 15px;
-		font-size: 2em;
-		color: #888;
-		padding: 6px;
-		cursor: pointer;
-	}
+  .menu-button {
+    align-items: center;
+    background: transparent;
+    border: 0;
+    color: var(--g555);
+    cursor: pointer;
+    display: flex;
+    height: 48px;
+    justify-content: center;
+    left: 8px;
+    position: absolute;
+    top: 8px;
+    width: 48px;
+    z-index: 13;
+  }
 
-	:global(.menuIcon:hover) {
-		color: #00316b;
-	}
+  .menu-button:hover,
+  .menu-button:focus-visible {
+    color: #00316b;
+    outline: 2px solid #00316b;
+    outline-offset: -4px;
+  }
 
-	:global(.nav-drawer) {
-		z-index: 5;
-		top: 0;
-		left: 0;
-	}
+  .menu-button .material-icons {
+    font-size: 2rem;
+  }
 
-	:global(.nav-item) {
-		color: #858585 !important;
-	}
+  .backdrop {
+    background: rgba(0, 0, 0, 0.4);
+    border: 0;
+    height: 100vh;
+    inset: 0;
+    opacity: 0;
+    pointer-events: none;
+    position: fixed;
+    transition: opacity 0.2s ease;
+    width: 100vw;
+    z-index: 11;
+  }
 
-	.nav-back {
-		position: fixed;
-		z-index: 4;
-		width: 100%;
-		width: 100vw;
-		height: 100%;
-		height: 100vh;
-		top: 0;
-		left: 0;
-		background-color: rgba(0, 0, 0, 0.32);
-		transition: all 0.7s;
-	}
+  .backdrop.open {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .drawer {
+    background: var(--fff);
+    box-shadow: 5px 0 18px rgba(0, 0, 0, 0.24);
+    box-sizing: border-box;
+    height: 100vh;
+    left: 0;
+    max-width: 88vw;
+    overflow-y: auto;
+    padding-bottom: 1.5rem;
+    position: fixed;
+    top: 0;
+    transform: translateX(-105%);
+    transition: transform 0.22s ease;
+    width: 320px;
+    z-index: 12;
+  }
+
+  .drawer.open {
+    transform: translateX(0);
+  }
+
+  .drawer-header {
+    align-items: center;
+    border-bottom: 1px solid rgba(0, 49, 107, 0.18);
+    display: flex;
+    justify-content: space-between;
+    min-height: 64px;
+    padding: 0 0.8rem 0 1.1rem;
+  }
+
+  .drawer-title {
+    color: #00316b;
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin: 0;
+  }
+
+  .close-button {
+    background: transparent;
+    border: 0;
+    color: var(--g555);
+    cursor: pointer;
+    padding: 0.7rem;
+  }
+
+  .group-title {
+    color: #920505;
+    font-size: 0.76rem;
+    font-weight: 800;
+    letter-spacing: 0.09em;
+    margin: 1rem 1.15rem 0.35rem;
+    text-transform: uppercase;
+  }
+
+  .mobile-link {
+    align-items: center;
+    border-left: 4px solid transparent;
+    color: var(--g555);
+    display: flex;
+    gap: 0.85rem;
+    min-height: 48px;
+    padding: 0 1.15rem;
+    text-decoration: none;
+  }
+
+  .mobile-link:hover,
+  .mobile-link:focus-visible,
+  .mobile-link.active {
+    background: rgba(0, 49, 107, 0.08);
+    border-left-color: #920505;
+    color: #00316b;
+    outline: none;
+  }
+
+  .mobile-link .material-icons {
+    font-size: 1.35rem;
+  }
+
+  .external {
+    font-size: 1rem !important;
+    margin-left: auto;
+  }
 </style>
-
-<Icon class="material-icons menuIcon" on:click={() => (open = true)}>menu</Icon>
-
-<div class="nav-back" style="pointer-events: {open ? "visible" : "none"}; opacity: {open ? 1 : 0};" on:click={() => (open = false)}/>
-
-<Drawer variant="modal" class="nav-drawer" fixed={true} bind:open>
-	<Header>
-		<Title>{leagueName}</Title>
-	</Header>
-	<Content>
-		<List>
-			{#each tabs as tab}
-				{#if !tab.nest && (tab.label != 'Blog' || (tab.label == 'Blog' && enableBlog))}
-					<Item href="javascript:void(0)" on:click={() => selectTab(tab)} on:touchstart={() => prefetch(tab.dest)} on:mouseover={() => prefetch(tab.dest)} activated={active == tab.dest} >
-						<Graphic class="material-icons{active == tab.dest ? "" : " nav-item"}" aria-hidden="true">{tab.icon}</Graphic>
-						<Text class="{active == tab.dest ? "" : "nav-item"}">{tab.label}</Text>
-					</Item>
-				{/if}
-			{/each}
-			{#each tabs as tab}
-				{#if tab.nest}
-					<Separator />
-					<Subheader>{tab.label}</Subheader>
-					{#each tab.children as subTab}
-						{#if subTab.label == 'Managers'}
-							{#if managers.length}
-								<Item href="javascript:void(0)" on:click={() => selectTab(subTab)} activated={active == subTab.dest}  on:touchstart={() => prefetch(subTab.dest)} on:mouseover={() => prefetch(subTab.dest)}>
-									<Graphic class="material-icons{active == subTab.dest ? "" : " nav-item"}" aria-hidden="true">{subTab.icon}</Graphic>
-									<Text class="{active == subTab.dest ? "" : "nav-item"}">{subTab.label}</Text>
-								</Item>
-							{/if}
-						{:else}
-							<Item href="javascript:void(0)" on:click={() => selectTab(subTab)} activated={active == subTab.dest}  on:touchstart={() => {if(subTab.label != 'Go to Sleeper') prefetch(subTab.dest)}} on:mouseover={() => {if(subTab.label != 'Go to Sleeper') prefetch(subTab.dest)}}>
-								<Graphic class="material-icons{active == subTab.dest ? "" : " nav-item"}" aria-hidden="true">{subTab.icon}</Graphic>
-								<Text class="{active == subTab.dest ? "" : "nav-item"}">{subTab.label}</Text>
-							</Item>
-						{/if}
-					{/each}
-				{/if}
-			{/each}
-		</List>
-	</Content>
-  </Drawer>
-	

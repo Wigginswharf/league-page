@@ -7,34 +7,14 @@ export const tabs = [
     dest: "/",
   },
   {
-    icon: "local_fire_department",
-    label: "Matchups",
-    dest: "/matchups",
-  },
-  {
-    icon: "swap_horiz",
-    label: "Trades & Waivers",
-    dest: "/transactions",
-  },
-  {
-    icon: "article",
-    label: "Blog",
-    dest: "/blog",
-  },
-  {
-    icon: "view_comfy",
-    label: "League Info",
+    icon: "event",
+    label: "Season",
     nest: true,
     children: [
       {
-        icon: "storage",
-        label: "Rosters",
-        dest: "/rosters",
-      },
-      {
-        icon: "groups",
-        label: "Managers",
-        dest: "/managers",
+        icon: "local_fire_department",
+        label: "Matchups",
+        dest: "/matchups",
       },
       {
         icon: "leaderboard",
@@ -42,10 +22,32 @@ export const tabs = [
         dest: "/standings",
       },
       {
+        icon: "storage",
+        label: "Rosters",
+        dest: "/rosters",
+      },
+      {
+        icon: "swap_horiz",
+        label: "Transactions",
+        dest: "/transactions",
+      },
+      {
         icon: "view_comfy",
-        label: "Drafts",
+        label: "Draft Center",
         dest: "/drafts",
       },
+    ],
+  },
+  {
+    icon: "groups",
+    label: "Managers",
+    dest: "/managers",
+  },
+  {
+    icon: "emoji_events",
+    label: "History",
+    nest: true,
+    children: [
       {
         icon: "emoji_events",
         label: "League History",
@@ -53,24 +55,38 @@ export const tabs = [
       },
       {
         icon: "military_tech",
-        label: "Records",
+        label: "Record Book",
         dest: "/records",
       },
+    ],
+  },
+  {
+    icon: "shield",
+    label: "League Hub",
+    nest: true,
+    children: [
       {
         icon: "history_edu",
         label: "Constitution",
         dest: "/constitution",
       },
       {
+        icon: "lightbulb",
+        label: "Resources",
+        dest: "/resources",
+      },
+      {
+        icon: "article",
+        label: "League Blog",
+        dest: "/blog",
+        blog: true,
+      },
+      {
         icon: "sports_football",
-        label: "Go to Sleeper",
+        label: "Open Sleeper",
         dest: `https://sleeper.app/leagues/${leagueID}`,
+        external: true,
       },
     ],
-  },
-  {
-    icon: "lightbulb",
-    label: "Resources",
-    dest: "/resources",
   },
 ];
