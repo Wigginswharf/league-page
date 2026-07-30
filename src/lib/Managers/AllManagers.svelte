@@ -77,19 +77,20 @@
 <style>
   .managerContainer {
     width: 100%;
-    margin: 2em 0 5em;
+    margin: 0;
+    padding: clamp(2.5rem, 6vw, 5rem) 1rem 6rem;
   }
 
   .managerConstrained {
     width: 97%;
-    max-width: 800px;
+    max-width: 980px;
     margin: 0 auto;
   }
 
   h2 {
     text-align: center;
-    font-size: 2.8em;
-    margin: 2em 0 1.5em;
+    font-size: clamp(2.6rem, 6vw, 4.75rem);
+    margin: 0 0 1em;
     line-height: 1em;
   }
 
@@ -100,10 +101,10 @@
     padding: 0.85em 1.25em;
     justify-content: space-between;
     align-items: center;
-    border: 1px solid var(--ccc);
-    border-radius: 1em;
-    background: var(--eee);
-    color: var(--g555);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-md);
+    background: var(--surface-muted);
+    color: var(--text-muted);
     font: inherit;
     font-weight: 700;
     cursor: pointer;
@@ -111,7 +112,8 @@
 
   .retiredToggle:hover,
   .retiredToggle:focus-visible {
-    background: var(--ddd);
+    background: var(--surface-raised);
+    border-color: var(--league-blue);
   }
 
   .toggleIcon {

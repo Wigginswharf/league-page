@@ -107,22 +107,22 @@
     align-items: center;
     background: transparent;
     border: 0;
-    color: var(--g555);
+    color: rgba(255, 255, 255, 0.9);
     cursor: pointer;
     display: flex;
     height: 48px;
     justify-content: center;
     left: 8px;
     position: absolute;
-    top: 8px;
+    top: 10px;
     width: 48px;
     z-index: 13;
   }
 
   .menu-button:hover,
   .menu-button:focus-visible {
-    color: #00316b;
-    outline: 2px solid #00316b;
+    color: #fff;
+    outline: 2px solid var(--league-gold);
     outline-offset: -4px;
   }
 
@@ -131,7 +131,8 @@
   }
 
   .backdrop {
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(2, 10, 20, 0.68);
+    backdrop-filter: blur(3px);
     border: 0;
     height: 100vh;
     inset: 0;
@@ -149,7 +150,7 @@
   }
 
   .drawer {
-    background: var(--fff);
+    background: var(--surface-raised);
     box-shadow: 5px 0 18px rgba(0, 0, 0, 0.24);
     box-sizing: border-box;
     height: 100vh;
@@ -171,7 +172,8 @@
 
   .drawer-header {
     align-items: center;
-    border-bottom: 1px solid rgba(0, 49, 107, 0.18);
+    background: #071a33;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
     display: flex;
     justify-content: space-between;
     min-height: 64px;
@@ -179,7 +181,7 @@
   }
 
   .drawer-title {
-    color: #00316b;
+    color: #fff;
     font-size: 1.05rem;
     font-weight: 700;
     margin: 0;
@@ -188,13 +190,13 @@
   .close-button {
     background: transparent;
     border: 0;
-    color: var(--g555);
+    color: rgba(255, 255, 255, 0.82);
     cursor: pointer;
     padding: 0.7rem;
   }
 
   .group-title {
-    color: #920505;
+    color: var(--league-blue);
     font-size: 0.76rem;
     font-weight: 800;
     letter-spacing: 0.09em;
@@ -205,7 +207,7 @@
   .mobile-link {
     align-items: center;
     border-left: 4px solid transparent;
-    color: var(--g555);
+    color: var(--text-primary);
     display: flex;
     gap: 0.85rem;
     min-height: 48px;
@@ -216,9 +218,9 @@
   .mobile-link:hover,
   .mobile-link:focus-visible,
   .mobile-link.active {
-    background: rgba(0, 49, 107, 0.08);
-    border-left-color: #920505;
-    color: #00316b;
+    background: rgba(8, 120, 209, 0.09);
+    border-left-color: var(--league-gold);
+    color: var(--league-blue);
     outline: none;
   }
 
