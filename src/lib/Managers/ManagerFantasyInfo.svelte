@@ -7,6 +7,7 @@
     const gotoRival = (rival) => {
         if(!rival) {
             goto(`/managers`);
+            return;
         }
         goto(`/manager?manager=${rival}`);
     }
@@ -80,6 +81,7 @@
 
     .infoRival {
         cursor: pointer;
+        max-width: 260px;
     }
 
     .infoRival:hover .infoIcon {
@@ -89,6 +91,23 @@
 
     .rival {
         height: 100%;
+    }
+
+    .rivalRecord {
+        width: 240px;
+        margin-top: 0.75em;
+        font-size: 0.85em;
+        font-weight: 700;
+        color: var(--g555);
+        line-height: 1.3em;
+    }
+
+    .rivalNote {
+        width: 240px;
+        margin-top: 0.5em;
+        font-size: 0.72em;
+        color: var(--g555);
+        line-height: 1.4em;
     }
 
     .rebuildOrWin {
@@ -242,20 +261,28 @@
                 <img class="rebuildOrWin" src="/{viewManager.mode.replace(' ', '%20')}.png" alt="win now or rebuild"/>
             </div>
             <div class="infoAnswer">
-                {viewManager.mode}
+                {viewManager.direction || viewManager.mode}
             </div>
         </div>
     {/if}
     <!-- Rival -->
-    <div class="infoSlot infoRival" on:click={() => gotoRival(viewManager.rival.link)}>
-        <div class="infoLabel">
-            Rival
+    {#if viewManager.rival}
+        <div class="infoSlot infoRival" on:click={() => gotoRival(viewManager.rival.link)}>
+            <div class="infoLabel">
+                Featured Rival
+            </div>
+            <div class="infoIcon">
+                <img class="rival" src="{viewManager.rival.image}" alt="rival"/>
+            </div>
+            <div class="infoAnswer">
+                {viewManager.rival.name}
+            </div>
+            <div class="rivalRecord">
+                {viewManager.rival.record}
+            </div>
+            <div class="rivalNote">
+                {viewManager.rival.note}
+            </div>
         </div>
-        <div class="infoIcon">
-            <img class="rival" src="{viewManager.rival.image}" alt="rival"/>
-        </div>
-        <div class="infoAnswer">
-            {viewManager.rival.name}
-        </div>
-    </div>
+    {/if}
 </div>
