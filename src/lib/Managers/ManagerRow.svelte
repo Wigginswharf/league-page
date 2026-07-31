@@ -16,6 +16,25 @@
     awards = [];
 
   let retired = false;
+  let rivalExpanded = false;
+
+  function showRivalDetails(event) {
+    event.preventDefault();
+    event.stopPropagation();
+    rivalExpanded = true;
+  }
+
+  function closeRivalDetails(event) {
+    event.preventDefault();
+    event.stopPropagation();
+    rivalExpanded = false;
+  }
+
+  function viewRivalManager(event) {
+    event.preventDefault();
+    event.stopPropagation();
+    goto(`/manager?manager=${manager.rival.link}`);
+  }
 
   // manager.roster is deprecated, pages should be using managerID now
   let rosterID = manager.roster;
@@ -144,10 +163,11 @@
         <button
           class="rivalButton"
           type="button"
-          aria-label="View {manager.rival.name}, featured rival"
+          aria-label="Show rivalry details for {manager.rival.name}"
           aria-describedby="rival-summary-{key}"
-          on:click|stopPropagation={() =>
-            goto(`/manager?manager=${manager.rival.link}`)}
+          aria-expanded={rivalExpanded}
+          aria-controls="rival-summary-{key}"
+          on:click={showRivalDetails}
         >
           <img
             class="rivalPhoto"
@@ -156,9 +176,26 @@
           />
         </button>
         <div class="infoAnswer">Rival</div>
-        <div class="rivalTooltip" id="rival-summary-{key}" role="tooltip">
+        <div
+          class:showRivalTooltip={rivalExpanded}
+          class="rivalTooltip"
+          id="rival-summary-{key}"
+          role="tooltip"
+        >
           <strong>{manager.rival.name} — {manager.rival.record}</strong>
           {manager.rival.note}
+          <div class="rivalActions">
+            <button
+              class="rivalAction rivalClose"
+              type="button"
+              on:click={closeRivalDetails}>Close</button
+            >
+            <button
+              class="rivalAction rivalView"
+              type="button"
+              on:click={viewRivalManager}>View {manager.rival.name}</button
+            >
+          </div>
         </div>
       {:else}
         <div class="infoIcon" aria-hidden="true"></div>
@@ -441,10 +478,39 @@
   }
 
   .rivalSlot:hover .rivalTooltip,
-  .rivalSlot:focus-within .rivalTooltip {
+  .rivalButton:focus-visible ~ .rivalTooltip,
+  .rivalTooltip.showRivalTooltip {
     opacity: 1;
+    pointer-events: auto;
     visibility: visible;
     transform: translateY(0);
+  }
+
+  .rivalActions {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: flex-end;
+    margin-top: 0.75rem;
+  }
+
+  .rivalAction {
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    cursor: pointer;
+    font: inherit;
+    font-weight: 700;
+    padding: 0.4rem 0.7rem;
+  }
+
+  .rivalClose {
+    background: var(--surface-muted);
+    color: var(--text-muted);
+  }
+
+  .rivalView {
+    background: var(--league-blue);
+    border-color: var(--league-blue);
+    color: #fff;
   }
 
   @media (max-width: 595px) {
