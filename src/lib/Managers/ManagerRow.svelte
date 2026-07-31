@@ -622,7 +622,7 @@
     }
 
     .infoTeam {
-      display: flex;
+      display: grid;
       grid-column: 2;
     }
 
