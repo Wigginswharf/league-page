@@ -481,6 +481,7 @@
   .rivalButton:focus-visible ~ .rivalTooltip,
   .rivalTooltip.showRivalTooltip {
     opacity: 1;
+    pointer-events: auto;
     visibility: visible;
     transform: translateY(0);
   }
