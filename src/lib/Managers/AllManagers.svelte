@@ -122,10 +122,19 @@
   }
 
   @media (max-width: 520px) {
+    .managerContainer {
+      box-sizing: border-box;
+      padding: 1.5rem 0.65rem 4rem;
+    }
+
+    .managerConstrained {
+      width: 100%;
+    }
+
     h2 {
       text-align: center;
       font-size: 2em;
-      margin: 1.5em 0 1em;
+      margin: 1em 0;
       line-height: 1em;
     }
   }
