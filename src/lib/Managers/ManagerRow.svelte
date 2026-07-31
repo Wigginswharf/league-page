@@ -63,13 +63,14 @@
   </div>
   <div class="spacer" />
   <div class="info">
-    {#if legacy.titles}
-      <div
-        class="infoSlot titleSlot"
-        title="{legacy.titles} league championship{legacy.titles === 1
-          ? ''
-          : 's'}: {legacy.championshipYears.join(', ')}"
-      >
+    <div
+      class:emptySlot={!legacy.titles}
+      class="infoSlot titleSlot"
+      title={legacy.titles
+        ? `${legacy.titles} league championship${legacy.titles === 1 ? '' : 's'}: ${legacy.championshipYears.join(', ')}`
+        : undefined}
+    >
+      {#if legacy.titles}
         <div
           class="infoIcon titleIcon"
           aria-label="{legacy.titles} league championship{legacy.titles === 1
@@ -81,11 +82,14 @@
         <div class="infoAnswer">
           {legacy.titles} Title{legacy.titles === 1 ? "" : "s"}
         </div>
-      </div>
-    {/if}
+      {:else}
+        <div class="infoIcon" aria-hidden="true"></div>
+        <div class="infoAnswer" aria-hidden="true">&nbsp;</div>
+      {/if}
+    </div>
     <!-- Favorite team (optional) -->
-    {#if manager.favoriteTeam}
-      <div class="infoSlot infoTeam">
+    <div class:emptySlot={!manager.favoriteTeam} class="infoSlot infoTeam">
+      {#if manager.favoriteTeam}
         <div class="infoIcon">
           <img
             class="infoImg"
@@ -93,11 +97,15 @@
             alt="favorite team"
           />
         </div>
-      </div>
-    {/if}
+        <div class="infoAnswer iconLabel">NFL Team</div>
+      {:else}
+        <div class="infoIcon" aria-hidden="true"></div>
+        <div class="infoAnswer" aria-hidden="true">&nbsp;</div>
+      {/if}
+    </div>
     <!-- Preferred contact -->
     {#if manager.preferredContact}
-      <div class="infoSlot">
+      <div class="infoSlot contactSlot">
         <div class="infoIcon">
           <img
             class="infoImg"
@@ -111,8 +119,8 @@
       </div>
     {/if}
     <!-- Live team direction (falls back to the approved static rating) -->
-    {#if dynasty && teamDirection}
-      <div class="infoSlot infoRebuild">
+    <div class:emptySlot={!(dynasty && teamDirection)} class="infoSlot infoRebuild">
+      {#if dynasty && teamDirection}
         <div class="infoIcon directionIcon">
           <TeamDirectionBadge
             category={teamDirection.category}
@@ -125,11 +133,14 @@
         <div class="infoAnswer">
           {teamDirection.category}
         </div>
-      </div>
-    {/if}
+      {:else}
+        <div class="infoIcon" aria-hidden="true"></div>
+        <div class="infoAnswer" aria-hidden="true">&nbsp;</div>
+      {/if}
+    </div>
     <!-- Featured rival -->
-    {#if manager.rival}
-      <div class="infoSlot rivalSlot">
+    <div class:emptySlot={!manager.rival} class="infoSlot rivalSlot">
+      {#if manager.rival}
         <button
           class="rivalButton"
           type="button"
@@ -149,8 +160,11 @@
           <strong>{manager.rival.name} — {manager.rival.record}</strong>
           {manager.rival.note}
         </div>
-      </div>
-    {/if}
+      {:else}
+        <div class="infoIcon" aria-hidden="true"></div>
+        <div class="infoAnswer" aria-hidden="true">&nbsp;</div>
+      {/if}
+    </div>
   </div>
 </div>
 
@@ -215,6 +229,10 @@
     text-align: center;
     margin: 0 0.5em;
     width: 63px;
+  }
+
+  .emptySlot {
+    visibility: hidden;
   }
 
   .infoIcon {
@@ -518,11 +536,138 @@
 
   @media (max-width: 595px) {
     .manager {
+      align-items: center;
       border-radius: 14px;
+      display: grid;
+      gap: 0.15rem 0.7rem;
+      grid-template-areas:
+        "avatar name"
+        "avatar team"
+        "info info";
+      grid-template-columns: 44px minmax(0, 1fr);
+      padding: 0.85rem;
     }
 
     .manager::before {
       border-radius: 14px 0 0 14px;
+    }
+
+    .avatarHolder {
+      grid-area: avatar;
+      justify-self: center;
+    }
+
+    .photo {
+      height: 38px;
+      margin-left: 0;
+      width: 38px;
+    }
+
+    .name {
+      font-size: 0.95rem;
+      grid-area: name;
+      line-height: 1.15;
+      margin-left: 0;
+      min-width: 0;
+      overflow-wrap: anywhere;
+      text-align: left;
+    }
+
+    .team {
+      font-size: 0.78rem;
+      grid-area: team;
+      line-height: 1.15;
+      margin-left: 0;
+      min-width: 0;
+      text-align: left;
+    }
+
+    .spacer {
+      display: none;
+    }
+
+    .info {
+      align-items: start;
+      border-top: 1px solid var(--line);
+      display: grid;
+      gap: 0.25rem;
+      grid-area: info;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      margin-top: 0.7rem;
+      padding-top: 0.7rem;
+      width: 100%;
+    }
+
+    .infoSlot {
+      align-items: start;
+      display: grid;
+      grid-template-rows: 44px minmax(1.55rem, auto);
+      justify-items: center;
+      margin: 0;
+      min-width: 0;
+      width: auto;
+    }
+
+    .infoIcon,
+    .rivalButton {
+      align-self: center;
+    }
+
+    .infoAnswer {
+      grid-row: 2;
+    }
+
+    .titleSlot {
+      grid-column: 1;
+    }
+
+    .infoTeam {
+      display: grid;
+      grid-column: 2;
+    }
+
+    .infoRebuild {
+      grid-column: 3;
+    }
+
+    .rivalSlot {
+      grid-column: 4;
+    }
+
+    .contactSlot {
+      display: none;
+    }
+
+    .infoIcon,
+    .rivalButton {
+      height: 36px;
+      width: 36px;
+    }
+
+    .infoImg {
+      height: 28px;
+      max-width: 30px;
+      object-fit: contain;
+    }
+
+    .directionIcon {
+      height: 44px;
+      width: 40px;
+    }
+
+    .infoAnswer {
+      font-size: 0.68rem;
+      line-height: 1.15;
+      min-height: 1.55rem;
+      overflow-wrap: anywhere;
+      width: 100%;
+    }
+
+    .commissionerBadge {
+      bottom: -7px;
+      height: 20px;
+      right: -7px;
+      width: 20px;
     }
   }
 </style>
