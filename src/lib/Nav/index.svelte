@@ -38,7 +38,7 @@
 </svelte:head>
 
 <nav>
-  <a href="/"><img id="logo" alt="league logo" src="./badge.png" /></a>
+  <a href="/"><img id="logo" alt="league logo" src="/badge.png" /></a>
 
   <div class="container">
     <IconButton
