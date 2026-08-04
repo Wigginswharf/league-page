@@ -26,7 +26,8 @@ export const weeklyColumns = [
                 heading: 'The standings are motionless; the draft board is not',
                 paragraphs: [
                     'The 2026 league remains in pre-draft status, every roster is 0–0, and the NFL state still says preseason. No one has climbed a division, no one has lost a close finish, and no commissioner should accept a petition to count practice reports as points. The last completed league matchups were the 2025 Week 17 finals; Week 18 contains no official head-to-head pairings.',
-                    'The next real league event is the three-round rookie draft scheduled for August 22. Casey’s newly acquired third originally belonged to Brandon. Elsewhere, Tommy holds Casey’s 2026 first, Wesley holds Casey’s second, and Jason controls three other managers’ 2026 thirds. The board currently looks less like a draft order and more like luggage after a tight connection, but every pick does still have a destination.',
+                    'The next real league event is the three-round rookie draft scheduled for August 22, and the pick distribution is already absurd. Keller owns 1.01 and 1.03, while Frank controls 1.02 and 1.04—meaning the first four selections alternate between only two managers. Tommy then closes the round with both 1.11 and 1.12, giving three managers control of half the first round.',
+                    'The concentration continues later. Wesley owns 2.07 and 2.11, while Tommy adds 2.08 and 2.12 to his two first-rounders. Round 3 belongs largely to Jason and Dustin: Jason controls 3.05, 3.07, and 3.11, while Dustin holds 3.02, 3.08, and 3.12. At the opposite extreme, Brandon currently owns no 2026 selections, and Casey’s entire draft consists of 3.06. The board currently looks less like a draft order and more like several small territorial disputes arranged into three rounds.',
                 ],
             },
             {
