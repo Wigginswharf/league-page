@@ -1,5 +1,5 @@
 <script>
-  let one, oneOne, oneTwo, oneThree, oneFour;
+  let one, oneOne, oneTwo, oneThree, oneFour, oneFive;
   let two,
     twoOne,
     twoOneOne,
@@ -34,7 +34,7 @@
     <h1 class="noUnderscore">
       A CHAMPION AND 11 LOSERS DYNASTY LEAGUE CONSTITUTION
     </h1>
-    <p class="edition">Current Edition · Last amended July 2026</p>
+    <p class="edition">Current Edition · Last amended August 2026</p>
   </header>
 
   <section class="quick-reference" aria-label="Constitution quick reference">
@@ -218,6 +218,21 @@
         remaining League Leaders cannot come to an agreement or are unavailable,
         the League Representative will be brought in to resolve the matter.
       </p>
+
+      <h3 class="subSectionHeading" bind:this={oneFive}>
+        1.5 League-Wide Voting Standard
+      </h3>
+      <div class="rule-callout">
+        <span class="rule-label">66% Approval Required</span>
+        <p>
+          Unless a specific section of this constitution expressly requires a
+          higher threshold, a league-wide proposal is approved when at least
+          66&nbsp;percent of all active managers vote in favor, rounded up to
+          the next whole vote. In a 12-team league, eight affirmative votes are
+          required. Abstentions and non-votes do not reduce the number of
+          affirmative votes required for approval.
+        </p>
+      </div>
     </div>
   </details>
 
@@ -790,7 +805,9 @@
     font: inherit;
     text-align: left;
     cursor: pointer;
-    transition: transform 140ms ease, box-shadow 140ms ease,
+    transition:
+      transform 140ms ease,
+      box-shadow 140ms ease,
       border-color 140ms ease;
   }
 
