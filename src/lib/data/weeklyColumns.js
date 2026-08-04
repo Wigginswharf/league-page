@@ -1,5 +1,44 @@
 export const weeklyColumns = [
     {
+        slug: '2026-division-realignment-special',
+        issue: '2026 Division Realignment Special',
+        publishedAt: '2026-08-04T19:14:00.000Z',
+        title: 'First Class Has a New Guest List',
+        dek: 'Eight managers approved the promotion-and-relegation plan, the semifinalists claimed the top floor, and several former residents have been asked to surrender their keys.',
+        readTime: '5 min read',
+        tags: ['Special Edition', 'Divisions', 'League Vote', '2026 Season'],
+        sections: [
+            {
+                heading: 'The league voted; the elevator started moving',
+                paragraphs: ['The Champion and 11 Losers Dynasty League has officially adopted its 2026 division realignment. Eight managers approved the promotion-and-relegation structure, meeting the league-wide standard of at least 66 percent of all active managers. In a 12-team league, that means eight affirmative votes. Managers who did not vote were not counted as opposition, but their silence also did not lower the number required to pass the proposal.', 'This is not an attempt to make all three divisions equally comfortable. The system is designed to sort teams by the previous postseason: the four semifinalists move into First Class, the other playoff and bubble teams occupy What’s Your Name Again?, and the remaining non-playoff teams report to Level 11. Competitive balance has been replaced by social mobility, which should be completely healthy and produce no resentment whatsoever.'],
+            },
+            {
+                heading: 'First Class: Casey, Tommy, Josh, and John',
+                paragraphs: ['First Class now belongs to Casey’s Rabbit Walrus, Tommy’s Sweet Tooth, Josh’s Sugar Tits, and John’s SNAFU—the four teams that reached the 2025 semifinals. Casey and John retain their seats. Tommy makes the most dramatic climb, going directly from Level 11 to the top division after winning the championship. Josh rises from What’s Your Name Again? after his own semifinal run.', 'The reward for reaching the final four is a 2026 schedule featuring three other teams that also reached the final four. The division guarantees one automatic playoff berth, but it also ensures that several excellent teams will spend the season taking turns damaging one another’s records. First Class remains accurate as a label, provided nobody mistakes it for first-class legroom.'],
+                bullets: ['Casey — Rabbit Walrus: remains in First Class.', 'Tommy — Sweet Tooth: promoted from Level 11 after winning the 2025 championship.', 'Josh — Sugar Tits: promoted from What’s Your Name Again? after reaching the semifinals.', 'John — SNAFU: remains in First Class after reaching the semifinals.'],
+            },
+            {
+                heading: 'What’s Your Name Again?: Brittany, Dustin, Brandon, and Wesley',
+                paragraphs: ['The middle division consists of Brittany’s Warren’s World, Dustin’s Badkittens, Brandon’s Austin’s Finest, and Wesley’s Skip’s Picks. Brittany drops from First Class, while Dustin stays exactly where he was. Brandon and Wesley both move up from Level 11 after earning playoff places without advancing to the semifinals.', 'This may be the league’s most volatile division. It includes two returning playoff teams, a former First Class resident, and Dustin—the sort of combination that can look orderly in August and become a four-car pileup by October. The name still asks whether anyone remembers who belongs here. The standings will eventually provide an answer, probably impolitely.'],
+                bullets: ['Brittany — Warren’s World: relegated from First Class.', 'Dustin — Badkittens: remains in What’s Your Name Again?.', 'Brandon — Austin’s Finest: promoted from Level 11 after making the playoffs.', 'Wesley — Skip’s Picks: promoted from Level 11 after making the playoffs.'],
+            },
+            {
+                heading: 'Level 11: Frank, Keller, Kevin, and Jason',
+                paragraphs: ['Level 11 will house Frank’s Dixienormous, Keller’s Because Casey Said So, Kevin’s ICU, and Jason’s Baker’s Dozen. Frank remains in place. Keller and Kevin move down from What’s Your Name Again?, while Jason takes the steepest fall in the realignment—from First Class all the way to Level 11 after missing the playoffs.', 'The division is not a permanent sentence. That is the entire point of relegation: last season determines the address, and the next season offers a way out. One of these teams is also guaranteed a playoff berth as a division winner, so Level 11 is simultaneously the bottom tier and a very real route into the postseason. Dynasty football has never been especially committed to ideological consistency.'],
+                bullets: ['Frank — Dixienormous: remains in Level 11.', 'Keller — Because Casey Said So: relegated from What’s Your Name Again?.', 'Kevin — ICU: relegated from What’s Your Name Again?.', 'Jason — Baker’s Dozen: relegated from First Class after missing the playoffs.'],
+            },
+            {
+                heading: 'What the new system actually rewards',
+                paragraphs: ['The realignment gives the divisions a clear identity that can be applied again next year without inventing a new explanation for every manager. Semifinalists rise to First Class. The remaining playoff teams and strongest bubble teams fill the middle. The other four teams land in Level 11. Roster reputation, injury excuses, and offseason optimism may influence the trash talk, but completed results determine the initial placement.', 'That clarity matters because division winners automatically qualify for the playoffs. First Class will be brutally difficult, and Level 11 will guarantee one of its four teams a postseason spot, but those are features of the adopted promotion-and-relegation model rather than accounting errors. The divisions are meant to tell the story of the prior season before the next one begins rewriting it.'],
+            },
+            {
+                heading: 'Extremely official realignment awards',
+                bullets: ['Express elevator award: Tommy, from Level 11 to First Class with a championship trophy as carry-on luggage.', 'Longest drop: Jason, from First Class to Level 11 in one offseason.', 'Most stable tenants: Casey, John, Dustin, and Frank, who kept the same divisional address.', 'Division most likely to require a tiebreaker and a wellness check: What’s Your Name Again?.', 'Best reminder that votes matter: the eight managers who actually cast the affirmative votes needed to approve the change.'],
+                paragraphs: ['The labels are set, the movement is official, and all twelve teams return to 0–0 when the season begins. Promotion lasts only as long as the results support it. Relegation lasts only until someone earns the elevator back up. Welcome to the new building. Please direct all complaints to the standings.'],
+            },
+        ],
+    },
+    {
         slug: '2026-preseason-first-whistle',
         issue: '2026 Preseason Week 1',
         publishedAt: '2026-08-04T14:03:55.000Z',
