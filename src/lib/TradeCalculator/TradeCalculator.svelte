@@ -63,29 +63,37 @@
   const searchedPlayers = () => {
     const query = playerSearch.trim().toLowerCase();
     if (!myRosterID || query.length < 2) return [];
+    const queryTokens = query.split(/\s+/).filter(Boolean);
     return teams
       .filter((team) => team.rosterID !== myRosterID)
       .flatMap((team) =>
         team.assets
-          .filter(
-            (asset) =>
-              asset.type === "player" &&
+          .filter((asset) => {
+            if (asset.type !== "player") return false;
+            const searchable =
               `${asset.name} ${asset.position} ${asset.nflTeam}`
                 .toLowerCase()
-                .includes(query),
-          )
+                .split(/\s+/);
+            return queryTokens.every((token) =>
+              searchable.some((field) => field.startsWith(token)),
+            );
+          })
           .map((target) => ({ target, partner: team })),
       )
       .sort((first, second) => {
-        const firstStarts = first.target.name.toLowerCase().startsWith(query);
-        const secondStarts = second.target.name.toLowerCase().startsWith(query);
+        const firstName = first.target.name.toLowerCase();
+        const secondName = second.target.name.toLowerCase();
+        const firstRank =
+          firstName === query ? 0 : firstName.startsWith(query) ? 1 : 2;
+        const secondRank =
+          secondName === query ? 0 : secondName.startsWith(query) ? 1 : 2;
         return (
-          Number(secondStarts) - Number(firstStarts) ||
+          firstRank - secondRank ||
           second.target.consensusValue - first.target.consensusValue ||
           first.target.name.localeCompare(second.target.name)
         );
       })
-      .slice(0, 12);
+      .slice(0, 8);
   };
 
   const resetAnalysis = () => {
@@ -104,11 +112,6 @@
     playerSearch = "";
     exactTrade = null;
     refreshTargets();
-  };
-
-  const updatePlayerSearch = (event) => {
-    playerSearch = event.currentTarget.value;
-    exactTrade = null;
   };
 
   const choosePlayerTarget = (playerID) => {
@@ -646,8 +649,8 @@
             <span class="material-icons" aria-hidden="true">search</span>
             <input
               type="search"
-              value={playerSearch}
-              on:input={updatePlayerSearch}
+              bind:value={playerSearch}
+              on:input={() => (exactTrade = null)}
               placeholder="Search by player name, position, or NFL team"
               autocomplete="off"
             />
@@ -728,68 +731,74 @@
           {/if}
         </section>
 
-        <div class="browseDivider"><span>Or browse by position</span></div>
-        <div class="positionPicker" role="group" aria-label="Target position">
-          {#each ["QB", "RB", "WR", "TE"] as position}
-            <button
-              class:active={targetPosition === position}
-              type="button"
-              on:click={() => changeTargetPosition(position)}>{position}</button
-            >
-          {/each}
-        </div>
-
-        <div class="targetIntro">
-          <div>
-            <span class="material-icons" aria-hidden="true">travel_explore</span
-            >
-            <div>
-              <strong
-                >League-wide {targetPosition} targets for {teamByID(myRosterID)
-                  ?.shortName}</strong
+        {#if playerSearch.trim().length < 2 || exactTrade}
+          <div class="browseDivider"><span>Or browse by position</span></div>
+          <div class="positionPicker" role="group" aria-label="Target position">
+            {#each ["QB", "RB", "WR", "TE"] as position}
+              <button
+                class:active={targetPosition === position}
+                type="button"
+                on:click={() => changeTargetPosition(position)}
+                >{position}</button
               >
-              <p>
-                Ranked by manager fit and estimated acceptance—not only market
-                value.
-              </p>
-            </div>
+            {/each}
           </div>
-          <button type="button" on:click={refreshTargets}
-            >Refresh targets</button
-          >
-        </div>
 
-        <div class="suggestionGrid">
-          {#each targetSuggestions as suggestion}
-            <article class="suggestionCard">
-              <div class="targetPlayer">
-                <span class="position">{suggestion.target.position}</span>
-                <div>
-                  <h3>{suggestion.target.name}</h3>
-                  <p>
-                    {suggestion.partner.shortName} · {suggestion.partner
-                      .teamName}
-                  </p>
-                </div>
-                <strong>{suggestion.result.overall}%</strong>
-              </div>
-              <div class="suggestedOffer">
-                <span>Suggested opening offer</span>
+          <div class="targetIntro">
+            <div>
+              <span class="material-icons" aria-hidden="true"
+                >travel_explore</span
+              >
+              <div>
+                <strong
+                  >League-wide {targetPosition} targets for {teamByID(
+                    myRosterID,
+                  )?.shortName}</strong
+                >
                 <p>
-                  {suggestion.offered.map((asset) => asset.name).join(" + ")}
+                  Ranked by manager fit and estimated acceptance—not only market
+                  value.
                 </p>
               </div>
-              <p class="whyTarget">
-                {suggestion.partner.shortName}'s profile: {suggestion.partner
-                  .tradeProfile.label}. This offer is shaped around the roster's {suggestion.partner.direction.toLowerCase()}
-                direction.
-              </p>
-              <button type="button" on:click={() => loadTrade(suggestion)}
-                >Open in builder</button
-              >
-            </article>
-          {/each}
-        </div>
+            </div>
+            <button type="button" on:click={refreshTargets}
+              >Refresh targets</button
+            >
+          </div>
+
+          <div class="suggestionGrid">
+            {#each targetSuggestions as suggestion}
+              <article class="suggestionCard">
+                <div class="targetPlayer">
+                  <span class="position">{suggestion.target.position}</span>
+                  <div>
+                    <h3>{suggestion.target.name}</h3>
+                    <p>
+                      {suggestion.partner.shortName} · {suggestion.partner
+                        .teamName}
+                    </p>
+                  </div>
+                  <strong>{suggestion.result.overall}%</strong>
+                </div>
+                <div class="suggestedOffer">
+                  <span>Suggested opening offer</span>
+                  <p>
+                    {suggestion.offered.map((asset) => asset.name).join(" + ")}
+                  </p>
+                </div>
+                <p class="whyTarget">
+                  {suggestion.partner.shortName}'s profile: {suggestion.partner
+                    .tradeProfile.label}. This offer is shaped around the
+                  roster's {suggestion.partner.direction.toLowerCase()}
+                  direction.
+                </p>
+                <button type="button" on:click={() => loadTrade(suggestion)}
+                  >Open in builder</button
+                >
+              </article>
+            {/each}
+          </div>
+        {/if}
 
         <div class="threeTeamGenerator">
           <div>
