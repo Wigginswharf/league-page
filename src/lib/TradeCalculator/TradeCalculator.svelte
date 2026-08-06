@@ -65,13 +65,13 @@
       if (counterpartRatio < 0.82) {
         return {
           label: "Works for you",
-          detail: `${counterpartName} appears to be overpaying and may counter.`,
+          detail: `${counterpartName}? Not so much. They may want a much better return.`,
         };
       }
       if (counterpartRatio < 0.94) {
         return {
           label: "Works for you",
-          detail: `${counterpartName} appears to be overpaying a little and may ask for another piece.`,
+          detail: `${counterpartName}? Not so much. They may ask for another piece.`,
         };
       }
       if (ratio < 0.9) {
