@@ -12,7 +12,10 @@
       <LinearProgress indeterminate />
     </div>
   {:then calculatorData}
-    <TradeCalculator {calculatorData} />
+    <TradeCalculator
+      {calculatorData}
+      initialWorkspace={data.initialWorkspace}
+    />
   {:catch error}
     <div class="error">
       <span class="material-icons" aria-hidden="true">error_outline</span>
