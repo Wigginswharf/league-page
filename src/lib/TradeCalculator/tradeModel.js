@@ -334,8 +334,8 @@ const perspectiveVerdict = (team, evaluations, selectedTeams, transfers) => {
       headline: "You are paying a premium, but the idea is defensible",
       summary: `The return helps ${team.shortName}, but the current version still leans toward ${partners.map((partner) => partner.shortName).join(" and ")}.`,
       counter: addition
-        ? `Try asking for ${addition.asset.name} as the final piece, or send the offer expecting a counter.`
-        : "Try trimming a smaller outgoing piece before sending it.",
+        ? `Sending this should get the job done, but consider asking for ${addition.asset.name} or another piece to get more value back.`
+        : "Sending this should get the job done, but consider trimming a smaller outgoing piece so you are not giving up more than needed.",
       contingency,
     };
   }
