@@ -21,6 +21,51 @@ const listNames = (assets, fallback = "the offered assets") => {
 const needScore = (team, position) =>
   team.needs?.find((need) => need.position === position)?.score || 0;
 
+const rosterSynergies = (team, sent, received) => {
+  const sentIDs = new Set(sent.map((asset) => asset.id));
+  const returningRoster = team.assets.filter(
+    (asset) => asset.type === "player" && !sentIDs.has(asset.id),
+  );
+  const handcuffs = received
+    .filter((asset) => asset.type === "player" && asset.position === "RB")
+    .map((asset) => {
+      const lead = returningRoster
+        .filter(
+          (rostered) =>
+            rostered.position === "RB" &&
+            rostered.nflTeam &&
+            rostered.nflTeam !== "FA" &&
+            rostered.nflTeam === asset.nflTeam &&
+            rostered.consensusValue > asset.consensusValue * 1.3,
+        )
+        .sort((a, b) => b.consensusValue - a.consensusValue)[0];
+      return lead ? { handcuff: asset, lead } : null;
+    })
+    .filter(Boolean);
+  return {
+    handcuffs,
+    bonus: handcuffs.reduce(
+      (sum, pairing) =>
+        sum + Math.min(pairing.handcuff.consensusValue * 0.18, 40),
+      0,
+    ),
+  };
+};
+
+const pickUpgrade = (sent, received) => {
+  const sentPicks = sent.filter(isPick);
+  for (const incoming of received.filter(isPick)) {
+    const outgoing = sentPicks.find(
+      (pick) =>
+        pick.season === incoming.season &&
+        pick.round === incoming.round &&
+        pick.slot > incoming.slot,
+    );
+    if (outgoing) return { incoming, outgoing };
+  }
+  return null;
+};
+
 const managerAdjustedValue = (asset, team, receiving) => {
   let multiplier = 1;
   if (isPick(asset)) {
@@ -109,9 +154,19 @@ const rejectionReason = ({ team, sent, received, ratio, penalty }) => {
   return `${team.shortName} may still ask for a small sweetener because managers rarely accept a deal that only looks neutral from their side.`;
 };
 
-const impactText = (team, sent, received) => {
+const impactText = (team, sent, received, synergy) => {
   const acquiredNeed = bestNeedFromAssets(team, received);
   const picksNet = received.filter(isPick).length - sent.filter(isPick).length;
+  const upgrade = pickUpgrade(sent, received);
+  if (synergy.handcuffs.length) {
+    const { handcuff, lead } = synergy.handcuffs[0];
+    const pickSentence = upgrade
+      ? ` The deal also moves ${team.shortName} from ${upgrade.outgoing.name} to ${upgrade.incoming.name}.`
+      : "";
+    return `${handcuff.name} gives ${team.shortName} direct backfield insurance behind ${lead.name} in ${handcuff.nflTeam}.${pickSentence}`;
+  }
+  if (upgrade)
+    return `${team.shortName} moves from ${upgrade.outgoing.name} to ${upgrade.incoming.name}, improving the quality of the pick without changing the roster's overall direction.`;
   if (acquiredNeed && needScore(team, acquiredNeed.position) >= 0.25) {
     return `${acquiredNeed.name} directly addresses ${team.shortName}'s ${acquiredNeed.position} need and better matches ${withArticle(team.direction.toLowerCase())} roster.`;
   }
@@ -167,14 +222,16 @@ export const evaluateTrade = (teams, transfers) => {
     const received = transfers
       .filter((transfer) => Number(transfer.toRosterID) === team.rosterID)
       .map((transfer) => transfer.asset);
+    const synergy = rosterSynergies(team, sent, received);
     const sentValue = sent.reduce(
       (sum, asset) => sum + managerAdjustedValue(asset, team, false),
       0,
     );
-    const receivedValue = received.reduce(
-      (sum, asset) => sum + managerAdjustedValue(asset, team, true),
-      0,
-    );
+    const receivedValue =
+      received.reduce(
+        (sum, asset) => sum + managerAdjustedValue(asset, team, true),
+        0,
+      ) + synergy.bonus;
     const ratio = sentValue
       ? receivedValue / sentValue
       : receivedValue
@@ -198,8 +255,9 @@ export const evaluateTrade = (teams, transfers) => {
       [...received].sort((a, b) => b.consensusValue - a.consensusValue),
     );
     const needAsset = bestNeedFromAssets(team, received);
-    const fitSentence =
-      needAsset && needScore(team, needAsset.position) >= 0.18
+    const fitSentence = synergy.handcuffs.length
+      ? `${synergy.handcuffs[0].handcuff.name} gives this roster direct insurance behind ${synergy.handcuffs[0].lead.name}.`
+      : needAsset && needScore(team, needAsset.position) >= 0.18
         ? `${needAsset.name} helps at ${needAsset.position}, one of this roster's clearest needs.`
         : `The return is judged against ${team.shortName}'s ${team.direction.toLowerCase()} timeline.`;
     const shortfall = Math.max(0, sentValue - receivedValue);
@@ -226,7 +284,7 @@ export const evaluateTrade = (teams, transfers) => {
         penalty,
       }),
       adjustment: suggestAdjustment(team, selectedTeams, transfers, shortfall),
-      impact: impactText(team, sent, received),
+      impact: impactText(team, sent, received, synergy),
     };
   });
   const overall = evaluations.length

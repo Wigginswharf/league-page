@@ -315,22 +315,30 @@
                 </div>
                 <div class="assetList">
                   {#each team.assets.filter((asset) => asset.type === "player") as asset}
-                    <label
-                      class:selected={Boolean(transferFor(asset))}
+                    {@const selected = transfers.some(
+                      (transfer) => transfer.asset.id === asset.id,
+                    )}
+                    <button
+                      type="button"
+                      aria-pressed={selected}
+                      class:selected
                       class="assetRow"
+                      on:click={() => toggleAsset(asset, team.rosterID)}
                     >
-                      <input
-                        type="checkbox"
-                        checked={Boolean(transferFor(asset))}
-                        on:change={() => toggleAsset(asset, team.rosterID)}
-                      />
+                      <span
+                        class="material-icons selectionIcon"
+                        aria-hidden="true"
+                        >{selected
+                          ? "check_box"
+                          : "check_box_outline_blank"}</span
+                      >
                       <span class="position">{asset.position}</span>
                       <span class="assetIdentity">
                         <strong>{asset.name}</strong>
                         <small>{teamAssetLabel(asset)}</small>
                       </span>
                       <span class="value">{sourceLabel(asset)}</span>
-                    </label>
+                    </button>
                   {/each}
                 </div>
               </div>
@@ -345,15 +353,23 @@
                 </div>
                 <div class="assetList picks">
                   {#each team.assets.filter((asset) => asset.type === "pick") as asset}
-                    <label
-                      class:selected={Boolean(transferFor(asset))}
+                    {@const selected = transfers.some(
+                      (transfer) => transfer.asset.id === asset.id,
+                    )}
+                    <button
+                      type="button"
+                      aria-pressed={selected}
+                      class:selected
                       class="assetRow"
+                      on:click={() => toggleAsset(asset, team.rosterID)}
                     >
-                      <input
-                        type="checkbox"
-                        checked={Boolean(transferFor(asset))}
-                        on:change={() => toggleAsset(asset, team.rosterID)}
-                      />
+                      <span
+                        class="material-icons selectionIcon"
+                        aria-hidden="true"
+                        >{selected
+                          ? "check_box"
+                          : "check_box_outline_blank"}</span
+                      >
                       <span class="material-icons pickIcon" aria-hidden="true"
                         >event_note</span
                       >
@@ -366,7 +382,7 @@
                         >
                       </span>
                       <span class="value">{sourceLabel(asset)}</span>
-                    </label>
+                    </button>
                   {/each}
                 </div>
               </div>
@@ -981,6 +997,8 @@
     gap: 0.55rem;
     grid-template-columns: auto 31px minmax(0, 1fr) auto;
     padding: 0.55rem;
+    text-align: left;
+    width: 100%;
   }
 
   .assetRow:hover,
@@ -992,8 +1010,9 @@
     background: rgba(8, 120, 209, 0.09);
   }
 
-  .assetRow input {
-    accent-color: var(--league-blue);
+  .selectionIcon {
+    color: var(--league-blue);
+    font-size: 1.2rem;
   }
 
   .position,
