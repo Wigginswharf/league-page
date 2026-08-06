@@ -11,6 +11,10 @@
   const visibleChildren = (tab) =>
     tab.children.filter((child) => !child.blog || enableBlog);
 
+  const childIsActive = (child) =>
+    child.dest === active ||
+    (child.dest === "/trade-lab" && active === "/trade-lab");
+
   const prefetchInternal = (item) => {
     if (!item.external) preloadData(item.dest);
   };
@@ -68,7 +72,7 @@
       <p class="group-title">{tab.label}</p>
       {#each visibleChildren(tab) as child}
         <a
-          class:active={child.dest === active}
+          class:active={childIsActive(child)}
           class="mobile-link"
           href={child.dest}
           target={child.external ? "_blank" : undefined}
