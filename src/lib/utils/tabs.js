@@ -41,7 +41,19 @@ export const tabs = [
   {
     icon: "handshake",
     label: "Trade Lab",
-    dest: "/trade-lab",
+    nest: true,
+    children: [
+      {
+        icon: "swap_horiz",
+        label: "Build a Trade",
+        dest: "/trade-lab",
+      },
+      {
+        icon: "travel_explore",
+        label: "Find a Trade",
+        dest: "/trade-lab?mode=find",
+      },
+    ],
   },
   {
     icon: "groups",
