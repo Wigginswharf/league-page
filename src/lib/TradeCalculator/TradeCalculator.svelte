@@ -727,7 +727,9 @@
                     <strong
                       >{evaluation.isPerspective
                         ? "Why this may not work for you"
-                        : "Why they may reject it"}</strong
+                        : returnRatioFor(evaluation) > 1.12
+                          ? "Why rejection is unlikely"
+                          : "Why they may reject it"}</strong
                     >
                     <p>
                       {evaluation.isPerspective
@@ -744,7 +746,9 @@
                         ? analysis.perspective?.tone === "advantage"
                           ? "What to expect next"
                           : "How to improve your side"
-                        : "How to improve the offer"}</strong
+                        : returnRatioFor(evaluation) > 1.12
+                          ? "No improvement needed"
+                          : "How to improve the offer"}</strong
                     >
                     <p>
                       {evaluation.isPerspective && analysis.perspective
