@@ -192,7 +192,7 @@
   };
 
   const analyze = () => {
-    analysis = evaluateTrade(teams, transfers);
+    analysis = evaluateTrade(teams, transfers, selectedTeamIDs[0]);
     document
       .querySelector("#trade-results")
       ?.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -228,7 +228,7 @@
     teamCount = IDs.length;
     selectedTeamIDs = IDs;
     transfers = proposal.transfers;
-    analysis = evaluateTrade(teams, transfers);
+    analysis = evaluateTrade(teams, transfers, IDs[0]);
     workspace = "builder";
     setTimeout(
       () =>
@@ -330,7 +330,11 @@
               <div class="teamHeader">
                 <img src={team.avatar} alt="" />
                 <div>
-                  <span class="teamNumber">Team {index + 1}</span>
+                  <span class="teamNumber"
+                    >{index === 0
+                      ? "Your side · Team 1"
+                      : `Team ${index + 1}`}</span
+                  >
                   <select
                     aria-label={`Select team ${index + 1}`}
                     value={team.rosterID}
@@ -463,7 +467,11 @@
             <article class="teamColumn emptyTeam">
               <div class="teamHeader">
                 <div>
-                  <span class="teamNumber">Team {index + 1}</span>
+                  <span class="teamNumber"
+                    >{index === 0
+                      ? "Your side · Team 1"
+                      : `Team ${index + 1}`}</span
+                  >
                   <select
                     aria-label={`Select team ${index + 1}`}
                     value=""
@@ -556,17 +564,65 @@
               </p>
             {/if}
           </div>
+          {#if analysis.perspective}
+            <article class={`perspectiveVerdict ${analysis.perspective.tone}`}>
+              <div class="perspectiveHeading">
+                <span class="material-icons" aria-hidden="true">balance</span>
+                <div>
+                  <span>Your value check</span>
+                  <h2>{analysis.perspective.headline}</h2>
+                </div>
+              </div>
+              <p>{analysis.perspective.summary}</p>
+              <div class="perspectiveInsights">
+                <div>
+                  <span class="material-icons" aria-hidden="true">tune</span>
+                  <div>
+                    <strong>A better construction</strong>
+                    <p>{analysis.perspective.counter}</p>
+                  </div>
+                </div>
+                {#if analysis.perspective.contingency}
+                  <div>
+                    <span class="material-icons" aria-hidden="true">shield</span
+                    >
+                    <div>
+                      <strong>Roster insurance</strong>
+                      <p>{analysis.perspective.contingency.text}</p>
+                      {#if analysis.perspective.contingency.sourceUrl}
+                        <a
+                          href={analysis.perspective.contingency.sourceUrl}
+                          target="_blank"
+                          rel="noreferrer"
+                          >{analysis.perspective.contingency.sourceLabel} ↗</a
+                        >
+                      {/if}
+                    </div>
+                  </div>
+                {/if}
+              </div>
+            </article>
+          {/if}
           <div class="evaluationGrid">
             {#each analysis.evaluations as evaluation}
               <article class="evaluationCard">
                 <div class="evaluationTop">
                   <div>
-                    <span>{evaluation.teamName}</span>
+                    <span
+                      >{evaluation.isPerspective
+                        ? `Your side · ${evaluation.teamName}`
+                        : evaluation.teamName}</span
+                    >
                     <h3>{evaluation.shortName}</h3>
                   </div>
                   <div class="likelihood">
                     <strong>{evaluation.likelihood}%</strong>
                     <span>{evaluation.label}</span>
+                    <small
+                      >{evaluation.isPerspective
+                        ? "Works for you"
+                        : "Likely to accept"}</small
+                    >
                   </div>
                 </div>
                 <div class="confidence">
@@ -596,15 +652,31 @@
                     >thumb_down_alt</span
                   >
                   <div>
-                    <strong>Why they may reject it</strong>
-                    <p>{evaluation.rejectionReason}</p>
+                    <strong
+                      >{evaluation.isPerspective
+                        ? "Why this may not work for you"
+                        : "Why they may reject it"}</strong
+                    >
+                    <p>
+                      {evaluation.isPerspective
+                        ? evaluation.valueReason
+                        : evaluation.rejectionReason}
+                    </p>
                   </div>
                 </div>
                 <div class="insight adjustment">
                   <span class="material-icons" aria-hidden="true">tune</span>
                   <div>
-                    <strong>How to improve the offer</strong>
-                    <p>{evaluation.adjustment}</p>
+                    <strong
+                      >{evaluation.isPerspective
+                        ? "How to improve your side"
+                        : "How to improve the offer"}</strong
+                    >
+                    <p>
+                      {evaluation.isPerspective && analysis.perspective
+                        ? analysis.perspective.counter
+                        : evaluation.adjustment}
+                    </p>
                   </div>
                 </div>
                 <div class="insight impact">
@@ -1554,6 +1626,99 @@
     font-size: 0.8rem;
   }
 
+  .perspectiveVerdict {
+    background: var(--surface-muted);
+    border: 1px solid var(--line);
+    border-left: 5px solid var(--league-blue);
+    border-radius: 14px;
+    margin-top: 1rem;
+    padding: 1rem;
+  }
+
+  .perspectiveVerdict.overpay {
+    border-left-color: #d95757;
+  }
+
+  .perspectiveVerdict.premium {
+    border-left-color: #d3912b;
+  }
+
+  .perspectiveVerdict.advantage {
+    border-left-color: #2eaa78;
+  }
+
+  .perspectiveHeading {
+    align-items: flex-start;
+    display: flex;
+    gap: 0.7rem;
+  }
+
+  .perspectiveHeading > .material-icons {
+    color: var(--league-blue);
+    font-size: 1.6rem;
+  }
+
+  .perspectiveHeading span:not(.material-icons) {
+    color: var(--text-muted);
+    font-size: 0.68rem;
+    font-weight: 900;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .perspectiveHeading h2 {
+    font-size: clamp(1.1rem, 3vw, 1.45rem);
+    margin: 0.15rem 0 0;
+  }
+
+  .perspectiveVerdict > p {
+    color: var(--text-muted);
+    line-height: 1.55;
+    margin: 0.7rem 0 0;
+  }
+
+  .perspectiveInsights {
+    display: grid;
+    gap: 0.7rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    margin-top: 0.8rem;
+  }
+
+  .perspectiveInsights > div {
+    align-items: flex-start;
+    background: var(--surface-raised);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    display: flex;
+    gap: 0.6rem;
+    padding: 0.75rem;
+  }
+
+  .perspectiveInsights .material-icons {
+    color: var(--league-blue);
+    font-size: 1.1rem;
+  }
+
+  .perspectiveInsights strong {
+    color: var(--text-primary);
+    font-size: 0.78rem;
+  }
+
+  .perspectiveInsights p {
+    color: var(--text-muted);
+    font-size: 0.76rem;
+    line-height: 1.45;
+    margin: 0.25rem 0 0;
+  }
+
+  .perspectiveInsights a {
+    color: var(--league-blue);
+    display: inline-block;
+    font-size: 0.68rem;
+    font-weight: 800;
+    margin-top: 0.35rem;
+  }
+
   .evaluationGrid {
     display: grid;
     gap: 1rem;
@@ -1589,6 +1754,15 @@
     color: var(--league-blue);
     display: block;
     font-size: 1.65rem;
+  }
+
+  .likelihood small {
+    color: var(--text-muted);
+    display: block;
+    font-size: 0.58rem;
+    font-weight: 750;
+    margin-top: 0.15rem;
+    text-transform: uppercase;
   }
 
   .confidence {
