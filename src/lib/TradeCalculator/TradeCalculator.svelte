@@ -20,6 +20,8 @@
   let targetSuggestions = [];
   let threeTeamSuggestions = [];
   let playerSearch = "";
+  let playerSearchFocused = false;
+  let playerSearchResults = [];
   let exactTrade = null;
   let sourcePanelOpen = false;
   const positionOrder = ["QB", "RB", "WR", "TE"];
@@ -60,8 +62,7 @@
           first.slot - second.slot ||
           first.name.localeCompare(second.name),
       );
-  const searchedPlayers = () => {
-    const query = playerSearch.trim().toLowerCase();
+  const rankedPlayersFor = (query) => {
     if (!myRosterID || query.length < 2) return [];
     const queryTokens = query.split(/\s+/).filter(Boolean);
     return teams
@@ -96,6 +97,9 @@
       .slice(0, 8);
   };
 
+  $: normalizedPlayerSearch = playerSearch.trim().toLowerCase();
+  $: playerSearchResults = rankedPlayersFor(normalizedPlayerSearch);
+
   const resetAnalysis = () => {
     analysis = null;
   };
@@ -112,6 +116,11 @@
     playerSearch = "";
     exactTrade = null;
     refreshTargets();
+  };
+
+  const syncPlayerSearch = (event) => {
+    playerSearch = event.currentTarget.value;
+    exactTrade = null;
   };
 
   const choosePlayerTarget = (playerID) => {
@@ -649,16 +658,30 @@
             <span class="material-icons" aria-hidden="true">search</span>
             <input
               type="search"
-              bind:value={playerSearch}
-              on:input={() => (exactTrade = null)}
+              value={playerSearch}
+              on:input={syncPlayerSearch}
+              on:keyup={syncPlayerSearch}
+              on:change={syncPlayerSearch}
+              on:search={syncPlayerSearch}
+              on:focus={() => (playerSearchFocused = true)}
+              on:blur={() => (playerSearchFocused = false)}
               placeholder="Search by player name, position, or NFL team"
               autocomplete="off"
+              autocapitalize="none"
+              autocorrect="off"
+              spellcheck="false"
             />
           </label>
 
           {#if playerSearch.trim().length >= 2 && !exactTrade}
             <div class="playerSearchResults" aria-label="Player search results">
-              {#each searchedPlayers() as result}
+              <p class="playerSearchSummary">
+                {playerSearchResults.length} match{playerSearchResults.length ===
+                1
+                  ? ""
+                  : "es"} for “{playerSearch.trim()}”
+              </p>
+              {#each playerSearchResults as result}
                 <button
                   type="button"
                   on:click={() => choosePlayerTarget(result.target.id)}
@@ -731,7 +754,7 @@
           {/if}
         </section>
 
-        {#if playerSearch.trim().length < 2 || exactTrade}
+        {#if !exactTrade && playerSearch.trim().length < 2 && !playerSearchFocused}
           <div class="browseDivider"><span>Or browse by position</span></div>
           <div class="positionPicker" role="group" aria-label="Target position">
             {#each ["QB", "RB", "WR", "TE"] as position}
@@ -1697,6 +1720,14 @@
     max-height: 330px;
     overflow-y: auto;
     padding: 0.35rem;
+  }
+
+  .playerSearchSummary {
+    color: var(--text-muted);
+    font-size: 0.72rem;
+    font-weight: 750;
+    margin: 0;
+    padding: 0.45rem 0.65rem 0.3rem;
   }
 
   .playerSearchResults > button {
