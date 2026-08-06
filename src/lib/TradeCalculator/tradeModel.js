@@ -18,6 +18,15 @@ const listNames = (assets, fallback = "the offered assets") => {
   return `${names[0]}, ${names[1]}, and ${names[2]}`;
 };
 
+const PLAYER_SITUATIONS = {
+  "Isaiah Likely": {
+    text: "The Giants view Isaiah Likely as a potential top pass-catching tight end, and John Harbaugh already knows him from Baltimore",
+    sourceLabel: "Giants.com role outlook",
+    sourceUrl:
+      "https://www.giants.com/news/20-questions-in-20-days-veteran-newcomers-to-know",
+  },
+};
+
 const needScore = (team, position) =>
   team.needs?.find((need) => need.position === position)?.score || 0;
 
@@ -168,6 +177,16 @@ const rejectionReason = ({ team, sent, received, ratio, penalty }) => {
   return `${team.shortName} may still ask for a small sweetener because managers rarely accept a deal that only looks neutral from their side.`;
 };
 
+const valueReason = (team, ratio) => {
+  if (ratio < 0.82)
+    return `${team.shortName} is giving up more value than is needed for this return. The idea may help the roster, but this version should be trimmed or expanded on the other side.`;
+  if (ratio < 0.94)
+    return `${team.shortName} is paying a noticeable premium. That can be reasonable for the right lineup upgrade, but there is room to ask for another useful piece.`;
+  if (ratio <= 1.12)
+    return `${team.shortName} is giving up an appropriate amount for the return, with no obvious overpay built into this side.`;
+  return `${team.shortName} is receiving the stronger value package, so the main risk is whether the other manager has enough incentive to accept.`;
+};
+
 const impactText = (team, sent, received, synergy) => {
   const acquiredNeed = bestNeedFromAssets(team, received);
   const picksNet = received.filter(isPick).length - sent.filter(isPick).length;
@@ -217,7 +236,131 @@ const suggestAdjustment = (team, selectedTeams, transfers, shortfall) => {
   return `The cleanest improvement is adding ${suggestion.asset.name} from ${suggestion.owner.shortName}'s pool or a similarly valued asset.`;
 };
 
-export const evaluateTrade = (teams, transfers) => {
+const rosterContingency = (team, sent) => {
+  const sentIDs = new Set(sent.map((asset) => asset.id));
+  const options = sent
+    .filter((asset) => asset.type === "player")
+    .flatMap((outgoing) =>
+      team.assets
+        .filter(
+          (candidate) =>
+            candidate.type === "player" &&
+            !sentIDs.has(candidate.id) &&
+            candidate.position === outgoing.position,
+        )
+        .map((replacement) => ({
+          outgoing,
+          replacement,
+          situation: PLAYER_SITUATIONS[replacement.name],
+          score:
+            replacement.consensusValue / Math.max(outgoing.consensusValue, 1) +
+            (PLAYER_SITUATIONS[replacement.name] ? 2 : 0),
+        })),
+    )
+    .sort((a, b) => b.score - a.score);
+  const best = options[0];
+  if (!best) return null;
+  const base = best.situation
+    ? `${best.situation.text}. That gives ${team.shortName} a credible ${best.outgoing.position} fallback if ${best.outgoing.name} is moved.`
+    : `${best.replacement.name} remains on the roster as ${team.shortName}'s clearest ${best.outgoing.position} fallback if ${best.outgoing.name} is moved.`;
+  return {
+    outgoing: best.outgoing,
+    replacement: best.replacement,
+    text: base,
+    sourceLabel: best.situation?.sourceLabel || null,
+    sourceUrl: best.situation?.sourceUrl || null,
+  };
+};
+
+const perspectiveVerdict = (team, evaluations, selectedTeams, transfers) => {
+  if (!team) return null;
+  const evaluation = evaluations.find(
+    (candidate) => candidate.rosterID === team.rosterID,
+  );
+  if (!evaluation) return null;
+  const ratio = evaluation.sentValue
+    ? evaluation.receivedValue / evaluation.sentValue
+    : 1;
+  const difference = evaluation.sentValue - evaluation.receivedValue;
+  const alreadyUsed = new Set(transfers.map((transfer) => transfer.asset.id));
+  const sentPositions = new Set(
+    evaluation.sent
+      .filter((asset) => asset.type === "player")
+      .map((asset) => asset.position),
+  );
+  const partners = selectedTeams.filter(
+    (candidate) => candidate.rosterID !== team.rosterID,
+  );
+  const availableAdditions = partners
+    .flatMap((partner) => partner.assets.map((asset) => ({ asset, partner })))
+    .filter(({ asset }) => !alreadyUsed.has(asset.id))
+    .filter(({ asset }) => asset.consensusValue >= 35);
+  const positionAdditions = availableAdditions.filter(({ asset }) =>
+    sentPositions.has(asset.position),
+  );
+  const additions = (
+    positionAdditions.length ? positionAdditions : availableAdditions
+  )
+    .map((candidate) => ({
+      ...candidate,
+      score:
+        Math.abs(candidate.asset.consensusValue - Math.max(difference, 45)) -
+        (sentPositions.has(candidate.asset.position) ? 55 : 0) -
+        (candidate.asset.type === "player" && candidate.asset.age <= 26.5
+          ? 18
+          : 0) -
+        Math.max(candidate.asset.trend30Day || 0, 0) * 0.05 +
+        Math.max(-(candidate.asset.trend30Day || 0), 0) * 0.08 +
+        (isVeteran(candidate.asset) ? 45 : 0),
+    }))
+    .sort((a, b) => a.score - b.score);
+  const addition = additions[0];
+  const contingency = rosterContingency(team, evaluation.sent);
+
+  if (ratio < 0.82) {
+    return {
+      tone: "overpay",
+      headline: "You are giving up more value than is needed",
+      summary: `${partners.map((partner) => partner.shortName).join(" and ")} may like this construction, but ${team.shortName} is carrying too much of the deal. The trade can solve a roster need without paying this full premium.`,
+      counter: addition
+        ? `Ask ${addition.partner.shortName} to add ${addition.asset.name}, or remove one of your secondary pieces before sending it.`
+        : "Remove one of your secondary pieces or ask for another useful asset before sending it.",
+      contingency,
+    };
+  }
+  if (ratio < 0.94) {
+    return {
+      tone: "premium",
+      headline: "You are paying a premium, but the idea is defensible",
+      summary: `The return helps ${team.shortName}, but the current version still leans toward ${partners.map((partner) => partner.shortName).join(" and ")}.`,
+      counter: addition
+        ? `Try asking for ${addition.asset.name} as the final piece, or send the offer expecting a counter.`
+        : "Try trimming a smaller outgoing piece before sending it.",
+      contingency,
+    };
+  }
+  if (ratio <= 1.12) {
+    return {
+      tone: "balanced",
+      headline: "This works for your roster at a reasonable price",
+      summary: `${team.shortName} is giving up an appropriate amount for the return and the move fits the current roster direction.`,
+      counter:
+        "This is close enough to send without manufacturing another piece.",
+      contingency,
+    };
+  }
+  return {
+    tone: "advantage",
+    headline: "The value favors you",
+    summary: `${team.shortName} improves its side of the deal, but the other manager may need a better reason to accept it.`,
+    counter: addition
+      ? `${addition.asset.name} is the type of piece the other side may request in a counter.`
+      : "Expect the other manager to ask for a sweetener.",
+    contingency,
+  };
+};
+
+export const evaluateTrade = (teams, transfers, perspectiveRosterID = null) => {
   const involvedIDs = [
     ...new Set(
       transfers.flatMap((transfer) => [
@@ -308,8 +451,11 @@ export const evaluateTrade = (teams, transfers) => {
         ratio,
         penalty,
       }),
+      valueReason: valueReason(team, ratio),
       adjustment: suggestAdjustment(team, selectedTeams, transfers, shortfall),
       impact: impactText(team, sent, received, synergy),
+      isPerspective:
+        Number(team.rosterID) === Number(perspectiveRosterID ?? -1),
     };
   });
   const overall = evaluations.length
@@ -319,6 +465,12 @@ export const evaluateTrade = (teams, transfers) => {
     overall,
     label: acceptanceLabel(overall),
     evaluations,
+    perspective: perspectiveVerdict(
+      teamByID(teams, perspectiveRosterID),
+      evaluations,
+      selectedTeams,
+      transfers,
+    ),
     complete:
       evaluations.length >= 2 &&
       evaluations.every(
@@ -426,7 +578,7 @@ const buildTargetProposal = (myTeam, partner, target, teams) => {
     partner,
     offered,
     transfers,
-    result: evaluateTrade(teams, transfers),
+    result: evaluateTrade(teams, transfers, myTeam.rosterID),
   };
 };
 
@@ -532,7 +684,7 @@ export const generateThreeTeamTrades = (myRosterID, teams, position) => {
           targetTeam,
           thirdTeam,
           transfers,
-          result: evaluateTrade(teams, transfers),
+          result: evaluateTrade(teams, transfers, myTeam.rosterID),
         });
       }
     }
