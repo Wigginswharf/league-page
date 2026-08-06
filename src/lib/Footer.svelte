@@ -110,7 +110,9 @@
     padding: 38px 1rem 52px;
     text-align: center;
     color: rgba(255, 255, 255, 0.62);
+    box-sizing: border-box;
     font-size: 0.88rem;
+    overflow-wrap: anywhere;
   }
 
   #navigation {
