@@ -353,9 +353,7 @@ const perspectiveVerdict = (team, evaluations, selectedTeams, transfers) => {
     tone: "advantage",
     headline: "The value favors you",
     summary: `${team.shortName} improves its side of the deal, but the other manager may need a better reason to accept it.`,
-    counter: addition
-      ? `${addition.asset.name} is the type of piece the other side may request in a counter.`
-      : "Expect the other manager to ask for a sweetener.",
+    counter: `Don't ask ${partners.map((partner) => partner.shortName).join(" and ")} for more—you’re already getting the better end. If anything, the next move is the other side asking you to add something.`,
     contingency,
   };
 };
