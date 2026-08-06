@@ -160,6 +160,8 @@ const rejectionReason = ({ team, sent, received, ratio, penalty }) => {
     return `${team.shortName} is being asked to turn a premium asset into several smaller pieces without receiving another cornerstone.`;
   if (ratio < 0.82)
     return `${team.shortName} is giving up too much of the consensus market value for the current return.`;
+  if (ratio > 1.12)
+    return `${team.shortName} is getting the stronger return, so rejecting this offer would be surprising unless roster fit matters more than the value.`;
   if (team.pickBias >= 0.65 && sent.some(isPick) && !received.some(isPick))
     return `${team.shortName}'s completed-trade history suggests future picks need to be replaced with a meaningful premium.`;
   if (
@@ -210,7 +212,15 @@ const impactText = (team, sent, received, synergy) => {
   return `The move changes the asset mix but probably leaves ${team.shortName} in the ${team.direction.toLowerCase()} lane.`;
 };
 
-const suggestAdjustment = (team, selectedTeams, transfers, shortfall) => {
+const suggestAdjustment = (
+  team,
+  selectedTeams,
+  transfers,
+  shortfall,
+  ratio,
+) => {
+  if (ratio > 1.12)
+    return `${team.shortName} is already receiving the stronger package. Nothing needs to be added for this side.`;
   if (shortfall <= 30)
     return "The value is close; a direct conversation may matter more than adding another asset.";
   const alreadyUsed = new Set(transfers.map((transfer) => transfer.asset.id));
@@ -450,7 +460,13 @@ export const evaluateTrade = (teams, transfers, perspectiveRosterID = null) => {
         penalty,
       }),
       valueReason: valueReason(team, ratio),
-      adjustment: suggestAdjustment(team, selectedTeams, transfers, shortfall),
+      adjustment: suggestAdjustment(
+        team,
+        selectedTeams,
+        transfers,
+        shortfall,
+        ratio,
+      ),
       impact: impactText(team, sent, received, synergy),
       isPerspective:
         Number(team.rosterID) === Number(perspectiveRosterID ?? -1),
