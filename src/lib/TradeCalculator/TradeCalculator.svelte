@@ -650,7 +650,11 @@
                 <div>
                   <span class="material-icons" aria-hidden="true">tune</span>
                   <div>
-                    <strong>A better construction</strong>
+                    <strong
+                      >{analysis.perspective.tone === "advantage"
+                        ? "What to expect next"
+                        : "A better construction"}</strong
+                    >
                     <p>{analysis.perspective.counter}</p>
                   </div>
                 </div>
@@ -737,7 +741,9 @@
                   <div>
                     <strong
                       >{evaluation.isPerspective
-                        ? "How to improve your side"
+                        ? analysis.perspective?.tone === "advantage"
+                          ? "What to expect next"
+                          : "How to improve your side"
                         : "How to improve the offer"}</strong
                     >
                     <p>
