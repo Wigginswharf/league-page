@@ -115,9 +115,9 @@ const confidenceFor = (assets, team) => {
 
 const acceptanceLabel = (likelihood) => {
   if (likelihood >= 78) return "Strong chance";
-  if (likelihood >= 60) return "Worth sending";
-  if (likelihood >= 43) return "Real negotiation";
-  if (likelihood >= 25) return "Long shot";
+  if (likelihood >= 60) return "Good chance";
+  if (likelihood >= 43) return "Worth sending";
+  if (likelihood >= 25) return "Tough sell";
   return "Very unlikely";
 };
 
