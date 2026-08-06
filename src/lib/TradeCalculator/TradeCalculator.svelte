@@ -1,5 +1,4 @@
 <script>
-  import { onMount } from "svelte";
   import {
     evaluateTrade,
     generateTargets,
@@ -9,9 +8,9 @@
   export let calculatorData;
 
   const { meta, teams } = calculatorData;
-  let myRosterID = teams[0]?.rosterID || null;
+  let myRosterID = null;
   let teamCount = 2;
-  let selectedTeamIDs = [];
+  let selectedTeamIDs = [null, null];
   let transfers = [];
   let analysis = null;
   let workspace = "builder";
@@ -36,18 +35,8 @@
     analysis = null;
   };
 
-  const chooseDefaultOpponent = (rosterID, excluded = []) =>
-    teams.find(
-      (team) =>
-        team.rosterID !== Number(rosterID) && !excluded.includes(team.rosterID),
-    )?.rosterID;
-
   const initializeTeams = () => {
-    const firstOpponent = chooseDefaultOpponent(myRosterID);
-    const thirdTeam = chooseDefaultOpponent(myRosterID, [firstOpponent]);
-    selectedTeamIDs = [myRosterID, firstOpponent, thirdTeam]
-      .filter(Boolean)
-      .slice(0, teamCount);
+    selectedTeamIDs = Array(teamCount).fill(null);
     transfers = [];
     resetAnalysis();
   };
@@ -55,7 +44,6 @@
   const changeMyTeam = (event) => {
     myRosterID = Number(event.currentTarget.value);
     localStorage.setItem("trade-lab-roster", String(myRosterID));
-    initializeTeams();
     refreshTargets();
   };
 
@@ -73,8 +61,9 @@
     transfers = transfers
       .filter(
         (transfer) =>
-          Number(transfer.fromRosterID) !== Number(previousID) &&
-          Number(transfer.toRosterID) !== Number(previousID),
+          !previousID ||
+          (Number(transfer.fromRosterID) !== Number(previousID) &&
+            Number(transfer.toRosterID) !== Number(previousID)),
       )
       .map((transfer) => {
         if (!selectedTeamIDs.includes(Number(transfer.toRosterID))) {
@@ -173,15 +162,6 @@
         ? `${asset.name} · projected`
         : asset.name
       : `${asset.position} · ${asset.nflTeam} · age ${asset.age || "—"}`;
-
-  onMount(() => {
-    const savedRoster = Number(localStorage.getItem("trade-lab-roster"));
-    if (teams.some((team) => team.rosterID === savedRoster)) {
-      myRosterID = savedRoster;
-    }
-    initializeTeams();
-    refreshTargets();
-  });
 </script>
 
 <svelte:head>
@@ -218,16 +198,6 @@
   </header>
 
   <section class="controlBar" aria-label="Trade Lab controls">
-    <label>
-      <span>Your team</span>
-      <select value={myRosterID} on:change={changeMyTeam}>
-        {#each teams as team}
-          <option value={team.rosterID}
-            >{team.managerName} · {team.teamName}</option
-          >
-        {/each}
-      </select>
-    </label>
     <div class="workspaceTabs" role="group" aria-label="Trade Lab workspace">
       <button
         class:active={workspace === "builder"}
@@ -237,7 +207,7 @@
       <button
         class:active={workspace === "targets"}
         type="button"
-        on:click={() => (workspace = "targets")}>Find a Target</button
+        on:click={() => (workspace = "targets")}>Find a Trade</button
       >
     </div>
   </section>
@@ -276,22 +246,18 @@
                 <img src={team.avatar} alt="" />
                 <div>
                   <span class="teamNumber">Team {index + 1}</span>
-                  {#if index === 0}
-                    <strong>{team.managerName}</strong>
-                    <small>{team.teamName}</small>
-                  {:else}
-                    <select
-                      aria-label={`Select team ${index + 1}`}
-                      value={team.rosterID}
-                      on:change={(event) => changeSelectedTeam(index, event)}
-                    >
-                      {#each teams.filter((candidate) => !selectedTeamIDs.includes(candidate.rosterID) || candidate.rosterID === team.rosterID) as candidate}
-                        <option value={candidate.rosterID}
-                          >{candidate.managerName} · {candidate.teamName}</option
-                        >
-                      {/each}
-                    </select>
-                  {/if}
+                  <select
+                    aria-label={`Select team ${index + 1}`}
+                    value={team.rosterID}
+                    on:change={(event) => changeSelectedTeam(index, event)}
+                  >
+                    <option value="" disabled>Select a manager</option>
+                    {#each teams.filter((candidate) => !selectedTeamIDs.includes(candidate.rosterID) || candidate.rosterID === team.rosterID) as candidate}
+                      <option value={candidate.rosterID}
+                        >{candidate.managerName} · {candidate.teamName}</option
+                      >
+                    {/each}
+                  </select>
                 </div>
                 <span class="direction">{team.direction}</span>
               </div>
@@ -385,6 +351,33 @@
                     </button>
                   {/each}
                 </div>
+              </div>
+            </article>
+          {:else}
+            <article class="teamColumn emptyTeam">
+              <div class="teamHeader">
+                <div>
+                  <span class="teamNumber">Team {index + 1}</span>
+                  <select
+                    aria-label={`Select team ${index + 1}`}
+                    value=""
+                    on:change={(event) => changeSelectedTeam(index, event)}
+                  >
+                    <option value="" disabled>Select a manager</option>
+                    {#each teams.filter((candidate) => !selectedTeamIDs.includes(candidate.rosterID)) as candidate}
+                      <option value={candidate.rosterID}
+                        >{candidate.managerName} · {candidate.teamName}</option
+                      >
+                    {/each}
+                  </select>
+                </div>
+              </div>
+              <div class="emptyTeamPrompt">
+                <span class="material-icons" aria-hidden="true"
+                  >person_search</span
+                >
+                <strong>Choose a manager</strong>
+                <p>The roster's players and draft picks will appear here.</p>
               </div>
             </article>
           {/if}
@@ -522,101 +515,133 @@
           </p>
         </div>
       </div>
-      <div class="positionPicker" role="group" aria-label="Target position">
-        {#each ["QB", "RB", "WR", "TE"] as position}
-          <button
-            class:active={targetPosition === position}
-            type="button"
-            on:click={() => changeTargetPosition(position)}>{position}</button
-          >
-        {/each}
-      </div>
-
-      <div class="targetIntro">
-        <div>
-          <span class="material-icons" aria-hidden="true">travel_explore</span>
-          <div>
-            <strong
-              >League-wide {targetPosition} targets for {teamByID(myRosterID)
-                ?.shortName}</strong
+      <div class="findTradeTeamPicker">
+        <label for="find-trade-team">Which team is yours?</label>
+        <select
+          id="find-trade-team"
+          value={myRosterID || ""}
+          on:change={changeMyTeam}
+        >
+          <option value="" disabled>Select your team</option>
+          {#each teams as team}
+            <option value={team.rosterID}
+              >{team.managerName} · {team.teamName}</option
             >
-            <p>
-              Ranked by manager fit and estimated acceptance—not only market
-              value.
-            </p>
-          </div>
-        </div>
-        <button type="button" on:click={refreshTargets}>Refresh targets</button>
+          {/each}
+        </select>
       </div>
+      {#if myRosterID}
+        <div class="positionPicker" role="group" aria-label="Target position">
+          {#each ["QB", "RB", "WR", "TE"] as position}
+            <button
+              class:active={targetPosition === position}
+              type="button"
+              on:click={() => changeTargetPosition(position)}>{position}</button
+            >
+          {/each}
+        </div>
 
-      <div class="suggestionGrid">
-        {#each targetSuggestions as suggestion}
-          <article class="suggestionCard">
-            <div class="targetPlayer">
-              <span class="position">{suggestion.target.position}</span>
-              <div>
-                <h3>{suggestion.target.name}</h3>
+        <div class="targetIntro">
+          <div>
+            <span class="material-icons" aria-hidden="true">travel_explore</span
+            >
+            <div>
+              <strong
+                >League-wide {targetPosition} targets for {teamByID(myRosterID)
+                  ?.shortName}</strong
+              >
+              <p>
+                Ranked by manager fit and estimated acceptance—not only market
+                value.
+              </p>
+            </div>
+          </div>
+          <button type="button" on:click={refreshTargets}
+            >Refresh targets</button
+          >
+        </div>
+
+        <div class="suggestionGrid">
+          {#each targetSuggestions as suggestion}
+            <article class="suggestionCard">
+              <div class="targetPlayer">
+                <span class="position">{suggestion.target.position}</span>
+                <div>
+                  <h3>{suggestion.target.name}</h3>
+                  <p>
+                    {suggestion.partner.shortName} · {suggestion.partner
+                      .teamName}
+                  </p>
+                </div>
+                <strong>{suggestion.result.overall}%</strong>
+              </div>
+              <div class="suggestedOffer">
+                <span>Suggested opening offer</span>
                 <p>
-                  {suggestion.partner.shortName} · {suggestion.partner.teamName}
+                  {suggestion.offered.map((asset) => asset.name).join(" + ")}
                 </p>
               </div>
-              <strong>{suggestion.result.overall}%</strong>
-            </div>
-            <div class="suggestedOffer">
-              <span>Suggested opening offer</span>
-              <p>{suggestion.offered.map((asset) => asset.name).join(" + ")}</p>
-            </div>
-            <p class="whyTarget">
-              {suggestion.partner.shortName}'s profile: {suggestion.partner
-                .tradeProfile.label}. This offer is shaped around the roster's {suggestion.partner.direction.toLowerCase()}
-              direction.
-            </p>
-            <button type="button" on:click={() => loadTrade(suggestion)}
-              >Open in builder</button
-            >
-          </article>
-        {/each}
-      </div>
-
-      <div class="threeTeamGenerator">
-        <div>
-          <span class="step">02</span>
-          <h2>Need a third manager to unlock it?</h2>
-          <p>
-            The model looks for a three-team path where every roster receives
-            something aligned with its needs.
-          </p>
-        </div>
-        <button type="button" on:click={buildThreeTeamSuggestions}>
-          Generate three-team ideas
-        </button>
-      </div>
-
-      {#if threeTeamSuggestions.length}
-        <div class="threeTeamResults">
-          {#each threeTeamSuggestions as suggestion}
-            <article>
-              <div class="threeTeamTop">
-                <strong>{suggestion.result.overall}% likelihood</strong>
-                <span
-                  >{suggestion.target.name} to {teamByID(myRosterID)
-                    ?.shortName}</span
-                >
-              </div>
-              <ul>
-                {#each suggestion.transfers as transfer}
-                  <li>
-                    {teamByID(transfer.fromRosterID)?.shortName} sends
-                    <strong>{transfer.asset.name}</strong> to
-                    {teamByID(transfer.toRosterID)?.shortName}
-                  </li>
-                {/each}
-              </ul>
+              <p class="whyTarget">
+                {suggestion.partner.shortName}'s profile: {suggestion.partner
+                  .tradeProfile.label}. This offer is shaped around the roster's {suggestion.partner.direction.toLowerCase()}
+                direction.
+              </p>
               <button type="button" on:click={() => loadTrade(suggestion)}
                 >Open in builder</button
               >
             </article>
           {/each}
+        </div>
+
+        <div class="threeTeamGenerator">
+          <div>
+            <span class="step">02</span>
+            <h2>Need a third manager to unlock it?</h2>
+            <p>
+              The model looks for a three-team path where every roster receives
+              something aligned with its needs.
+            </p>
+          </div>
+          <button type="button" on:click={buildThreeTeamSuggestions}>
+            Generate three-team ideas
+          </button>
+        </div>
+
+        {#if threeTeamSuggestions.length}
+          <div class="threeTeamResults">
+            {#each threeTeamSuggestions as suggestion}
+              <article>
+                <div class="threeTeamTop">
+                  <strong>{suggestion.result.overall}% likelihood</strong>
+                  <span
+                    >{suggestion.target.name} to {teamByID(myRosterID)
+                      ?.shortName}</span
+                  >
+                </div>
+                <ul>
+                  {#each suggestion.transfers as transfer}
+                    <li>
+                      {teamByID(transfer.fromRosterID)?.shortName} sends
+                      <strong>{transfer.asset.name}</strong> to
+                      {teamByID(transfer.toRosterID)?.shortName}
+                    </li>
+                  {/each}
+                </ul>
+                <button type="button" on:click={() => loadTrade(suggestion)}
+                  >Open in builder</button
+                >
+              </article>
+            {/each}
+          </div>
+        {/if}
+      {:else}
+        <div class="findTradeEmpty">
+          <span class="material-icons" aria-hidden="true">manage_search</span>
+          <h3>Select your team to begin</h3>
+          <p>
+            Then Trade Lab can search the entire league for realistic targets
+            and offers.
+          </p>
         </div>
       {/if}
     </section>
@@ -771,7 +796,7 @@
     border-radius: 16px;
     box-shadow: var(--league-shadow-soft);
     gap: 1rem;
-    justify-content: space-between;
+    justify-content: center;
     margin: 1rem 0 2rem;
     padding: 0.85rem;
   }
@@ -813,6 +838,14 @@
     display: flex;
     gap: 0.25rem;
     padding: 0.25rem;
+  }
+
+  .workspaceTabs {
+    width: 100%;
+  }
+
+  .workspaceTabs button {
+    flex: 1;
   }
 
   .workspaceTabs button,
@@ -884,6 +917,67 @@
   .teamColumn {
     min-width: 0;
     overflow: hidden;
+  }
+
+  .emptyTeam {
+    min-height: 270px;
+  }
+
+  .emptyTeamPrompt,
+  .findTradeEmpty {
+    align-items: center;
+    color: var(--text-muted);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3rem 1rem;
+    text-align: center;
+  }
+
+  .emptyTeamPrompt .material-icons,
+  .findTradeEmpty .material-icons {
+    color: var(--league-blue);
+    font-size: 2.2rem;
+  }
+
+  .emptyTeamPrompt strong,
+  .findTradeEmpty h3 {
+    color: var(--text-primary);
+    margin: 0.6rem 0 0.25rem;
+  }
+
+  .emptyTeamPrompt p,
+  .findTradeEmpty p {
+    margin: 0;
+  }
+
+  .findTradeTeamPicker {
+    align-items: center;
+    background: var(--surface-raised);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    box-shadow: var(--league-shadow-soft);
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
+  }
+
+  .findTradeTeamPicker label {
+    color: var(--text-primary);
+    font-size: 0.82rem;
+    font-weight: 900;
+  }
+
+  .findTradeTeamPicker select {
+    flex: 1;
+  }
+
+  .findTradeEmpty {
+    background: var(--surface-raised);
+    border: 1px dashed var(--line);
+    border-radius: 16px;
+    min-height: 220px;
   }
 
   .teamHeader {
@@ -1531,6 +1625,11 @@
     }
     .workspaceTabs button {
       flex: 1;
+    }
+    .findTradeTeamPicker {
+      align-items: stretch;
+      flex-direction: column;
+      gap: 0.45rem;
     }
     .teamColumns {
       grid-template-columns: 1fr;
