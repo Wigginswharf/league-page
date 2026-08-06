@@ -32,6 +32,11 @@ export const tabs = [
         dest: "/transactions",
       },
       {
+        icon: "handshake",
+        label: "Trade Lab",
+        dest: "/trade-lab",
+      },
+      {
         icon: "view_comfy",
         label: "Draft Center",
         dest: "/drafts",
