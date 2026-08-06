@@ -21,6 +21,20 @@ const listNames = (assets, fallback = "the offered assets") => {
 const needScore = (team, position) =>
   team.needs?.find((need) => need.position === position)?.score || 0;
 
+const protectsRosterStar = (asset, team) =>
+  asset.type === "player" &&
+  asset.position === "RB" &&
+  asset.nflTeam &&
+  asset.nflTeam !== "FA" &&
+  team.assets.some(
+    (teammate) =>
+      teammate.id !== asset.id &&
+      teammate.type === "player" &&
+      teammate.position === "RB" &&
+      teammate.nflTeam === asset.nflTeam &&
+      teammate.consensusValue > asset.consensusValue * 1.3,
+  );
+
 const rosterSynergies = (team, sent, received) => {
   const sentIDs = new Set(sent.map((asset) => asset.id));
   const returningRoster = team.assets.filter(
@@ -255,11 +269,22 @@ export const evaluateTrade = (teams, transfers) => {
       [...received].sort((a, b) => b.consensusValue - a.consensusValue),
     );
     const needAsset = bestNeedFromAssets(team, received);
+    const positionReplacement = received.find(
+      (incoming) =>
+        incoming.type === "player" &&
+        sent.some(
+          (outgoing) =>
+            outgoing.type === "player" &&
+            outgoing.position === incoming.position,
+        ),
+    );
     const fitSentence = synergy.handcuffs.length
       ? `${synergy.handcuffs[0].handcuff.name} gives this roster direct insurance behind ${synergy.handcuffs[0].lead.name}.`
-      : needAsset && needScore(team, needAsset.position) >= 0.18
-        ? `${needAsset.name} helps at ${needAsset.position}, one of this roster's clearest needs.`
-        : `The return is judged against ${team.shortName}'s ${team.direction.toLowerCase()} timeline.`;
+      : positionReplacement
+        ? `${positionReplacement.name} replaces the ${positionReplacement.position} depth leaving in the deal without forcing a roster reset.`
+        : needAsset && needScore(team, needAsset.position) >= 0.45
+          ? `${needAsset.name} helps at ${needAsset.position}, one of this roster's clearest needs.`
+          : `The return is judged against ${team.shortName}'s ${team.direction.toLowerCase()} timeline.`;
     const shortfall = Math.max(0, sentValue - receivedValue);
     return {
       rosterID: team.rosterID,
@@ -302,7 +327,14 @@ export const evaluateTrade = (teams, transfers) => {
   };
 };
 
-const bestPackage = (assets, targetValue, recipient, maxAssets = 3) => {
+const bestPackage = (
+  assets,
+  targetValue,
+  recipient,
+  target,
+  sender,
+  maxAssets = 3,
+) => {
   const candidates = assets
     .filter((asset) => asset.consensusValue >= 35)
     .sort((a, b) => b.consensusValue - a.consensusValue);
@@ -334,6 +366,25 @@ const bestPackage = (assets, targetValue, recipient, maxAssets = 3) => {
           (sum, asset) => sum + managerAdjustedValue(asset, recipient, true),
           0,
         ),
+        fitPenalty:
+          (assetsInPackage.length - 1) * targetValue * 0.16 +
+          (recipient.direction === "Rebuilding"
+            ? assetsInPackage.filter(isVeteran).length * targetValue * 0.1
+            : 0) -
+          (target?.type === "player" &&
+          assetsInPackage.some(
+            (asset) =>
+              asset.type === "player" && asset.position === target.position,
+          )
+            ? targetValue * 0.06
+            : 0) +
+          assetsInPackage
+            .filter((asset) => protectsRosterStar(asset, sender))
+            .reduce(
+              (penalty, asset) =>
+                penalty + Math.min(asset.consensusValue * 0.28, 45),
+              0,
+            ),
       }))
       .filter(
         (candidate) =>
@@ -342,8 +393,9 @@ const bestPackage = (assets, targetValue, recipient, maxAssets = 3) => {
       )
       .sort(
         (a, b) =>
-          Math.abs(a.value - targetValue * 1.03) -
-          Math.abs(b.value - targetValue * 1.03),
+          Math.abs(a.value - targetValue * 1.03) +
+          a.fitPenalty -
+          (Math.abs(b.value - targetValue * 1.03) + b.fitPenalty),
       )[0]?.assets || []
   );
 };
@@ -353,6 +405,8 @@ const buildTargetProposal = (myTeam, partner, target, teams) => {
     myTeam.assets,
     managerAdjustedValue(target, partner, false),
     partner,
+    target,
+    myTeam,
   );
   if (!offered.length) return null;
   const transfers = [
