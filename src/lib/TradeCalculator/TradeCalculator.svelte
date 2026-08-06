@@ -171,13 +171,12 @@
       );
     } else {
       const destination = destinationOptions(ownerRosterID)[0];
-      if (!destination) return;
       transfers = [
         ...transfers,
         {
           asset,
           fromRosterID: Number(ownerRosterID),
-          toRosterID: destination.rosterID,
+          toRosterID: destination?.rosterID ?? null,
         },
       ];
     }
@@ -504,6 +503,7 @@
           </div>
           <div class="transferList">
             {#each transfers as transfer}
+              {@const destinations = destinationOptions(transfer.fromRosterID)}
               <div class="transferRow">
                 <span class="assetPill">{transfer.asset.name}</span>
                 <span class="fromTeam"
@@ -512,22 +512,32 @@
                 <span class="material-icons arrow" aria-hidden="true"
                   >arrow_forward</span
                 >
-                <select
-                  aria-label={`Destination for ${transfer.asset.name}`}
-                  value={transfer.toRosterID}
-                  on:change={(event) =>
-                    changeDestination(transfer.asset.id, event)}
-                >
-                  {#each destinationOptions(transfer.fromRosterID) as destination}
-                    <option value={destination.rosterID}
-                      >{destination.shortName}</option
-                    >
-                  {/each}
-                </select>
+                {#if destinations.length}
+                  <select
+                    aria-label={`Destination for ${transfer.asset.name}`}
+                    value={transfer.toRosterID}
+                    on:change={(event) =>
+                      changeDestination(transfer.asset.id, event)}
+                  >
+                    {#each destinations as destination}
+                      <option value={destination.rosterID}
+                        >{destination.shortName}</option
+                      >
+                    {/each}
+                  </select>
+                {:else}
+                  <span class="pendingDestination">Choose the other team</span>
+                {/if}
               </div>
             {/each}
           </div>
-          <button class="analyzeButton" type="button" on:click={analyze}>
+          <button
+            class="analyzeButton"
+            type="button"
+            disabled={selectedTeams().length < 2 ||
+              transfers.some((transfer) => !transfer.toRosterID)}
+            on:click={analyze}
+          >
             <span class="material-icons" aria-hidden="true">psychology</span>
             Estimate Acceptance
           </button>
@@ -1362,6 +1372,9 @@
     grid-template-columns: auto 31px minmax(0, 1fr) auto;
     padding: 0.55rem;
     text-align: left;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: rgba(8, 120, 209, 0.18);
+    user-select: none;
     width: 100%;
   }
 
@@ -1372,6 +1385,23 @@
 
   .assetRow.selected {
     background: rgba(8, 120, 209, 0.09);
+  }
+
+  .assetRow:active {
+    background: rgba(8, 120, 209, 0.16);
+    border-color: var(--league-blue);
+  }
+
+  .pendingDestination {
+    color: var(--league-blue);
+    font-size: 0.72rem;
+    font-weight: 800;
+    text-align: right;
+  }
+
+  .analyzeButton:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
   }
 
   .selectionIcon {
