@@ -6,6 +6,7 @@
   } from "./tradeModel";
 
   export let calculatorData;
+  export let initialWorkspace = "builder";
 
   const { meta, teams } = calculatorData;
   let myRosterID = null;
@@ -13,11 +14,12 @@
   let selectedTeamIDs = [null, null];
   let transfers = [];
   let analysis = null;
-  let workspace = "builder";
+  let workspace = initialWorkspace;
   let targetPosition = "WR";
   let targetSuggestions = [];
   let threeTeamSuggestions = [];
   let sourcePanelOpen = false;
+  const positionOrder = ["QB", "RB", "WR", "TE"];
 
   const teamByID = (rosterID) =>
     teams.find((team) => Number(team.rosterID) === Number(rosterID));
@@ -30,6 +32,31 @@
     transfers.filter(
       (transfer) => Number(transfer.fromRosterID) === Number(rosterID),
     );
+  const playersAtPosition = (team, position) =>
+    team.assets
+      .filter((asset) => asset.type === "player" && asset.position === position)
+      .sort(
+        (first, second) =>
+          second.consensusValue - first.consensusValue ||
+          first.name.localeCompare(second.name),
+      );
+  const pickSeasons = (team) =>
+    [
+      ...new Set(
+        team.assets
+          .filter((asset) => asset.type === "pick")
+          .map((asset) => asset.season),
+      ),
+    ].sort((first, second) => first - second);
+  const picksInSeason = (team, season) =>
+    team.assets
+      .filter((asset) => asset.type === "pick" && asset.season === season)
+      .sort(
+        (first, second) =>
+          first.round - second.round ||
+          first.slot - second.slot ||
+          first.name.localeCompare(second.name),
+      );
 
   const resetAnalysis = () => {
     analysis = null;
@@ -280,31 +307,40 @@
                   >
                 </div>
                 <div class="assetList">
-                  {#each team.assets.filter((asset) => asset.type === "player") as asset}
-                    {@const selected = transfers.some(
-                      (transfer) => transfer.asset.id === asset.id,
-                    )}
-                    <button
-                      type="button"
-                      aria-pressed={selected}
-                      class:selected
-                      class="assetRow"
-                      on:click={() => toggleAsset(asset, team.rosterID)}
-                    >
-                      <span
-                        class="material-icons selectionIcon"
-                        aria-hidden="true"
-                        >{selected
-                          ? "check_box"
-                          : "check_box_outline_blank"}</span
-                      >
-                      <span class="position">{asset.position}</span>
-                      <span class="assetIdentity">
-                        <strong>{asset.name}</strong>
-                        <small>{teamAssetLabel(asset)}</small>
-                      </span>
-                      <span class="value">{sourceLabel(asset)}</span>
-                    </button>
+                  {#each positionOrder as position}
+                    {@const positionPlayers = playersAtPosition(team, position)}
+                    {#if positionPlayers.length}
+                      <div class="assetGroupLabel">
+                        <strong>{position}</strong>
+                        <span>{positionPlayers.length}</span>
+                      </div>
+                      {#each positionPlayers as asset}
+                        {@const selected = transfers.some(
+                          (transfer) => transfer.asset.id === asset.id,
+                        )}
+                        <button
+                          type="button"
+                          aria-pressed={selected}
+                          class:selected
+                          class="assetRow"
+                          on:click={() => toggleAsset(asset, team.rosterID)}
+                        >
+                          <span
+                            class="material-icons selectionIcon"
+                            aria-hidden="true"
+                            >{selected
+                              ? "check_box"
+                              : "check_box_outline_blank"}</span
+                          >
+                          <span class="position">{asset.position}</span>
+                          <span class="assetIdentity">
+                            <strong>{asset.name}</strong>
+                            <small>{teamAssetLabel(asset)}</small>
+                          </span>
+                          <span class="value">{sourceLabel(asset)}</span>
+                        </button>
+                      {/each}
+                    {/if}
                   {/each}
                 </div>
               </div>
@@ -318,37 +354,49 @@
                   >
                 </div>
                 <div class="assetList picks">
-                  {#each team.assets.filter((asset) => asset.type === "pick") as asset}
-                    {@const selected = transfers.some(
-                      (transfer) => transfer.asset.id === asset.id,
-                    )}
-                    <button
-                      type="button"
-                      aria-pressed={selected}
-                      class:selected
-                      class="assetRow"
-                      on:click={() => toggleAsset(asset, team.rosterID)}
-                    >
-                      <span
-                        class="material-icons selectionIcon"
-                        aria-hidden="true"
-                        >{selected
-                          ? "check_box"
-                          : "check_box_outline_blank"}</span
+                  {#each pickSeasons(team) as season}
+                    <div class="assetGroupLabel pickYear">
+                      <strong>{season}</strong>
+                      <span>Draft timeline</span>
+                    </div>
+                    {#each picksInSeason(team, season) as asset}
+                      {@const selected = transfers.some(
+                        (transfer) => transfer.asset.id === asset.id,
+                      )}
+                      <button
+                        type="button"
+                        aria-pressed={selected}
+                        class:selected
+                        class="assetRow pickTimelineRow"
+                        on:click={() => toggleAsset(asset, team.rosterID)}
                       >
-                      <span class="material-icons pickIcon" aria-hidden="true"
-                        >event_note</span
-                      >
-                      <span class="assetIdentity">
-                        <strong>{asset.name}</strong>
-                        <small
-                          >{asset.projected
-                            ? "Projected range"
-                            : "Known draft slot"}</small
+                        <span
+                          class="material-icons selectionIcon"
+                          aria-hidden="true"
+                          >{selected
+                            ? "check_box"
+                            : "check_box_outline_blank"}</span
                         >
-                      </span>
-                      <span class="value">{sourceLabel(asset)}</span>
-                    </button>
+                        <span class="material-icons pickIcon" aria-hidden="true"
+                          >event_note</span
+                        >
+                        <span class="assetIdentity">
+                          <strong>{asset.name}</strong>
+                          <small
+                            >Round {asset.round} · {asset.projected
+                              ? `projected ${
+                                  asset.slot <= 4
+                                    ? "early"
+                                    : asset.slot <= 8
+                                      ? "mid"
+                                      : "late"
+                                }`
+                              : `pick ${asset.slot}`}</small
+                          >
+                        </span>
+                        <span class="value">{sourceLabel(asset)}</span>
+                      </button>
+                    {/each}
                   {/each}
                 </div>
               </div>
@@ -1072,13 +1120,53 @@
     display: flex;
     flex-direction: column;
     gap: 0.35rem;
-    max-height: 310px;
+    max-height: 430px;
     overflow-y: auto;
     padding-right: 0.15rem;
   }
 
   .assetList.picks {
-    max-height: 205px;
+    max-height: 330px;
+  }
+
+  .assetGroupLabel {
+    align-items: center;
+    background: var(--surface-raised);
+    border-bottom: 1px solid var(--line);
+    color: var(--league-blue);
+    display: flex;
+    font-size: 0.7rem;
+    justify-content: space-between;
+    letter-spacing: 0.1em;
+    margin-top: 0.35rem;
+    padding: 0.45rem 0.35rem 0.3rem;
+    position: sticky;
+    text-transform: uppercase;
+    top: 0;
+    z-index: 1;
+  }
+
+  .assetGroupLabel:first-child {
+    margin-top: 0;
+  }
+
+  .assetGroupLabel span {
+    color: var(--text-muted);
+    font-size: 0.62rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+  }
+
+  .pickYear {
+    border-left: 3px solid var(--league-gold);
+    color: var(--text-primary);
+    font-size: 0.78rem;
+    padding-left: 0.55rem;
+  }
+
+  .pickTimelineRow {
+    margin-left: 0.35rem;
+    width: calc(100% - 0.35rem);
   }
 
   .assetRow {
