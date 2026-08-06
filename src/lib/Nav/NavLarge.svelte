@@ -10,9 +10,14 @@
   const visibleChildren = (tab) =>
     tab.children.filter((child) => !child.blog || enableBlog);
 
+  const pathOnly = (destination) => destination?.split("?")[0];
+
   const isActive = (tab) =>
     tab.dest === active ||
-    (tab.nest && visibleChildren(tab).some((child) => child.dest === active));
+    (tab.nest &&
+      visibleChildren(tab).some(
+        (child) => pathOnly(child.dest) === pathOnly(active),
+      ));
 
   const prefetchInternal = (item) => {
     if (!item.external) preloadData(item.dest);
