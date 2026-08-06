@@ -37,6 +37,78 @@
     transfers.filter(
       (transfer) => Number(transfer.fromRosterID) === Number(rosterID),
     );
+  const returnRatioFor = (evaluation) =>
+    evaluation.sentValue
+      ? evaluation.receivedValue / evaluation.sentValue
+      : evaluation.receivedValue
+        ? 1.4
+        : 0;
+  const counterpartFor = (evaluation) => {
+    const others =
+      analysis?.evaluations.filter(
+        (candidate) => candidate.rosterID !== evaluation.rosterID,
+      ) ?? [];
+    if (evaluation.isPerspective) {
+      return [...others].sort(
+        (first, second) => returnRatioFor(first) - returnRatioFor(second),
+      )[0];
+    }
+    return others.find((candidate) => candidate.isPerspective) ?? others[0];
+  };
+  const likelihoodCopyFor = (evaluation) => {
+    const counterpart = counterpartFor(evaluation);
+    const counterpartName = counterpart?.shortName ?? "the other manager";
+    const ratio = returnRatioFor(evaluation);
+
+    if (evaluation.isPerspective) {
+      const counterpartRatio = counterpart ? returnRatioFor(counterpart) : 1;
+      if (counterpartRatio < 0.82) {
+        return {
+          label: "Works for you",
+          detail: `${counterpartName}? Not so much. They may want a much better return.`,
+        };
+      }
+      if (counterpartRatio < 0.94) {
+        return {
+          label: "Works for you",
+          detail: `${counterpartName}? Not so much. They may ask for another piece.`,
+        };
+      }
+      if (ratio < 0.9) {
+        return {
+          label: "May cost too much",
+          detail: `The roster fit makes sense, but you may be paying more than needed.`,
+        };
+      }
+      return {
+        label: "Works for you",
+        detail: `The return looks reasonable for both you and ${counterpartName}.`,
+      };
+    }
+
+    if (ratio < 0.82) {
+      return {
+        label: `${evaluation.shortName} may pass`,
+        detail: `${evaluation.shortName} appears to be overpaying and is likely to counter.`,
+      };
+    }
+    if (ratio < 0.94) {
+      return {
+        label: `${evaluation.shortName} may counter`,
+        detail: `${evaluation.shortName} appears to be overpaying and may ask for another piece.`,
+      };
+    }
+    if (ratio > 1.18) {
+      return {
+        label: `Good for ${evaluation.shortName}`,
+        detail: `${evaluation.shortName} gets the stronger return, so ${counterpartName} may be overpaying.`,
+      };
+    }
+    return {
+      label: `${evaluation.shortName} may accept`,
+      detail: `The return is close enough for ${evaluation.shortName} to seriously consider.`,
+    };
+  };
   const playersAtPosition = (team, position) =>
     team.assets
       .filter((asset) => asset.type === "player" && asset.position === position)
@@ -617,12 +689,8 @@
                   </div>
                   <div class="likelihood">
                     <strong>{evaluation.likelihood}%</strong>
-                    <span>{evaluation.label}</span>
-                    <small
-                      >{evaluation.isPerspective
-                        ? "Works for you"
-                        : "Likely to accept"}</small
-                    >
+                    <span>{likelihoodCopyFor(evaluation).label}</span>
+                    <small>{likelihoodCopyFor(evaluation).detail}</small>
                   </div>
                 </div>
                 <div class="confidence">
@@ -1747,6 +1815,7 @@
   }
 
   .likelihood {
+    max-width: 15rem;
     text-align: right;
   }
 
@@ -1759,10 +1828,10 @@
   .likelihood small {
     color: var(--text-muted);
     display: block;
-    font-size: 0.58rem;
-    font-weight: 750;
-    margin-top: 0.15rem;
-    text-transform: uppercase;
+    font-size: 0.68rem;
+    font-weight: 650;
+    line-height: 1.35;
+    margin-top: 0.25rem;
   }
 
   .confidence {
