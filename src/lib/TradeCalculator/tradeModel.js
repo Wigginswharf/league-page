@@ -305,8 +305,7 @@ export const evaluateTrade = (teams, transfers) => {
 const bestPackage = (assets, targetValue, recipient, maxAssets = 3) => {
   const candidates = assets
     .filter((asset) => asset.consensusValue >= 35)
-    .sort((a, b) => b.consensusValue - a.consensusValue)
-    .slice(0, 18);
+    .sort((a, b) => b.consensusValue - a.consensusValue);
   const packages = [];
   for (let first = 0; first < candidates.length; first++) {
     packages.push([candidates[first]]);
@@ -349,6 +348,52 @@ const bestPackage = (assets, targetValue, recipient, maxAssets = 3) => {
   );
 };
 
+const buildTargetProposal = (myTeam, partner, target, teams) => {
+  const offered = bestPackage(
+    myTeam.assets,
+    managerAdjustedValue(target, partner, false),
+    partner,
+  );
+  if (!offered.length) return null;
+  const transfers = [
+    ...offered.map((asset) => ({
+      asset,
+      fromRosterID: myTeam.rosterID,
+      toRosterID: partner.rosterID,
+    })),
+    {
+      asset: target,
+      fromRosterID: partner.rosterID,
+      toRosterID: myTeam.rosterID,
+    },
+  ];
+  return {
+    target,
+    partner,
+    offered,
+    transfers,
+    result: evaluateTrade(teams, transfers),
+  };
+};
+
+export const generateTradeForPlayer = (myRosterID, teams, playerID) => {
+  const myTeam = teamByID(teams, myRosterID);
+  if (!myTeam) return null;
+  const partner = teams.find(
+    (team) =>
+      team.rosterID !== myTeam.rosterID &&
+      team.assets.some(
+        (asset) => asset.type === "player" && asset.id === playerID,
+      ),
+  );
+  const target = partner?.assets.find(
+    (asset) => asset.type === "player" && asset.id === playerID,
+  );
+  return partner && target
+    ? buildTargetProposal(myTeam, partner, target, teams)
+    : null;
+};
+
 export const generateTargets = (myRosterID, teams, position) => {
   const myTeam = teamByID(teams, myRosterID);
   if (!myTeam) return [];
@@ -362,33 +407,7 @@ export const generateTargets = (myRosterID, teams, position) => {
         .slice(0, 5)
         .map((target) => ({ team, target })),
     )
-    .map(({ team, target }) => {
-      const offered = bestPackage(
-        myTeam.assets,
-        managerAdjustedValue(target, myTeam, true),
-        team,
-      );
-      if (!offered.length) return null;
-      const transfers = [
-        ...offered.map((asset) => ({
-          asset,
-          fromRosterID: myTeam.rosterID,
-          toRosterID: team.rosterID,
-        })),
-        {
-          asset: target,
-          fromRosterID: team.rosterID,
-          toRosterID: myTeam.rosterID,
-        },
-      ];
-      return {
-        target,
-        partner: team,
-        offered,
-        transfers,
-        result: evaluateTrade(teams, transfers),
-      };
-    })
+    .map(({ team, target }) => buildTargetProposal(myTeam, team, target, teams))
     .filter(Boolean)
     .sort(
       (a, b) =>

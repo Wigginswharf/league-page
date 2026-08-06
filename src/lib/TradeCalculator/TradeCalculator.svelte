@@ -1,6 +1,7 @@
 <script>
   import {
     evaluateTrade,
+    generateTradeForPlayer,
     generateTargets,
     generateThreeTeamTrades,
   } from "./tradeModel";
@@ -18,6 +19,8 @@
   let targetPosition = "WR";
   let targetSuggestions = [];
   let threeTeamSuggestions = [];
+  let playerSearch = "";
+  let exactTrade = null;
   let sourcePanelOpen = false;
   const positionOrder = ["QB", "RB", "WR", "TE"];
 
@@ -57,6 +60,33 @@
           first.slot - second.slot ||
           first.name.localeCompare(second.name),
       );
+  const searchedPlayers = () => {
+    const query = playerSearch.trim().toLowerCase();
+    if (!myRosterID || query.length < 2) return [];
+    return teams
+      .filter((team) => team.rosterID !== myRosterID)
+      .flatMap((team) =>
+        team.assets
+          .filter(
+            (asset) =>
+              asset.type === "player" &&
+              `${asset.name} ${asset.position} ${asset.nflTeam}`
+                .toLowerCase()
+                .includes(query),
+          )
+          .map((target) => ({ target, partner: team })),
+      )
+      .sort((first, second) => {
+        const firstStarts = first.target.name.toLowerCase().startsWith(query);
+        const secondStarts = second.target.name.toLowerCase().startsWith(query);
+        return (
+          Number(secondStarts) - Number(firstStarts) ||
+          second.target.consensusValue - first.target.consensusValue ||
+          first.target.name.localeCompare(second.target.name)
+        );
+      })
+      .slice(0, 12);
+  };
 
   const resetAnalysis = () => {
     analysis = null;
@@ -71,7 +101,24 @@
   const changeMyTeam = (event) => {
     myRosterID = Number(event.currentTarget.value);
     localStorage.setItem("trade-lab-roster", String(myRosterID));
+    playerSearch = "";
+    exactTrade = null;
     refreshTargets();
+  };
+
+  const updatePlayerSearch = (event) => {
+    playerSearch = event.currentTarget.value;
+    exactTrade = null;
+  };
+
+  const choosePlayerTarget = (playerID) => {
+    exactTrade = generateTradeForPlayer(myRosterID, teams, playerID);
+    if (exactTrade) playerSearch = exactTrade.target.name;
+  };
+
+  const clearPlayerTarget = () => {
+    playerSearch = "";
+    exactTrade = null;
   };
 
   const setTeamCount = (count) => {
@@ -579,6 +626,109 @@
         </select>
       </div>
       {#if myRosterID}
+        <section class="playerTradeSearch">
+          <div class="playerSearchHeading">
+            <div>
+              <span class="step">Search any player</span>
+              <h3>Who do you want?</h3>
+              <p>
+                Choose any player on another roster and Trade Lab will build a
+                realistic opening offer.
+              </p>
+            </div>
+            {#if exactTrade}
+              <button type="button" on:click={clearPlayerTarget}
+                >Clear search</button
+              >
+            {/if}
+          </div>
+          <label class="playerSearchInput">
+            <span class="material-icons" aria-hidden="true">search</span>
+            <input
+              type="search"
+              value={playerSearch}
+              on:input={updatePlayerSearch}
+              placeholder="Search by player name, position, or NFL team"
+              autocomplete="off"
+            />
+          </label>
+
+          {#if playerSearch.trim().length >= 2 && !exactTrade}
+            <div class="playerSearchResults" aria-label="Player search results">
+              {#each searchedPlayers() as result}
+                <button
+                  type="button"
+                  on:click={() => choosePlayerTarget(result.target.id)}
+                >
+                  <span class="position">{result.target.position}</span>
+                  <span>
+                    <strong>{result.target.name}</strong>
+                    <small
+                      >{result.target.nflTeam} · rostered by {result.partner
+                        .shortName}</small
+                    >
+                  </span>
+                  <span class="material-icons" aria-hidden="true"
+                    >arrow_forward</span
+                  >
+                </button>
+              {:else}
+                <p class="noPlayerResults">
+                  No available player matches that search.
+                </p>
+              {/each}
+            </div>
+          {/if}
+
+          {#if exactTrade}
+            {@const partnerEvaluation = exactTrade.result.evaluations.find(
+              (evaluation) =>
+                evaluation.rosterID === exactTrade.partner.rosterID,
+            )}
+            <article class="exactTradeCard">
+              <div class="exactTradeTarget">
+                <span class="position">{exactTrade.target.position}</span>
+                <div>
+                  <span>Target acquired</span>
+                  <h3>{exactTrade.target.name}</h3>
+                  <p>
+                    {exactTrade.target.nflTeam} · from {exactTrade.partner
+                      .shortName}'s {exactTrade.partner.teamName}
+                  </p>
+                </div>
+                <div class="exactLikelihood">
+                  <strong>{exactTrade.result.overall}%</strong>
+                  <span>{exactTrade.result.label}</span>
+                </div>
+              </div>
+              <div class="exactOffer">
+                <span>Realistic opening offer</span>
+                <p>
+                  Send {exactTrade.offered
+                    .map((asset) => asset.name)
+                    .join(" + ")} for {exactTrade.target.name}
+                </p>
+              </div>
+              {#if partnerEvaluation}
+                <div class="ownerRead">
+                  <strong
+                    >{exactTrade.partner.shortName}: {partnerEvaluation.likelihood}%
+                    likely</strong
+                  >
+                  <p>{partnerEvaluation.explanation}</p>
+                  <small>{partnerEvaluation.adjustment}</small>
+                </div>
+              {/if}
+              <button
+                class="openExactTrade"
+                type="button"
+                on:click={() => loadTrade(exactTrade)}>Open in builder</button
+              >
+            </article>
+          {/if}
+        </section>
+
+        <div class="browseDivider"><span>Or browse by position</span></div>
         <div class="positionPicker" role="group" aria-label="Target position">
           {#each ["QB", "RB", "WR", "TE"] as position}
             <button
@@ -1457,6 +1607,231 @@
   }
   .impact {
     background: rgba(8, 120, 209, 0.09);
+  }
+
+  .playerTradeSearch {
+    background: var(--surface-raised);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    box-shadow: var(--league-shadow-soft);
+    margin-bottom: 1.5rem;
+    padding: clamp(1rem, 3vw, 1.4rem);
+  }
+
+  .playerSearchHeading,
+  .exactTradeTarget {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .playerSearchHeading h3 {
+    color: var(--text-primary);
+    font-size: 1.4rem;
+    margin: 0.12rem 0;
+  }
+
+  .playerSearchHeading p,
+  .ownerRead p,
+  .ownerRead small {
+    color: var(--text-muted);
+    font-size: 0.78rem;
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  .playerSearchHeading > button {
+    background: transparent;
+    border: 1px solid var(--line);
+    border-radius: 9px;
+    color: var(--text-muted);
+    cursor: pointer;
+    font-size: 0.75rem;
+    font-weight: 800;
+    padding: 0.55rem 0.75rem;
+  }
+
+  .playerSearchInput {
+    align-items: center;
+    background: var(--surface-muted);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    display: flex;
+    gap: 0.55rem;
+    margin-top: 1rem;
+    padding: 0 0.8rem;
+  }
+
+  .playerSearchInput:focus-within {
+    border-color: var(--league-blue);
+    box-shadow: 0 0 0 3px rgba(8, 120, 209, 0.12);
+  }
+
+  .playerSearchInput .material-icons {
+    color: var(--league-blue);
+  }
+
+  .playerSearchInput input {
+    background: transparent;
+    border: 0;
+    color: var(--text-primary);
+    flex: 1;
+    min-width: 0;
+    outline: 0;
+    padding: 0.85rem 0;
+  }
+
+  .playerSearchResults {
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    margin-top: 0.45rem;
+    max-height: 330px;
+    overflow-y: auto;
+    padding: 0.35rem;
+  }
+
+  .playerSearchResults > button {
+    align-items: center;
+    background: transparent;
+    border: 0;
+    border-radius: 9px;
+    color: var(--text-primary);
+    cursor: pointer;
+    display: grid;
+    gap: 0.7rem;
+    grid-template-columns: 31px minmax(0, 1fr) auto;
+    padding: 0.65rem;
+    text-align: left;
+    width: 100%;
+  }
+
+  .playerSearchResults > button:hover,
+  .playerSearchResults > button:focus-visible {
+    background: rgba(8, 120, 209, 0.09);
+    outline: none;
+  }
+
+  .playerSearchResults > button > span:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .playerSearchResults small {
+    color: var(--text-muted);
+    font-size: 0.7rem;
+    margin-top: 0.1rem;
+  }
+
+  .playerSearchResults > button > .material-icons {
+    color: var(--text-muted);
+    font-size: 1rem;
+  }
+
+  .noPlayerResults {
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    margin: 0;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .exactTradeCard {
+    border: 1px solid rgba(8, 120, 209, 0.24);
+    border-radius: 14px;
+    margin-top: 1rem;
+    overflow: hidden;
+  }
+
+  .exactTradeTarget {
+    background: linear-gradient(
+      135deg,
+      rgba(8, 120, 209, 0.12),
+      rgba(229, 176, 35, 0.08)
+    );
+    gap: 0.75rem;
+    padding: 1rem;
+  }
+
+  .exactTradeTarget > div:nth-child(2) {
+    flex: 1;
+  }
+
+  .exactTradeTarget h3 {
+    margin: 0.05rem 0;
+  }
+
+  .exactTradeTarget p,
+  .exactTradeTarget > div > span {
+    color: var(--text-muted);
+    font-size: 0.7rem;
+    margin: 0;
+  }
+
+  .exactLikelihood {
+    text-align: right;
+  }
+
+  .exactLikelihood strong {
+    color: var(--league-blue);
+    display: block;
+    font-size: 1.7rem;
+  }
+
+  .exactOffer,
+  .ownerRead {
+    padding: 0.9rem 1rem;
+  }
+
+  .exactOffer {
+    border-bottom: 1px solid var(--line);
+  }
+
+  .exactOffer > span {
+    color: var(--text-muted);
+    font-size: 0.68rem;
+    font-weight: 900;
+    text-transform: uppercase;
+  }
+
+  .exactOffer p {
+    color: var(--text-primary);
+    font-weight: 850;
+    margin: 0.2rem 0 0;
+  }
+
+  .ownerRead small {
+    display: block;
+    margin-top: 0.4rem;
+  }
+
+  .openExactTrade {
+    background: var(--league-blue);
+    border: 0;
+    color: white;
+    cursor: pointer;
+    font-weight: 900;
+    padding: 0.85rem 1rem;
+    width: 100%;
+  }
+
+  .browseDivider {
+    align-items: center;
+    color: var(--text-muted);
+    display: flex;
+    font-size: 0.72rem;
+    font-weight: 900;
+    gap: 0.75rem;
+    letter-spacing: 0.08em;
+    margin-bottom: 0.8rem;
+    text-transform: uppercase;
+  }
+
+  .browseDivider::before,
+  .browseDivider::after {
+    background: var(--line);
+    content: "";
+    flex: 1;
+    height: 1px;
   }
 
   .positionPicker {
