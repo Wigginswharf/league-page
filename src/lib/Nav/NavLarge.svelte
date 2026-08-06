@@ -37,7 +37,7 @@
       openMenu = tab.label;
       setTimeout(
         () => event.currentTarget.querySelector(".submenu a")?.focus(),
-        0
+        0,
       );
     }
   };
@@ -135,12 +135,12 @@
     font: inherit;
     gap: 0.42rem;
     height: 100%;
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     font-weight: 700;
     letter-spacing: 0.025em;
-    min-width: 116px;
+    min-width: 106px;
     justify-content: center;
-    padding: 0.7rem 0.85rem 0.55rem;
+    padding: 0.7rem 0.65rem 0.55rem;
     text-decoration: none;
   }
 
@@ -181,7 +181,9 @@
     position: absolute;
     top: 100%;
     transform: translate(-50%, -6px);
-    transition: opacity 0.16s ease, transform 0.16s ease;
+    transition:
+      opacity 0.16s ease,
+      transform 0.16s ease;
     z-index: 10;
   }
 
