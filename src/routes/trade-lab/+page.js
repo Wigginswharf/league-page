@@ -1,4 +1,4 @@
-export async function load({ fetch }) {
+export async function load({ fetch, url }) {
   const calculatorData = fetch("/api/trade-calculator").then(
     async (response) => {
       const data = await response.json();
@@ -8,5 +8,8 @@ export async function load({ fetch }) {
     },
   );
 
-  return { calculatorData };
+  const initialWorkspace =
+    url.searchParams.get("mode") === "find" ? "targets" : "builder";
+
+  return { calculatorData, initialWorkspace };
 }
