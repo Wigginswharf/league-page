@@ -76,7 +76,7 @@
       }
       if (ratio < 0.9) {
         return {
-          label: "May cost too much",
+          label: "You are giving up too much",
           detail: `The roster fit makes sense, but you may be paying more than needed.`,
         };
       }
