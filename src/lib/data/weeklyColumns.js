@@ -28,6 +28,11 @@ export const weeklyColumns = [
           "The first-round movement sits on top of an already concentrated board. Frank’s new 1.11 and 1.12 are followed by Tommy at 2.08 and 2.12, while Wesley holds 2.07 and 2.11. Jason controls 3.05, 3.07, and 3.11; Dustin owns 3.02, 3.08, and 3.12. Brandon still has no 2026 selections, and Casey’s only pick is 3.06.",
           "That is the board as it stands eleven days before the draft: Keller and Jason own the opening, Frank owns the first-round turn, Wesley and Tommy have paired seconds, and Jason and Dustin have each collected three thirds. Calling this a draft order feels generous. It is closer to a set of small property holdings with rookie names attached.",
         ],
+        bullets: [
+          "Round 1 — 1.01 Keller; 1.02 Jason; 1.03 Keller; 1.04 Jason; 1.05 Brittany; 1.06 Kevin; 1.07 Wesley; 1.08 Dustin; 1.09 John; 1.10 Josh; 1.11 Frank; 1.12 Frank.",
+          "Round 2 — 2.01 Keller; 2.02 Kevin; 2.03 Jason; 2.04 Frank; 2.05 Brittany; 2.06 Dustin; 2.07 Wesley; 2.08 Tommy; 2.09 John; 2.10 Josh; 2.11 Wesley; 2.12 Tommy.",
+          "Round 3 — 3.01 Keller; 3.02 Dustin; 3.03 Wesley; 3.04 Frank; 3.05 Jason; 3.06 Casey; 3.07 Jason; 3.08 Dustin; 3.09 John; 3.10 Josh; 3.11 Jason; 3.12 Dustin.",
+        ],
       },
       {
         heading: "Two roster spots were quietly returned to circulation",
@@ -39,7 +44,7 @@ export const weeklyColumns = [
       {
         heading: "The NFL contract desk stayed expensive",
         paragraphs: [
-          "Several league rosters received meaningful real-world news even when their managers were not trading. Casey’s Jahmyr Gibbs signed a three-year Detroit extension with a reported base value of $67.5 million and $51.5 million guaranteed, pushing the running-back market forward again. John’s Jonathan Taylor followed with a two-year, $44 million Colts extension that can reach $47 million. The position was declared financially endangered and responded by spending the week purchasing real estate.",
+          "Several league rosters received meaningful real-world news even when their managers were not trading. Dustin’s Zay Flowers signed a four-year, $140 million Baltimore extension with $108 million guaranteed. Casey’s Jahmyr Gibbs then signed a three-year Detroit extension with a reported base value of $67.5 million and $51.5 million guaranteed, and John’s Jonathan Taylor followed with a two-year, $44 million Colts extension that can reach $47 million. The position markets were declared financially endangered and responded by spending the week purchasing real estate.",
           "Frank’s roster collected two more real-world answers. Stefon Diggs signed a one-year deal with Washington worth up to $12 million, giving him a new offense and Jayden Daniels after months as a free agent. Hunter Henry then signed a two-year New England extension with a $16 million base value and incentives that can take it to $20 million. None of those contracts scores fantasy points by itself, but role security and an actual NFL employer remain useful starting points.",
         ],
       },
