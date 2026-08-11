@@ -1,4 +1,70 @@
 export const weeklyColumns = [
+  {
+    slug: "2026-preseason-first-round-forwarding-address",
+    issue: "2026 Preseason Week 2",
+    publishedAt: "2026-08-11T15:28:30.000Z",
+    title: "The First Round Changed Hands Twice",
+    dek: "Kenneth Walker and Luther Burden changed rosters, four first-round picks found new owners, and training camp immediately supplied the punch line.",
+    readTime: "7 min read",
+    tags: ["Preseason", "Trades", "Rookie Draft", "Contracts", "Injuries"],
+    sections: [
+      {
+        heading: "Jason and Frank tore up the top of the board",
+        paragraphs: [
+          "The first completed trade of the week sent Kenneth Walker from Jason to Frank. Jason received 1.02 and 1.04, turning one veteran running back into two of the first four selections in the August 22 rookie draft. Keller still owns 1.01 and 1.03, so the opening round will now alternate Keller, Jason, Keller, Jason. Twelve managers will attend the draft; two of them will control the first four announcements.",
+          "For Jason, the deal converts a productive veteran into two premium chances to reshape a roster that missed last season’s playoffs. Frank gets the established back and accepts the usual dynasty bargain: fewer lottery tickets, considerably less waiting, and full responsibility for whatever the Kansas City backfield decides to become.",
+        ],
+      },
+      {
+        heading: "Frank then bought the other end of Round 1",
+        paragraphs: [
+          "The same Thursday that moved the early picks, Frank sent Luther Burden to Tommy for 1.11 and 1.12. Frank therefore exited the week with Kenneth Walker plus the final two picks of Round 1, while Tommy exchanged both late firsts for a 22-year-old receiver coming off a 652-yard rookie season.",
+          "The two trades rewrote half the first round. Keller owns 1.01 and 1.03, Jason owns 1.02 and 1.04, and Frank owns 1.11 and 1.12. Three managers now control six of the twelve first-round selections. Tommy no longer owns a first, but he does own the player he chose instead of waiting to see which prospects survived until the turn.",
+        ],
+      },
+      {
+        heading: "The rookie draft now has neighborhoods",
+        paragraphs: [
+          "The first-round movement sits on top of an already concentrated board. Frank’s new 1.11 and 1.12 are followed by Tommy at 2.08 and 2.12, while Wesley holds 2.07 and 2.11. Jason controls 3.05, 3.07, and 3.11; Dustin owns 3.02, 3.08, and 3.12. Brandon still has no 2026 selections, and Casey’s only pick is 3.06.",
+          "That is the board as it stands eleven days before the draft: Keller and Jason own the opening, Frank owns the first-round turn, Wesley and Tommy have paired seconds, and Jason and Dustin have each collected three thirds. Calling this a draft order feels generous. It is closer to a set of small property holdings with rookie names attached.",
+        ],
+      },
+      {
+        heading: "Two roster spots were quietly returned to circulation",
+        paragraphs: [
+          "Thursday also brought two clean cuts. Tommy released Phil Mafah, and Casey released Ja’Lynn Polk. Neither manager added a replacement, so both moves appear aimed at creating flexibility before the rookie draft rather than winning an August waiver headline.",
+          "The cuts matter because empty roster spots are useful currency at this point of the calendar. They can absorb rookies, waiver claims, or the uneven sides of another trade without requiring a hurried decision later. Sometimes roster management is simply admitting that an open chair has more upside than the player sitting in it.",
+        ],
+      },
+      {
+        heading: "The NFL contract desk stayed expensive",
+        paragraphs: [
+          "Several league rosters received meaningful real-world news even when their managers were not trading. Casey’s Jahmyr Gibbs signed a three-year Detroit extension with a reported base value of $67.5 million and $51.5 million guaranteed, pushing the running-back market forward again. John’s Jonathan Taylor followed with a two-year, $44 million Colts extension that can reach $47 million. The position was declared financially endangered and responded by spending the week purchasing real estate.",
+          "Frank’s roster collected two more real-world answers. Stefon Diggs signed a one-year deal with Washington worth up to $12 million, giving him a new offense and Jayden Daniels after months as a free agent. Hunter Henry then signed a two-year New England extension with a $16 million base value and incentives that can take it to $20 million. None of those contracts scores fantasy points by itself, but role security and an actual NFL employer remain useful starting points.",
+        ],
+      },
+      {
+        heading: "Training camp delivered the invoice",
+        paragraphs: [
+          "Tommy’s new acquisition lasted roughly one weekend before the news cycle tested the purchase. Luther Burden suffered a groin injury Saturday and is expected to miss the remainder of the preseason, although Chicago hopes he will return for Week 1. That does not invalidate the trade. It does establish that dynasty transactions now come with complimentary anxiety before the veto period has finished cooling.",
+          "Casey’s Isiah Pacheco is dealing with an MCL sprain, but Detroit expects him to be ready for the regular-season opener. Dustin’s Zay Flowers is considered day-to-day with a quad contusion. Those are monitoring items rather than emergency declarations: real injuries, limited current timelines, and no need to send an insulting offer disguised as medical assistance.",
+        ],
+      },
+      {
+        heading: "Extremely official awards and the final whistle",
+        bullets: [
+          "Board takeover of the week: Jason turning Kenneth Walker into 1.02 and 1.04.",
+          "Most complicated Thursday: Frank acquiring Walker, moving Burden, and ending up with 1.11 and 1.12.",
+          "Fastest arrival of the injury tax: Tommy acquiring Burden immediately before the groin report.",
+          "Most expensive NFL news cycle: Gibbs, Taylor, Diggs, and Henry collectively making “contract update” an insufficiently dramatic label.",
+          "Quietly useful moves: Tommy and Casey opening one roster spot apiece before August 22.",
+        ],
+        paragraphs: [
+          "The rookie draft is eleven days away, and six first-round picks are now concentrated among Keller, Jason, and Frank. If the next week is as active as this one, the draft order should probably stop using ink. The Ledger will keep using receipts.",
+        ],
+      },
+    ],
+  },
     {
         slug: '2026-division-realignment-special',
         issue: '2026 Division Realignment Special',
