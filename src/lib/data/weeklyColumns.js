@@ -1,5 +1,73 @@
 export const weeklyColumns = [
   {
+    slug: "2026-rookie-draft-grades-secret-mock",
+    issue: "2026 Rookie Draft Early Edition",
+    publishedAt: "2026-08-24T18:14:29.000Z",
+    title: "The Mock Knew Too Much",
+    dek: "Thirty-seven rookies, four uncovered trades, twelve draft grades, and one suspiciously accurate mock nobody knew existed.",
+    readTime: "7 min read",
+    tags: ["Rookie Draft", "Draft Grades", "Trades", "Training Camp", "Secret Mock"],
+    sections: [
+      {
+        heading: "Thirty-seven rookies and one manual override",
+        paragraphs: [
+          "The 2026 rookie draft is complete: Sleeper recorded 36 selections, then the room paused so commissioner Casey could place compensatory 1.13 Caleb Douglas on Brandon’s roster. Sleeper cannot create the toilet-bowl pick, but Douglas is officially a member of Skip’s Picks and therefore officially eligible to make everyone ask why the software is less flexible than the league.",
+          "These grades ignore pick volume. They judge only whether each player was good value at that exact slot and whether the selection fits the roster. Camp matters too: Love and Tyson carry real injury concerns, while Douglas, Branch, Lane, Klare, Beck, Black, Stribling and Camden Brown have supplied varying amounts of August encouragement. The post-draft cuts made to reach the new 20-bench, four-IR limit are intentionally absent; compliance paperwork is not a storyline.",
+        ],
+      },
+      {
+        heading: "The secret mock needs to calm down",
+        paragraphs: [
+          "Before the draft, the Ledger quietly ran a need-adjusted mock that nobody in the room saw. It hit Love, Price, Tate, Tyson and Lemon in the first five slots, then correctly placed Concepcion at 1.07, Sadiq at 1.08 and Boston at 1.12. It also nailed Singleton at 2.02, Simpson at 2.06, Black at 3.02, Randall at 3.05 and Raridon at 3.09: 13 exact player-and-slot matches.",
+          "The model’s dignity was restored to safe levels when it assigned Eli Stowers to Brandon at 1.13. John took Stowers four picks earlier, and Brandon used the hidden pick on Douglas instead. Predicting a third of the board is analysis. Missing the one selection the platform could not display is comedy with excellent timing.",
+        ],
+      },
+      {
+        heading: "Grades: the board’s first six reports",
+        bullets: [
+          "Keller — A: Jeremiyah Love at 1.01 and Carnell Tate at 1.03 are rebuild cornerstones; Germie Bernard at 2.01 and Elijah Sarratt at 3.01 add sensible receiver volume. Love’s high-ankle sprain tempers September, not the dynasty value.",
+          "Jason — A-: Jadarian Price at 1.02 was above broad market but perfectly answers the Walker-sized RB hole, and Seattle lists him first. Jordyn Tyson at 1.04 carries a reported two-month hamstring absence, but Fernando Mendoza at 2.03 and camp riser Cyrus Allen at 3.11 restore the value.",
+          "Brittany — A: Makai Lemon at 1.05 adds premium youth after returning to limited work from a hamstring injury. Zachariah Branch at 2.05 fits even better after becoming one of Atlanta’s loudest camp stories.",
+          "Kevin — C+: De'Zhaun Stribling at 1.06 was the draft’s clearest reach, even with his strong red-zone work after hamstring trouble. Nicholas Singleton at 2.02 fits behind Jeanty and Montgomery, but both selections arrived ahead of their usual market.",
+          "Wesley — B+: KC Concepcion at 1.07 was clean value, Ted Hurst at 2.07 was reasonable, and Kaytron Allen at 3.03 adds inexpensive RB depth. None must start immediately, which suits a balanced Retooling roster.",
+          "Frank — A-: Omar Cooper at 1.11 and Denzel Boston at 1.12 were both values; Cooper has earned first-team praise. Emmett Johnson at 2.04 and Carson Beck at 3.04 were earlier bets, but RB opportunity and Beck’s strong camp make coherent rebuilding swings.",
+        ],
+      },
+      {
+        heading: "Grades: contenders, stashes and one kicker",
+        bullets: [
+          "Dustin — B: Kenyon Sadiq at 1.08 solves the long-term TE need, although his post-surgery setback matters. Ty Simpson, Kaelon Black and Drew Allar are patient stashes; Black has returned well. Undrafted Camden Brown at 3.12 is defensible after a standout Dallas camp.",
+          "John — B: Eli Stowers at 1.09 was aggressive but fits an aging TE room. Antonio Williams at 2.09 was excellent receiver value, and fellow tight end Eli Raridon at 3.09 has drawn New England buzz. The value works even if the roster now resembles a TE convention.",
+          "Josh — B: Jonah Coleman at 1.10 addresses an old backfield; Chris Bell, Adam Randall and Max Klare were fair upside bets, with Klare already catching seven preseason passes. Trey Smack at 3.10 is Green Bay’s current K1, which is the nicest possible sentence about drafting a kicker.",
+          "Tommy — A: Ja'Kobi Lane at 2.08 has been Baltimore’s camp toast, and Malachi Fields at 2.12 arrived well after his market range. Two useful receiver values suit an Elite Contender without forcing immediate snaps.",
+          "Casey — B+: Mike Washington at 2.11 is already listed second in Las Vegas, and Demond Claiborne at 3.06 was solid market value. The RB room is crowded, but this scoring rewards carries and contenders can use liquid depth.",
+          "Brandon — B: Caleb Douglas at compensatory 1.13 was aggressive on spring value and unnecessary by pure roster need. His climb into Miami’s top receiver group makes the bet defensible—and considerably more fun than the mock’s Stowers prediction.",
+        ],
+      },
+      {
+        heading: "Four trades moved more than the clock",
+        bullets: [
+          "Casey and Brittany: Casey received Brian Robinson and Brittany’s 2027 second; Brittany received Rhamondre Stevenson and Casey’s 2027 second. Two veteran NFL RB2s and a standings-dependent pick swap create depth, not a new balance of power.",
+          "Casey and Wesley: Casey reclaimed 2.11 and selected Mike Washington; Wesley received Brittany’s 2027 second. Casey chose a live RB opportunity, while Wesley pushed the asset into a less predictable future class.",
+          "Jason, Brandon and Josh: Brandon received Mike Evans from Josh; Jason received Zach Charbonnet from Brandon; Josh received 3.05 and 3.07 from Jason, then selected Adam Randall and Max Klare. Brandon bought present WR help, Jason bought an ACL-recovery bet, and Josh turned a 33-year-old receiver into two rookies.",
+          "Keller and Wesley: Keller received RJ Harvey; Wesley received Tank Bigsby and Keller’s 2027 third. Both backs currently sit second on their NFL depth charts, so the rebuilding Keller paid the future pick to choose his preferred profile.",
+        ],
+      },
+      {
+        heading: "Extremely official early-edition awards",
+        bullets: [
+          "Best grade without counting pick volume: Brittany and Tommy, tied at the top because quality is not a punch card.",
+          "Boldest opening: Jason taking Price second and immediately making the secret mock look informed.",
+          "Best platform workaround: Brandon’s invisible 1.13 becoming the camp-famous Caleb Douglas.",
+          "Best draft-day conversion: Josh turning Evans into Randall and the suddenly busy Max Klare.",
+        ],
+        paragraphs: [
+          "The draft is over, the mock has been placed under observation, and every roster now has until September to explain why its grade is wrong. The Ledger accepts appeals in the traditional format: points.",
+        ],
+      },
+    ],
+  },
+  {
     slug: "2026-preseason-first-round-forwarding-address",
     issue: "2026 Preseason Week 2",
     publishedAt: "2026-08-11T15:28:30.000Z",
