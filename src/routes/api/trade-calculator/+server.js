@@ -280,6 +280,8 @@ const buildPickAssets = ({
   dynastyPicks,
 }) => {
   const currentSeason = Number(league.season);
+  const draftIsComplete = draft?.status === "complete";
+  const firstAvailablePickSeason = currentSeason + (draftIsComplete ? 1 : 0);
   const rounds = Math.min(Number(league.settings?.draft_rounds || 3), 4);
   const teamCount = rosters.length;
   const draftSlotByRoster = Object.fromEntries(
@@ -311,11 +313,17 @@ const buildPickAssets = ({
   );
   const assets = [];
 
-  for (let season = currentSeason; season <= currentSeason + 2; season++) {
+  for (
+    let season = firstAvailablePickSeason;
+    season <= firstAvailablePickSeason + 2;
+    season++
+  ) {
     for (const roster of rosters) {
       for (let pickRound = 1; pickRound <= rounds; pickRound++) {
         const actualSlot =
-          season === currentSeason ? draftSlotByRoster[roster.roster_id] : null;
+          !draftIsComplete && season === currentSeason
+            ? draftSlotByRoster[roster.roster_id]
+            : null;
         const projectedSlot =
           actualSlot ||
           projectedSlotByRoster[roster.roster_id] ||
@@ -324,9 +332,12 @@ const buildPickAssets = ({
         const tier =
           projectedSlot <= 4 ? "Early" : projectedSlot <= 8 ? "Mid" : "Late";
         const futureName = `${season} ${pickRound === 1 ? "1st" : pickRound === 2 ? "2nd" : pickRound === 3 ? "3rd" : `${pickRound}th`} (${tier})`;
+        const genericFutureName = `${season} ${pickRound === 1 ? "1st" : pickRound === 2 ? "2nd" : pickRound === 3 ? "3rd" : `${pickRound}th`}`;
         const tradyrValue = tradyrMap.get(exactName);
         const fantasyRaw =
-          fantasyPickMap.get(exactName) ?? fantasyPickMap.get(futureName);
+          fantasyPickMap.get(exactName) ??
+          fantasyPickMap.get(futureName) ??
+          fantasyPickMap.get(genericFutureName);
         const fantasyValue = Number.isFinite(fantasyRaw)
           ? Math.round((fantasyRaw / maxFantasyValue) * 1000)
           : undefined;
