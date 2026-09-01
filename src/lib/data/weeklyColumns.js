@@ -1,5 +1,80 @@
 export const weeklyColumns = [
   {
+    slug: "2026-cmc-brian-thomas-trade-special",
+    issue: "2026 September Trade Special",
+    publishedAt: "2026-09-01T17:36:17.000Z",
+    title: "Brandon Bought Sunday; Josh Bought Tomorrow",
+    dek: "Christian McCaffrey moved one way, Brian Thomas Jr. and a 2027 first moved the other, and two competitive timelines stopped pretending to be subtle.",
+    readTime: "6 min read",
+    tags: ["Trade Special", "Christian McCaffrey", "Brian Thomas Jr.", "2027 Rookie Draft", "NFL News"],
+    sections: [
+      {
+        heading: "The scoreboard is empty; the trade column is not",
+        paragraphs: [
+          "Sleeper has advanced the league into 2026 Week 1, but no official fantasy matchup has been completed and every roster remains 0-0. This is not a weekly recap wearing a fake mustache. It is a trade special because Brandon sent 23-year-old Brian Thomas Jr. and his own 2027 first-round pick to Josh for Christian McCaffrey, a premium-player exchange with enough present value and future leverage to redraw both rosters.",
+          "The deal completed August 30, six days after the rookie-draft edition. It is the only completed trade since that reporting cutoff. The cleanest summary is almost suspiciously tidy: Brandon bought the highest-impact 2026 player in the package, while Josh bought the longest runway and made Brandon's next season part of the price.",
+        ],
+      },
+      {
+        heading: "Brandon pushed the retooling button toward contender",
+        paragraphs: [
+          "McCaffrey joins De'Von Achane, Chuba Hubbard, Tony Pollard, Aaron Jones and Tyrone Tracy in a backfield that no longer has a reasonable excuse to lack weekly choices. Lamar Jackson, Drake Maye, Drake London, Chris Olave, Rome Odunze and Kyle Pitts supply the rest of a lineup that can compete now. McCaffrey is 30, but the purpose of this purchase is not to admire an age curve. It is to put a difference-maker into one of two FLEX spots while the veteran core can still cash checks on Sundays.",
+          "That makes this a material change from the Retooling baseline in the league's roster outlook. It moves Brandon toward Contender; it does not automatically complete the promotion. Brian Thomas was Brandon's best young receiver, the first is now gone, and McCaffrey carries the usual age and health volatility. The roster supports a win-now push. The standings have not yet agreed to anything.",
+        ],
+      },
+      {
+        heading: "Josh extended the window and created one obvious chore",
+        paragraphs: [
+          "Josh added Thomas to Ja'Marr Chase, Jordan Addison, Troy Franklin and the rookie group, giving a Contender two young foundational receivers instead of one. Brock Bowers remains the long-term answer at tight end, Jalen Hurts remains the weekly quarterback advantage, and Brandon's 2027 first joins Josh's own first. If Brandon's push sputters, the delayed portion of this return gets considerably louder.",
+          "The cost is visible at running back. Josh's post-trade room is led by Jordan Mason, rookie Jonah Coleman and several veterans without secure current jobs, including Joe Mixon and Kareem Hunt. Trading McCaffrey does not make this a rebuild; Chase, Hurts and Bowers would object. It does turn a balanced Contender into a roster with excellent long-term insulation and an immediate RB problem written in capital letters.",
+        ],
+      },
+      {
+        heading: "The complete 2027 board now has two landlords",
+        paragraphs: [
+          "Draft positions cannot be assigned before the season determines the order, but ownership can. Wesley controls six of the 36 selections, including two picks in every round. Josh and Tommy hold four each, while Casey and Brandon are down to one apiece. The complete ownership map, with imported picks identified by original roster, is:",
+        ],
+        bullets: [
+          "Casey — Casey's third. Frank — Frank's first, second and third. Brandon — Brandon's third.",
+          "Dustin — Dustin's first, second and third. Kevin — Kevin's first, second and third. John — John's first, second and third.",
+          "Wesley — Wesley's first, second and third; Casey's first; Brittany's second; Keller's third.",
+          "Josh — Josh's first, second and third; Brandon's first. Jason — Jason's first, second and third.",
+          "Keller — Keller's first and second. Brittany — Brittany's first and third; Casey's second.",
+          "Tommy — Tommy's first, second and third; Brandon's second.",
+        ],
+        paragraphs: [
+          "Wesley owns the broadest portfolio, but Josh now has the premium concentration most connected to this season: his own first plus the first of a manager who just paid to contend. Brandon has reduced 2027 to one third-round pick. That is not necessarily reckless; it is simply a very efficient way to make September results feel expensive.",
+        ],
+      },
+      {
+        heading: "Roster cleanup produced volume, not another headline",
+        paragraphs: [
+          "The rest of the league activity after August 24 was eighteen completed drops and no successful waiver or free-agent additions. Dustin made seven of those cuts, including Tyreek Hill, Austin Ekeler and Jordan Whittington. Kevin released four players; Wesley, Brandon and John also cleared space. Those moves matter for roster compliance after the rookie draft, but drops do not manufacture a second story simply by arriving in a crowd.",
+          "No newly acquired player has reached a first eligible completed fantasy week, either. McCaffrey and Thomas will enter that follow-through window when Week 1 actually finishes, provided their NFL teams play and each was eligible before kickoff. For now, there are no lineup points to grade and no bench choices to prosecute.",
+        ],
+      },
+      {
+        heading: "The NFL news desk complicated the opening lineup",
+        paragraphs: [
+          "The live Dynasty Wire carried one major uncertainty for Brittany: Josh Jacobs was placed on the exempt list, leaving his immediate availability unclear. That is more consequential than a preseason ranking and worth monitoring before lineups lock. John received better injury news when George Kittle returned to team drills while working back from an Achilles issue.",
+          "Brandon's newly aggressive roster also collected two updates. Chuba Hubbard returned to practice Tuesday after a hamstring issue, while San Francisco hopes Mike Evans can return to practice next week from a groin injury. Those reports do not settle Week 1 availability, but they explain why acquiring another premium starter was more than decorative spending.",
+        ],
+      },
+      {
+        heading: "Extremely official trade-special awards",
+        bullets: [
+          "Best 2026 player acquired: Brandon, because Christian McCaffrey remains the least subtle answer available.",
+          "Best long-term asset bundle: Josh, who paired Brian Thomas Jr. with a second 2027 first.",
+          "Most concentrated draft cabinet: Wesley, owner of six 2027 picks and exactly two in every round.",
+          "Most urgent follow-up task: Josh finding startable running-back points without mailing the new first back across the table.",
+        ],
+        paragraphs: [
+          "Brandon has chosen acceleration. Josh has chosen runway. The league has chosen to make one of those approaches look brilliant almost immediately, because Week 1 is close and patience has never survived contact with an actual scoreboard.",
+        ],
+      },
+    ],
+  },
+  {
     slug: "2026-rookie-draft-grades-secret-mock",
     issue: "2026 Rookie Draft Early Edition",
     publishedAt: "2026-08-24T18:14:29.000Z",
