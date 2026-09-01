@@ -33,6 +33,7 @@ export const weeklyColumns = [
         heading: "The complete 2027 board now has two landlords",
         paragraphs: [
           "Draft positions cannot be assigned before the season determines the order, but ownership can. Wesley controls six of the 36 selections, including two picks in every round. Josh and Tommy hold four each, while Casey and Brandon are down to one apiece. The complete ownership map, with imported picks identified by original roster, is:",
+          "Wesley owns the broadest portfolio, but Josh now has the premium concentration most connected to this season: his own first plus the first of a manager who just paid to contend. Brandon has reduced 2027 to one third-round pick. That is not necessarily reckless; it is simply a very efficient way to make September results feel expensive.",
         ],
         bullets: [
           "Casey — Casey's third. Frank — Frank's first, second and third. Brandon — Brandon's third.",
@@ -41,9 +42,6 @@ export const weeklyColumns = [
           "Josh — Josh's first, second and third; Brandon's first. Jason — Jason's first, second and third.",
           "Keller — Keller's first and second. Brittany — Brittany's first and third; Casey's second.",
           "Tommy — Tommy's first, second and third; Brandon's second.",
-        ],
-        paragraphs: [
-          "Wesley owns the broadest portfolio, but Josh now has the premium concentration most connected to this season: his own first plus the first of a manager who just paid to contend. Brandon has reduced 2027 to one third-round pick. That is not necessarily reckless; it is simply a very efficient way to make September results feel expensive.",
         ],
       },
       {
