@@ -1,36 +1,43 @@
 export const weeklyColumns = [
   {
-    slug: "2026-cmc-brian-thomas-trade-special",
-    issue: "2026 September Trade Special",
-    publishedAt: "2026-09-01T17:36:17.000Z",
-    title: "Brandon Bought Sunday; Josh Bought Tomorrow",
-    dek: "Christian McCaffrey moved one way, Brian Thomas Jr. and a 2027 first moved the other, and two competitive timelines stopped pretending to be subtle.",
-    readTime: "6 min read",
-    tags: ["Trade Special", "Christian McCaffrey", "Brian Thomas Jr.", "2027 Rookie Draft", "NFL News"],
+    slug: "2026-the-crown-is-gone",
+    issue: "2026 Week 1 Trade Edition",
+    publishedAt: "2026-09-02T03:20:00.000Z",
+    title: "The Crown Is Gone. So Is the Restraint.",
+    dek: "The former champion answered a lost crown by putting Ja'Marr Chase beside Puka, Ladd, Bijan and Gibbs. The trade is still pending. The warning is not.",
+    readTime: "9 min read",
+    tags: ["Trade Special", "Ja'Marr Chase", "Christian McCaffrey", "Week 1", "NFL News"],
     sections: [
       {
-        heading: "The scoreboard is empty; the trade column is not",
+        heading: "Pending: the former king found a superweapon",
         paragraphs: [
-          "Sleeper has advanced the league into 2026 Week 1, but no official fantasy matchup has been completed and every roster remains 0-0. This is not a weekly recap wearing a fake mustache. It is a trade special because Brandon sent 23-year-old Brian Thomas Jr. and his own 2027 first-round pick to Josh for Christian McCaffrey, a premium-player exchange with enough present value and future leverage to redraw both rosters.",
-          "The deal completed August 30, six days after the rookie-draft edition. It is the only completed trade since that reporting cutoff. The cleanest summary is almost suspiciously tidy: Brandon bought the highest-impact 2026 player in the package, while Josh bought the longest runway and made Brandon's next season part of the price.",
+          "Casey lost the 2025 championship by 10.11 points. He has apparently spent the offseason treating that margin as a personal insult. Rabbit Walrus has now agreed to acquire Ja'Marr Chase and rookie Chris Bell from Josh's Sugar Tits for DeVonta Smith, Marvin Harrison Jr., Tyler Allgeier and Casey's 2028 first-round pick. One starting receiver, one premium prospect, one depth back and one distant first have been compressed into the loudest receiver in the league.",
+          "Important newspaper language before anyone begins engraving the trophy: the trade is still pending review. Sleeper continues to show Chase and Bell on Josh's roster and Smith, Harrison and Allgeier on Casey's. Five vetoes are required to stop it. Until the review closes, this is a signed intention rather than a completed transaction. It is included because pretending the league's largest proposed deal does not exist would be less accurate than labeling it correctly.",
         ],
       },
       {
-        heading: "Brandon pushed the retooling button toward contender",
+        heading: "Casey did not buy depth; he bought one lineup slot",
         paragraphs: [
-          "McCaffrey joins De'Von Achane, Chuba Hubbard, Tony Pollard, Aaron Jones and Tyrone Tracy in a backfield that no longer has a reasonable excuse to lack weekly choices. Lamar Jackson, Drake Maye, Drake London, Chris Olave, Rome Odunze and Kyle Pitts supply the rest of a lineup that can compete now. McCaffrey is 30, but the purpose of this purchase is not to admire an age curve. It is to put a difference-maker into one of two FLEX spots while the veteran core can still cash checks on Sundays.",
-          "That makes this a material change from the Retooling baseline in the league's roster outlook. It moves Brandon toward Contender; it does not automatically complete the promotion. Brian Thomas was Brandon's best young receiver, the first is now gone, and McCaffrey carries the usual age and health volatility. The roster supports a win-now push. The standings have not yet agreed to anything.",
+          "If the deal clears, the weekly offensive core is Justin Herbert, Bijan Robinson, Jahmyr Gibbs, Ja'Marr Chase, Puka Nacua, Ladd McConkey, Travis Etienne and Tucker Kraft. That is not a list of trade assets waiting to mature. It is eight starting positions with very few places for an opponent to breathe. Brian Robinson protects Bijan, Isiah Pacheco supplies another usable back, and Parker Washington remains a matchup option behind the three starting receivers.",
+          "The price is real. Smith is already a quality starter, Harrison remains young enough to make a future breakout expensive in hindsight, and a 2028 first is the last clean reload button on a roster that has repeatedly converted draft capital into current points. Allgeier matters less here because he is no longer Bijan's Atlanta handcuff. This is the correct kind of overpay for consolidation: Casey is not purchasing four usable players. He is purchasing Chase's production without needing four lineup spots to access it.",
         ],
       },
       {
-        heading: "Josh extended the window and created one obvious chore",
+        heading: "Josh turned one weekend into an asset migration",
         paragraphs: [
-          "Josh added Thomas to Ja'Marr Chase, Jordan Addison, Troy Franklin and the rookie group, giving a Contender two young foundational receivers instead of one. Brock Bowers remains the long-term answer at tight end, Jalen Hurts remains the weekly quarterback advantage, and Brandon's 2027 first joins Josh's own first. If Brandon's push sputters, the delayed portion of this return gets considerably louder.",
-          "The cost is visible at running back. Josh's post-trade room is led by Jordan Mason, rookie Jonah Coleman and several veterans without secure current jobs, including Joe Mixon and Kareem Hunt. Trading McCaffrey does not make this a rebuild; Chase, Hurts and Bowers would object. It does turn a balanced Contender into a roster with excellent long-term insulation and an immediate RB problem written in capital letters.",
+          "The Chase proposal cannot be graded in isolation because Josh had already sent Christian McCaffrey to Brandon for Brian Thomas Jr. and Brandon's 2027 first. If both moves are counted together, Josh will have converted McCaffrey, Chase and Bell into Thomas, Smith, Harrison, Allgeier and two outside first-round picks—Brandon's in 2027 and Casey's in 2028. That is not a single trade. It is a competitive roster being broken into a diversified fund while the market is open.",
+          "Jalen Hurts and Brock Bowers keep the foundation from resembling a teardown. Thomas, Smith and Harrison would give Josh three receivers with different timelines, while the two imported firsts allow the next version of the roster to benefit if either buyer's title push breaks badly. The sacrifice is equally obvious: Chase was the best player in either deal, and Josh's current running-back room remains the weak point. He has exchanged concentrated weekly power for flexibility, youth and the right to root against two other managers' draft positions.",
         ],
       },
       {
-        heading: "The complete 2027 board now has two landlords",
+        heading: "Brandon bought Sunday before Casey bought the headline",
+        paragraphs: [
+          "The completed half of this week's story arrived August 30, when Brandon sent 23-year-old Brian Thomas Jr. and his own 2027 first to Josh for Christian McCaffrey. McCaffrey joins De'Von Achane, Chuba Hubbard, Tony Pollard, Aaron Jones and Tyrone Tracy in a backfield that no longer has a reasonable excuse to lack weekly choices. Lamar Jackson, Drake Maye, Drake London, Chris Olave, Rome Odunze and Kyle Pitts provide the rest of a roster that has moved from Retooling toward Contender.",
+          "Brandon bought the highest-impact 2026 player in the package. Josh bought the longer runway and made Brandon's next season part of the invoice. McCaffrey's age and health keep this from being a ceremonial promotion, and losing Thomas removes Brandon's best young receiver. The roster now supports a win-now push. The standings remain 0-0 and have declined to issue a press release.",
+        ],
+      },
+      {
+        heading: "The complete 2027 board has two landlords",
         paragraphs: [
           "Draft positions cannot be assigned before the season determines the order, but ownership can. Wesley controls six of the 36 selections, including two picks in every round. Josh and Tommy hold four each, while Casey and Brandon are down to one apiece. The complete ownership map, with imported picks identified by original roster, is:",
           "Wesley owns the broadest portfolio, but Josh now has the premium concentration most connected to this season: his own first plus the first of a manager who just paid to contend. Brandon has reduced 2027 to one third-round pick. That is not necessarily reckless; it is simply a very efficient way to make September results feel expensive.",
@@ -45,29 +52,30 @@ export const weeklyColumns = [
         ],
       },
       {
-        heading: "Roster cleanup produced volume, not another headline",
+        heading: "Roster cleanup became an actual waiver run",
         paragraphs: [
-          "The rest of the league activity after August 24 was eighteen completed drops and no successful waiver or free-agent additions. Dustin made seven of those cuts, including Tyreek Hill, Austin Ekeler and Jordan Whittington. Kevin released four players; Wesley, Brandon and John also cleared space. Those moves matter for roster compliance after the rookie draft, but drops do not manufacture a second story simply by arriving in a crowd.",
-          "No newly acquired player has reached a first eligible completed fantasy week, either. McCaffrey and Thomas will enter that follow-through window when Week 1 actually finishes, provided their NFL teams play and each was eligible before kickoff. For now, there are no lineup points to grade and no bench choices to prosecute.",
+          "The eighteen post-draft cuts reported in the earlier edition were followed by successful waivers. Casey replaced Calvin Ridley with Greg Dulcich. Brandon added Malik Davis for Miami's defense and Devaughn Vele for Devontez Walker. Wesley exchanged Samaje Perine and Isaiah Bond for Justice Hill and Kimani Vidal. Jason added Odell Beckham Jr. and Dohnte Meyers, while Dustin released Jaleel McLaughlin and Josh cleared Van Jefferson and Dare Ogunbowale.",
+          "None of those moves competes with two blockbuster trades, but they complete the week's transaction record and turn the roster-cut story into something more useful than a list of empty chairs. No newly acquired player has reached a completed eligible fantasy week yet. Week 1 will provide the first evidence; until then, every waiver claim remains an argument delivered in advance.",
         ],
       },
       {
         heading: "The NFL news desk complicated the opening lineup",
         paragraphs: [
-          "The live Dynasty Wire carried one major uncertainty for Brittany: Josh Jacobs was placed on the exempt list, leaving his immediate availability unclear. That is more consequential than a preseason ranking and worth monitoring before lineups lock. John received better injury news when George Kittle returned to team drills while working back from an Achilles issue.",
-          "Brandon's newly aggressive roster also collected two updates. Chuba Hubbard returned to practice Tuesday after a hamstring issue, while San Francisco hopes Mike Evans can return to practice next week from a groin injury. Those reports do not settle Week 1 availability, but they explain why acquiring another premium starter was more than decorative spending.",
+          "Brittany received the week's largest non-trade uncertainty when Josh Jacobs was placed on the commissioner's exempt list. He cannot practice or play while the league's review continues, leaving Badkittens without a timetable for one of its central backs. John received better injury news when George Kittle returned to team drills during his recovery from a torn Achilles.",
+          "Brandon's newly aggressive roster collected two updates of its own. Chuba Hubbard is progressing from his hamstring issue with the opener as the target, while San Francisco hopes Mike Evans can return to practice next week from an adductor injury. The newest trade also arrived with fine print: Chase is managing a hyperextended knee and is expected to be limited in practice, although Cincinnati expects him ready for the September 13 opener. Apparently even a superweapon ships with a questionable tag.",
         ],
       },
       {
-        heading: "Extremely official trade-special awards",
+        heading: "Extremely official Week 1 trade awards",
         bullets: [
-          "Best 2026 player acquired: Brandon, because Christian McCaffrey remains the least subtle answer available.",
-          "Best long-term asset bundle: Josh, who paired Brian Thomas Jr. with a second 2027 first.",
+          "Least subtle response to losing a championship: Casey, pending five managers deciding otherwise.",
+          "Best completed 2026 player acquired: Brandon, because Christian McCaffrey remains the least subtle answer currently allowed to count.",
+          "Largest long-term asset migration: Josh, who may leave the weekend with Thomas, Smith, Harrison, Allgeier and two imported firsts.",
           "Most concentrated draft cabinet: Wesley, owner of six 2027 picks and exactly two in every round.",
-          "Most urgent follow-up task: Josh finding startable running-back points without mailing the new first back across the table.",
+          "Most aggressive waiver housekeeping: Jason adding two receivers while several managers were still admiring their empty roster spots.",
         ],
         paragraphs: [
-          "Brandon has chosen acceleration. Josh has chosen runway. The league has chosen to make one of those approaches look brilliant almost immediately, because Week 1 is close and patience has never survived contact with an actual scoreboard.",
+          "Brandon chose acceleration. Josh chose optionality. Casey appears to have chosen violence, although the review clock retains editorial control over that sentence. The crown belongs to Tommy, the standings belong to nobody, and the former champion has spent September making sure both facts feel temporary.",
         ],
       },
     ],
