@@ -12,7 +12,7 @@ export const weeklyColumns = [
         heading: "Pending: the former king found a superweapon",
         paragraphs: [
           "Casey lost the 2025 championship by 10.11 points. He has apparently spent the offseason treating that margin as a personal insult. Rabbit Walrus has now agreed to acquire Ja'Marr Chase and rookie Chris Bell from Josh's Sugar Tits for DeVonta Smith, Marvin Harrison Jr., Tyler Allgeier and Casey's 2028 first-round pick. One starting receiver, one premium prospect, one depth back and one distant first have been compressed into the loudest receiver in the league.",
-          "Important newspaper language before anyone begins engraving the trophy: the trade is still pending review. Sleeper continues to show Chase and Bell on Josh's roster and Smith, Harrison and Allgeier on Casey's. Five vetoes are required to stop it. Until the review closes, this is a signed intention rather than a completed transaction. It is included because pretending the league's largest proposed deal does not exist would be less accurate than labeling it correctly.",
+          "Important newspaper language before anyone begins engraving the trophy: the trade is still in its normal processing period. Sleeper continues to show Chase and Bell on Josh's roster and Smith, Harrison and Allgeier on Casey's. Five review votes would not veto or automatically stop the deal; under the constitution, they would trigger a League Leadership review for suspected collusion or extreme imbalance. Because Casey is involved, he would recuse himself from any such review. Until the processing period closes, this is a signed intention rather than a completed transaction. It is included because pretending the league's largest proposed deal does not exist would be less accurate than labeling it correctly.",
         ],
       },
       {
@@ -68,7 +68,7 @@ export const weeklyColumns = [
       {
         heading: "Extremely official Week 1 trade awards",
         bullets: [
-          "Least subtle response to losing a championship: Casey, pending five managers deciding otherwise.",
+          "Least subtle response to losing a championship: Casey, pending the normal processing period and any constitutionally triggered leadership review.",
           "Best completed 2026 player acquired: Brandon, because Christian McCaffrey remains the least subtle answer currently allowed to count.",
           "Largest long-term asset migration: Josh, who may leave the weekend with Thomas, Smith, Harrison, Allgeier and two imported firsts.",
           "Most concentrated draft cabinet: Wesley, owner of six 2027 picks and exactly two in every round.",
