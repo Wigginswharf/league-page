@@ -1,70 +1,80 @@
 export const weeklyColumns = [
   {
-    slug: "2026-wesley-eight-pick-pivot",
-    issue: "2026 September Roster Pivot",
-    publishedAt: "2026-09-08T20:58:32.000Z",
-    title: "Wesley Built an Eight-Pick Escape Hatch",
-    dek: "A.J. Brown and Jared Goff left; Rome Odunze, C.J. Stroud and two more 2027 picks arrived. One retool just became impossible to misunderstand.",
-    readTime: "6 min read",
-    tags: ["Trade Special", "Rome Odunze", "C.J. Stroud", "A.J. Brown", "2027 Rookie Draft"],
+    slug: "2026-brandon-declared-2027-optional",
+    issue: "2026 Week 1 Opening Edition",
+    publishedAt: "2026-09-09T15:02:47.000Z",
+    title: "Brandon Has Declared 2027 Optional",
+    dek: "A.J. Brown joined Christian McCaffrey, Wesley collected an eight-pick escape hatch, and the Chase trade stopped being hypothetical before Week 1 could score a point.",
+    readTime: "8 min read",
+    tags: ["Week 1", "A.J. Brown", "Ja'Marr Chase", "Trades", "Waivers", "NFL News"],
     sections: [
       {
-        heading: "Wesley put the retool in permanent marker",
+        heading: "Brandon bought the present and left 2027 at checkout",
         paragraphs: [
-          "There is still no official fantasy result to recap. Sleeper shows all twelve teams at 0-0, Week 1 has zero recorded points, and the NFL season does not begin until September 9. Wesley supplied a publishable story anyway. In two trades proposed September 2 and completed September 4, he sent A.J. Brown to Brandon for Rome Odunze and Brandon's 2027 third, then sent Jared Goff to Jason for C.J. Stroud and Jason's 2027 second.",
-          "Read together, the pivot is wonderfully unsubtle: two 29-or-older veterans went out; two 24-year-old building blocks and two picks came back. LeagueInfo still labels Wesley Retooling, and that remains the correct category. This is not a declaration that Warren's World has completed the climb into contention. It is evidence that the roster now has a younger core, more optionality and fewer reasons to pretend the timeline is accidental.",
+          "Brandon completed his second major win-now purchase in five days on September 4, sending Rome Odunze and his own 2027 third to Wesley for A.J. Brown. Brown joins Drake London and Chris Olave at receiver, with Mike Evans, Jauan Jennings, Josh Downs and Rashid Shaheed behind them. Christian McCaffrey, acquired August 30 for Brian Thomas Jr. and Brandon's 2027 first, now shares a backfield with De'Von Achane, Chuba Hubbard and Tony Pollard. Skip's Picks did not improve by half-measures.",
+          "The invoice is equally direct. Brandon moved his 2027 first for McCaffrey, his second in an earlier deal, and now his third for Brown. He owns no selection in the 2027 rookie draft. Odunze and Thomas—his two best young receivers—left within ten days. The immediate lineup is stronger and older, the escape routes are fewer, and the Retooling label is beginning to look like paperwork nobody bothered to update. Brandon has purchased Sundays. Future Brandon may contact customer service.",
         ],
       },
       {
-        heading: "Brandon bought another Sunday",
+        heading: "Wesley built an eight-pick escape hatch",
         paragraphs: [
-          "Brandon paid Rome Odunze and his last remaining 2027 pick for A.J. Brown. The age curve clearly favors Wesley, but the immediate lineup belongs to Brandon. Brown joins Drake London and Chris Olave at receiver, with Mike Evans, Jauan Jennings, Josh Downs and Rashid Shaheed behind them. Christian McCaffrey, De'Von Achane, Chuba Hubbard and Tony Pollard already gave Skip's Picks a serious backfield after the previous blockbuster.",
-          "That does not automatically rewrite Brandon's Retooling label as Contender. McCaffrey and Brown raise the 2026 ceiling while Odunze and Brian Thomas Jr. have both left the roster in ten days, and Brandon now owns no 2027 first, second or third. The accurate verdict is directional: Brandon has pushed much closer to a win-now build, and the standings will soon decide whether the acceleration was inspired or merely expensive.",
+          "Wesley used the same September 4 processing window to finish two timeline trades. A.J. Brown became Rome Odunze and Brandon's 2027 third. Jared Goff became C.J. Stroud and Jason's 2027 second. Two players aged 29 or older went out; two 24-year-old building blocks and two draft picks came back. Warren's World remains a retool, but nobody can call the direction accidental now.",
+          "The new picks raise Wesley's 2027 collection from six selections to eight: his own first, second and third; Casey's first; Brittany's second; Jason's second; Keller's third; and Brandon's third. That is two firsts, three seconds and three thirds. Josh and Tommy are next with four each. Brandon has none. Wesley does not merely own the largest draft cabinet; he owns enough of the room to begin charging rent.",
         ],
       },
       {
         heading: "Jason paid for the older quarterback",
         paragraphs: [
-          "The second trade is harder to flatter. Jason received 31-year-old Jared Goff and sent Wesley 24-year-old C.J. Stroud plus Jason's 2027 second. This is a one-quarterback league, which narrows the weekly gap between usable passers, but it also makes paying a meaningful pick to get older especially difficult to justify through roster construction alone.",
-          "Jason remains a Contender with Baker Mayfield, Goff and rookie Fernando Mendoza at quarterback; Amon-Ra St. Brown, Nico Collins, DK Metcalf and Courtland Sutton headline the receivers, while Trey McBride anchors tight end. Goff can absolutely produce useful 2026 weeks. Stroud could have done that too, however, and the second-round pick did not need a starting slot. Wesley now has Stroud, Brock Purdy and Trevor Lawrence, so he can wait, trade again or simply enjoy having received the younger quarterback and the extra asset.",
+          "Jason's half of Wesley's pivot remains the harder trade to flatter. Baker's Dozen received 31-year-old Jared Goff and sent away 24-year-old C.J. Stroud plus Jason's 2027 second. In a one-quarterback league, usable passers are easier to find and the weekly difference between them is compressed. Paying a meaningful pick to get older therefore requires a very specific belief that Goff will materially outscore Stroud now.",
+          "Jason still has a contender's supporting cast: Baker Mayfield at quarterback, Amon-Ra St. Brown, Nico Collins, DK Metcalf and Courtland Sutton at receiver, and Trey McBride at tight end. Goff can help that roster. Stroud could have helped it too, and the second-round pick never required a starting spot. The Ledger has inspected the receipt twice. Wesley's name remains on the better side of it.",
         ],
       },
       {
-        heading: "The 2027 board now belongs to one manager",
+        heading: "The former king's superweapon is no longer pending",
         paragraphs: [
-          "Wesley entered the previous edition with six of the league's 36 selections and exactly two in every round. The new trades raise that total to eight: two firsts, three seconds and three thirds. Draft positions remain unknown, but original ownership and current control are settled. The complete board now looks like this:",
+          "The Ja'Marr Chase blockbuster covered as pending in the September 2 Ledger completed September 3 without a change to the package. Casey received Chase and Chris Bell. Josh received DeVonta Smith, Marvin Harrison Jr., Tyler Allgeier and Casey's 2028 first. Rabbit Walrus now actually owns the lineup that was only conditional grammar one week ago: Justin Herbert, Bijan Robinson, Jahmyr Gibbs, Chase, Puka Nacua, Ladd McConkey, Travis Etienne and Tucker Kraft.",
+          "Josh's return remains substantial rather than ceremonial. Combined with the completed McCaffrey trade, Sugar Tits converted McCaffrey, Chase and Bell into Brian Thomas Jr., Smith, Harrison, Allgeier, Brandon's 2027 first and Casey's 2028 first. Casey bought the best player. Josh diversified two aging or concentrated stars into youth and two outside firsts. Both plans are coherent; only one of them looks like it arrived carrying a flamethrower.",
         ],
+      },
+      {
+        heading: "Transaction status: three completed, zero hiding behind a vote label",
+        paragraphs: [
+          "Sleeper's transaction record currently shows the Chase deal, the Brown–Odunze deal and the Goff–Stroud deal as complete. It shows no accepted trade still inside the normal processing period. Failed waiver claims are also excluded from the completed ledger because wanting a player and acquiring one remain irritatingly different events.",
+          "The constitution has not changed with the app's vocabulary: five review votes do not automatically veto or stop a trade. They trigger League Leadership review for suspected collusion or extreme imbalance, competitive inconvenience is not grounds for review, and any involved leader recuses. Completed means processed. Pending means still processing. A button labeled veto is not a substitute for reading the constitution.",
+        ],
+      },
+      {
+        heading: "Waivers opened, and everyone remembered kickers exist",
+        paragraphs: [
+          "The September 4 run sent Calvin Ridley, Skyler Bell and Wil Lutz to Wesley; Jacob Saylors and Marlin Klein to Jason; Spencer Shrader to Keller; and Zavion Thomas to Casey. Wesley dropped Anthony Richardson, Isaiah Davis and the Giants defense in those moves. Keller dropped Daniel Carlson, who remained unemployed for five days and presumably used the time to think about what he had done.",
+          "Wednesday's claims brought Carlson to Casey for Harrison Mevis and Cedric Tillman for Jaylin Lane. Jason reclaimed Isaiah Bond after Wesley's brief custody; Keller added Seth McGowan; Tommy added Chris Brooks; and Wesley swapped Tennessee's defense for Chris Brazzell. Josh cleared Zach Ertz, Matt Prater and Zane Gonzalez without replacements. These are all completed moves. The waiver wire has produced no points, but it has already produced a kicker carousel and shared custody paperwork.",
+        ],
+      },
+      {
+        heading: "Week 1 injury news immediately edited the depth charts",
+        paragraphs: [
+          "The most useful update for the new superteam is that Ja'Marr Chase practiced Monday and is tracking to play without restrictions against Tampa Bay after the knee scare. The less useful update is that Casey's Isiah Pacheco begins the season on injured reserve with a back problem and no firm return date. Travis Etienne may cover some of that depth loss immediately: Alvin Kamara appears headed for a Week 1 inactive, leaving Etienne positioned for New Orleans' largest backfield workload against Detroit.",
+          "Wesley's newly acquired Rome Odunze had not practiced through Tuesday while managing a leg injury, even as Chicago remained hopeful for Week 1. His Breece Hall is trending toward playing after a groin injury. Keller's TreVeyon Henderson is in serious danger of missing the opener, which would push Brittany's Rhamondre Stevenson toward a near-workhorse role, while Keller's Jeremiyah Love may be eased in behind Tyler Allgeier. Apparently Josh did not merely acquire Allgeier; he acquired Week 1 leverage as a parting gift.",
+          "Other opening-week items worth the lineup check: Josh Jacobs remains unavailable on the commissioner's exempt list, Tank Dell begins the year on injured reserve, George Kittle is expected to return from his Achilles injury in a limited early role, and Michael Penix Jr. is not ready to start for Atlanta. This is why depth charts are printed in pencil and fantasy managers age in dog years.",
+        ],
+      },
+      {
+        heading: "The standings remain innocent for a few more hours",
+        paragraphs: [
+          "Sleeper shows every manager at 0-0 and every Week 1 matchup at 0.00. There are no results or standings developments to manufacture. The opening slate is Dustin versus Brandon, Wesley versus Brittany, Casey versus John, Tommy versus Josh, Keller versus Frank, and Jason versus Kevin. After an offseason spent trading away future draft classes, actual football has finally arrived to interrupt the accounting.",
+        ],
+      },
+      {
+        heading: "Extremely official opening-bell awards",
         bullets: [
-          "Wesley — eight: his own first, second and third; Casey's first; Brittany's second; Jason's second; Keller's third; Brandon's third.",
-          "Josh — four: his own three picks and Brandon's first. Tommy — four: his own three picks and Brandon's second.",
-          "Brittany — three: her first and third plus Casey's second. Dustin, Frank, John and Kevin — three each, all their own.",
-          "Jason — his first and third. Keller — his first and second. Casey — only his third. Brandon — no 2027 selections.",
-        ],
-      },
-      {
-        heading: "The last blockbuster cleared; the waiver wire filled the margins",
-        paragraphs: [
-          "The Ja'Marr Chase trade covered as pending in the September 2 edition completed September 3 without a change to the package: Casey received Chase and Chris Bell; Josh received DeVonta Smith, Marvin Harrison Jr., Tyler Allgeier and Casey's 2028 first. That is confirmation, not a new analysis assignment. The proposed superteam is now an actual roster, while Josh's asset migration is no longer conditional grammar.",
-          "Successful activity after the prior edition also sent Calvin Ridley, Skyler Bell and Wil Lutz to Wesley; Jacob Saylors and Marlin Klein to Jason; Spencer Shrader to Keller; and Zavion Thomas to Casey. The drops and unsuccessful claims supplied volume but not another headline. None of the acquisitions has reached a completed eligible fantasy week, so the Ledger is saving its first-week follow-through until points exist to follow.",
-        ],
-      },
-      {
-        heading: "The news wire offered opening-week fine print",
-        paragraphs: [
-          "The live Dynasty Wire was fully online Tuesday and carried three useful lineup developments. Wesley's Breece Hall participated in positional drills while managing a groin issue. Brittany's Keon Coleman, also dealing with a foot issue, appeared among Buffalo's three starters on the unofficial depth chart. Casey's newly acquired Chris Bell received the same unofficial starter treatment in Miami. Practice participation and depth-chart labels are encouraging, not guarantees.",
-          "The largest unresolved problem remains Brittany's backfield. Green Bay indicated MarShawn Lloyd could work in a committee while Josh Jacobs remains on the commissioner's exempt list, potentially turning Tommy's Lloyd into an immediate option and leaving Brittany without a timetable for Jacobs. Keller's rookie Jeremiyah Love was listed behind Tyler Allgeier on Arizona's unofficial chart, which gives Josh a little opening-week leverage from the Chase return before anyone has scored a point.",
-        ],
-      },
-      {
-        heading: "Extremely official pre-kickoff awards",
-        bullets: [
-          "Cleanest timeline trade: Wesley turning Brown into Odunze and the final piece of Brandon's 2027 draft.",
-          "Most generous age adjustment: Jason attaching a second while moving from Stroud to Goff.",
-          "Most committed present-tense roster: Brandon, now holding McCaffrey and Brown but no 2027 picks.",
-          "Largest draft cabinet: Wesley, whose eight-pick collection now requires its own inventory system.",
+          "Most committed present tense: Brandon, now holding McCaffrey and Brown and exactly zero 2027 picks.",
+          "Best week for a retool: Wesley, who got younger twice and raised his 2027 inventory to eight selections.",
+          "Least subtle completed roster: Casey, whose pending superteam has graduated into an active threat.",
+          "Most generous age adjustment: Jason, for attaching a second while moving from Stroud to Goff.",
+          "Most traveled specialist: Daniel Carlson, from Keller to unemployment to Casey in five days.",
         ],
         paragraphs: [
-          "Week 1 is close enough to make every trade feel prophetic and every unofficial depth chart feel legally binding. It is neither. Wesley won the week on timeline discipline, Brandon bought more immediate force, and Jason volunteered to make quarterback valuation the league's first argument before kickoff. The scoreboard opens next. It has excellent timing.",
+          "The trades are complete, the waivers have cleared, and not one manager has scored a point. Brandon bought the present. Wesley bought nearly a quarter of the 2027 draft. Casey bought the league's loudest weapon. Tonight the receipts finally meet a scoreboard, which remains the only review process cruel enough for everybody.",
         ],
       },
     ],
