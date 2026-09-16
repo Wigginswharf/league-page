@@ -1,5 +1,82 @@
 export const weeklyColumns = [
   {
+    slug: "2026-dustin-week-one-demolition",
+    issue: "2026 Week 1 Results Edition",
+    publishedAt: "2026-09-16T15:02:07.000Z",
+    title: "Dustin Opened the Season With a Controlled Demolition",
+    dek: "Austin's Finest scored 257.66, Brittany survived by 0.86, and Week 1 gave six undefeated managers exactly one week to become unbearable.",
+    readTime: "9 min read",
+    tags: ["Week 1", "Results", "Standings", "Waivers", "NFL News"],
+    sections: [
+      {
+        heading: "Dustin did not ease into the season",
+        paragraphs: [
+          "Austin's Finest opened 2026 with 257.66 points, the highest score in the league by 58.02 and a 105.75-point win over Brandon. Josh Allen supplied 48.16, Christian Watson 42.70, Zay Flowers 37.00 and DJ Moore 31.00. Seven of Dustin's ten starters reached double figures, Jacksonville added 25 from the defense slot, and even the bench contained a 26-point Raiders defense that was entirely unnecessary.",
+          "Skip's Picks scored a respectable 151.91 and still spent Sunday trapped beneath a falling building. Chris Olave delivered 37.20 and Lamar Jackson added 36.41, but A.J. Brown, Drake London and Brandon Aubrey combined for 12.35. Chuba Hubbard's 26.20 stayed on the bench, where it could have made the loss look slightly less like a crime scene without changing who committed it.",
+          "Dustin's 271.21 potential points also led the league, so this was not merely a lucky lineup dart landing correctly. The roster produced the week's deepest output and captured 95 percent of its available score. The first standings table therefore begins with Austin's Finest at 1-0 and everybody else in the middle division already looking up at a point differential of plus-105.75. Subtlety has been postponed.",
+        ],
+      },
+      {
+        heading: "Brittany won by less than one point and all of it counted",
+        paragraphs: [
+          "Badkittens defeated Warren's World 166.86 to 166.00, a margin of 0.86 and the sort of result that turns every forgotten reception into courtroom evidence. Derrick Henry's 48.30 carried Brittany through Jake Ferguson's 2.60, while Patrick Mahomes, Rhamondre Stevenson and the Tampa Bay defense supplied enough support to survive Monday with the decimal point intact.",
+          "Wesley received 35.90 from Trevor Lawrence, 32.30 from Breece Hall and 23.00 from the Jets defense. His bench also held Brock Purdy's 30.85 and Dallas Goedert's 26.70, but neither created an obvious legal appeal: Lawrence outscored Purdy, and Tyler Warren occupied the required tight-end spot while Goedert would have needed a flex decision. The loss is painful without being mysterious. Brittany is 1-0. Wesley is 0-1. The difference is smaller than one standard Sleeper stat correction, which is a perfectly calm thing to remember all week.",
+        ],
+      },
+      {
+        heading: "The other four games ranged from expensive to impolite",
+        bullets: [
+          "Casey 187.76, John 132.90 — Ja'Marr Chase scored only 3.20, but Bijan Robinson and Jahmyr Gibbs combined for 82.40 and Isaiah Likely added 26.80. John started Matthew Stafford's 7.10 over Bryce Young's 46.24; even Sleeper's optimal 187.64 would have lost to Casey by 0.12, an unusually thorough form of bad luck.",
+          "Tommy 187.91, Josh 117.17 — Caleb Williams scored 45.86, Jaxon Smith-Njigba 36.20 and Dalton Kincaid 26.00 for the defending champion. Josh received 36.37 from Jalen Hurts and then watched Jordan Addison score zero while DeVonta Smith, Marvin Harrison Jr. and Brian Thomas Jr. combined for 18.60. The post-Chase youth package has time. It did not have Week 1.",
+          "Frank 179.60, Keller 89.76 — Kenneth Walker's 52.85 and Tyler Shough's 36.20 gave Because Casey Said So an 89.84-point win. Keller posted the week's lowest score, with Terry McLaurin, Romeo Doubs and the flex combination of Blake Corum and Carnell Tate totaling 19.10. This was less a matchup than a scheduled inspection.",
+          "Jason 199.64, Kevin 170.06 — Jason became the week's only other 199-point team behind D'Andre Swift's 43.90, Amon-Ra St. Brown's 28.70, Javonte Williams' 27.20 and Trey McBride's 24.50. Kevin had the highest losing score of the week after Ashton Jeanty and David Montgomery combined for 79.35. In another matchup, 170.06 beats Brittany, Wesley, Brandon, John, Josh and Keller. In this one it purchased a very decorative 0-1.",
+        ],
+      },
+      {
+        heading: "The first standings are real, if not yet wise",
+        paragraphs: [
+          "First Class opens with Tommy and Casey at 1-0, separated by 0.15 points scored, while John and Josh begin 0-1. In What's Your Name Again?, Dustin's 257.66 gives him the division lead over 1-0 Brittany; Wesley and Brandon are one game back. Level 11 begins with Jason at 1-0 and 199.64 points, Frank also 1-0, and Kevin and Keller at 0-1.",
+          "No one has clinched anything, been eliminated from anything or established a meaningful season-long trend from one game. What Week 1 has established is the first tiebreaker ledger: Dustin owns the league's scoring lead, Jason owns the second-highest total, Kevin owns the strongest loss, and Brittany owns the only win that could still be frightened by a Wednesday morning scoring correction.",
+        ],
+      },
+      {
+        heading: "The waiver wire charged admission after the show",
+        paragraphs: [
+          "Dustin followed the league's highest score by spending the week's largest single player bid, $12 on Kirk Cousins. Tommy spent $11 on Cincinnati's defense, dropping Atlanta, then added Green Bay's defense for $1 in place of Chicago. He had already claimed Charlie Kolar for $1 while dropping Theo Johnson. Brandon added Michael Mayer for $3 and dropped Marvin Mims, added Samaje Perine for $3, and later won Kalif Raymond for $7. The immediate lesson is that a 1-0 record does not prevent shopping and an 0-1 record does not prevent buying three lottery tickets.",
+          "Jason reacted directly to Cleveland's backfield news: he dropped Trevor Etienne, claimed George Holani for $4, then added Raheim Sanders and Devin Singletary for $0 each. Keller spent $5 to exchange Washington's defense for Tennessee's. Those are the remaining completed acquisitions since the previous edition. Failed claims are not being promoted into roster moves merely because Sleeper preserved the evidence of desire.",
+          "The completed cuts without corresponding additions were also reconciled. Brittany released Tyler Lockett, Taysom Hill and Luke Schoonmaker; John released Mack Hollins, Olamide Zaccheaus, Green Bay's defense, Jonathan Mingo and KaVontae Turpin; Frank released Dalvin Cook, Alexander Mattison, Jelani Woods and Tylan Wallace; and Kevin released Darius Slayton. Several benches used opening week as a final round of preseason cuts, only with more emotional information.",
+        ],
+      },
+      {
+        heading: "Trade desk: remarkably, nobody moved a draft class",
+        paragraphs: [
+          "Sleeper shows no completed trade after the September 9 cutoff and no accepted trade still inside its normal processing period. There is therefore no pending blockbuster to label, no traded pick to redraw and no constitutional review question to manufacture. The league spent one full scoring week allowing the players already acquired to play football. Historians may struggle to explain this restraint.",
+        ],
+      },
+      {
+        heading: "Week 1 also sent several fantasy plans to the trainer's room",
+        paragraphs: [
+          "Josh opened without Brock Bowers after the Raiders tight end underwent meniscus surgery and was given an early estimate of one to two missed games. Casey's bench absorbed a different cluster: Sam Darnold left Seattle's opener with a glute injury that the team considers short-term but has not attached to a firm return date; Kyler Murray entered concussion protocol after Minnesota's opener; and Ladd McConkey is day-to-day with a rib injury after catching five passes for 82 yards and a touchdown. Jalen Coker scored 43.80 from Casey's bench while playing through an ankle injury, then appeared in a walking boot but said he expected to play Week 2. Fantasy football has restored the traditional balance between points and dread.",
+          "Cleveland placed Dylan Sampson on injured reserve with a knee injury, guaranteeing at least four missed games. The Browns identified Raheim Sanders as the expected backup to Quinshon Judkins and promoted Jaleel McLaughlin, which explains why Jason's $0 Sanders claim is more than random roster churn. Around the league, injury news did not merely decorate the waiver page; it created the depth chart the waiver page was trying to buy.",
+        ],
+      },
+      {
+        heading: "Extremely official Week 1 awards",
+        bullets: [
+          "Opening statement: Dustin, for scoring 257.66 before anyone had time to develop a defensive theory.",
+          "Most stressful successful Sunday: Brittany, winner by 0.86 and current enemy of stat corrections everywhere.",
+          "Best score to receive absolutely nothing: Kevin's 170.06.",
+          "Most efficient losing optimal lineup: John, whose theoretical best still loses by 0.12.",
+          "Fastest injury-to-waiver translation: Jason adding Raheim Sanders after Dylan Sampson landed on injured reserve.",
+          "Strongest commitment to a fresh start: Frank, who cleared four veterans and then beat Keller by 89.84.",
+        ],
+        paragraphs: [
+          "Week 1 delivered a demolition, a coin-flip and four reminders that respectable scores are distributed without regard for fairness. Dustin owns the loudest opening, Brittany owns the smallest cushion, and six managers now possess undefeated records that will remain historically perfect until football resumes. Enjoy the dynasty while it lasts.",
+        ],
+      },
+    ],
+  },
+  {
     slug: "2026-brandon-declared-2027-optional",
     issue: "2026 Week 1 Opening Edition",
     publishedAt: "2026-09-09T15:02:47.000Z",
