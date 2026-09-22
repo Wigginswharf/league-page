@@ -1,5 +1,70 @@
 export const weeklyColumns = [
   {
+    slug: "2026-frank-202-points-and-more",
+    issue: "2026 Week 2 Results Edition",
+    publishedAt: "2026-09-22T22:09:04.000Z",
+    title: "Frank Scored 202 and Left Another 58 on the Bench",
+    dek: "Because Casey Said So reached 2-0 with the week's biggest score, Brandon built the cleanest lineup, and Kevin discovered the wrong defense can absolutely make things worse.",
+    readTime: "7 min read",
+    tags: ["Week 2", "Results", "Standings", "Lineups", "NFL News"],
+    sections: [
+      {
+        heading: "Frank won the week and lost an argument with his own bench",
+        paragraphs: [
+          "Because Casey Said So beat Jason 202.33 to 160.88, produced the only 200-point score of Week 2 and moved to 2-0 atop Level 11. CeeDee Lamb scored 42.30, Kenneth Walker 36.80, Jaylen Waddle 29.80 and Tyler Shough 26.83. Pittsburgh's defense added 18.00, because apparently the offensive avalanche also required security staff.",
+          "The ridiculous part is that Frank's highest legal lineup was 260.73. Dalton Schultz scored 33.00, Denzel Boston 23.50 and Stefon Diggs 21.70 on the bench while Colston Loveland, Hunter Henry and Cam Skattebo combined for 19.80 in the corresponding legal mix. That leaves 58.40 missed points and 77.60 percent lineup accuracy. The metric is harsh: several of those alternatives were far easier to identify after kickoff than before it. Still, scoring 202 while your bench assembles another functional offense is a depth flex with poor manners.",
+        ],
+      },
+      {
+        heading: "Brandon went from crater to calibration",
+        paragraphs: [
+          "One week after losing by 105.75, Brandon beat Brittany 194.55 to 157.13 and earned Most Accurate Starting Roster. His starters captured 97.11 percent of a 200.35 legal maximum, missing only 5.80 points. The Patriots defense supplied 34.50, while Aaron Jones, Christian McCaffrey, Chris Olave, De'Von Achane and Chuba Hubbard all cleared 17. Brandon needed a response with A.J. Brown on injured reserve; he got one from nearly every active corner of the roster.",
+          "Brittany did not submit a bad score. Patrick Mahomes delivered 41.68, James Cook 33.15 and Derrick Henry 21.70. She simply ran into Brandon's most efficient possible version. Carolina's 35-point defense and Rashod Bateman's 21.80 stayed on her bench, pushing her optimal score to 213.53, but neither turns Brandon's lineup into an accident. Skip's Picks is 1-1 and has already experienced both ends of the weekly scoring weapon.",
+        ],
+      },
+      {
+        heading: "Kevin found the bottom of the lineup audit",
+        paragraphs: [
+          "Keller beat Kevin 122.18 to 88.34 in the week's lowest-scoring matchup. Kevin's legal maximum was 162.74, leaving 74.40 points unused and a league-low 54.28 percent accuracy. The cleanest error was Minnesota's 28.00 on the bench while Detroit scored minus-2.50 in the starting defense slot, a 30.50-point swing.",
+          "Tre Tucker's 33.90 also stayed behind Malik Nabers, Jameson Williams and Kevin's flex choices. That result hurts, but Tucker had scored 4.70 from the bench in Week 1, so treating the explosion as obvious would be cheap hindsight. The defense decision deserves the sharper stare. Keller did enough with Harrison Butker's 17.00, the Saints defense's 14.50 and four skill players between 12.20 and 17.60. Kevin falls to 0-2; Keller is 1-1 and may send a thank-you card to Detroit's special teams coordinator.",
+        ],
+      },
+      {
+        heading: "Four more results completed the reset",
+        bullets: [
+          "Tommy 170.82, Casey 147.78 — Jaxon Smith-Njigba detonated for 52.50 and Dalton Kincaid added 22.50, carrying Tommy through Caleb Williams' 7.97. Dak Prescott scored 40.36 on the bench, but Williams had posted 45.86 in Week 1 before a hamstring injury shortened this game. That was painful timing, not an indefensible choice.",
+          "John 183.20, Josh 96.36 — Jonathan Taylor scored 36.20 and Travis Kelce 32.10 for John. Davante Adams' 47.50 and Matthew Stafford's 41.68 remained unused and the win was still 86.84 points. Josh received 34.70 from DeVonta Smith, then zeroes from Jordan Mason and Marvin Harrison Jr. The youth plan is now 0-2 and temporarily allergic to points.",
+          "Wesley 145.03, Dustin 121.32 — Brock Purdy's 36.23, Tetairoa McMillan's 22.10 and Breece Hall's 19.20 gave Wesley his first win. Josh Allen scored 53.32 for Dustin, but Saquon Barkley, DJ Moore and three more starters combined for only 18.20. One quarterback cannot legally occupy six lineup slots, despite Allen's best effort.",
+          "Frank's win over Jason left Amon-Ra St. Brown's 42.20 as the centerpiece of a strong losing score. Jason also started Baker Mayfield's 16.78 while Jared Goff scored 40.13 on the bench; unlike several other misses this week, that switch alone would not have erased the 41.45-point margin.",
+        ],
+      },
+      {
+        heading: "Two teams are perfect and two are already digging",
+        paragraphs: [
+          "Tommy and Frank are the league's only 2-0 teams. Tommy leads First Class, with Casey and John at 1-1 and Josh at 0-2. The entire What's Your Name Again? division is 1-1 after Wesley and Brandon answered Week 1 losses while Dustin and Brittany gave theirs back. In Level 11, Frank leads Jason and Keller by one game, with Kevin at 0-2.",
+          "Frank also leads the league in total scoring at 381.93, just ahead of Dustin at 378.98, with Jason third at 360.52. Two weeks remain far too small for prophecy, but no longer too small for consequences: Josh and Kevin now need their first win while Tommy and Frank have banked the only perfect starts.",
+        ],
+      },
+      {
+        heading: "The transaction desk stayed quiet while the injury desk did not",
+        paragraphs: [
+          "Sleeper shows no completed trade, no rookie-draft event and no pick-ownership change since the Week 1 recap. The successful additions were supporting moves: Wesley claimed Bryce Lance and Chicago's defense; Kevin added Mack Hollins and Sione Vaki; Brandon added DeeJay Dallas and Devontez Walker; Tommy signed Oscar Delp; and Casey added Roman Wilson and Konata Mumpfield. None produced a notable first-eligible-week payoff, and Chicago's 16 points stayed on Wesley's bench behind Baltimore's 10.",
+          "The larger roster news came from the NFL. Kevin's Jayden Daniels dislocated his left elbow and has no return timetable; Washington has already named Marcus Mariota its Week 3 starter. Tommy's Caleb Williams is considered week to week with a hamstring injury, though Prescott's bench performance demonstrated the available insurance. Casey's Puka Nacua was inactive Monday with hip or groin soreness, and Dustin's DJ Moore suffered a reported AC joint sprain. Week 2 did not wait for the standings to settle before editing four depth charts.",
+        ],
+      },
+      {
+        heading: "The extremely official Week 2 awards",
+        bullets: [
+          "Best roster problem: Frank, for scoring 202.33 and still being able to point at 58.40 missed points.",
+          "Cleanest recovery: Brandon, from a 105.75-point loss to the week's most accurate lineup.",
+          "Most expensive logo choice: Kevin, whose starting defense lost 30.50 points to the defense on his bench.",
+          "Single-player rescue attempt: Dustin's Josh Allen, responsible for 43.95 percent of his entire starting score.",
+          "Perfect-start club: Tommy and Frank, now 2-0 and authorized to become exactly as annoying as the standings permit.",
+        ],
+      },
+    ],
+  },
+  {
     slug: "2026-dustin-week-one-demolition",
     issue: "2026 Week 1 Results Edition",
     publishedAt: "2026-09-16T15:02:07.000Z",
