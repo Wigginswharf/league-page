@@ -1,5 +1,86 @@
 export const weeklyColumns = [
   {
+    slug: "2026-brandon-scoring-lead-josh-basement",
+    issue: "2026 Week 3 Results Edition",
+    publishedAt: "2026-09-30T14:56:21.000Z",
+    title: "Brandon Took the Scoring Lead. Josh Found the Basement.",
+    dek: "Skip's Picks crossed 205 and now leads the league in points, Josh answered a completed trade with 71.92, and Frank became the last unbeaten manager standing.",
+    readTime: "8 min read",
+    tags: ["Week 3", "Results", "Trade", "Standings", "Waivers", "NFL News"],
+    sections: [
+      {
+        heading: "Brandon has gone from crater to league scoring leader",
+        paragraphs: [
+          "Skip's Picks beat Warren's World 205.59 to 156.68, posted the only 200-point score of Week 3 and moved to 2-1. Drake London scored 37.40, Lamar Jackson 27.44, Chris Olave 26.70 and Christian McCaffrey 26.35. Even the Giants defense, claimed for $7 in place of Devontez Walker thirteen minutes after the previous Ledger went to press, supplied 18.50. Brandon has finally located a return on one of his aggressive investments, and it came from the least glamorous name on the receipt.",
+          "The larger reversal is rude. Brandon opened the season by losing to Dustin by 105.75, then answered with 194.55 and 205.59. His 552.05 season points now lead the entire league, 15.52 ahead of Frank and 18.56 ahead of the same Dustin who dropped the building on him in Week 1. The roster is older, expensive and still owns no 2027 draft picks. It is also currently scoring more points than everybody else's. Future Brandon remains responsible for the bill; present Brandon has started eating the groceries.",
+          "Wesley received 44.28 from Brock Purdy, 33.70 from Garrett Wilson and 31.85 from Jaylen Warren and still lost by 48.91. His legal maximum reached 201.58, but even flawless hindsight would have left him four points short. Sometimes the lineup decision is not the problem. Sometimes the other roster has decided to become a weather event.",
+        ],
+      },
+      {
+        heading: "Josh made a trade, scored 71.92 and discovered all the wrong symmetry",
+        paragraphs: [
+          "Thursday night's completed trade sent Deebo Samuel from Josh to Jason. Josh received DK Metcalf and Jason's own 2028 second-round pick. The extra second gives the 0-3 roster another future asset, and Metcalf preserves a veteran receiver slot rather than turning this into a pure liquidation. Jason paid the pick to make the player swap now. The first scoreboard receipt was not subtle: Deebo scored 21.85 in Jason's starting lineup during a win, while Metcalf's 12.10 appeared on Josh's bench during the lowest score of the season.",
+          "Sugar Tits lost 192.19 to 71.92, a 120.27-point margin and the largest defeat of Week 3. Geno Smith scored 36.14 on the bench while Jalen Hurts supplied 14.22. Brock Bowers added 34.60 from the bench while David Njoku scored zero. Marvin Harrison Jr., Brian Thomas Jr. and Keon Coleman combined for 8.80 in the lineup. Josh's highest legal combination was only 138.74, so perfect management still loses by 53.45, but 51.84 percent lineup accuracy replaces Kevin's Week 2 mark as the season's least efficient submission.",
+          "Casey's winning total deserves the evidence without hijacking the issue: Bijan Robinson scored 53.55 and Jahmyr Gibbs 47.40, meaning two running backs combined for 100.95 and beat Josh's entire team by 29.03. Ja'Marr Chase added 24.80. Rabbit Walrus left 60.52 legal points unused and won by 120 anyway, which is the fantasy equivalent of forgetting half the groceries and still hosting Thanksgiving.",
+        ],
+      },
+      {
+        heading: "Four more games removed the last symmetry from the standings",
+        bullets: [
+          "Frank 154.60, Kevin 146.65 — Tyler Shough scored 31.95, CeeDee Lamb 28.20 and Kenneth Walker 25.80. Kevin answered with 30 from Minnesota's defense, 29 from Matthew Golden and 24.10 from Harold Fannin Jr., but lost by 7.95. Frank is 3-0 and now stands alone as the league's only unbeaten manager. Kevin is 0-3 and remains accompanied only by Josh.",
+          "Brittany 160.94, Dustin 154.51 — James Cook's 31.40, Derrick Henry's 28.40 and Michael Wilson's 25.90 survived by 6.43. Kenyon Sadiq scored 31.50 for Dustin and Christian Watson added 22.60, but Josh Allen's 18.06 was merely mortal. Badkittens is 2-1; the Week 1 scoring monster is 1-2 despite ranking third in season points.",
+          "John 172.13, Tommy 152.35 — Jordan Love scored 28.03, Davante Adams 28.70, Kyren Williams 26.55 and Tee Higgins 21.00 to hand the defending champion his first loss. Jaxon Smith-Njigba's 42.46 tried to prevent it. John, Tommy and Casey are now all 2-1 in First Class, because divisional peace was apparently scheduled for exactly two weeks.",
+          "Jason 145.66, Keller 123.43 — Jared Goff scored 26.86, Javonte Williams 23.05, Deebo 21.85 and Bhayshul Tuten 20.75. Keller received 30.38 from Joe Burrow and 28.15 from Jordan Love, then only two other double-digit starters. Jason moved to 2-1 one game behind Frank; Keller fell to 1-2.",
+        ],
+      },
+      {
+        heading: "Frank owns perfection; Brandon owns the scoreboard",
+        paragraphs: [
+          "First Class is now a three-team knot: John, Casey and Tommy are 2-1, while Josh is 0-3. In What's Your Name Again?, Brandon and Brittany lead at 2-1, with Wesley and Dustin at 1-2. Level 11 is the only division with a clean staircase: Frank 3-0, Jason 2-1, Keller 1-2 and Kevin 0-3. Whoever designed that symmetry should not expect it to survive another Sunday.",
+          "The points table is less orderly. Brandon leads with 552.05, followed by Frank at 536.53, Dustin at 533.49, Casey at 527.73, Tommy at 511.08 and Jason at 506.18. Dustin's 1-2 record beside the third-highest output is the early season's strongest complaint against scheduling. Josh's 285.45 is last by 49.92 and is the only total below 300. The rebuilding explanation remains coherent. The weekly viewing experience remains a fire.",
+          "Tommy submitted Week 3's most accurate lineup at 93.61 percent of his 162.75 legal maximum, which earns him an unusually tidy loss. Brandon's 205.59 came from 87.51 percent of an enormous 234.94 maximum. The difference explains the standings rather neatly: Tommy squeezed more from the available roster; Brandon simply brought more points to squeeze.",
+        ],
+      },
+      {
+        heading: "Transaction status: one trade completed, none waiting on mythology",
+        paragraphs: [
+          "The Metcalf–Samuel trade completed September 24 at 7:52 p.m. Central with Jason's 2028 second moving to Josh. Sleeper shows no accepted trade still inside its normal processing period and no other pick-ownership change after the last edition. This deal is complete, not pending, and the future second now belongs to Josh.",
+          "For constitutional accuracy even when nobody currently needs the hearing: five Sleeper review votes do not automatically veto or stop a trade. They trigger League Leadership review only for suspected collusion or extreme imbalance; competitive inconvenience is not grounds for review, and any involved leader recuses. No live transaction currently requires that process. The app records clicks. The constitution determines what they mean.",
+        ],
+      },
+      {
+        heading: "Waivers ranged from injury insurance to unemployed speed",
+        paragraphs: [
+          "Brandon followed the Giants-defense hit by clearing Michael Mayer and Tyrone Tracy, adding Jameis Winston for $0 and claiming Tyreek Hill as a free agent. Hill remains unsigned while rehabbing the catastrophic 2025 knee injury, so this is not a starter acquisition yet; it is Brandon purchasing a famous lottery ticket that Hill has since suggested may be getting closer to activation.",
+          "Jason cut Calvin Austin, added Darius Slayton for $0 and then spent $2 on Marcus Mariota after Baker Mayfield injured his throwing hand. Wesley added Malik Davis and Isaiah Davis, then replaced Dallas's defense with Atlanta for $0 and Wil Lutz with Harrison Mevis for $0. Those are all completed additions. His $2 Roman Wilson attempt failed, which is roster desire rather than roster change.",
+          "Casey's churn took the scenic route. He added Zach Ertz for Konata Mumpfield, then Isaiah Williams for Roman Wilson and Eli Heidenreich for Cedric Tillman. Tuesday night he won Tyler Goodson for $3 while releasing Heidenreich, then won Roman Wilson back for another $3 while releasing Ertz. Failed $3 claims on C.J. Donaldson and the first Roman Wilson queue do not count as acquisitions; the later successful Wilson claim does. Brandon's $1 Goodson attempt also failed. The completed ledger contains enough motion without awarding players to people who did not get them.",
+        ],
+      },
+      {
+        heading: "The injury report attacked the same rosters already making moves",
+        paragraphs: [
+          "Brandon's 205-point week came with the period's worst fantasy news: Miami placed De'Von Achane on injured reserve after the running back reportedly tore his ACL. Achane scored 2.45 before leaving, and his season is expected to be over. The manager who traded every 2027 pick to win now has already lost A.J. Brown for at least four games and now loses the centerpiece of his backfield. The scoring lead is real. So is the sound of depth being tested with a crowbar.",
+          "Jason's Baker Mayfield dislocated the thumb on his throwing hand and is expected to miss at least three weeks; Tampa Bay plans to turn to rookie Jalon Daniels. Jason's $2 Mariota claim is therefore direct quarterback insurance rather than decorative waiver activity. Wesley's Breece Hall left Sunday with a thigh injury and underwent further evaluation without a public timetable by the cutoff. Mike Evans left San Francisco's win with a rib injury, though the 49ers said it was not expected to be long-term. Brandon's roster apparently wanted the entire range of medical outcomes represented.",
+          "The quarterback market also changed permanently for Josh and potentially for Tommy. The Giants confirmed Jaxson Dart will miss the rest of the regular season after a serious knee injury and named Jameis Winston the starter. New York then acquired J.J. McCarthy from Minnesota for a 2027 fifth-round pick. Josh loses Dart; Brandon already rostered Winston; Tommy owns McCarthy. One NFL transaction has therefore created three separate dynasty footnotes, which is exactly the sort of efficiency this league respects only after someone else benefits from it.",
+        ],
+      },
+      {
+        heading: "The extremely official Week 3 awards",
+        bullets: [
+          "Present-tense champion: Brandon, for turning 205.59 into the league scoring lead while future Brandon continues forwarding the mail.",
+          "Last perfect record standing: Frank at 3-0, one game ahead of every other manager and 15.52 points behind Brandon in the category that does not award wins.",
+          "Most immediate trade receipt: Jason, who put Deebo's 21.85 into a winning lineup before the ink had time to become emotionally complicated.",
+          "Most points left where they could do no harm: Josh, whose bench housed Geno's 36.14, Bowers' 34.60 and the newly acquired Metcalf's 12.10.",
+          "Best legal lineup in a losing cause: Wesley's 201.58, still four points short of Brandon's actual score.",
+          "Most organized defeat: Tommy, who captured 93.61 percent of his available score and was rewarded with absolutely nothing.",
+        ],
+        paragraphs: [
+          "Week 3 left the league with one unbeaten team, two winless teams, a new scoring leader and a completed trade whose first result arrived immediately. Frank owns the record. Brandon owns the points. Josh owns another future second and the right to insist the rebuild is not obligated to be photogenic. The Ledger will allow all three truths to coexist, mostly because Sunday appears determined to make each of them temporary.",
+        ],
+      },
+    ],
+  },
+  {
     slug: "2026-frank-202-points-and-more",
     issue: "2026 Week 2 Results Edition",
     publishedAt: "2026-09-22T22:09:04.000Z",
