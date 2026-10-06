@@ -1,5 +1,78 @@
 export const weeklyColumns = [
   {
+    slug: "2026-frank-4-0-jason-perfect-lineup",
+    issue: "2026 Week 4 Results Edition",
+    publishedAt: "2026-10-06T15:20:18.000Z",
+    title: "Frank Is 4–0. Jason Was Literally Perfect.",
+    dek: "Frank kept the league's last perfect record, Jason found every available point, and the scoring lead shrank to nineteen hundredths.",
+    readTime: "8 min read",
+    tags: ["Week 4", "Results", "Standings", "Lineups", "Waivers", "NFL News"],
+    sections: [
+      {
+        heading: "Frank stayed perfect and stole the scoring lead by pocket change",
+        paragraphs: [
+          "Because Casey Said So beat Wesley 204.24 to 156.53 and moved to 4-0, the league's only undefeated record. CeeDee Lamb scored 48.55, Kenneth Walker 45.40 and Quinshon Judkins 25.85. Wesley answered with Tetairoa McMillan's 51.20, but the rest of Warren's World could not turn one eruption into a weather system.",
+          "Frank also passed Brandon for the season scoring lead, 740.77 to 740.58—a margin of 0.19 after four weeks. The standings are less delicate: Frank owns four wins while Brandon is 2-2. Points and wins belong in separate columns, preferably far enough apart that Brandon cannot stare at them simultaneously.",
+        ],
+      },
+      {
+        heading: "Jason submitted the answer key",
+        paragraphs: [
+          "Baker's Dozen beat Tommy 206.33 to 156.40 with Week 4's highest score and the Most Accurate Starting Roster. Jason's actual lineup was also his exact legal maximum: 206.33 points, zero missed points and 100 percent accuracy. Nico Collins scored 38.80, Javonte Williams 36.05, Jared Goff 32.18 and Deebo Samuel 20.20. Every legal lineup choice that mattered was already on the field.",
+          "The perfection moved Jason to 3-1, one game behind Frank in Level 11. Tommy received 42.50 from Kyle Monangai and 26.30 from Dak Prescott, but even his 172.20 optimum could not approach Jason. This was a clean loss to somebody who completed fantasy football's group project without assigning one task incorrectly.",
+        ],
+      },
+      {
+        heading: "John joined the 200 club; Kevin finally joined the win column",
+        bullets: [
+          "John 205.41, Brandon 188.53 — Kyren Williams scored 41.70, Tee Higgins 33.70 and Bryce Young 30.61. Brandon countered with Chuba Hubbard's 37.90 and Chris Olave's 27.60, then watched 188 points become a second loss.",
+          "Kevin 174.92, Josh 95.72 — Malik Nabers scored 30.20, Jameson Williams 24.20 and Minnesota's defense 21.50 to give Kevin his first win. Josh fell to 0-4 and has scored 106.77 fewer points than the next-lowest team.",
+          "Casey 155.92, Dustin 111.57 — Bijan Robinson supplied 45.45 and Puka Nacua 34.95. Dustin got 33.80 from Zay Flowers, but Saquon Barkley, DJ Moore and Kenyon Sadiq combined for 4.45.",
+          "Keller 152.57, Brittany 130.60 — Joe Burrow scored 33.37 and Carnell Tate 26.50. Brittany left Keon Coleman's 30.60 on the bench for Emeka Egbuka's 3.30; that legal swap alone flips the result by 5.33.",
+        ],
+        paragraphs: [
+          "First Class has John and Casey at 3-1, Tommy at 2-2 and Josh at 0-4. Brandon and Brittany lead What's Your Name Again? at 2-2. Level 11 is the staircase: Frank 4-0, Jason 3-1, Keller 2-2 and Kevin 1-3.",
+        ],
+      },
+      {
+        heading: "The lineup audit handed Casey the least flattering trophy",
+        paragraphs: [
+          "Casey's 155.92 came from a 233.97 legal maximum, leaving 78.05 points unused and producing a league-low 66.64 percent accuracy. Brian Robinson scored 29.20 on the bench, Isaiah Williams 19.40 and Roman Wilson 17.40. Ladd McConkey scored zero in a flex spot after entering with a foot concern; Parker Washington supplied 2.40 at receiver.",
+          "The metric is harsher than the decision sheet. Robinson's three-touchdown game was not an obvious start over Bijan Robinson, Jahmyr Gibbs, Puka Nacua or Ja'Marr Chase, and the Williams-Wilson scores were not prophecies everybody else received. McConkey was active before aggravating the foot injury. Casey earned Least Accurate Starting Roster because the legal gap was enormous, not because every bench eruption was predictable.",
+          "Keller supplied the week's clearest invitation for a raised eyebrow: T.J. Hockenson scored 31.90 on the bench while Austin Hooper produced 1.90 in the tight-end slot. Keller won by 21.97 anyway. Victory remains the league's most effective laundering service for lineup decisions.",
+        ],
+      },
+      {
+        heading: "The transaction desk produced support, not a sequel",
+        paragraphs: [
+          "Sleeper shows no completed trade, rookie-draft event or changed pick ownership after the Week 3 cutoff. Tommy claimed Konata Mumpfield; Wesley briefly claimed Skyy Moore, then added Dallas's defense; Brandon added Austin Ekeler and Arizona's defense. Jason added Brycen Tremayne, John the Giants defense, Josh DeeJay Dallas and Keller Austin Hooper. Failed claims remain excluded.",
+          "The only immediate return worth preserving was Brandon starting Arizona for 13.50. It was useful, properly deployed and not enough to beat John's 205.41. The other new additions produced no meaningful first-eligible-week consequence. Routine depth maintenance does not need a documentary series.",
+        ],
+      },
+      {
+        heading: "Week 4 collected points and body parts together",
+        paragraphs: [
+          "Brandon got 24.88 from Lamar Jackson before a sprained ankle. NFL Network reports Jackson has only an outside chance to play in Week 5 and could miss multiple games, though the injury is not considered long-term or surgical. Brandon has Drake Maye, whose 32.86 stayed on the Week 4 bench, so the roster has real insurance even if replacing Lamar remains impossible.",
+          "Casey's zero from McConkey came with an explanation rather than a punch line: the receiver entered Sunday questionable, played, aggravated the foot injury and is now considered week to week. John absorbed two Kansas City receiver injuries in the same game. Rashee Rice left with a hamstring issue after scoring zero, while Tyquan Thornton scored 37.10 on John's bench before dislocating his ankle. Reports say Thornton will have surgery and miss roughly three to four months. The bench explosion was real; so was the reason not to use hindsight as a comedy weapon.",
+        ],
+      },
+      {
+        heading: "The extremely official Week 4 awards",
+        bullets: [
+          "Last zero standing: Frank, 4-0 and now leading season scoring by 0.19.",
+          "Completed lineup certificate: Jason, 206.33 actual and 206.33 optimal.",
+          "Best loss in the least useful category: Brandon, 188.53 points and no standings credit.",
+          "First win, finally: Kevin, whose 174.92 converted into something other than sympathy.",
+          "Most expensive tight-end shrug: Keller, leaving 30 points between Hockenson and Hooper while winning anyway.",
+          "Cruelest audit math: Casey, whose legal maximum treated three touchdowns from Brian Robinson like an obvious calendar appointment.",
+        ],
+        paragraphs: [
+          "Week 4 left one unbeaten manager, one winless manager, three 200-point teams and a scoring race separated by less than a quarter-point. Frank owns the record and, barely, the points lead. Jason owns a perfect lineup. Everybody else owns another week to explain why the standings are accurate but somehow not representative.",
+        ],
+      },
+    ],
+  },
+  {
     slug: "2026-brandon-scoring-lead-josh-basement",
     issue: "2026 Week 3 Results Edition",
     publishedAt: "2026-09-30T14:56:21.000Z",
