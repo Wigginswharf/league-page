@@ -1,12 +1,12 @@
 export const weeklyColumns = [
   {
     slug: "2026-frank-4-0-jason-perfect-lineup",
-    issue: "2026 Week 4 Results Edition",
-    publishedAt: "2026-10-06T15:20:18.000Z",
+    issue: "2026 Week 4 Recap + Week 5 Outlook",
+    publishedAt: "2026-10-07T17:04:01.000Z",
     title: "Frank Is 4–0. Jason Was Literally Perfect.",
-    dek: "Frank kept the league's last perfect record, Jason found every available point, and the scoring lead shrank to nineteen hundredths.",
-    readTime: "8 min read",
-    tags: ["Week 4", "Results", "Standings", "Lineups", "Waivers", "NFL News"],
+    dek: "Frank kept the league's last perfect record, Jason found every available point, Wednesday's waiver ledger closed, and Week 5 arrived with six new arguments.",
+    readTime: "10 min read",
+    tags: ["Week 4", "Week 5 Outlook", "Results", "Standings", "Lineups", "Waivers", "NFL News"],
     sections: [
       {
         heading: "Frank stayed perfect and stole the scoring lead by pocket change",
@@ -43,10 +43,11 @@ export const weeklyColumns = [
         ],
       },
       {
-        heading: "The transaction desk produced support, not a sequel",
+        heading: "The Wednesday transaction desk produced support, not a sequel",
         paragraphs: [
           "Sleeper shows no completed trade, rookie-draft event or changed pick ownership after the Week 3 cutoff. Tommy claimed Konata Mumpfield; Wesley briefly claimed Skyy Moore, then added Dallas's defense; Brandon added Austin Ekeler and Arizona's defense. Jason added Brycen Tremayne, John the Giants defense, Josh DeeJay Dallas and Keller Austin Hooper. Failed claims remain excluded.",
           "The only immediate return worth preserving was Brandon starting Arizona for 13.50. It was useful, properly deployed and not enough to beat John's 205.41. The other new additions produced no meaningful first-eligible-week consequence. Routine depth maintenance does not need a documentary series.",
+          "The first post-week waiver cycle added exactly one completed move after the original Tuesday publication: Tommy claimed Cincinnati receiver Dohnte Meyers without a corresponding drop. Through 12:04 p.m. Central on Wednesday, Sleeper recorded no other completed waiver, free-agent addition, drop, trade or pick transfer after the original article cutoff. Meyers is active depth, not an instant lineup verdict; his first eligible completed week will determine whether the claim earns more than this receipt.",
         ],
       },
       {
@@ -54,6 +55,20 @@ export const weeklyColumns = [
         paragraphs: [
           "Brandon got 24.88 from Lamar Jackson before a sprained ankle. NFL Network reports Jackson has only an outside chance to play in Week 5 and could miss multiple games, though the injury is not considered long-term or surgical. Brandon has Drake Maye, whose 32.86 stayed on the Week 4 bench, so the roster has real insurance even if replacing Lamar remains impossible.",
           "Casey's zero from McConkey came with an explanation rather than a punch line: the receiver entered Sunday questionable, played, aggravated the foot injury and is now considered week to week. John absorbed two Kansas City receiver injuries in the same game. Rashee Rice left with a hamstring issue after scoring zero, while Tyquan Thornton scored 37.10 on John's bench before dislocating his ankle. Reports say Thornton will have surgery and miss roughly three to four months. The bench explosion was real; so was the reason not to use hindsight as a comedy weapon.",
+        ],
+      },
+      {
+        heading: "Week 5 outlook: six matchups, one unbeaten target and several Wednesday question marks",
+        bullets: [
+          "Casey (3-1) vs. Brandon (2-2) — The record favors Casey; the points favor Brandon, whose 740.58 trails Frank's league lead by 0.19. Brandon enters the week monitoring Lamar Jackson's ankle and Rico Dowdle's toe after Dowdle remained with the rehab group Wednesday. Casey has Ladd McConkey's week-to-week foot situation to manage. Current Sleeper lineups are provisional, but the standings stakes are already real.",
+          "Keller (2-2) vs. Wesley (1-3) — Wednesday news put a question beside both rosters: Keller's Terry McLaurin did not practice because of a hamstring injury, while Wesley's Breece Hall remains week to week with a quadriceps issue. This matchup may be decided first by who becomes available and only afterward by who gets started.",
+          "Frank (4-0) vs. Brittany (2-2) — The league's last unbeaten manager meets a team capable of ending the ceremony. Frank owns the best record and a 740.77–615.53 season-scoring edge, but Brittany's Week 4 loss was one defensible receiver swap from becoming a win. The target is now attached to Frank in permanent marker.",
+          "Jason (3-1) vs. Josh (0-4) — Jason follows a literal 206.33-point perfect lineup with the league's only winless opponent. Josh is coming off 95.72 and sits last in season scoring, so the paper version is impolite. The games remain stubbornly unwilling to award wins on Wednesday, which is Josh's best available argument.",
+          "Dustin (1-3) vs. John (3-1) — John has scored 693.64 and is tied with Casey atop First Class at 3-1; Dustin has scored a respectable 645.06 while taking three losses. A Dustin upset would tighten the standings and provide another exhibit for the case that record and roster quality are not always on speaking terms.",
+          "Tommy (2-2) vs. Kevin (1-3) — Kevin finally reached the win column with 174.92, while Tommy scored 156.40 and ran into Jason's answer key. Tommy's new Meyers claim expands the bench but does not automatically alter the submitted lineup. Kevin now gets to test whether Week 4 was a rescue or the beginning of an actual trend.",
+        ],
+        paragraphs: [
+          "Sleeper showed zero Week 5 points for all twelve teams at the Wednesday update. Matchup assignments are official; submitted starters, player availability and every forecast above remain provisional. This is the outlook, not a notarized prediction—an important distinction in a league that just watched three managers clear 200 in the same week.",
         ],
       },
       {
