@@ -1,5 +1,89 @@
 export const weeklyColumns = [
   {
+    slug: "2026-casey-266-frank-falls",
+    issue: "2026 Week 5 Recap + Week 6 Outlook",
+    publishedAt: "2026-10-16T13:43:14.000Z",
+    title: "Casey Scored 266. Frank Scored 60.",
+    dek: "Casey won a 489-point shootout, Brittany ended perfection with a 123-point demolition, and Josh achieved flawless lineup accuracy with 79.70 points.",
+    readTime: "10 min read",
+    tags: ["Week 5", "Week 6 Outlook", "Results", "Standings", "Lineups", "Transactions", "NFL News"],
+    sections: [
+      {
+        heading: "Casey won the game that ate the scoreboard",
+        paragraphs: [
+          "Casey beat Brandon 266.41 to 222.81 in a 489.22-point argument against moderation. Jahmyr Gibbs scored 52.95, Puka Nacua 45.20, Parker Washington 40.95 and Isaiah Likely 32.40 for Casey, who moved to 4-1 and now sits second in total scoring at 950.06. A reasonable league would have stopped counting somewhere around 220. This league asked for another 44.",
+          "Brandon received 55.31 from Drake Maye, 33.30 from Mike Evans, 30.95 from Aaron Jones and 29.50 from Denver's defense—and still lost by 43.60. He remains the league's scoring leader with 963.39 points, but he is 2-3 because opponents have deposited 1,043.29 against him. That is not poor team building. It is the schedule repeatedly arriving with a folding chair.",
+        ],
+      },
+      {
+        heading: "Brittany ended perfection; Frank left an entire lineup behind",
+        paragraphs: [
+          "Brittany routed Frank 182.96 to 60.04, ending the league's last unbeaten record and improving to 3-2. Frank fell to 4-1 with the week's lowest score and the Least Accurate Starting Roster: 60.04 of a 131.85 legal maximum, 45.54 percent accuracy and 71.81 missed points.",
+          "The audit is not equally accusatory about every point. Kyle Williams scored 22.65 and Denzel Boston 14.25 on Frank's bench, but neither eruption was an automatic pregame selection. Cleveland's defense scoring 24.00 instead of Pittsburgh's 6.00 was a costly miss. The difficult part to defend is Kenneth Walker occupying an RB slot for 0.00 while Kansas City was on its bye. Michael Penix's 16.30 also outscored Tyler Shough's 0.94. Optimal hindsight can be cruel; a bye-week starter is volunteering as evidence.",
+          "Josh earned the Most Accurate Starting Roster at exactly 100 percent: his 79.70 actual points were also his legal maximum. That is real lineup perfection wrapped around the week's second-lowest score. Every available choice was correct; there simply were not enough productive choices. Jason won 187.34 to 79.70 and moved to 4-1 while Josh fell to 0-5.",
+        ],
+      },
+      {
+        heading: "The rest of Week 5 rearranged every division",
+        bullets: [
+          "Tommy 213.54, Kevin 205.06 — the week's closest finish was still a heavyweight fight. Tommy survived by 8.48 and reached 3-2; Kevin fell to 1-4 despite the league's fourth-highest score.",
+          "Dustin 197.70, John 169.32 — Dustin climbed to 2-3 and handed John his second loss. John remains 3-2, but the First Class lead now belongs to Casey at 4-1.",
+          "Wesley 153.89, Keller 100.60 — Wesley reached 2-3 and kept pace in What's Your Name Again?, while Keller slipped to 2-3.",
+        ],
+        paragraphs: [
+          "The standings now have Casey 4-1, Tommy and John 3-2, and Josh 0-5 in First Class. Brittany leads What's Your Name Again? at 3-2, with Brandon, Wesley and Dustin all 2-3. Level 11 has Frank and Jason at 4-1, Keller at 2-3 and Kevin at 1-4. Five weeks in, the league has three 4-1 teams, one winless team and no undefeated teams left to annoy everyone.",
+        ],
+      },
+      {
+        heading: "The complete transaction window: Vidal paid immediately, from the bench",
+        paragraphs: [
+          "Every completed move since the previous Ledger is in the book. Jason added Jalen Royals for Brycen Tremayne, later added Jalon Daniels and then Tanner McKee. Brandon dropped Arizona's defense, added Kimani Vidal, then added the Jets' defense for Austin Ekeler. Kevin added Dameon Pierce. Casey added Efton Chism for Demond Claiborne, Dominic Zvada for Daniel Carlson, and Jaleel McLaughlin for Tyler Goodson. Wesley reclaimed Claiborne for Tyler Badie and swapped Harrison Mevis for Andy Borregales. Tommy added Corey Kiner, then dropped Dohnte Meyers. Failed claims are excluded.",
+          "Vidal supplied the only immediate acquisition follow-through worth circling: Brandon added him before his game, left him on the bench and watched 24.35 points arrive in his first eligible week. That total would have improved Brandon's legal maximum, but this is not a courtroom exhibit. Vidal was a speculative depth option entering the week, not an obvious start over Christian McCaffrey, Aaron Jones, Drake London or Mike Evans. It was instant value, just not instant lineup value.",
+        ],
+      },
+      {
+        heading: "Tommy bought Brenton Strange; Brandon reopened his 2027 draft",
+        paragraphs: [
+          "The only completed trade sent Brenton Strange to Tommy for Tommy's original 2027 second-round pick. Brandon entered the deal without any of his own 2027 selections and now owns that second. Tommy still holds Brandon's second from an earlier deal, so they have effectively exchanged places in the round. Strange adds another tight-end option for Tommy; the pick gives Brandon a future asset without changing either roster's direction category.",
+          "The complete 2027 map shows the real concentration. Wesley controls eight of the league's 36 picks: three firsts, three seconds and two thirds. Josh owns four, including two firsts. Frank, Dustin, John and Kevin each retain their own three; Brittany and Tommy each hold three mixed selections. Keller and Jason have two apiece. Brandon now has one—the newly acquired Tommy second—and Casey has only his own third. Future draft position is not yet available, but the ownership imbalance already is.",
+        ],
+      },
+      {
+        heading: "The NFL moved one of Josh's stars and complicated several Week 6 lineups",
+        paragraphs: [
+          "Houston acquired Marvin Harrison Jr., currently rostered by Josh, from Arizona with a 2027 seventh-round pick for 2027 second- and sixth-round selections. Harrison now enters a new offense after recording no Week 5 fantasy points. The team change is confirmed; how quickly his role stabilizes is analysis, not a promise.",
+          "Brandon's injury board remains crowded. Lamar Jackson is day-to-day with an ankle issue after missing Week 5, while A.J. Brown had his practice window opened from injured reserve and was limited Wednesday. Keller's TreVeyon Henderson is dealing with an ankle injury and opened the week limited. Kevin's David Montgomery has been ruled out with a groin injury. Those statuses matter to the Week 6 board, but none should be treated as a settled future beyond the official designations.",
+        ],
+      },
+      {
+        heading: "Week 6 outlook: the games are official, the rest is provisional",
+        paragraphs: [
+          "Week 6 began Thursday, so these are official pairings with partial scores—not final outcomes or locked projections. The centerpiece is Casey versus Frank, a 4-1 showdown with Casey leading 12.72 to 6.40 after Thursday. Frank gets an immediate chance to prove Week 5 was a crater rather than a trend.",
+        ],
+        bullets: [
+          "Dustin vs. Tommy — Tommy leads 56.90 to 17.85 behind Jaxon Smith-Njigba, Seattle's defense and Jason Myers. A Tommy win keeps pressure on Casey in First Class; Dustin needs the weekend to rescue a 2-3 record.",
+          "Brandon vs. Josh — Josh leads 1.20 to 0.00. The league's scoring leader meets the only winless team, with Brandon's injury decisions and Harrison's Houston transition supplying the uncertainty.",
+          "Wesley vs. Jason — Jason leads 13.15 to 0.00. Wesley is chasing the middle division lead; Jason can keep pace with Frank atop Level 11.",
+          "Brittany vs. Kevin — still 0.00 to 0.00. Brittany can strengthen her division lead, while Kevin must replace Montgomery and try to turn competitive scoring into a second win.",
+          "Keller vs. John — Keller leads 16.10 to 8.70. Keller can pull Level 11 closer; John is trying to stay within one game of Casey in First Class.",
+        ],
+      },
+      {
+        heading: "The Week 5 awards",
+        bullets: [
+          "Scoreboard Detonation: Casey, for 266.41 points and four different players above 32.",
+          "Schedule Cruelty: Brandon, for scoring 222.81 and watching it become a comfortable loss.",
+          "Perfect, Technically: Josh, whose 100 percent lineup accuracy produced 79.70 points.",
+          "Perfection Eraser: Brittany, for turning Frank's 4-0 start into a 122.92-point demolition.",
+          "Calendar Awareness: not Frank, whose active lineup included a running back on bye.",
+        ],
+        paragraphs: [
+          "Week 5 gave the league its highest score, its lowest score, its last undefeated team's first loss and a 205-point loser. Week 6 is already moving. The remaining lineups, injury calls and projections are provisional; the chaos, at least, appears fully confirmed.",
+        ],
+      },
+    ],
+  },
+  {
     slug: "2026-frank-4-0-jason-perfect-lineup",
     issue: "2026 Week 4 Recap + Week 5 Outlook",
     publishedAt: "2026-10-07T17:04:01.000Z",
