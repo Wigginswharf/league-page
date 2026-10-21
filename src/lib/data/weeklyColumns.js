@@ -1,12 +1,134 @@
 export const weeklyColumns = [
   {
+    slug: "2026-jason-buys-love-wesley-benches-points",
+    issue: "2026 Week 6 Recap + Week 7 Outlook",
+    publishedAt: "2026-10-21T15:03:34.000Z",
+    title:
+      "Jason Bought Jordan Love at the Buzzer. Wesley Started the Wrong Quarterback.",
+    dek: "An expedited trade paid immediately, Kevin finally converted a monster score into a win, and Wesley left 61.08 points outside the legal maximum.",
+    readTime: "11 min read",
+    tags: [
+      "Week 6",
+      "Week 7 Outlook",
+      "Results",
+      "Standings",
+      "Lineups",
+      "Transactions",
+      "Trades",
+      "NFL News",
+    ],
+    sections: [
+      {
+        heading:
+          "Jason bought a quarterback on Sunday morning and used him immediately",
+        paragraphs: [
+          "The Jordan Love trade that was still pending at the previous Ledger cutoff is now complete. Jason received Love from John; John received Jason's original 2027 first-round pick. Sleeper records completion at 10:11 a.m. Central on October 18, after the league's documented expedited approval for kickoff timing. Love then entered Jason's lineup and scored 24.04 points in a 156.09-108.01 win over Wesley. Some trades require patience. This one required everybody to find the correct button before lunch.",
+          "The constitutional language matters. In-season trades normally process after one day, but Section 2.2 allows League Leadership or the League Representative to expedite review when kickoff creates an urgent timing constraint. Five Sleeper review votes do not automatically veto, overturn or stop a trade; they trigger a leadership review only for suspected collusion or extreme imbalance, and competitive inconvenience is not grounds for review. Any involved leader must recuse. Neither Jason nor John is a League Leadership member. This deal was approved and processed early; it was not defeated by democracy and resurrected by sorcery.",
+          "Love was not the only reason Jason won. Bhayshul Tuten scored 27.70, D'Andre Swift 27.00, Javonte Williams 15.75, San Francisco's defense 13.00 and Trey McBride 12.30. Jason improved to 5-1, leads Level 11 on points and has now converted a future first into a quarterback who contributed immediately. The invoice arrived later: Jason's only remaining original 2027 selection is his third-rounder.",
+        ],
+      },
+      {
+        heading: "Wesley found 61 points, carefully labeled them bench",
+        paragraphs: [
+          "Wesley's starters produced 108.01 points against a legal maximum of 169.09: 63.88 percent accuracy and a league-high 61.08 missed points. Trevor Lawrence scored 41.49, C.J. Stroud scored 36.63 and Chicago's defense scored 25.50 on the bench. Wesley could not start both quarterbacks in a one-quarterback lineup, but he could have selected either one instead of Brock Purdy's 22.71. Ryan Flournoy added 17.00 from storage because the bench wanted depth in its performance art.",
+          "Jason, by contrast, scored 156.09 against a 157.79 maximum, a week-best 98.92 percent. The difference between the two lineups was not subtle. Jason missed 1.70 points. Wesley missed enough to purchase a respectable standalone loss.",
+        ],
+      },
+      {
+        heading: "Kevin finally received points and a win in the same shipment",
+        paragraphs: [
+          "Kevin posted the week's high score and beat Brittany 182.65 to 136.38. Malik Nabers scored 36.50, Jayden Daniels 29.90, Tre Tucker 29.70, Matthew Golden 29.40, Ashton Jeanty 18.30 and Dameon Pierce 18.00. Kevin's 201.95 legal maximum shows there were still 19.30 points available, but criticizing a 182-point lineup would be the kind of journalism that gets a newspaper thrown into a pond.",
+          "Kevin moved to 2-4 after entering the week with 785.03 points and only one win. Brittany fell to 3-3 despite 30.80 from James Cook. The result pulled the entire What's Your Name Again? division into a one-game band and gave Kevin proof that the scoreboard is occasionally connected to the standings.",
+        ],
+      },
+      {
+        heading: "Frank escaped the crater; Josh discovered a deeper basement",
+        bullets: [
+          "Frank 172.16, Casey 136.52 — one week after scoring 60.04, Frank received 39.65 from Kenneth Walker, 35.81 from Tyler Shough, 24.00 from Pittsburgh's defense and 18.50 from Colston Loveland. Casey's 29.00 from Kansas City's defense and 23.90 from Isaiah Likely could not prevent a fall to 4-2. Frank returned to 5-1 and restored the appearance that Week 5 had been an isolated electrical failure.",
+          "Brandon 162.45, Josh 85.18 — Drake Maye scored 35.60, Christian McCaffrey 34.70 and Chuba Hubbard 33.10 for Brandon. Josh received 20.30 from DK Metcalf and 17.98 from Geno Smith, fell to 0-6 and now owns a point differential of minus-541.96. The good news is that he is only one game farther from .500 than he was last week. The bad news is arithmetic.",
+          "Tommy 139.22, Dustin 106.60 — Jaxon Smith-Njigba scored 32.40 and Seattle's defense 16.50 as Tommy reached 4-2. Dustin fell to 2-4 while Kirk Cousins' 30.82 watched from the bench.",
+          "Keller 143.97, John 124.23 — Germie Bernard scored 25.70, Aaron Rodgers 21.07 and Carnell Tate 19.00 for Keller. John had 26.35 from Jonathan Taylor and 21.88 from Matthew Stafford but slipped to 3-3.",
+        ],
+      },
+      {
+        heading:
+          "The divisions are tied at the top and hostile everywhere else",
+        paragraphs: [
+          "First Class has Casey and Tommy at 4-2, with Casey ahead 1,086.58 to 1,020.24 in points. John is 3-3 and Josh is 0-6. What's Your Name Again? has Brandon and Brittany at 3-3, with Brandon holding the points edge, while Dustin and Wesley sit at 2-4. Level 11 has Jason and Frank at 5-1, Jason leading 1,055.94 to 972.97 in points, followed by Keller at 3-3 and Kevin at 2-4.",
+          "Brandon owns the league scoring lead at 1,125.84 despite a 3-3 record. Casey is second at 1,086.58; Jason is third at 1,055.94. Jason's 839.93 points against are the league's friendliest schedule, while Brandon has absorbed 1,128.47. The standings continue to insist that scoring points and being allowed to enjoy them are separate services.",
+        ],
+      },
+      {
+        heading:
+          "The complete transaction window: $54 spent, two bidding wars settled",
+        paragraphs: [
+          "Every completed move after the October 16 cutoff is accounted for. Brandon added Tyler Goodson for zero dollars, then won Tyrone Tracy for $11 and dropped Jameis Winston. Dustin paid $8 for Blake Grupe. John added Nick Folk. Jason released Jalon Daniels and Kyle McCord. Brittany dropped Cade Stover. Wesley paid $3 for Pierre Strong and dropped Skyler Bell, then replaced Andy Borregales with Ryan Fitzgerald for zero dollars. Tommy paid $2 for Darnell Washington and dropped Chris Brooks. Casey paid $11 for Savion Williams and dropped Darius Cooper. Kevin paid $19 to reclaim Konata Mumpfield after Tommy had released him two days earlier.",
+          "Two failed claims reveal the market beneath the winners: Brittany bid $7 on Tracy before Brandon landed him at $11, and Casey bid $11 on Mumpfield before Kevin won at $19. Brandon also submitted unsuccessful zero-dollar claims on Trevor Etienne and Austin Ekeler, while Tommy missed Greg Dulcich at $2. Failed claims changed no roster and are not being presented as completed transactions. Sleeper currently shows no accepted trade still in its normal processing period and no Week 7 transaction of any kind.",
+        ],
+      },
+      {
+        heading: "John now owns four 2027 picks; Jason owns one",
+        paragraphs: [
+          "The Love deal moves Jason's 2027 first to John and sharpens an already lopsided draft map. Wesley controls eight of the league's 36 selections: three firsts, three seconds and two thirds. John and Josh own four each. Frank, Dustin, Kevin, Brittany and Tommy own three apiece; Keller owns two. Casey, Brandon and Jason each own one. Jason has his third, Brandon has Tommy's second and Casey has his third.",
+          "John therefore leaves the week 3-3 with Jordan Love gone but an extra first attached to a four-pick class. Jason leaves 5-1 with Love and almost no 2027 draft capital. Both directions are coherent. One manager bought present stability; the other sold it for a future lottery ticket with a first-round label.",
+        ],
+      },
+      {
+        heading:
+          "The NFL news was medically serious and immediately league-relevant",
+        paragraphs: [
+          "Philadelphia placed Jalen Hurts, rostered by Josh, on injured reserve on October 17. On October 19, the Eagles and Hurts' agent announced that further testing found a deep vein thrombosis and bilateral pulmonary emboli. He is clinically stable, his prognosis is very good and a full recovery is expected, but he cannot participate in contact football while taking blood thinners. NFL reporting says his 2026 season is likely over. Tanner McKee—added by Jason before the previous cutoff—started in Hurts' place and now has a far more significant real-world role than a speculative quarterback add normally receives.",
+          "Washington announced on October 20 that Terry McLaurin, rostered by Keller, tore his patellar tendon and will miss the rest of the season. Stefon Diggs and Chig Okonkwo are logical opportunity beneficiaries, not guaranteed statistical replacements; Frank owns Diggs and Brandon owns Okonkwo. Losing a starting receiver is fact. Predicting the exact shape of the targets is where fantasy managers begin lying to themselves with charts.",
+          "Green Bay removed Josh Jacobs, rostered by Brittany, from the Commissioner's Exempt List on October 19. He is eligible to practice and play in Week 7, though the NFL's personal-conduct review and possible discipline remain pending. Houston also confirmed that Tank Dell, rostered by Casey, will return against the Giants on October 25 for his first game since December 2024. He rejoins a crowded Texans receiver room that also contains Josh's Marvin Harrison Jr. and Tommy's Jaylin Noel. The comeback is excellent news. The target distribution is a knife fight with name tags.",
+        ],
+      },
+      {
+        heading:
+          "Week 7 outlook: four contenders can damage each other at once",
+        bullets: [
+          "Dustin vs. Josh — Dustin can return to .500; Josh is trying to avoid 0-7 while replacing Hurts.",
+          "Brandon vs. Tommy — the league's scoring leader meets a 4-2 First Class co-leader. Brandon can seize his division outright if Brittany also loses.",
+          "Wesley vs. Kevin — Kevin arrives with the week's high score; Wesley arrives with several excellent quarterbacks and one available starting slot.",
+          "Brittany vs. Jason — Brittany gets Jacobs back into the decision tree while Jason tries to protect the Level 11 points tiebreaker and reach 6-1.",
+          "Casey vs. Keller — Casey can hold First Class; Keller can reach 4-3 while adjusting to the loss of McLaurin.",
+          "Frank vs. John — Frank can reach 6-1, while John gets an immediate chance to beat the other Level 11 co-leader after selling Love to the first one.",
+        ],
+        paragraphs: [
+          "All six Week 7 matchups currently show 0.00-0.00. Those are official pairings, not projections and not evidence that the league has collectively forgotten to play football. Lineups, injury designations and late transactions remain subject to change.",
+        ],
+      },
+      {
+        heading: "The Week 6 awards",
+        bullets: [
+          "Sunday Delivery: Jason, for acquiring Jordan Love and immediately receiving 24.04 points from him.",
+          "Highest Score: Kevin, whose 182.65 finally came attached to a second victory.",
+          "Bench Museum Curator: Wesley, for preserving 61.08 points where nobody could touch them.",
+          "System Reboot: Frank, who followed 60.04 with 172.16 and pretended the previous week never happened.",
+          "Perfect Enough: Jason, whose 98.92 percent lineup accuracy left only 1.70 points behind.",
+          "Waiver Conviction: Kevin, for paying $19 for a player Tommy had dropped 39 hours earlier.",
+        ],
+        paragraphs: [
+          "Week 6 produced a completed first-round-pick trade, two 5-1 division co-leaders, a 182-point rebound from Kevin and another week of Josh testing the structural limits of zero. Week 7 now arrives with meaningful games in every division and enough injury news to make depth feel less like planning than emergency architecture.",
+        ],
+      },
+    ],
+  },
+  {
     slug: "2026-casey-266-frank-falls",
     issue: "2026 Week 5 Recap + Week 6 Outlook",
     publishedAt: "2026-10-16T13:43:14.000Z",
     title: "Casey Scored 266. Frank Scored 60.",
     dek: "Casey won a 489-point shootout, Brittany ended perfection with a 123-point demolition, and Josh achieved flawless lineup accuracy with 79.70 points.",
     readTime: "10 min read",
-    tags: ["Week 5", "Week 6 Outlook", "Results", "Standings", "Lineups", "Transactions", "NFL News"],
+    tags: [
+      "Week 5",
+      "Week 6 Outlook",
+      "Results",
+      "Standings",
+      "Lineups",
+      "Transactions",
+      "NFL News",
+    ],
     sections: [
       {
         heading: "Casey won the game that ate the scoreboard",
@@ -16,7 +138,8 @@ export const weeklyColumns = [
         ],
       },
       {
-        heading: "Brittany ended perfection; Frank left an entire lineup behind",
+        heading:
+          "Brittany ended perfection; Frank left an entire lineup behind",
         paragraphs: [
           "Brittany routed Frank 182.96 to 60.04, ending the league's last unbeaten record and improving to 3-2. Frank fell to 4-1 with the week's lowest score and the Least Accurate Starting Roster: 60.04 of a 131.85 legal maximum, 45.54 percent accuracy and 71.81 missed points.",
           "The audit is not equally accusatory about every point. Kyle Williams scored 22.65 and Denzel Boston 14.25 on Frank's bench, but neither eruption was an automatic pregame selection. Cleveland's defense scoring 24.00 instead of Pittsburgh's 6.00 was a costly miss. The difficult part to defend is Kenneth Walker occupying an RB slot for 0.00 while Kansas City was on its bye. Michael Penix's 16.30 also outscored Tyler Shough's 0.94. Optimal hindsight can be cruel; a bye-week starter is volunteering as evidence.",
@@ -35,28 +158,32 @@ export const weeklyColumns = [
         ],
       },
       {
-        heading: "The complete transaction window: Vidal paid immediately, from the bench",
+        heading:
+          "The complete transaction window: Vidal paid immediately, from the bench",
         paragraphs: [
           "Every completed move since the previous Ledger is in the book. Jason added Jalen Royals for Brycen Tremayne, later added Jalon Daniels and then Tanner McKee. Brandon dropped Arizona's defense, added Kimani Vidal, then added the Jets' defense for Austin Ekeler. Kevin added Dameon Pierce. Casey added Efton Chism for Demond Claiborne, Dominic Zvada for Daniel Carlson, and Jaleel McLaughlin for Tyler Goodson. Wesley reclaimed Claiborne for Tyler Badie and swapped Harrison Mevis for Andy Borregales. Tommy added Corey Kiner, then dropped Dohnte Meyers. Failed claims are excluded.",
           "Vidal supplied the only immediate acquisition follow-through worth circling: Brandon added him before his game, left him on the bench and watched 24.35 points arrive in his first eligible week. That total would have improved Brandon's legal maximum, but this is not a courtroom exhibit. Vidal was a speculative depth option entering the week, not an obvious start over Christian McCaffrey, Aaron Jones, Drake London or Mike Evans. It was instant value, just not instant lineup value.",
         ],
       },
       {
-        heading: "Tommy bought Brenton Strange; Brandon reopened his 2027 draft",
+        heading:
+          "Tommy bought Brenton Strange; Brandon reopened his 2027 draft",
         paragraphs: [
           "The only completed trade sent Brenton Strange to Tommy for Tommy's original 2027 second-round pick. Brandon entered the deal without any of his own 2027 selections and now owns that second. Tommy still holds Brandon's second from an earlier deal, so they have effectively exchanged places in the round. Strange adds another tight-end option for Tommy; the pick gives Brandon a future asset without changing either roster's direction category.",
           "The complete 2027 map shows the real concentration. Wesley controls eight of the league's 36 picks: three firsts, three seconds and two thirds. Josh owns four, including two firsts. Frank, Dustin, John and Kevin each retain their own three; Brittany and Tommy each hold three mixed selections. Keller and Jason have two apiece. Brandon now has one—the newly acquired Tommy second—and Casey has only his own third. Future draft position is not yet available, but the ownership imbalance already is.",
         ],
       },
       {
-        heading: "The NFL moved one of Josh's stars and complicated several Week 6 lineups",
+        heading:
+          "The NFL moved one of Josh's stars and complicated several Week 6 lineups",
         paragraphs: [
           "Houston acquired Marvin Harrison Jr., currently rostered by Josh, from Arizona with a 2027 seventh-round pick for 2027 second- and sixth-round selections. Harrison now enters a new offense after recording no Week 5 fantasy points. The team change is confirmed; how quickly his role stabilizes is analysis, not a promise.",
           "Brandon's injury board remains crowded. Lamar Jackson is day-to-day with an ankle issue after missing Week 5, while A.J. Brown had his practice window opened from injured reserve and was limited Wednesday. Keller's TreVeyon Henderson is dealing with an ankle injury and opened the week limited. Kevin's David Montgomery has been ruled out with a groin injury. Those statuses matter to the Week 6 board, but none should be treated as a settled future beyond the official designations.",
         ],
       },
       {
-        heading: "Week 6 outlook: the games are official, the rest is provisional",
+        heading:
+          "Week 6 outlook: the games are official, the rest is provisional",
         paragraphs: [
           "Week 6 began Thursday, so these are official pairings with partial scores—not final outcomes or locked projections. The centerpiece is Casey versus Frank, a 4-1 showdown with Casey leading 12.72 to 6.40 after Thursday. Frank gets an immediate chance to prove Week 5 was a crater rather than a trend.",
         ],
@@ -90,10 +217,19 @@ export const weeklyColumns = [
     title: "Frank Is 4–0. Jason Was Literally Perfect.",
     dek: "Frank kept the league's last perfect record, Jason found every available point, Wednesday's waiver ledger closed, and Week 5 arrived with six new arguments.",
     readTime: "10 min read",
-    tags: ["Week 4", "Week 5 Outlook", "Results", "Standings", "Lineups", "Waivers", "NFL News"],
+    tags: [
+      "Week 4",
+      "Week 5 Outlook",
+      "Results",
+      "Standings",
+      "Lineups",
+      "Waivers",
+      "NFL News",
+    ],
     sections: [
       {
-        heading: "Frank stayed perfect and stole the scoring lead by pocket change",
+        heading:
+          "Frank stayed perfect and stole the scoring lead by pocket change",
         paragraphs: [
           "Because Casey Said So beat Wesley 204.24 to 156.53 and moved to 4-0, the league's only undefeated record. CeeDee Lamb scored 48.55, Kenneth Walker 45.40 and Quinshon Judkins 25.85. Wesley answered with Tetairoa McMillan's 51.20, but the rest of Warren's World could not turn one eruption into a weather system.",
           "Frank also passed Brandon for the season scoring lead, 740.77 to 740.58—a margin of 0.19 after four weeks. The standings are less delicate: Frank owns four wins while Brandon is 2-2. Points and wins belong in separate columns, preferably far enough apart that Brandon cannot stare at them simultaneously.",
@@ -107,7 +243,8 @@ export const weeklyColumns = [
         ],
       },
       {
-        heading: "John joined the 200 club; Kevin finally joined the win column",
+        heading:
+          "John joined the 200 club; Kevin finally joined the win column",
         bullets: [
           "John 205.41, Brandon 188.53 — Kyren Williams scored 41.70, Tee Higgins 33.70 and Bryce Young 30.61. Brandon countered with Chuba Hubbard's 37.90 and Chris Olave's 27.60, then watched 188 points become a second loss.",
           "Kevin 174.92, Josh 95.72 — Malik Nabers scored 30.20, Jameson Williams 24.20 and Minnesota's defense 21.50 to give Kevin his first win. Josh fell to 0-4 and has scored 106.77 fewer points than the next-lowest team.",
@@ -127,7 +264,8 @@ export const weeklyColumns = [
         ],
       },
       {
-        heading: "The Wednesday transaction desk produced support, not a sequel",
+        heading:
+          "The Wednesday transaction desk produced support, not a sequel",
         paragraphs: [
           "Sleeper shows no completed trade, rookie-draft event or changed pick ownership after the Week 3 cutoff. Tommy claimed Konata Mumpfield; Wesley briefly claimed Skyy Moore, then added Dallas's defense; Brandon added Austin Ekeler and Arizona's defense. Jason added Brycen Tremayne, John the Giants defense, Josh DeeJay Dallas and Keller Austin Hooper. Failed claims remain excluded.",
           "The only immediate return worth preserving was Brandon starting Arizona for 13.50. It was useful, properly deployed and not enough to beat John's 205.41. The other new additions produced no meaningful first-eligible-week consequence. Routine depth maintenance does not need a documentary series.",
@@ -142,7 +280,8 @@ export const weeklyColumns = [
         ],
       },
       {
-        heading: "Week 5 outlook: six matchups, one unbeaten target and several Wednesday question marks",
+        heading:
+          "Week 5 outlook: six matchups, one unbeaten target and several Wednesday question marks",
         bullets: [
           "Casey (3-1) vs. Brandon (2-2) — The record favors Casey; the points favor Brandon, whose 740.58 trails Frank's league lead by 0.19. Brandon enters the week monitoring Lamar Jackson's ankle and Rico Dowdle's toe after Dowdle remained with the rehab group Wednesday. Casey has Ladd McConkey's week-to-week foot situation to manage. Current Sleeper lineups are provisional, but the standings stakes are already real.",
           "Keller (2-2) vs. Wesley (1-3) — Wednesday news put a question beside both rosters: Keller's Terry McLaurin did not practice because of a hamstring injury, while Wesley's Breece Hall remains week to week with a quadriceps issue. This matchup may be decided first by who becomes available and only afterward by who gets started.",
@@ -189,7 +328,8 @@ export const weeklyColumns = [
         ],
       },
       {
-        heading: "Josh made a trade, scored 71.92 and discovered all the wrong symmetry",
+        heading:
+          "Josh made a trade, scored 71.92 and discovered all the wrong symmetry",
         paragraphs: [
           "Thursday night's completed trade sent Deebo Samuel from Josh to Jason. Josh received DK Metcalf and Jason's own 2028 second-round pick. The extra second gives the 0-3 roster another future asset, and Metcalf preserves a veteran receiver slot rather than turning this into a pure liquidation. Jason paid the pick to make the player swap now. The first scoreboard receipt was not subtle: Deebo scored 21.85 in Jason's starting lineup during a win, while Metcalf's 12.10 appeared on Josh's bench during the lowest score of the season.",
           "Sugar Tits lost 192.19 to 71.92, a 120.27-point margin and the largest defeat of Week 3. Geno Smith scored 36.14 on the bench while Jalen Hurts supplied 14.22. Brock Bowers added 34.60 from the bench while David Njoku scored zero. Marvin Harrison Jr., Brian Thomas Jr. and Keon Coleman combined for 8.80 in the lineup. Josh's highest legal combination was only 138.74, so perfect management still loses by 53.45, but 51.84 percent lineup accuracy replaces Kevin's Week 2 mark as the season's least efficient submission.",
@@ -214,7 +354,8 @@ export const weeklyColumns = [
         ],
       },
       {
-        heading: "Transaction status: one trade completed, none waiting on mythology",
+        heading:
+          "Transaction status: one trade completed, none waiting on mythology",
         paragraphs: [
           "The Metcalf–Samuel trade completed September 24 at 7:52 p.m. Central with Jason's 2028 second moving to Josh. Sleeper shows no accepted trade still inside its normal processing period and no other pick-ownership change after the last edition. This deal is complete, not pending, and the future second now belongs to Josh.",
           "For constitutional accuracy even when nobody currently needs the hearing: five Sleeper review votes do not automatically veto or stop a trade. They trigger League Leadership review only for suspected collusion or extreme imbalance; competitive inconvenience is not grounds for review, and any involved leader recuses. No live transaction currently requires that process. The app records clicks. The constitution determines what they mean.",
@@ -229,7 +370,8 @@ export const weeklyColumns = [
         ],
       },
       {
-        heading: "The injury report attacked the same rosters already making moves",
+        heading:
+          "The injury report attacked the same rosters already making moves",
         paragraphs: [
           "Brandon's 205-point week came with the period's worst fantasy news: Miami placed De'Von Achane on injured reserve after the running back reportedly tore his ACL. Achane scored 2.45 before leaving, and his season is expected to be over. The manager who traded every 2027 pick to win now has already lost A.J. Brown for at least four games and now loses the centerpiece of his backfield. The scoring lead is real. So is the sound of depth being tested with a crowbar.",
           "Jason's Baker Mayfield dislocated the thumb on his throwing hand and is expected to miss at least three weeks; Tampa Bay plans to turn to rookie Jalon Daniels. Jason's $2 Mariota claim is therefore direct quarterback insurance rather than decorative waiver activity. Wesley's Breece Hall left Sunday with a thigh injury and underwent further evaluation without a public timetable by the cutoff. Mike Evans left San Francisco's win with a rib injury, though the 49ers said it was not expected to be long-term. Brandon's roster apparently wanted the entire range of medical outcomes represented.",
@@ -299,7 +441,8 @@ export const weeklyColumns = [
         ],
       },
       {
-        heading: "The transaction desk stayed quiet while the injury desk did not",
+        heading:
+          "The transaction desk stayed quiet while the injury desk did not",
         paragraphs: [
           "Sleeper shows no completed trade, no rookie-draft event and no pick-ownership change since the Week 1 recap. The successful additions were supporting moves: Wesley claimed Bryce Lance and Chicago's defense; Kevin added Mack Hollins and Sione Vaki; Brandon added DeeJay Dallas and Devontez Walker; Tommy signed Oscar Delp; and Casey added Roman Wilson and Konata Mumpfield. None produced a notable first-eligible-week payoff, and Chicago's 16 points stayed on Wesley's bench behind Baltimore's 10.",
           "The larger roster news came from the NFL. Kevin's Jayden Daniels dislocated his left elbow and has no return timetable; Washington has already named Marcus Mariota its Week 3 starter. Tommy's Caleb Williams is considered week to week with a hamstring injury, though Prescott's bench performance demonstrated the available insurance. Casey's Puka Nacua was inactive Monday with hip or groin soreness, and Dustin's DJ Moore suffered a reported AC joint sprain. Week 2 did not wait for the standings to settle before editing four depth charts.",
@@ -402,7 +545,14 @@ export const weeklyColumns = [
     title: "Brandon Has Declared 2027 Optional",
     dek: "A.J. Brown joined Christian McCaffrey, Wesley collected an eight-pick escape hatch, and the Chase trade stopped being hypothetical before Week 1 could score a point.",
     readTime: "8 min read",
-    tags: ["Week 1", "A.J. Brown", "Ja'Marr Chase", "Trades", "Waivers", "NFL News"],
+    tags: [
+      "Week 1",
+      "A.J. Brown",
+      "Ja'Marr Chase",
+      "Trades",
+      "Waivers",
+      "NFL News",
+    ],
     sections: [
       {
         heading: "Brandon bought the present and left 2027 at checkout",
@@ -433,7 +583,8 @@ export const weeklyColumns = [
         ],
       },
       {
-        heading: "Transaction status: three completed, zero hiding behind a vote label",
+        heading:
+          "Transaction status: three completed, zero hiding behind a vote label",
         paragraphs: [
           "Sleeper's transaction record currently shows the Chase deal, the Brown–Odunze deal and the Goff–Stroud deal as complete. It shows no accepted trade still inside the normal processing period. Failed waiver claims are also excluded from the completed ledger because wanting a player and acquiring one remain irritatingly different events.",
           "The constitution has not changed with the app's vocabulary: five review votes do not automatically veto or stop a trade. They trigger League Leadership review for suspected collusion or extreme imbalance, competitive inconvenience is not grounds for review, and any involved leader recuses. Completed means processed. Pending means still processing. A button labeled veto is not a substitute for reading the constitution.",
@@ -482,7 +633,13 @@ export const weeklyColumns = [
     title: "The Crown Is Gone. So Is the Restraint.",
     dek: "The former champion answered a lost crown by putting Ja'Marr Chase beside Puka, Ladd, Bijan and Gibbs. The trade is still pending. The warning is not.",
     readTime: "9 min read",
-    tags: ["Trade Special", "Ja'Marr Chase", "Christian McCaffrey", "Week 1", "NFL News"],
+    tags: [
+      "Trade Special",
+      "Ja'Marr Chase",
+      "Christian McCaffrey",
+      "Week 1",
+      "NFL News",
+    ],
     sections: [
       {
         heading: "Pending: the former king found a superweapon",
@@ -563,7 +720,13 @@ export const weeklyColumns = [
     title: "The Mock Knew Too Much",
     dek: "The secret mock got smug, Kevin started the reaches, Brandon required a hidden pick, and twelve managers left with grades to argue about.",
     readTime: "7 min read",
-    tags: ["Rookie Draft", "Draft Grades", "Trades", "Training Camp", "Secret Mock"],
+    tags: [
+      "Rookie Draft",
+      "Draft Grades",
+      "Trades",
+      "Training Camp",
+      "Secret Mock",
+    ],
     sections: [
       {
         heading: "The room behaved for exactly five picks",
@@ -695,160 +858,200 @@ export const weeklyColumns = [
       },
     ],
   },
-    {
-        slug: '2026-division-realignment-special',
-        issue: '2026 Division Realignment Special',
-        publishedAt: '2026-08-04T19:14:00.000Z',
-        title: 'First Class Has a New Guest List',
-        dek: 'Eight managers approved the promotion-and-relegation plan, the semifinalists claimed the top floor, and several former residents have been asked to surrender their keys.',
-        readTime: '5 min read',
-        tags: ['Special Edition', 'Divisions', 'League Vote', '2026 Season'],
-        sections: [
-            {
-                heading: 'The league voted; the elevator started moving',
-                paragraphs: ['The Champion and 11 Losers Dynasty League has officially adopted its 2026 division realignment. Eight managers approved the promotion-and-relegation structure, meeting the league-wide standard of at least 66 percent of all active managers. In a 12-team league, that means eight affirmative votes. Managers who did not vote were not counted as opposition, but their silence also did not lower the number required to pass the proposal.', 'This is not an attempt to make all three divisions equally comfortable. The system is designed to sort teams by the previous postseason: the four semifinalists move into First Class, the other playoff and bubble teams occupy What’s Your Name Again?, and the remaining non-playoff teams report to Level 11. Competitive balance has been replaced by social mobility, which should be completely healthy and produce no resentment whatsoever.'],
-            },
-            {
-                heading: 'First Class: Casey, Tommy, Josh, and John',
-                paragraphs: ['First Class now belongs to Casey’s Rabbit Walrus, Tommy’s Sweet Tooth, Josh’s Sugar Tits, and John’s SNAFU—the four teams that reached the 2025 semifinals. Casey and John retain their seats. Tommy makes the most dramatic climb, going directly from Level 11 to the top division after winning the championship. Josh rises from What’s Your Name Again? after his own semifinal run.', 'The reward for reaching the final four is a 2026 schedule featuring three other teams that also reached the final four. The division guarantees one automatic playoff berth, but it also ensures that several excellent teams will spend the season taking turns damaging one another’s records. First Class remains accurate as a label, provided nobody mistakes it for first-class legroom.'],
-                bullets: ['Casey — Rabbit Walrus: remains in First Class.', 'Tommy — Sweet Tooth: promoted from Level 11 after winning the 2025 championship.', 'Josh — Sugar Tits: promoted from What’s Your Name Again? after reaching the semifinals.', 'John — SNAFU: remains in First Class after reaching the semifinals.'],
-            },
-            {
-                heading: 'What’s Your Name Again?: Brittany, Dustin, Brandon, and Wesley',
-                paragraphs: ['The middle division consists of Brittany’s Badkittens, Dustin’s Austin’s Finest, Brandon’s Skip’s Picks, and Wesley’s Warren’s World. Dustin and Wesley claimed the two playoff positions outside the semifinalists. Brittany drops from First Class as a bubble team, while Dustin stays exactly where he was. Brandon moves up from Level 11 as the other bubble team, and Wesley joins him after making the playoffs.', 'This may be the league’s most volatile division. It includes two returning playoff teams and the league’s two bubble teams—the sort of combination that can look orderly in August and become a four-car pileup by October. The name still asks whether anyone remembers who belongs here. The standings will eventually provide an answer, probably impolitely.'],
-                bullets: ['Brittany — Badkittens: relegated from First Class as a bubble team.', 'Dustin — Austin’s Finest: remains in What’s Your Name Again? after making the playoffs.', 'Brandon — Skip’s Picks: promoted from Level 11 as a bubble team.', 'Wesley — Warren’s World: promoted from Level 11 after making the playoffs.'],
-            },
-            {
-                heading: 'Level 11: Frank, Keller, Kevin, and Jason',
-                paragraphs: ['Level 11 will house Frank’s Because Casey Said So, Keller’s Dixienormous, Kevin’s ICU, and Jason’s Baker’s Dozen. Frank remains in place. Keller and Kevin move down from What’s Your Name Again?, while Jason takes the steepest fall in the realignment—from First Class all the way to Level 11 after missing the playoffs.', 'The division is not a permanent sentence. That is the entire point of relegation: last season determines the address, and the next season offers a way out. One of these teams is also guaranteed a playoff berth as a division winner, so Level 11 is simultaneously the bottom tier and a very real route into the postseason. Dynasty football has never been especially committed to ideological consistency.'],
-                bullets: ['Frank — Because Casey Said So: remains in Level 11.', 'Keller — Dixienormous: relegated from What’s Your Name Again?.', 'Kevin — ICU: relegated from What’s Your Name Again?.', 'Jason — Baker’s Dozen: relegated from First Class after missing the playoffs.'],
-            },
-            {
-                heading: 'What the new system actually rewards',
-                paragraphs: ['The realignment gives the divisions a clear identity that can be applied again next year without inventing a new explanation for every manager. Semifinalists rise to First Class. The remaining playoff teams and strongest bubble teams fill the middle. The other four teams land in Level 11. Roster reputation, injury excuses, and offseason optimism may influence the trash talk, but completed results determine the initial placement.', 'That clarity matters because division winners automatically qualify for the playoffs. First Class will be brutally difficult, and Level 11 will guarantee one of its four teams a postseason spot, but those are features of the adopted promotion-and-relegation model rather than accounting errors. The divisions are meant to tell the story of the prior season before the next one begins rewriting it.'],
-            },
-            {
-                heading: 'Extremely official realignment awards',
-                bullets: ['Express elevator award: Tommy, from Level 11 to First Class with a championship trophy as carry-on luggage.', 'Longest drop: Jason, from First Class to Level 11 in one offseason.', 'Most stable tenants: Casey, John, Dustin, and Frank, who kept the same divisional address.', 'Division most likely to require a tiebreaker and a wellness check: What’s Your Name Again?.', 'Best reminder that votes matter: the eight managers who actually cast the affirmative votes needed to approve the change.'],
-                paragraphs: ['The labels are set, the movement is official, and all twelve teams return to 0–0 when the season begins. Promotion lasts only as long as the results support it. Relegation lasts only until someone earns the elevator back up. Welcome to the new building. Please direct all complaints to the standings.'],
-            },
+  {
+    slug: "2026-division-realignment-special",
+    issue: "2026 Division Realignment Special",
+    publishedAt: "2026-08-04T19:14:00.000Z",
+    title: "First Class Has a New Guest List",
+    dek: "Eight managers approved the promotion-and-relegation plan, the semifinalists claimed the top floor, and several former residents have been asked to surrender their keys.",
+    readTime: "5 min read",
+    tags: ["Special Edition", "Divisions", "League Vote", "2026 Season"],
+    sections: [
+      {
+        heading: "The league voted; the elevator started moving",
+        paragraphs: [
+          "The Champion and 11 Losers Dynasty League has officially adopted its 2026 division realignment. Eight managers approved the promotion-and-relegation structure, meeting the league-wide standard of at least 66 percent of all active managers. In a 12-team league, that means eight affirmative votes. Managers who did not vote were not counted as opposition, but their silence also did not lower the number required to pass the proposal.",
+          "This is not an attempt to make all three divisions equally comfortable. The system is designed to sort teams by the previous postseason: the four semifinalists move into First Class, the other playoff and bubble teams occupy What’s Your Name Again?, and the remaining non-playoff teams report to Level 11. Competitive balance has been replaced by social mobility, which should be completely healthy and produce no resentment whatsoever.",
         ],
-    },
-    {
-        slug: '2026-preseason-first-whistle',
-        issue: '2026 Preseason Week 1',
-        publishedAt: '2026-08-04T14:03:55.000Z',
-        title: 'A First-Round Pick Walks Into August',
-        dek: 'Casey and Wesley moved a veteran runner, a prospect, and two picks while the rest of the league discovered that preseason patience is technically optional.',
-        readTime: '5 min read',
-        tags: ['Preseason', 'Trades', 'Training Camp', 'Rookie Draft'],
-        sections: [
-            {
-                heading: 'The main event: Casey and Wesley moved the calendar',
-                paragraphs: [
-                    'Sunday night delivered the league’s biggest move since the last Ledger. Casey acquired Travis Etienne and Brandon’s 2026 third-round pick from Wesley. Going the other way were Isaiah Davis and Casey’s own 2027 first. That is not a depth swap wearing a fake mustache. It is a clean exchange of present help for future leverage, with a third tossed in to keep the accounting department awake.',
-                    'Sleeper currently lists Etienne as New Orleans’ first running back and Davis as the Jets’ third. Depth charts in early August are written in pencil, sometimes by someone holding an eraser, but the intended shapes are obvious. Casey gets the veteran with the clearer immediate path. Wesley gets a younger back and the asset every dynasty manager suddenly describes as “untouchable” approximately six minutes after acquiring it.',
-                ],
-            },
-            {
-                heading: 'Why Etienne matters a little more here',
-                paragraphs: [
-                    'This league awards a full point per reception and a quarter-point per rushing attempt, then adds bonuses for 100-yard rushing or receiving days. In other words, usable volume is not merely helpful; it arrives with a loyalty program. If Etienne holds meaningful work in New Orleans, Casey has added a player whose carries can score before the yards even begin doing their part.',
-                    'The timing fits a team that went 10–4 last season and lost the Week 17 title game to Tommy, 161.40–151.29. Wesley finished 8–6 and now owns Casey’s 2026 second plus Casey’s 2027 first. That does not declare one manager right and the other wrong. It does make their timelines unusually legible: Casey is paying to attack the current window, while Wesley has purchased two future opportunities to critique Casey’s decisions with supporting documentation.',
-                ],
-            },
-            {
-                heading: 'The standings are motionless; the draft board is not',
-                paragraphs: [
-                    'The 2026 league remains in pre-draft status, every roster is 0–0, and the NFL state still says preseason. No one has climbed a division, no one has lost a close finish, and no commissioner should accept a petition to count practice reports as points. The last completed league matchups were the 2025 Week 17 finals; Week 18 contains no official head-to-head pairings.',
-                    'The next real league event is the three-round rookie draft scheduled for August 22, and the pick distribution is already absurd. Keller owns 1.01 and 1.03, while Frank controls 1.02 and 1.04—meaning the first four selections alternate between only two managers. Tommy then closes the round with both 1.11 and 1.12, giving three managers control of half the first round.',
-                    'The concentration continues later. Wesley owns 2.07 and 2.11, while Tommy adds 2.08 and 2.12 to his two first-rounders. Round 3 belongs largely to Jason and Dustin: Jason controls 3.05, 3.07, and 3.11, while Dustin holds 3.02, 3.08, and 3.12. At the opposite extreme, Brandon currently owns no 2026 selections, and Casey’s entire draft consists of 3.06. The board currently looks less like a draft order and more like several small territorial disputes arranged into three rounds.',
-                ],
-            },
-            {
-                heading: 'Dustin cleared two seats without shopping',
-                paragraphs: [
-                    'Dustin made the week’s only other completed moves, releasing Russell Wilson and Brock Wright on Monday without adding replacements. Wilson is currently unattached to an NFL team in Sleeper’s player data, while Wright sits behind Detroit’s lead tight end. These are sensible end-of-bench cuts before a rookie draft, which is precisely why they will receive less attention than the first future touchdown scored by either player.',
-                    'The useful consequence is flexibility. Dustin now has room to work through waivers, preseason cuts, or the rookie draft instead of carrying two names mainly because they are recognizable. Restraint is not usually the loudest dynasty strategy, but open roster spots have never missed a game with a hamstring injury.',
-                ],
-            },
-            {
-                heading: 'The Dynasty Wire found everyone’s preferred anxiety',
-                paragraphs: [
-                    'Casey received the strongest concrete news: Bijan Robinson agreed to a three-year extension with Atlanta, and Parker Washington drew positive early-camp coverage in Jacksonville. The former reinforces an elite cornerstone; the latter is the sort of depth-chart whisper that makes a deep roster feel clever for at least one afternoon. Brandon also got a favorable camp note on Brian Thomas Jr., whose strong spring has reportedly carried into August.',
-                    'Josh’s roster gained a much larger real-world plot twist when Deebo Samuel returned to San Francisco. John’s Ray Davis briefly left Tuesday practice with an apparent ankle issue but returned, while Bryce Young is being held out of Thursday’s Hall of Fame Game. The distinction matters: one was a short-lived injury scare, the other a coach’s preseason decision. Neither is permission to compose a five-player panic offer before lunch.',
-                    'The Wire also flagged broader camp discussions involving Casey’s Marvin Harrison Jr., Keller’s Ricky Pearsall, Jason’s Baker Mayfield, and Kevin’s Malik Nabers. Those are analysis items rather than official depth-chart rulings, so treat them as prompts to investigate, not tablets carried down from the fantasy mountain.',
-                ],
-            },
-            {
-                heading: 'Extremely official awards and the final whistle',
-                bullets: [
-                    'Deal most likely to be re-litigated during the 2027 rookie draft: Casey and Wesley, obviously.',
-                    'Best use of a quiet Monday: Dustin creating two roster spots and refusing to pretend either cut required a documentary.',
-                    'Camp-news winner: Casey, with a Bijan extension, Parker Washington buzz, and enough incoming information to justify several unnecessary refreshes.',
-                    'Most valuable league-wide skill for the next two weeks: remembering that “won’t play in the preseason opener” and “football emergency” are different sentences.',
-                ],
-                paragraphs: [
-                    'The first preseason game arrives Thursday, the rookie draft follows on August 22, and the standings will remain perfectly innocent a little longer. Enjoy the blank record while it lasts. The transaction log is already keeping receipts.',
-                ],
-            },
+      },
+      {
+        heading: "First Class: Casey, Tommy, Josh, and John",
+        paragraphs: [
+          "First Class now belongs to Casey’s Rabbit Walrus, Tommy’s Sweet Tooth, Josh’s Sugar Tits, and John’s SNAFU—the four teams that reached the 2025 semifinals. Casey and John retain their seats. Tommy makes the most dramatic climb, going directly from Level 11 to the top division after winning the championship. Josh rises from What’s Your Name Again? after his own semifinal run.",
+          "The reward for reaching the final four is a 2026 schedule featuring three other teams that also reached the final four. The division guarantees one automatic playoff berth, but it also ensures that several excellent teams will spend the season taking turns damaging one another’s records. First Class remains accurate as a label, provided nobody mistakes it for first-class legroom.",
         ],
-    },
-    {
-        slug: '2026-preseason-the-opening-bell',
-        issue: '2026 Preseason Edition',
-        publishedAt: '2026-07-30T18:00:00.000Z',
-        title: 'The Offseason Has Entered the Chat',
-        dek: 'Kelce changed lockers, third-round picks changed hands, and training camp supplied just enough anxiety for everyone to start defending their roster in late July.',
-        readTime: '6 min read',
-        tags: ['Preseason', 'Trades', 'Training Camp'],
-        sections: [
-            {
-                heading: 'The trade desk: Kelce for Pacheco',
-                paragraphs: [
-                    'Casey sent Travis Kelce to John and brought back Isiah Pacheco, a wonderfully tidy deal between a manager trying to get younger and a manager who looked at the calendar, ignored it, and decided another veteran run sounded delightful.',
-                    'For Casey, Pacheco adds another usable running back without asking the roster to wait on tight-end retirement rumors. For John, Kelce is a bet that one more stretch of vintage production is worth more than long-term comfort. If Kelce delivers three monster Sundays, John will cite them as legal precedent through at least 2031.',
-                ],
-            },
-            {
-                heading: 'John visited the waiver aisle with a large cart',
-                paragraphs: [
-                    'The Kelce move was not John’s only bit of business. Jahan Dotson, Noah Gray, and Olamide Zaccheaus all joined the roster in a rapid waiver run. None of those moves needs to become a league-winner by itself. The idea is to create several small chances for one depth-chart surprise to matter.',
-                    'It is the dynasty equivalent of buying three mystery boxes and announcing that at least one definitely contains a boat. Maybe. Probably. Please stop asking follow-up questions.',
-                ],
-            },
-            {
-                heading: 'Wesley and Jason opened the third-round pick exchange',
-                paragraphs: [
-                    'Wesley and Jason have spent the offseason moving Isaiah Bond and rearranging 2026 third-round selections. The immediate fantasy impact is modest, but this is how managers quietly reshape the bottom of a roster before everyone suddenly needs rookie-draft ammunition.',
-                    'Thirds are dynasty pocket change right up until someone uses one on a player the league spends the next two years pretending it almost drafted.',
-                ],
-            },
-            {
-                heading: 'Training-camp weather report',
-                paragraphs: [
-                    'Jahmyr Gibbs missing practice was quickly downplayed by Detroit, which is welcome news for Casey and for anyone who prefers July without emergency trade offers. The correct response is to monitor it. The traditional dynasty response is to refresh six feeds, send one insulting offer, and call it due diligence.',
-                    'Around the league, first-team reps, cautious injury returns, and contract noise are beginning to create real movement. The new Dynasty Wire will keep those stories tied to the managers who actually roster the players, so every piece of camp news can now locate its most anxious audience.',
-                ],
-            },
-            {
-                heading: 'Extremely official preseason awards',
-                bullets: [
-                    'Most likely to call a veteran acquisition “the final piece” before August: John.',
-                    'Most likely to receive a bad offer because of one missed practice: Casey.',
-                    'Most committed to proving that third-round picks are a liquid currency: Wesley and Jason.',
-                    'Best transaction of the week: everyone who resisted making a trade solely because a camp reporter used the phrase “working with the twos.”',
-                ],
-            },
-            {
-                heading: 'Final whistle',
-                paragraphs: [
-                    'There are no standings to overreact to yet, but the league is already moving. Veterans are changing teams, benches are being churned, and every manager remains undefeated in the version of the season currently playing inside their own head.',
-                    'Enjoy it while it lasts. Actual scores are coming, and actual scores have never cared about anyone’s offseason victory lap.',
-                ],
-            },
+        bullets: [
+          "Casey — Rabbit Walrus: remains in First Class.",
+          "Tommy — Sweet Tooth: promoted from Level 11 after winning the 2025 championship.",
+          "Josh — Sugar Tits: promoted from What’s Your Name Again? after reaching the semifinals.",
+          "John — SNAFU: remains in First Class after reaching the semifinals.",
         ],
-    },
+      },
+      {
+        heading:
+          "What’s Your Name Again?: Brittany, Dustin, Brandon, and Wesley",
+        paragraphs: [
+          "The middle division consists of Brittany’s Badkittens, Dustin’s Austin’s Finest, Brandon’s Skip’s Picks, and Wesley’s Warren’s World. Dustin and Wesley claimed the two playoff positions outside the semifinalists. Brittany drops from First Class as a bubble team, while Dustin stays exactly where he was. Brandon moves up from Level 11 as the other bubble team, and Wesley joins him after making the playoffs.",
+          "This may be the league’s most volatile division. It includes two returning playoff teams and the league’s two bubble teams—the sort of combination that can look orderly in August and become a four-car pileup by October. The name still asks whether anyone remembers who belongs here. The standings will eventually provide an answer, probably impolitely.",
+        ],
+        bullets: [
+          "Brittany — Badkittens: relegated from First Class as a bubble team.",
+          "Dustin — Austin’s Finest: remains in What’s Your Name Again? after making the playoffs.",
+          "Brandon — Skip’s Picks: promoted from Level 11 as a bubble team.",
+          "Wesley — Warren’s World: promoted from Level 11 after making the playoffs.",
+        ],
+      },
+      {
+        heading: "Level 11: Frank, Keller, Kevin, and Jason",
+        paragraphs: [
+          "Level 11 will house Frank’s Because Casey Said So, Keller’s Dixienormous, Kevin’s ICU, and Jason’s Baker’s Dozen. Frank remains in place. Keller and Kevin move down from What’s Your Name Again?, while Jason takes the steepest fall in the realignment—from First Class all the way to Level 11 after missing the playoffs.",
+          "The division is not a permanent sentence. That is the entire point of relegation: last season determines the address, and the next season offers a way out. One of these teams is also guaranteed a playoff berth as a division winner, so Level 11 is simultaneously the bottom tier and a very real route into the postseason. Dynasty football has never been especially committed to ideological consistency.",
+        ],
+        bullets: [
+          "Frank — Because Casey Said So: remains in Level 11.",
+          "Keller — Dixienormous: relegated from What’s Your Name Again?.",
+          "Kevin — ICU: relegated from What’s Your Name Again?.",
+          "Jason — Baker’s Dozen: relegated from First Class after missing the playoffs.",
+        ],
+      },
+      {
+        heading: "What the new system actually rewards",
+        paragraphs: [
+          "The realignment gives the divisions a clear identity that can be applied again next year without inventing a new explanation for every manager. Semifinalists rise to First Class. The remaining playoff teams and strongest bubble teams fill the middle. The other four teams land in Level 11. Roster reputation, injury excuses, and offseason optimism may influence the trash talk, but completed results determine the initial placement.",
+          "That clarity matters because division winners automatically qualify for the playoffs. First Class will be brutally difficult, and Level 11 will guarantee one of its four teams a postseason spot, but those are features of the adopted promotion-and-relegation model rather than accounting errors. The divisions are meant to tell the story of the prior season before the next one begins rewriting it.",
+        ],
+      },
+      {
+        heading: "Extremely official realignment awards",
+        bullets: [
+          "Express elevator award: Tommy, from Level 11 to First Class with a championship trophy as carry-on luggage.",
+          "Longest drop: Jason, from First Class to Level 11 in one offseason.",
+          "Most stable tenants: Casey, John, Dustin, and Frank, who kept the same divisional address.",
+          "Division most likely to require a tiebreaker and a wellness check: What’s Your Name Again?.",
+          "Best reminder that votes matter: the eight managers who actually cast the affirmative votes needed to approve the change.",
+        ],
+        paragraphs: [
+          "The labels are set, the movement is official, and all twelve teams return to 0–0 when the season begins. Promotion lasts only as long as the results support it. Relegation lasts only until someone earns the elevator back up. Welcome to the new building. Please direct all complaints to the standings.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "2026-preseason-first-whistle",
+    issue: "2026 Preseason Week 1",
+    publishedAt: "2026-08-04T14:03:55.000Z",
+    title: "A First-Round Pick Walks Into August",
+    dek: "Casey and Wesley moved a veteran runner, a prospect, and two picks while the rest of the league discovered that preseason patience is technically optional.",
+    readTime: "5 min read",
+    tags: ["Preseason", "Trades", "Training Camp", "Rookie Draft"],
+    sections: [
+      {
+        heading: "The main event: Casey and Wesley moved the calendar",
+        paragraphs: [
+          "Sunday night delivered the league’s biggest move since the last Ledger. Casey acquired Travis Etienne and Brandon’s 2026 third-round pick from Wesley. Going the other way were Isaiah Davis and Casey’s own 2027 first. That is not a depth swap wearing a fake mustache. It is a clean exchange of present help for future leverage, with a third tossed in to keep the accounting department awake.",
+          "Sleeper currently lists Etienne as New Orleans’ first running back and Davis as the Jets’ third. Depth charts in early August are written in pencil, sometimes by someone holding an eraser, but the intended shapes are obvious. Casey gets the veteran with the clearer immediate path. Wesley gets a younger back and the asset every dynasty manager suddenly describes as “untouchable” approximately six minutes after acquiring it.",
+        ],
+      },
+      {
+        heading: "Why Etienne matters a little more here",
+        paragraphs: [
+          "This league awards a full point per reception and a quarter-point per rushing attempt, then adds bonuses for 100-yard rushing or receiving days. In other words, usable volume is not merely helpful; it arrives with a loyalty program. If Etienne holds meaningful work in New Orleans, Casey has added a player whose carries can score before the yards even begin doing their part.",
+          "The timing fits a team that went 10–4 last season and lost the Week 17 title game to Tommy, 161.40–151.29. Wesley finished 8–6 and now owns Casey’s 2026 second plus Casey’s 2027 first. That does not declare one manager right and the other wrong. It does make their timelines unusually legible: Casey is paying to attack the current window, while Wesley has purchased two future opportunities to critique Casey’s decisions with supporting documentation.",
+        ],
+      },
+      {
+        heading: "The standings are motionless; the draft board is not",
+        paragraphs: [
+          "The 2026 league remains in pre-draft status, every roster is 0–0, and the NFL state still says preseason. No one has climbed a division, no one has lost a close finish, and no commissioner should accept a petition to count practice reports as points. The last completed league matchups were the 2025 Week 17 finals; Week 18 contains no official head-to-head pairings.",
+          "The next real league event is the three-round rookie draft scheduled for August 22, and the pick distribution is already absurd. Keller owns 1.01 and 1.03, while Frank controls 1.02 and 1.04—meaning the first four selections alternate between only two managers. Tommy then closes the round with both 1.11 and 1.12, giving three managers control of half the first round.",
+          "The concentration continues later. Wesley owns 2.07 and 2.11, while Tommy adds 2.08 and 2.12 to his two first-rounders. Round 3 belongs largely to Jason and Dustin: Jason controls 3.05, 3.07, and 3.11, while Dustin holds 3.02, 3.08, and 3.12. At the opposite extreme, Brandon currently owns no 2026 selections, and Casey’s entire draft consists of 3.06. The board currently looks less like a draft order and more like several small territorial disputes arranged into three rounds.",
+        ],
+      },
+      {
+        heading: "Dustin cleared two seats without shopping",
+        paragraphs: [
+          "Dustin made the week’s only other completed moves, releasing Russell Wilson and Brock Wright on Monday without adding replacements. Wilson is currently unattached to an NFL team in Sleeper’s player data, while Wright sits behind Detroit’s lead tight end. These are sensible end-of-bench cuts before a rookie draft, which is precisely why they will receive less attention than the first future touchdown scored by either player.",
+          "The useful consequence is flexibility. Dustin now has room to work through waivers, preseason cuts, or the rookie draft instead of carrying two names mainly because they are recognizable. Restraint is not usually the loudest dynasty strategy, but open roster spots have never missed a game with a hamstring injury.",
+        ],
+      },
+      {
+        heading: "The Dynasty Wire found everyone’s preferred anxiety",
+        paragraphs: [
+          "Casey received the strongest concrete news: Bijan Robinson agreed to a three-year extension with Atlanta, and Parker Washington drew positive early-camp coverage in Jacksonville. The former reinforces an elite cornerstone; the latter is the sort of depth-chart whisper that makes a deep roster feel clever for at least one afternoon. Brandon also got a favorable camp note on Brian Thomas Jr., whose strong spring has reportedly carried into August.",
+          "Josh’s roster gained a much larger real-world plot twist when Deebo Samuel returned to San Francisco. John’s Ray Davis briefly left Tuesday practice with an apparent ankle issue but returned, while Bryce Young is being held out of Thursday’s Hall of Fame Game. The distinction matters: one was a short-lived injury scare, the other a coach’s preseason decision. Neither is permission to compose a five-player panic offer before lunch.",
+          "The Wire also flagged broader camp discussions involving Casey’s Marvin Harrison Jr., Keller’s Ricky Pearsall, Jason’s Baker Mayfield, and Kevin’s Malik Nabers. Those are analysis items rather than official depth-chart rulings, so treat them as prompts to investigate, not tablets carried down from the fantasy mountain.",
+        ],
+      },
+      {
+        heading: "Extremely official awards and the final whistle",
+        bullets: [
+          "Deal most likely to be re-litigated during the 2027 rookie draft: Casey and Wesley, obviously.",
+          "Best use of a quiet Monday: Dustin creating two roster spots and refusing to pretend either cut required a documentary.",
+          "Camp-news winner: Casey, with a Bijan extension, Parker Washington buzz, and enough incoming information to justify several unnecessary refreshes.",
+          "Most valuable league-wide skill for the next two weeks: remembering that “won’t play in the preseason opener” and “football emergency” are different sentences.",
+        ],
+        paragraphs: [
+          "The first preseason game arrives Thursday, the rookie draft follows on August 22, and the standings will remain perfectly innocent a little longer. Enjoy the blank record while it lasts. The transaction log is already keeping receipts.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "2026-preseason-the-opening-bell",
+    issue: "2026 Preseason Edition",
+    publishedAt: "2026-07-30T18:00:00.000Z",
+    title: "The Offseason Has Entered the Chat",
+    dek: "Kelce changed lockers, third-round picks changed hands, and training camp supplied just enough anxiety for everyone to start defending their roster in late July.",
+    readTime: "6 min read",
+    tags: ["Preseason", "Trades", "Training Camp"],
+    sections: [
+      {
+        heading: "The trade desk: Kelce for Pacheco",
+        paragraphs: [
+          "Casey sent Travis Kelce to John and brought back Isiah Pacheco, a wonderfully tidy deal between a manager trying to get younger and a manager who looked at the calendar, ignored it, and decided another veteran run sounded delightful.",
+          "For Casey, Pacheco adds another usable running back without asking the roster to wait on tight-end retirement rumors. For John, Kelce is a bet that one more stretch of vintage production is worth more than long-term comfort. If Kelce delivers three monster Sundays, John will cite them as legal precedent through at least 2031.",
+        ],
+      },
+      {
+        heading: "John visited the waiver aisle with a large cart",
+        paragraphs: [
+          "The Kelce move was not John’s only bit of business. Jahan Dotson, Noah Gray, and Olamide Zaccheaus all joined the roster in a rapid waiver run. None of those moves needs to become a league-winner by itself. The idea is to create several small chances for one depth-chart surprise to matter.",
+          "It is the dynasty equivalent of buying three mystery boxes and announcing that at least one definitely contains a boat. Maybe. Probably. Please stop asking follow-up questions.",
+        ],
+      },
+      {
+        heading: "Wesley and Jason opened the third-round pick exchange",
+        paragraphs: [
+          "Wesley and Jason have spent the offseason moving Isaiah Bond and rearranging 2026 third-round selections. The immediate fantasy impact is modest, but this is how managers quietly reshape the bottom of a roster before everyone suddenly needs rookie-draft ammunition.",
+          "Thirds are dynasty pocket change right up until someone uses one on a player the league spends the next two years pretending it almost drafted.",
+        ],
+      },
+      {
+        heading: "Training-camp weather report",
+        paragraphs: [
+          "Jahmyr Gibbs missing practice was quickly downplayed by Detroit, which is welcome news for Casey and for anyone who prefers July without emergency trade offers. The correct response is to monitor it. The traditional dynasty response is to refresh six feeds, send one insulting offer, and call it due diligence.",
+          "Around the league, first-team reps, cautious injury returns, and contract noise are beginning to create real movement. The new Dynasty Wire will keep those stories tied to the managers who actually roster the players, so every piece of camp news can now locate its most anxious audience.",
+        ],
+      },
+      {
+        heading: "Extremely official preseason awards",
+        bullets: [
+          "Most likely to call a veteran acquisition “the final piece” before August: John.",
+          "Most likely to receive a bad offer because of one missed practice: Casey.",
+          "Most committed to proving that third-round picks are a liquid currency: Wesley and Jason.",
+          "Best transaction of the week: everyone who resisted making a trade solely because a camp reporter used the phrase “working with the twos.”",
+        ],
+      },
+      {
+        heading: "Final whistle",
+        paragraphs: [
+          "There are no standings to overreact to yet, but the league is already moving. Veterans are changing teams, benches are being churned, and every manager remains undefeated in the version of the season currently playing inside their own head.",
+          "Enjoy it while it lasts. Actual scores are coming, and actual scores have never cared about anyone’s offseason victory lap.",
+        ],
+      },
+    ],
+  },
 ];
 
-export const getWeeklyColumn = (slug) => weeklyColumns.find((column) => column.slug === slug);
+export const getWeeklyColumn = (slug) =>
+  weeklyColumns.find((column) => column.slug === slug);
