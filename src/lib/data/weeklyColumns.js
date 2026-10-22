@@ -4,8 +4,8 @@ export const weeklyColumns = [
     issue: "2026 Week 6 Recap + Week 7 Outlook",
     publishedAt: "2026-10-21T15:03:34.000Z",
     title:
-      "Jason Bought Jordan Love at the Buzzer. Wesley Started the Wrong Quarterback.",
-    dek: "An expedited trade paid immediately, Kevin finally converted a monster score into a win, and Wesley left 61.08 points outside the legal maximum.",
+      "Jason Got Jordan Love Before Kickoff. Wesley Started the Wrong Quarterback.",
+    dek: "An expedited trade paid immediately, Kevin finally converted a monster score into a win, and Wesley left 61.08 usable points on the bench.",
     readTime: "11 min read",
     tags: [
       "Week 6",
@@ -20,10 +20,10 @@ export const weeklyColumns = [
     sections: [
       {
         heading:
-          "Jason bought a quarterback on Sunday morning and used him immediately",
+          "A Tuesday trade cleared Sunday morning, and Jason used Love immediately",
         paragraphs: [
-          "The Jordan Love trade that was still pending at the previous Ledger cutoff is now complete. Jason received Love from John; John received Jason's original 2027 first-round pick. Sleeper records completion at 10:11 a.m. Central on October 18, after the league's documented expedited approval for kickoff timing. Love then entered Jason's lineup and scored 24.04 points in a 156.09-108.01 win over Wesley. Some trades require patience. This one required everybody to find the correct button before lunch.",
-          "The constitutional language matters. In-season trades normally process after one day, but Section 2.2 allows League Leadership or the League Representative to expedite review when kickoff creates an urgent timing constraint. Five Sleeper review votes do not automatically veto, overturn or stop a trade; they trigger a leadership review only for suspected collusion or extreme imbalance, and competitive inconvenience is not grounds for review. Any involved leader must recuse. Neither Jason nor John is a League Leadership member. This deal was approved and processed early; it was not defeated by democracy and resurrected by sorcery.",
+          "Jason and John accepted the Jordan Love deal Tuesday, October 13 at 7:14 p.m. Central. It was still pending when the October 16 Ledger went out and completed Sunday, October 18 at 10:11 a.m. Central after leadership approved expedited processing ahead of kickoff. Jason received Love; John received Jason's original 2027 first-round pick. Love then entered Jason's lineup and scored 24.04 points in a 156.09-108.01 win over Wesley. Some trades require patience. This one required everybody to find the correct button before lunch.",
+          "The game-day reminder is simple: Section 2.2 allows League Leadership or the League Representative to expedite review and approve or veto a trade when kickoff timing makes it urgent. If a deal needs to go through before a player's game, contact leadership so it can be reviewed in time. Jason and John's deal received that approval and processed before kickoff.",
           "Love was not the only reason Jason won. Bhayshul Tuten scored 27.70, D'Andre Swift 27.00, Javonte Williams 15.75, San Francisco's defense 13.00 and Trey McBride 12.30. Jason improved to 5-1, leads Level 11 on points and has now converted a future first into a quarterback who contributed immediately. The invoice arrived later: Jason's only remaining original 2027 selection is his third-rounder.",
         ],
       },
@@ -62,8 +62,8 @@ export const weeklyColumns = [
         heading:
           "The complete transaction window: $54 spent, two bidding wars settled",
         paragraphs: [
-          "Every completed move after the October 16 cutoff is accounted for. Brandon added Tyler Goodson for zero dollars, then won Tyrone Tracy for $11 and dropped Jameis Winston. Dustin paid $8 for Blake Grupe. John added Nick Folk. Jason released Jalon Daniels and Kyle McCord. Brittany dropped Cade Stover. Wesley paid $3 for Pierre Strong and dropped Skyler Bell, then replaced Andy Borregales with Ryan Fitzgerald for zero dollars. Tommy paid $2 for Darnell Washington and dropped Chris Brooks. Casey paid $11 for Savion Williams and dropped Darius Cooper. Kevin paid $19 to reclaim Konata Mumpfield after Tommy had released him two days earlier.",
-          "Two failed claims reveal the market beneath the winners: Brittany bid $7 on Tracy before Brandon landed him at $11, and Casey bid $11 on Mumpfield before Kevin won at $19. Brandon also submitted unsuccessful zero-dollar claims on Trevor Etienne and Austin Ekeler, while Tommy missed Greg Dulcich at $2. Failed claims changed no roster and are not being presented as completed transactions. Sleeper currently shows no accepted trade still in its normal processing period and no Week 7 transaction of any kind.",
+          "This transaction roundup covers moves completed after the October 16 edition through 10 a.m. Central on Wednesday, October 21. The Love deal above was accepted earlier and completed during this window. Brandon added Tyler Goodson for zero dollars, then won Tyrone Tracy for $11 and dropped Jameis Winston. Dustin paid $8 for Blake Grupe. John added Nick Folk. Jason released Jalon Daniels and Kyle McCord. Brittany dropped Cade Stover. Wesley paid $3 for Pierre Strong and dropped Skyler Bell, then replaced Andy Borregales with Ryan Fitzgerald for zero dollars. Tommy paid $2 for Darnell Washington and dropped Chris Brooks. Casey paid $11 for Savion Williams and dropped Darius Cooper. Kevin paid $19 to reclaim Konata Mumpfield after Tommy had released him nearly three days earlier.",
+          "Two failed claims reveal the market beneath the winners: Brittany bid $7 on Tracy before Brandon landed him at $11, and Casey bid $11 on Mumpfield before Kevin won at $19. Brandon also submitted unsuccessful zero-dollar claims on Trevor Etienne and Austin Ekeler, while Tommy missed Greg Dulcich at $2. Failed claims changed no roster and are not being presented as completed transactions. At the Wednesday cutoff, Sleeper showed no pending accepted trade. Wednesday's completed waiver claims are included above.",
         ],
       },
       {
@@ -79,14 +79,14 @@ export const weeklyColumns = [
         paragraphs: [
           "Philadelphia placed Jalen Hurts, rostered by Josh, on injured reserve on October 17. On October 19, the Eagles and Hurts' agent announced that further testing found a deep vein thrombosis and bilateral pulmonary emboli. He is clinically stable, his prognosis is very good and a full recovery is expected, but he cannot participate in contact football while taking blood thinners. NFL reporting says his 2026 season is likely over. Tanner McKee—added by Jason before the previous cutoff—started in Hurts' place and now has a far more significant real-world role than a speculative quarterback add normally receives.",
           "Washington announced on October 20 that Terry McLaurin, rostered by Keller, tore his patellar tendon and will miss the rest of the season. Stefon Diggs and Chig Okonkwo are logical opportunity beneficiaries, not guaranteed statistical replacements; Frank owns Diggs and Brandon owns Okonkwo. Losing a starting receiver is fact. Predicting the exact shape of the targets is where fantasy managers begin lying to themselves with charts.",
-          "Green Bay removed Josh Jacobs, rostered by Brittany, from the Commissioner's Exempt List on October 19. He is eligible to practice and play in Week 7, though the NFL's personal-conduct review and possible discipline remain pending. Houston also confirmed that Tank Dell, rostered by Casey, will return against the Giants on October 25 for his first game since December 2024. He rejoins a crowded Texans receiver room that also contains Josh's Marvin Harrison Jr. and Tommy's Jaylin Noel. The comeback is excellent news. The target distribution is a knife fight with name tags.",
+          "Green Bay removed Josh Jacobs, rostered by Brittany, from the Commissioner's Exempt List on October 19. He is eligible to practice and play in Week 7, but Matt LaFleur has not committed to playing him Sunday. Eligibility is not a confirmed game status, and the NFL's personal-conduct review and possible discipline remain pending. Houston also confirmed that Tank Dell, rostered by Casey, will return against the Giants on October 25 for his first game since December 2024. He rejoins a crowded Texans receiver room that also contains Josh's Marvin Harrison Jr. and Tommy's Jaylin Noel. The comeback is excellent news. The target distribution is a knife fight with name tags.",
         ],
       },
       {
         heading:
           "Week 7 outlook: four contenders can damage each other at once",
         bullets: [
-          "Dustin vs. Josh — Dustin can return to .500; Josh is trying to avoid 0-7 while replacing Hurts.",
+          "Dustin vs. Josh — Dustin can improve from 2-4 to 3-4; Josh is trying to avoid 0-7 while replacing Hurts.",
           "Brandon vs. Tommy — the league's scoring leader meets a 4-2 First Class co-leader. Brandon can seize his division outright if Brittany also loses.",
           "Wesley vs. Kevin — Kevin arrives with the week's high score; Wesley arrives with several excellent quarterbacks and one available starting slot.",
           "Brittany vs. Jason — Brittany gets Jacobs back into the decision tree while Jason tries to protect the Level 11 points tiebreaker and reach 6-1.",
@@ -94,7 +94,7 @@ export const weeklyColumns = [
           "Frank vs. John — Frank can reach 6-1, while John gets an immediate chance to beat the other Level 11 co-leader after selling Love to the first one.",
         ],
         paragraphs: [
-          "All six Week 7 matchups currently show 0.00-0.00. Those are official pairings, not projections and not evidence that the league has collectively forgotten to play football. Lineups, injury designations and late transactions remain subject to change.",
+          "These are the scheduled Week 7 pairings for October 22-26, following the Week 6 games played October 15-19. Records and scores above reflect completed Week 6 results; the outlook describes the upcoming week. Lineups, injury designations and late transactions remain subject to change.",
         ],
       },
       {
@@ -105,7 +105,7 @@ export const weeklyColumns = [
           "Bench Museum Curator: Wesley, for preserving 61.08 points where nobody could touch them.",
           "System Reboot: Frank, who followed 60.04 with 172.16 and pretended the previous week never happened.",
           "Perfect Enough: Jason, whose 98.92 percent lineup accuracy left only 1.70 points behind.",
-          "Waiver Conviction: Kevin, for paying $19 for a player Tommy had dropped 39 hours earlier.",
+          "Waiver Conviction: Kevin, for paying $19 for a player Tommy had dropped about 67 hours earlier.",
         ],
         paragraphs: [
           "Week 6 produced a completed first-round-pick trade, two 5-1 division co-leaders, a 182-point rebound from Kevin and another week of Josh testing the structural limits of zero. Week 7 now arrives with meaningful games in every division and enough injury news to make depth feel less like planning than emergency architecture.",
