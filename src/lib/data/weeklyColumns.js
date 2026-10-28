@@ -4,8 +4,8 @@ export const weeklyColumns = [
     issue: "2026 Week 7 Recap + Week 8 Outlook",
     publishedAt: "2026-10-28T15:08:12.000Z",
     title:
-      "Brandon Needed 206. Wesley Traded for a Quarterback and Benched Him.",
-    dek: "Brandon survived a 404-point shootout, Jason and Frank reached 6-1, and the week's only trade paid Casey immediately while Wesley stored his new quarterback on the bench.",
+      "Brandon Needed 206. Wesley Traded Stroud and Benched Darnold.",
+    dek: "Brandon survived a 404-point shootout, Jason and Frank reached 6-1, and Wesley sent Stroud for Darnold plus Casey's 2028 second—then stored Darnold on the bench.",
     readTime: "11 min read",
     tags: [
       "Week 7",
@@ -95,7 +95,7 @@ export const weeklyColumns = [
           "Scoreboard Hostage Situation: Brandon, for needing 206.29 to win by 8.06.",
           "Best Loss Nobody Requested: Tommy, whose 198.23 beat ten managers and earned nothing.",
           "Immediate Trade Receipt: Casey, for starting Stroud's 23.22 two days after the deal processed.",
-          "Premium Bench Seating: Wesley, for trading for Darnold and watching him outscore the starter by 2.26.",
+          "Premium Bench Seating: Wesley, for sending Stroud for Darnold and a 2028 second, then watching Darnold outscore his starter by 2.26.",
           "Lineup Surveyor: Dustin, for finding 97.25 percent of his legal maximum.",
           "Medical Supply Closet: Brandon, who finished the week with Tracy on IR and McCaffrey and Jones nursing injuries.",
         ],
