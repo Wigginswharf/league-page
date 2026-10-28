@@ -29,9 +29,9 @@ export const weeklyColumns = [
       {
         heading: "Casey and Wesley changed quarterbacks; only one entered a lineup",
         paragraphs: [
-          "The week's only trade processed Thursday, October 22 at 10:00 p.m. Central. Casey received C.J. Stroud. Wesley received Sam Darnold and Casey's original 2028 second-round pick. That is the confirmed completion time; Sleeper's earlier creation timestamp does not establish when the offer was accepted, so no acceptance time is being invented here.",
-          "Stroud immediately started for Casey and scored 23.22 in a 157.87-135.68 win over Keller. Darnold scored 18.48 from Wesley's bench while Brock Purdy supplied 16.22 in a 169.52-125.22 loss to Kevin. The missed quarterback swap was worth 2.26 points, not the 44.30 Wesley needed, so the Ledger will resist pretending one lineup choice caused a landslide. It did, however, give the new quarterback an excellent view of it.",
-          "The pick completes Casey's liquidation of the first two rounds of his original 2028 class: Josh owns Casey's first, Wesley now owns the second and Casey retains the third. Wesley holds four 2028 selections and eight in 2027. Sleeper shows this trade as complete and currently shows no accepted trade in its normal processing period.",
+          "The week's only trade processed Thursday, October 22 at 10:00 p.m. Central. Casey received C.J. Stroud. Wesley received Sam Darnold and Casey's original 2028 second-round pick.",
+          "Stroud immediately started for Casey and scored 23.22 in a 157.87-135.68 win over Keller. Darnold scored 18.48 from Wesley's bench while Brock Purdy supplied 16.22 in a 169.52-125.22 loss to Kevin. Darnold's 2.26-point edge was not rescuing a 44.30-point loss. It did, however, give Wesley's newest quarterback an excellent view of it.",
+          "The pick completes Casey's liquidation of the first two rounds of his original 2028 class: Josh owns Casey's first, Wesley now owns the second and Casey retains the third. Wesley holds four 2028 selections and eight in 2027. The trade is complete, and the rest of the league entered Wednesday without another deal waiting to process.",
         ],
       },
       {
@@ -48,7 +48,7 @@ export const weeklyColumns = [
         heading: "Dustin missed five points; Brittany misplaced almost 58",
         paragraphs: [
           "Dustin submitted Week 7's Most Accurate Starting Roster: 169.90 of a 174.70 legal maximum, 97.25 percent accuracy and only 4.80 missed points. Kaelon Black's 14.60 was the only bench score that improved the legal combination meaningfully. The lineup was not literally perfect, but it was close enough that the audit department had time for lunch.",
-          "Brittany earned the Least Accurate Starting Roster at 125.70 of a 183.28 maximum: 68.58 percent accuracy and 57.58 missed points. Jacoby Brissett scored 21.43 and Tyler Huntley 21.17 while Patrick Mahomes produced 6.90. Makai Lemon scored 19.70, Cairo Santos 15.00 and AJ Barner 9.35 from the bench. Not every bench score was an obvious pregame decision, but a 57-point legal gap is large enough to require its own mailing address.",
+          "Brittany earned the Least Accurate Starting Roster at 125.70 of a 183.28 maximum: 68.58 percent accuracy and 57.58 missed points. Jacoby Brissett scored 21.43 and Tyler Huntley 21.17 while Patrick Mahomes produced 6.90. Makai Lemon scored 19.70, Cairo Santos 15.00 and AJ Barner 9.35 from the bench. A 57-point legal gap is large enough to require its own mailing address.",
           "John left 39.93 points behind, including Bo Nix's 39.93 and Emanuel Wilson's 31.50. Brandon left 40.25 despite clearing 200. Kevin left 44.05 and still won by 44.30, achieving the rare feat of misplacing almost exactly one entire margin of victory.",
         ],
       },
@@ -60,11 +60,11 @@ export const weeklyColumns = [
         ],
       },
       {
-        heading: "The complete transaction window: quarterbacks moved, running backs reacted",
+        heading: "The quarterbacks moved; the waiver wire kept going",
         paragraphs: [
-          "This ledger covers every move completed after the previous edition's October 21, 10:03 a.m. Central cutoff through October 28 at 10:06 a.m. Central. In addition to the Stroud-Darnold trade, John added Darius Cooper and Skyler Bell. Dustin dropped Dont'e Thornton, then added Brandon McManus and Tutu Atwell. Jason added Trevor Etienne for zero dollars, added Marquise Brown for zero while dropping Jalen Royals, and later added Washington's defense while dropping Isaiah Bond.",
-          "Brandon released AJ Dillon and Kalif Raymond, added Tommy Tremble for zero dollars, then paid $4 for Devin Singletary. Wesley replaced Ryan Fitzgerald with Chad Ryland for zero dollars and dropped Najee Harris Wednesday morning. Casey paid $2 for Austin Ekeler and dropped Jaleel McLaughlin. Those are the 16 completed transactions in the window, including the trade and standalone drops; no completed move has been omitted.",
-          "Wesley also submitted a $1 claim for Singletary and lost to Brandon's $4 bid. That claim failed and changed no roster. The timing became less subtle Tuesday afternoon, when New York placed Brandon's Tyrone Tracy on injured reserve. Brandon bought the available veteran behind Cam Skattebo before the injury report finished cooling. Fantasy football occasionally rewards foresight. It more often rewards reading the news before everyone else finishes breakfast.",
+          "Beyond the Stroud-Darnold trade, John added Darius Cooper and Skyler Bell. Dustin dropped Dont'e Thornton, then added Brandon McManus and Tutu Atwell. Jason added Trevor Etienne for zero dollars, added Marquise Brown for zero while dropping Jalen Royals, and later added Washington's defense while dropping Isaiah Bond.",
+          "Brandon released AJ Dillon and Kalif Raymond, added Tommy Tremble for zero dollars, then paid $4 for Devin Singletary. Wesley replaced Ryan Fitzgerald with Chad Ryland for zero dollars and dropped Najee Harris Wednesday morning. Casey paid $2 for Austin Ekeler and dropped Jaleel McLaughlin.",
+          "Wesley bid $1 for Singletary; Brandon landed him for $4. The timing became less subtle Tuesday afternoon, when New York placed Brandon's Tyrone Tracy on injured reserve. Brandon bought the available veteran behind Cam Skattebo before the injury report finished cooling. Fantasy football occasionally rewards foresight. It more often rewards reading the news before everyone else finishes breakfast.",
         ],
       },
       {
@@ -72,13 +72,13 @@ export const weeklyColumns = [
         paragraphs: [
           "The Giants placed Tyrone Tracy on injured reserve October 27 with a hamstring injury, guaranteeing at least four missed games, although general manager Joe Schoen said it is not expected to end his season. Tracy belongs to Brandon, who had added him for $11 the previous week and then acquired Devin Singletary for $4 in this window. Singletary and Cam Skattebo remain the established backs ahead of newly signed Gregory Desrosiers.",
           "San Francisco announced October 26 that Christian McCaffrey, also rostered by Brandon, sustained a mild hamstring strain in Week 7. Kyle Shanahan said the team is optimistic about his availability after the 49ers' Week 8 bye. Aaron Jones aggravated his earlier MCL injury for Brandon as well, but reporting Monday described him as day-to-day after avoiding a significant new injury. Brandon scored 206 and then opened the medical chart to discover the bill.",
-          "The Week 8 injury report has immediate lineup consequences elsewhere. Breece Hall, rostered by Wesley, is out with a quadriceps injury. Caleb Williams, rostered by Tommy, is out with a hamstring injury. Baker Mayfield, rostered by Jason, is out with a thumb injury. Houston is still evaluating Jaylin Noel's turf-toe injury; Tommy owns Noel, while Casey's Tank Dell and Josh's Marvin Harrison Jr. are the most obvious candidates for additional routes if Noel misses time. Opportunity is an inference, not a guaranteed target count.",
+          "The Week 8 injury report has immediate lineup consequences elsewhere. Breece Hall, rostered by Wesley, is out with a quadriceps injury. Caleb Williams, rostered by Tommy, is out with a hamstring injury. Baker Mayfield, rostered by Jason, is out with a thumb injury. Houston is still evaluating Jaylin Noel's turf-toe injury; Tommy owns Noel, while Casey's Tank Dell and Josh's Marvin Harrison Jr. stand to inherit the available routes if Noel misses time.",
         ],
       },
       {
         heading: "Week 8 outlook: the two best records finally share a field",
         paragraphs: [
-          "Week 8 runs Thursday, October 29 through Monday, November 2. All six matchups showed 0.00-0.00 at the Wednesday cutoff; the pairings are official, while lineups and player availability remain provisional.",
+          "Week 8 runs Thursday, October 29 through Monday, November 2. All six matchups were still 0.00-0.00 Wednesday morning. The arguments had already started.",
         ],
         bullets: [
           "Casey (5-2) vs. Jason (6-1) — the league's second- and third-highest scorers meet, separated by 3.20 season points. Casey can tighten the race for the top overall record; Jason can reach 7-1 and protect the Level 11 points lead.",
