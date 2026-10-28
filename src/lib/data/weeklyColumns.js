@@ -1,5 +1,111 @@
 export const weeklyColumns = [
   {
+    slug: "2026-brandon-206-wesley-benches-darnold",
+    issue: "2026 Week 7 Recap + Week 8 Outlook",
+    publishedAt: "2026-10-28T15:08:12.000Z",
+    title:
+      "Brandon Needed 206. Wesley Traded for a Quarterback and Benched Him.",
+    dek: "Brandon survived a 404-point shootout, Jason and Frank reached 6-1, and the week's only trade paid Casey immediately while Wesley stored his new quarterback on the bench.",
+    readTime: "11 min read",
+    tags: [
+      "Week 7",
+      "Week 8 Outlook",
+      "Results",
+      "Standings",
+      "Lineups",
+      "Transactions",
+      "Trades",
+      "NFL News",
+    ],
+    sections: [
+      {
+        heading: "Brandon scored 206 and still needed nearly all of it",
+        paragraphs: [
+          "Brandon beat Tommy 206.29 to 198.23 in Week 7's highest-scoring and closest matchup, an 8.06-point escape involving 404.52 total points. Tony Pollard scored 49.75, Drake Maye 39.84, Christian McCaffrey 24.75 and Drake London 19.60. Tommy answered with 38.80 from Jaxon Smith-Njigba, 36.00 from Bucky Irving, 31.95 from Luther Burden and 31.28 from Dak Prescott. Eight players scored at least 24 points. The defenses were less a presence than a polite suggestion.",
+          "Brandon improved to 4-3 and kept the league scoring lead at 1,332.13. Tommy fell to 4-3 despite posting the week's second-highest score. He would have beaten every other manager by at least 9.26 points. Instead, he found the one opponent carrying a 49-point running back and the league's continuing refusal to award standings credit for moral victories.",
+          "Neither lineup reached its ceiling. Brandon's legal maximum was 246.54, leaving 40.25 points unused behind eruptions from Ollie Gordon, Caleb Douglas and Rico Dowdle. Tommy's maximum was 222.17. This was not perfect management. It was enough firepower to make management look optional.",
+        ],
+      },
+      {
+        heading: "Casey and Wesley changed quarterbacks; only one entered a lineup",
+        paragraphs: [
+          "The week's only trade processed Thursday, October 22 at 10:00 p.m. Central. Casey received C.J. Stroud. Wesley received Sam Darnold and Casey's original 2028 second-round pick. That is the confirmed completion time; Sleeper's earlier creation timestamp does not establish when the offer was accepted, so no acceptance time is being invented here.",
+          "Stroud immediately started for Casey and scored 23.22 in a 157.87-135.68 win over Keller. Darnold scored 18.48 from Wesley's bench while Brock Purdy supplied 16.22 in a 169.52-125.22 loss to Kevin. The missed quarterback swap was worth 2.26 points, not the 44.30 Wesley needed, so the Ledger will resist pretending one lineup choice caused a landslide. It did, however, give the new quarterback an excellent view of it.",
+          "The pick completes Casey's liquidation of the first two rounds of his original 2028 class: Josh owns Casey's first, Wesley now owns the second and Casey retains the third. Wesley holds four 2028 selections and eight in 2027. Sleeper shows this trade as complete and currently shows no accepted trade in its normal processing period.",
+        ],
+      },
+      {
+        heading: "Frank and Jason reached 6-1 by different routes",
+        bullets: [
+          "Frank 188.97, John 170.90 — Cam Skattebo scored 32.35, Quinshon Judkins 28.65 and CeeDee Lamb 24.40 as Frank won his second straight after the Week 5 collapse. John received 35.80 from Tee Higgins, 26.05 from Matthew Stafford and 24.50 from Jonathan Taylor, then watched 170 points become his fourth loss.",
+          "Jason 185.31, Brittany 125.70 — Javonte Williams scored 34.75, Trey McBride 34.10, Amon-Ra St. Brown 32.45 and D'Andre Swift 24.50. Jason joined Frank at 6-1 and leads Level 11 on points. Brittany received 39.00 from Tampa Bay's defense and 28.00 from Rhamondre Stevenson, but the rest of the lineup did not share their enthusiasm.",
+          "Kevin 169.52, Wesley 125.22 — Malik Willis scored 35.42, Malik Nabers and Jameson Williams each scored 26.10, and Kevin climbed to 3-4. Wesley fell to 2-5 despite 30.95 from KC Concepcion and 28.20 from Jaylen Warren.",
+          "Dustin 169.90, Josh 75.18 — Zay Flowers scored 37.70, Braelon Allen 30.65 and Kirk Cousins 27.75 as Dustin reached 3-4. Josh got 34.28 from Geno Smith, then 40.90 from everybody else combined and fell to 0-7.",
+          "Casey 157.87, Keller 135.68 — Jahmyr Gibbs scored 30.55, Stroud 23.22, Bijan Robinson 23.20 and Puka Nacua 22.30. Joe Burrow answered with 41.08 for Keller, but Casey moved to 5-2 and took sole possession of First Class.",
+        ],
+      },
+      {
+        heading: "Dustin missed five points; Brittany misplaced almost 58",
+        paragraphs: [
+          "Dustin submitted Week 7's Most Accurate Starting Roster: 169.90 of a 174.70 legal maximum, 97.25 percent accuracy and only 4.80 missed points. Kaelon Black's 14.60 was the only bench score that improved the legal combination meaningfully. The lineup was not literally perfect, but it was close enough that the audit department had time for lunch.",
+          "Brittany earned the Least Accurate Starting Roster at 125.70 of a 183.28 maximum: 68.58 percent accuracy and 57.58 missed points. Jacoby Brissett scored 21.43 and Tyler Huntley 21.17 while Patrick Mahomes produced 6.90. Makai Lemon scored 19.70, Cairo Santos 15.00 and AJ Barner 9.35 from the bench. Not every bench score was an obvious pregame decision, but a 57-point legal gap is large enough to require its own mailing address.",
+          "John left 39.93 points behind, including Bo Nix's 39.93 and Emanuel Wilson's 31.50. Brandon left 40.25 despite clearing 200. Kevin left 44.05 and still won by 44.30, achieving the rare feat of misplacing almost exactly one entire margin of victory.",
+        ],
+      },
+      {
+        heading: "The standings now have two 6-1 teams and one 0-7 warning label",
+        paragraphs: [
+          "First Class has Casey at 5-2, Tommy at 4-3, John at 3-4 and Josh at 0-7. What's Your Name Again? has Brandon at 4-3, Dustin and Brittany at 3-4, and Wesley at 2-5. Level 11 has Jason and Frank at 6-1, with Jason ahead 1,241.25 to 1,161.94 in points, followed by Kevin and Keller at 3-4.",
+          "Brandon leads the league with 1,332.13 points. Casey is second at 1,244.45, Jason third at 1,241.25 and Tommy fourth at 1,218.47. Brandon has also faced a league-high 1,326.70 points, which explains why the scoring leader owns four wins instead of a parade. Jason has faced only 965.63, the league's lowest total. Josh's 621.23 points are 246.96 below Keller, the next-lowest team, because the basement has apparently added a sub-basement.",
+        ],
+      },
+      {
+        heading: "The complete transaction window: quarterbacks moved, running backs reacted",
+        paragraphs: [
+          "This ledger covers every move completed after the previous edition's October 21, 10:03 a.m. Central cutoff through October 28 at 10:06 a.m. Central. In addition to the Stroud-Darnold trade, John added Darius Cooper and Skyler Bell. Dustin dropped Dont'e Thornton, then added Brandon McManus and Tutu Atwell. Jason added Trevor Etienne for zero dollars, added Marquise Brown for zero while dropping Jalen Royals, and later added Washington's defense while dropping Isaiah Bond.",
+          "Brandon released AJ Dillon and Kalif Raymond, added Tommy Tremble for zero dollars, then paid $4 for Devin Singletary. Wesley replaced Ryan Fitzgerald with Chad Ryland for zero dollars and dropped Najee Harris Wednesday morning. Casey paid $2 for Austin Ekeler and dropped Jaleel McLaughlin. Those are the 16 completed transactions in the window, including the trade and standalone drops; no completed move has been omitted.",
+          "Wesley also submitted a $1 claim for Singletary and lost to Brandon's $4 bid. That claim failed and changed no roster. The timing became less subtle Tuesday afternoon, when New York placed Brandon's Tyrone Tracy on injured reserve. Brandon bought the available veteran behind Cam Skattebo before the injury report finished cooling. Fantasy football occasionally rewards foresight. It more often rewards reading the news before everyone else finishes breakfast.",
+        ],
+      },
+      {
+        heading: "The NFL news attached itself directly to league rosters",
+        paragraphs: [
+          "The Giants placed Tyrone Tracy on injured reserve October 27 with a hamstring injury, guaranteeing at least four missed games, although general manager Joe Schoen said it is not expected to end his season. Tracy belongs to Brandon, who had added him for $11 the previous week and then acquired Devin Singletary for $4 in this window. Singletary and Cam Skattebo remain the established backs ahead of newly signed Gregory Desrosiers.",
+          "San Francisco announced October 26 that Christian McCaffrey, also rostered by Brandon, sustained a mild hamstring strain in Week 7. Kyle Shanahan said the team is optimistic about his availability after the 49ers' Week 8 bye. Aaron Jones aggravated his earlier MCL injury for Brandon as well, but reporting Monday described him as day-to-day after avoiding a significant new injury. Brandon scored 206 and then opened the medical chart to discover the bill.",
+          "The Week 8 injury report has immediate lineup consequences elsewhere. Breece Hall, rostered by Wesley, is out with a quadriceps injury. Caleb Williams, rostered by Tommy, is out with a hamstring injury. Baker Mayfield, rostered by Jason, is out with a thumb injury. Houston is still evaluating Jaylin Noel's turf-toe injury; Tommy owns Noel, while Casey's Tank Dell and Josh's Marvin Harrison Jr. are the most obvious candidates for additional routes if Noel misses time. Opportunity is an inference, not a guaranteed target count.",
+        ],
+      },
+      {
+        heading: "Week 8 outlook: the two best records finally share a field",
+        paragraphs: [
+          "Week 8 runs Thursday, October 29 through Monday, November 2. All six matchups showed 0.00-0.00 at the Wednesday cutoff; the pairings are official, while lineups and player availability remain provisional.",
+        ],
+        bullets: [
+          "Casey (5-2) vs. Jason (6-1) — the league's second- and third-highest scorers meet, separated by 3.20 season points. Casey can tighten the race for the top overall record; Jason can reach 7-1 and protect the Level 11 points lead.",
+          "Frank (6-1) vs. Dustin (3-4) — Frank can keep pace with Jason, while Dustin can return to .500 after posting Week 7's most accurate lineup.",
+          "Keller (3-4) vs. Brandon (4-3) — Brandon arrives as the scoring leader with a crowded injury sheet. Keller needs a win to stay within reach of the Level 11 leaders.",
+          "Wesley (2-5) vs. Tommy (4-3) — both managers enter with injured or unavailable players and multiple quarterback choices. Wesley needs the win more; Tommy needs it to stay within one game of Casey.",
+          "Brittany (3-4) vs. Josh (0-7) — Brittany can recover to .500. Josh can either claim his first win or produce an eighth consecutive piece of documentary evidence.",
+          "John (3-4) vs. Kevin (3-4) — identical records, very different Week 7 experiences. The winner reaches .500; the loser receives another week of explaining why the roster is better than the record.",
+        ],
+      },
+      {
+        heading: "The Week 7 awards",
+        bullets: [
+          "Scoreboard Hostage Situation: Brandon, for needing 206.29 to win by 8.06.",
+          "Best Loss Nobody Requested: Tommy, whose 198.23 beat ten managers and earned nothing.",
+          "Immediate Trade Receipt: Casey, for starting Stroud's 23.22 two days after the deal processed.",
+          "Premium Bench Seating: Wesley, for trading for Darnold and watching him outscore the starter by 2.26.",
+          "Lineup Surveyor: Dustin, for finding 97.25 percent of his legal maximum.",
+          "Medical Supply Closet: Brandon, who finished the week with Tracy on IR and McCaffrey and Jones nursing injuries.",
+        ],
+        paragraphs: [
+          "Week 7 delivered a completed quarterback-and-pick trade, two 6-1 teams, a 404-point matchup and enough running-back injuries to turn a $4 waiver claim into strategic planning. Week 8 now gives Casey and Jason the marquee game while the rest of the league negotiates with the injury report, the standings and its own bench decisions—usually in that order, rarely successfully.",
+        ],
+      },
+    ],
+  },
+  {
     slug: "2026-jason-buys-love-wesley-benches-points",
     issue: "2026 Week 6 Recap + Week 7 Outlook",
     publishedAt: "2026-10-21T15:03:34.000Z",
