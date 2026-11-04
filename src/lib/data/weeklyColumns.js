@@ -1,5 +1,108 @@
 export const weeklyColumns = [
   {
+    slug: "2026-josh-first-win-frank-bench-loss",
+    issue: "2026 Week 8 Recap + Week 9 Outlook",
+    publishedAt: "2026-11-04T15:56:28.000Z",
+    title: "Josh Finally Won. Frank Left the Winning Lineup on His Bench.",
+    dek: "Josh's first victory came with a perfect lineup, Frank missed a 0.49-point escape, and Brittany stored 90.98 usable points where they could do no harm.",
+    readTime: "10 min read",
+    tags: [
+      "Week 8",
+      "Week 9 Outlook",
+      "Results",
+      "Standings",
+      "Lineups",
+      "Transactions",
+      "NFL News",
+    ],
+    sections: [
+      {
+        heading: "Josh found the win column and brought exact change",
+        paragraphs: [
+          "Josh beat Brittany 168.65 to 140.21 for his first win of the season, and there was no better legal lineup hiding on his bench. His starters scored exactly 168.65 of a 168.65 maximum: 100 percent accuracy, zero missed points and finally one victory that cannot be cross-examined by hindsight.",
+          "Tyler Allgeier detonated for 53.85, Brock Bowers added 28.20, Jonah Coleman scored 25.15 and Geno Smith supplied 24.25. Josh improved to 1-7 after spending seven weeks as the league's only permanent resident of zero. The escape route was apparently labeled ALLGEIER and required 53 points of force to open.",
+          "Brittany reached the same game by a very different path. Her starters produced 140.21 against a 231.19 legal maximum, leaving 90.98 points unused and posting the week's lowest lineup accuracy at 60.65 percent. Patrick Mahomes scored 39.94, Michael Wilson 34.05, DeMario Douglas 19.60 and Tyler Bass 16.00 from the bench. Josh did not merely get his first win. Brittany arrived with enough spare points to prevent it and carefully left them in the car.",
+        ],
+      },
+      {
+        heading: "Frank lost by 55.96 with a 0.49-point win sitting inside the roster",
+        paragraphs: [
+          "Dustin beat Frank 171.96 to 116.00, but Frank's legal maximum was 172.45. The winning lineup existed. It would have cleared Dustin by 0.49. It simply never reached the field.",
+          "Emmett Johnson scored 37.75, Mike Gesicki 17.60, Kyle Williams 14.30 and Stefon Diggs 12.80 on Frank's bench. Pittsburgh's defense contributed 32.50 and Kenneth Walker added 17.65 to the starters, but the lineup finished at 67.27 percent accuracy with 56.45 points unused. This was not a narrow loss that looked inevitable afterward. This was a narrow win wearing a 56-point fake mustache.",
+          "Dustin still earned the result. Josh Allen scored 35.91, Braelon Allen 35.55, Jacksonville's defense 31.00 and Christian Watson 24.30. Dustin reached 4-4 and handed Frank his second straight loss after a 6-0 start. Frank is now 6-2, which remains excellent unless one has recently seen the 172.45 available in the other timeline.",
+        ],
+      },
+      {
+        heading: "Jason reached 7-1 by giving the week's second-best score nothing",
+        paragraphs: [
+          "Jason beat Casey 196.12 to 174.85 in Week 8's highest-scoring matchup. Bhayshul Tuten scored 40.90, D'Andre Swift 34.65, Jordan Love 31.52, Washington's defense 25.50 and Trey McBride 20.20. Jason moved to 7-1, owns the league's best record and has won seven straight since opening day.",
+          "Casey's 174.85 was the second-highest score of the week and would have beaten every manager except Jason. Ja'Marr Chase scored 38.10, Jahmyr Gibbs 37.55, Kyler Murray 26.10 and Puka Nacua 25.00. The reward was a third loss and the familiar educational experience of learning that points are only useful when the schedule permits them to be.",
+          "Jason's 1,437.37 points rank second overall, and his 1,140.48 points against remain among the league's lightest burdens. Casey fell to 5-3 but retained the First Class lead on points. The matchup did not expose either roster. It exposed the cruelty of pairing them together while Josh and Brittany were conducting a rescue operation elsewhere.",
+        ],
+      },
+      {
+        heading: "Brandon won without a quarterback; John survived the one on his bench",
+        bullets: [
+          "Brandon 152.05, Keller 137.73 — Lamar Jackson left on his first snap and scored zero, but Tony Pollard erupted for 45.95, Chuba Hubbard scored 31.40 and New England's defense added 18.00. Drake Maye's 33.56 watched from Brandon's bench. Keller received 57.53 from Joe Burrow and still fell to 3-5.",
+          "Tommy 154.75, Wesley 143.05 — Bucky Irving scored 35.75, Jaxon Smith-Njigba 33.80, Dak Prescott 23.45 and Dalton Kincaid 19.60 as Tommy reached 5-3. Wesley chose Trevor Lawrence's 25.65 over newly acquired Sam Darnold's 25.22, winning the quarterback decision by 0.43 and losing the game by 11.70.",
+          "John 171.63, Kevin 153.68 — Tee Higgins delivered 44.50, the Rams defense scored 22.00 and Rashee Rice added 18.30. John left Bo Nix's 25.53 on the bench behind Matthew Stafford and won anyway. Kevin received 29.40 from Harold Fannin Jr. and 27.25 from Kenny Gainwell, then left Buffalo's 30.50-point defense unused.",
+        ],
+      },
+      {
+        heading: "The standings have a 7-1 leader, two 5-3 traffic jams and one survivor",
+        paragraphs: [
+          "First Class has Casey and Tommy at 5-3, with Casey ahead 1,418.30 to 1,373.22 in points. John is 4-4, and Josh is 1-7 after finally removing the zero from his record. What's Your Name Again? belongs to Brandon at 5-3, followed by Dustin at 4-4, Brittany at 3-5 and Wesley at 2-6.",
+          "Level 11 remains the league's sharpest division. Jason is 7-1, Frank is 6-2, and Kevin and Keller are 3-5. Kevin holds the points edge between the 3-5 teams, 1,290.88 to 1,005.92. Jason and Frank are still the league's only teams above five wins, although Frank's two-game skid has turned a shared summit into Jason's private office.",
+          "Brandon leads the league with 1,484.18 points despite carrying a 5-3 record and a league-high 1,464.43 points against. Jason is second at 1,437.37, Casey third at 1,418.30 and Tommy fourth at 1,373.22. Dustin has faced only 1,113.52 points, the league's lowest total, and sits 4-4. The schedule remains committed to distributing justice with the accuracy of a T-shirt cannon.",
+        ],
+      },
+      {
+        heading: "Brandon bought Arizona's new starter before Wednesday breakfast",
+        paragraphs: [
+          "Arizona promoted Gardner Minshew to starting quarterback Monday after he replaced Jacoby Brissett and led four straight touchdown drives in an overtime comeback against Dallas. Brandon responded Wednesday by spending $5 on Minshew and releasing Tyreek Hill. Two days after Lamar Jackson's thumb injury erased Brandon's Week 8 quarterback score, a newly minted NFL starter arrived on the waiver wire wearing a five-dollar receipt.",
+          "Brandon also paid $4 for Greg Dulcich, beating Wesley's $2 claim, and released Tommy Tremble earlier in the window. Tommy added kicker Drew Stevens for zero dollars and dropped Tyler Loop. Casey added Josh Cameron for Isaiah Williams and Elijah Mitchell for Efton Chism III. Keller added Dallas' defense. Jason released Jacob Saylors, and Kevin released Dameon Pierce.",
+          "No trade processed during the week, and the 2027 and 2028 pick map stayed where the Stroud-Darnold deal left it. The market chose depth, kickers and one suddenly relevant quarterback instead of another exchange of future draft capital.",
+        ],
+      },
+      {
+        heading: "The NFL took two quarterbacks and Keller's rookie runner",
+        paragraphs: [
+          "Baltimore will place Lamar Jackson on injured reserve after he injured his right thumb on the first snap of Sunday's loss to Buffalo. He needs surgery and will miss at least four games; the Ravens have not ruled out a season-ending absence. Tyler Huntley also injured his toe, leaving undrafted rookie Joe Fagnano to start Thursday against Jacksonville. Brandon owns Jackson, then added Minshew after Arizona named him its starter moving forward.",
+          "Arizona placed Jeremiyah Love on injured reserve Tuesday after the rookie aggravated his right ankle. Love, rostered by Keller, will miss at least four games and is expected back later this season. Tyler Allgeier returns to the top of the Cardinals backfield after his 147-yard real-world performance produced 53.85 league points and Josh's first win. Kendrick Bourne also landed on Arizona's injured reserve with a broken leg that is expected to end his season.",
+          "Jason's Week 8 hero now carries the short-week warning label. Bhayshul Tuten followed his 40.90-point eruption with two missed practices because of ankle and foot injuries before Jacksonville's Thursday game. Breece Hall is expected back for Wesley after missing Week 8 with a quadriceps injury, while Christian McCaffrey is tracking toward a return for Brandon after San Francisco's bye. The injury report has moved from background reading to active roster construction.",
+        ],
+      },
+      {
+        heading: "Week 9 outlook: Josh gets the manager directly below him",
+        paragraphs: [
+          "Week 9 runs Thursday, November 5 through Monday, November 9. All six matchups were 0.00-0.00 Wednesday morning.",
+        ],
+        bullets: [
+          "Wesley (2-6) vs. Josh (1-7) — Josh can turn one perfect week into an actual streak and move within a game of Wesley. Wesley can restore a two-game cushion between the basement and the floor above it.",
+          "Jason (7-1) vs. John (4-4) — Jason can reach 8-1 and extend his seven-game winning streak. John arrives at .500 with Tee Higgins hot and another weekly quarterback decision waiting behind him.",
+          "Frank (6-2) vs. Brandon (5-3) — Frank tries to stop a two-game slide against the league's scoring leader. Brandon tries to win a third straight game with a quarterback room rebuilt during the week.",
+          "Brittany (3-5) vs. Tommy (5-3) — Brittany needs the 91 points to move from theoretical storage into the lineup. Tommy can keep pace with Casey at the top of First Class.",
+          "Casey (5-3) vs. Kevin (3-5) — Casey is coming off the league's best loss; Kevin is coming off a respectable score that left the wrong defense on the bench.",
+          "Keller (3-5) vs. Dustin (4-4) — Keller loses Jeremiyah Love just as Dustin returns to .500. The winner stays attached to the playoff chase; the loser gets another week of studying the standings from below the line.",
+        ],
+      },
+      {
+        heading: "The Week 8 awards",
+        bullets: [
+          "Zero-Waste First Victory: Josh, for scoring his exact 168.65 maximum and finally reaching 1-7.",
+          "Alternate-Timeline Winner: Frank, whose 172.45 legal maximum beat Dustin's actual score by 0.49.",
+          "Premium Point Storage: Brittany, for preserving 90.98 usable points beyond the reach of her starting lineup.",
+          "Best Loss: Casey, whose 174.85 finished second for the week and first among scores that received nothing.",
+          "Quarterback Optional: Brandon, for winning with zero from Lamar Jackson while Drake Maye scored 33.56 on the bench.",
+          "Seven Straight: Jason, who followed an opening loss with seven wins and the league's best record.",
+        ],
+        paragraphs: [
+          "Week 8 gave Josh his first win, gave Jason the league to himself at 7-1 and gave Frank photographic evidence of the game he could have won. Week 9 begins with the basement teams facing each other, the top two scorers chasing different division leaders and enough injured quarterbacks to make a five-dollar waiver claim feel like infrastructure spending.",
+        ],
+      },
+    ],
+  },
+  {
     slug: "2026-brandon-206-wesley-benches-darnold",
     issue: "2026 Week 7 Recap + Week 8 Outlook",
     publishedAt: "2026-10-28T15:08:12.000Z",
