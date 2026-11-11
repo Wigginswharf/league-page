@@ -60,7 +60,7 @@ export const weeklyColumns = [
       {
         heading: "The playoff race has six chairs and twelve different levels of panic",
         paragraphs: [
-          "Section 5 sends the three division winners and the three best remaining records to the playoffs. Total Points For is the first tiebreaker, followed by head-to-head record, division record, Points Against and increasingly medieval solutions. With five regular-season games left, the records, scoring and actual Weeks 10-14 opponents produce this board:",
+          "John, Dustin and Keller are all 4–5 with five games left. John’s still favored to get in, Dustin has to get through the Moon Pies this week, and Keller’s already running out of Sundays. The three division winners are in, and if teams finish tied for a wild card, points scored are the first tiebreaker.",
         ],
         table: {
           headers: ["SOS Rank", "Team", "Record", "Opponent PPG", "Playoff Odds"],
