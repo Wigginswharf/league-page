@@ -58,7 +58,7 @@ export const weeklyColumns = [
         ],
       },
       {
-        heading: "The playoff race has six chairs and twelve different levels of panic",
+        heading: "What Are the Odds?: A Completely Scientific Way to Ruin Your Wednesday",
         paragraphs: [
           "Five games left, six playoff spots. How good are your odds, and who do you still have to get through? The table ranks all 12 teams from the easiest remaining schedule to the toughest, based on how much their opponents have scored per game. Next to that is each team’s shot at getting in, whether it’s by winning the division or grabbing one of the three wild cards.",
         ],
