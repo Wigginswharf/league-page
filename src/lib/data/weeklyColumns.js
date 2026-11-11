@@ -60,7 +60,7 @@ export const weeklyColumns = [
       {
         heading: "The playoff race has six chairs and twelve different levels of panic",
         paragraphs: [
-          "John, Dustin and Keller are all 4–5 with five games left. John’s still favored to get in, Dustin has to get through the Moon Pies this week, and Keller’s already running out of Sundays. The three division winners are in, and if teams finish tied for a wild card, points scored are the first tiebreaker.",
+          "Five games left, six playoff spots. How good are your odds, and who do you still have to get through? The table ranks all 12 teams from the easiest remaining schedule to the toughest, based on how much their opponents have scored per game. Next to that is each team’s shot at getting in, whether it’s by winning the division or grabbing one of the three wild cards.",
         ],
         table: {
           headers: ["SOS Rank", "Team", "Record", "Opponent PPG", "Playoff Odds"],
