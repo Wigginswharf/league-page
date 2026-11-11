@@ -1,5 +1,145 @@
 export const weeklyColumns = [
   {
+    slug: "2026-jason-benches-88-casey-249-playoff-race",
+    issue: "2026 Week 9 Recap + Week 10 Outlook",
+    publishedAt: "2026-11-11T16:02:25.000Z",
+    title: "Jason Hid 88 Points on the Bench and Still Reached 8–1.",
+    dek: "Casey scored 249.86, Frank knocked off the scoring leader, and the five-game playoff sprint arrived carrying a very uneven map.",
+    readTime: "13 min read",
+    tags: [
+      "Week 9",
+      "Week 10 Outlook",
+      "Results",
+      "Standings",
+      "Lineups",
+      "Transactions",
+      "Playoff Race",
+      "NFL News",
+    ],
+    sections: [
+      {
+        heading: "Jason misplaced 88 points and won his eighth game anyway",
+        paragraphs: [
+          "Jason beat John 156.50 to 145.67, improved to 8-1 and somehow turned the week's least accurate lineup into another victory. His starters captured 156.50 of a 244.98 legal maximum: 63.88 percent accuracy and 88.48 missed points.",
+          "Jordan Love scored 49.23, Kayshon Boutte 38.50 and San Francisco's defense 30.00 on Jason's bench. Javonte Williams supplied 34.40, Houston's defense 23.50, Ka'imi Fairbairn 17.00 and Amon-Ra St. Brown 16.60 to the lineup that actually existed. Most managers need their best players. Jason apparently keeps his in a glass case for special occasions.",
+          "John received 29.00 from the Giants defense and 20.20 from Tee Higgins, but Bryce Young scored 26.89, the Rams defense 24.00 and Darren Waller 23.00 from his bench. The 10.83-point loss dropped SNAFU to 4-5 and turned Thursday's game against Badkittens into the loudest hinge on the wild-card door.",
+        ],
+      },
+      {
+        heading: "Casey scored 249 and left another 51 behind",
+        paragraphs: [
+          "Casey beat Kevin 249.86 to 149.66, the week's largest margin and only triple-digit demolition. C.J. Stroud scored 56.46, Ja'Marr Chase and Puka Nacua each scored 41.50, Bijan Robinson added 37.45 and Kansas City's defense delivered 25.50. Rabbit Walrus moved to 6-3 and reclaimed the league scoring lead at 1,668.16.",
+          "The legal maximum was 301.31. Tank Dell scored 29.55, Dominic Zvada 17.00, Isaiah Likely 16.30 and Savion Williams 13.55 from the bench. Scoring 249 while missing 51 is less lineup management than leaving the vault open because the house is already on fire.",
+          "Kevin fell to 3-6 despite 41.40 from Matthew Golden, 18.96 from Jayden Daniels, 18.00 from Detroit's defense and 17.00 from Cam Little. Buffalo's defense scored 31.00 on the bench, which would have improved the presentation without changing the cause of death.",
+        ],
+      },
+      {
+        heading: "Frank handed Brandon a loss and took a firmer grip on 7-2",
+        paragraphs: [
+          "Frank beat Brandon 160.45 to 148.86 behind 47.80 from Kenneth Walker, 43.50 from CeeDee Lamb and 22.80 from Tyler Shough. Because Casey Said So improved to 7-2, one game behind Jason in Level 11 and one game ahead of every team outside that division.",
+          "Brandon received 27.20 from Christian McCaffrey, 24.61 from Drake Maye, 16.80 from Chris Olave and 16.60 from Chuba Hubbard. Skip's Picks fell to 5-4, lost the overall points lead to Casey and remains first in What's Your Name Again? by one game. The division lead survived. The aura took the week off.",
+          "Frank's 160.45 came from a 209.75 legal maximum, so the win was not clean. It was simply cleaner than the opponent's scoreboard. After two straight losses ended the 6-0 opening, Frank has restarted the machine without bothering to wipe off the fingerprints.",
+        ],
+      },
+      {
+        heading: "Wesley climbed, Tommy held serve and Keller escaped by 5.03",
+        bullets: [
+          "Wesley 174.73, Josh 128.10 — Brock Purdy scored 32.23, Justice Hill 28.70, KC Concepcion 22.05 and Chicago's defense 21.00. Warren's World improved to 3-6 and posted the week's second-highest lineup accuracy at 95.18 percent. Josh followed his first win with a loss, although his 95.45 percent accuracy led the league for a second straight week of nearly perfect decisions.",
+          "Tommy 140.65, Brittany 110.63 — Bucky Irving scored 33.50, Dak Prescott 31.60 and Luther Burden 22.70 as Sweet Tooth reached 6-3. Brittany left DeMario Douglas' 22.20 and Patrick Mahomes' 20.28 on the bench, finished at 65.59 percent accuracy and fell to 3-6.",
+          "Keller 137.24, Dustin 132.21 — Joe Burrow scored 41.69, newly added Jordan Watkins 18.60 and Spencer Shrader 16.00 as Dixienormous reached 4-5. Christian Watson answered with 38.10 for Dustin, but Austin's Finest fell below .500 by 5.03 points.",
+        ],
+      },
+      {
+        heading: "The division leads are clear; the wild cards are not",
+        paragraphs: [
+          "First Class has Rabbit Walrus and Sweet Tooth at 6-3, with Rabbit Walrus ahead 1,668.16 to 1,513.87 in points. SNAFU is 4-5, and Sugar Tits is 1-8. What's Your Name Again? has Skip's Picks at 5-4, Austin's Finest at 4-5, and Warren's World and Badkittens at 3-6. Warren's World holds the points edge between the 3-6 teams, 1,329.14 to 1,311.41.",
+          "Level 11 remains hostile to visitors and most of its own residents. Warren's Moon Pies is 8-1, Because Casey Said So is 7-2, Dixienormous is 4-5 and 5™ is 3-6. Jason and Frank own the league's two best records, but only one can receive the division's automatic berth. The other is already making the wild-card line uncomfortable.",
+          "Rabbit Walrus now leads scoring at 1,668.16, followed by Skip's Picks at 1,633.04 and Warren's Moon Pies at 1,593.87. Brandon has faced a league-high 1,624.88 points. Dustin has faced only 1,250.76, the league's lowest total, and sits 4-5. The schedule continues to distribute sympathy in theory and blunt objects in practice.",
+        ],
+      },
+      {
+        heading: "The playoff race has six chairs and twelve different levels of panic",
+        paragraphs: [
+          "Section 5 sends the three division winners and the three best remaining records to the playoffs. Total Points For is the first tiebreaker, followed by head-to-head record, division record, Points Against and increasingly medieval solutions. With five regular-season games left, the records, scoring and actual Weeks 10-14 opponents produce this board:",
+        ],
+        table: {
+          headers: ["SOS Rank", "Team", "Record", "Opponent PPG", "Playoff Odds"],
+          rows: [
+            ["1", "Rabbit Walrus", "6-3", "145.51", "99.9%"],
+            ["2", "Because Casey Said So", "7-2", "146.88", "99.6%"],
+            ["3", "Sweet Tooth", "6-3", "147.62", "99.1%"],
+            ["4", "SNAFU", "4-5", "149.79", "70.4%"],
+            ["5", "Dixienormous", "4-5", "153.44", "0.5%"],
+            ["6", "Warren’s Moon Pies", "8-1", "157.30", "100.0%"],
+            ["7", "Skip’s Picks", "5-4", "157.74", "97.5%"],
+            ["8", "5™", "3-6", "160.71", "9.4%"],
+            ["9", "Sugar Tits", "1-8", "160.87", "0.0%"],
+            ["10", "Austin’s Finest", "4-5", "162.40", "20.8%"],
+            ["11", "Warren's World", "3-6", "166.92", "1.6%"],
+            ["12", "Badkittens", "3-6", "167.31", "1.3%"],
+          ],
+        },
+        source: {
+          label: "League Constitution — Sections 5.1 and 5.2",
+          href: "/constitution#section-5",
+        },
+      },
+      {
+        heading: "The same record does not mean the same race",
+        paragraphs: [
+          "SNAFU and Dixienormous are both 4-5. The model gives SNAFU a 70.4 percent playoff chance and Dixienormous 0.5 percent. John owns 332.23 more Points For, the first constitutional tiebreaker, and the fourth-easiest remaining schedule. Keller shares a division with the 8-1 and 7-2 teams while carrying the league's second-lowest scoring total. One record is standing on a launchpad. The other is standing under it.",
+          "Austin's Finest has the harder version of the bubble. Dustin is 4-5 with 1,423.43 points, but his remaining opponents average 162.40 per game. An upset of Warren's Moon Pies lifts the playoff estimate to roughly 37.5 percent; a loss drops it to about 13.4. The roster has enough points to make a run and a schedule that would like to see paperwork first.",
+          "The most consequential Week 10 game is SNAFU versus Badkittens. A John win moves SNAFU to roughly 78.7 percent; a loss cuts it to about 48.0. Brittany enters at 3-6 with a 1.3 percent estimate, which makes Badkittens less a conventional contender than a person standing near the emergency brake with both hands free.",
+          "The 100.0 and 0.0 percent entries are model results, not declarations that anyone has mathematically clinched or been eliminated.",
+        ],
+      },
+      {
+        heading: "The waiver wire became a quarterback exchange desk",
+        paragraphs: [
+          "Brandon spent $5 on Kyle McCord and dropped Gardner Minshew, then paid $4 for Shedeur Sanders while releasing Tyler Goodson. He also added Miami's defense for $4. Minshew's season ended on injured reserve with a torn UCL; McCord is now in line for his first NFL start after Miami placed Malik Willis on injured reserve. Sanders started for Cleveland in Week 9, but Deshaun Watson is returning to the top of the depth chart in Week 10. Brandon bought two quarterback tickets Wednesday morning. One became a starter. The other became a souvenir before lunch.",
+          "Casey won Audric Estime for $8 and dropped Elijah Mitchell, beating Brandon's $6 and Wesley's $2 claims. Wesley added Wil Lutz and Reggie Virgil for zero dollars, dropping Chad Ryland and Isaiah Davis, and had earlier added Dohnte Meyers. Keller paid $5 for Jordan Watkins after dropping Jerome Ford. Frank added Arizona's defense and released Malachi Corley. Jason released Tanner McKee.",
+          "Brandon's earlier quarterback carousel included adding Joe Milton for the Jets defense, replacing Milton with Carson Wentz and releasing Wentz a day later. No league trade processed, and no draft pick changed hands. The week moved rosters through attrition rather than negotiation.",
+        ],
+      },
+      {
+        heading: "The NFL deadline moved four league players and the injury list took three more",
+        paragraphs: [
+          "Minnesota reacquired Kirk Cousins from Las Vegas for a 2027 third-round pick, giving Dustin's quarterback a reunion with Justin Jefferson and Jordan Addison. Kansas City acquired Brandon's Josh Downs from Indianapolis, while San Francisco acquired Casey's Keenan Allen for a 2027 sixth. Baltimore acquired Brittany's Jacoby Brissett from Arizona and plans to start him Monday while Lamar Jackson remains on injured reserve.",
+          "Casey's 41.50-point Week 9 performance from Puka Nacua came with a bill: the Rams expect to place him on injured reserve with turf toe and sprains to both the MCL and PCL. Arizona placed Minshew and Brittany's Michael Wilson on injured reserve Tuesday. Minshew's torn UCL ended his season; Wilson played through a fractured neck before tests ended his season as well.",
+          "The quarterback replacement arrived quickly. Miami placed Malik Willis on injured reserve with a groin injury and turned to McCord, whom Brandon acquired Wednesday. Arizona will give rookie Carson Beck his first start after losing Minshew. Between the trade deadline and the medical report, four fantasy rosters changed context without making a single league trade.",
+        ],
+      },
+      {
+        heading: "Week 10 outlook: the bubble gets Thursday night",
+        paragraphs: [
+          "Week 10 runs Thursday, November 12 through Monday, November 16. All six league matchups were 0.00-0.00 Wednesday morning.",
+        ],
+        bullets: [
+          "SNAFU (4-5) vs. Badkittens (3-6) — the week's largest playoff-odds swing belongs to the Thursday matchup. John can strengthen his wild-card position; Brittany can drag the bubble back toward the entire league.",
+          "Warren's Moon Pies (8-1) vs. Austin's Finest (4-5) — Jason can reach nine wins. Dustin can turn one of the league's hardest immediate assignments into the result that changes his season.",
+          "Because Casey Said So (7-2) vs. Sweet Tooth (6-3) — two of the three easiest remaining schedules collide immediately. Frank protects the league's second-best record; Tommy protects his share of First Class.",
+          "Rabbit Walrus (6-3) vs. Warren's World (3-6) — Casey brings the league scoring lead into the manager with the second-hardest remaining schedule. Wesley brings Week 9's second-highest score and no interest in being treated like relief.",
+          "Skip's Picks (5-4) vs. 5™ (3-6) — Brandon can keep control of What's Your Name Again? Kevin can make the division a traffic problem again.",
+          "Dixienormous (4-5) vs. Sugar Tits (1-8) — Keller owns the fifth-easiest remaining schedule and almost no margin for error. Josh owns a recent reminder that perfect lineups can happen without warning.",
+        ],
+      },
+      {
+        heading: "The Week 9 awards",
+        bullets: [
+          "Luxury Bench Collection: Jason, for leaving 88.48 usable points behind and reaching 8-1 anyway.",
+          "Scoreboard Eviction: Casey, for winning by 100.20 while scoring 249.86.",
+          "Perfect Decisions, Uncooperative Roster: Josh, for leading lineup accuracy at 95.45 percent and losing by 46.63.",
+          "Division Reassertion: Frank, for stopping Brandon and moving to 7-2.",
+          "Five-Point Escape: Keller, for surviving Christian Watson's 38.10 and beating Dustin 137.24-132.21.",
+          "Quarterback Day Trader: Brandon, whose weekly transaction history reads like a depth chart suffering a nervous breakdown.",
+        ],
+        paragraphs: [
+          "Week 9 gave the league a 249-point demolition, an 8-1 leader with an 88-point bench and a playoff race in which identical records carry wildly different futures. Five games remain. The safe teams are not officially safe, the desperate teams are not all equally desperate, and SNAFU versus Badkittens has somehow become appointment television. Dynasty football remains a serious strategic exercise conducted inside a building with no adult supervision.",
+        ],
+      },
+    ],
+  },
+  {
     slug: "2026-josh-first-win-frank-bench-loss",
     issue: "2026 Week 8 Recap + Week 9 Outlook",
     publishedAt: "2026-11-04T15:56:28.000Z",
