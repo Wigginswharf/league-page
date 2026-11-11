@@ -34,6 +34,23 @@
                         {#each section.bullets as bullet}<li>{bullet}</li>{/each}
                     </ul>
                 {/if}
+                {#if section.table}
+                    <div class="table-scroll">
+                        <table>
+                            <thead>
+                                <tr>{#each section.table.headers as header}<th>{header}</th>{/each}</tr>
+                            </thead>
+                            <tbody>
+                                {#each section.table.rows as row}
+                                    <tr>{#each row as cell}<td>{cell}</td>{/each}</tr>
+                                {/each}
+                            </tbody>
+                        </table>
+                    </div>
+                {/if}
+                {#if section.source}
+                    <p class="section-source"><a href={section.source.href}>{section.source.label}</a></p>
+                {/if}
             </section>
         {/each}
     </div>
@@ -153,6 +170,48 @@
 
     li + li {
         margin-top: 0.65rem;
+    }
+
+    .table-scroll {
+        margin: 1.2rem 0;
+        overflow-x: auto;
+    }
+
+    table {
+        border-collapse: collapse;
+        min-width: 660px;
+        width: 100%;
+    }
+
+    th,
+    td {
+        border-bottom: 1px solid var(--line);
+        color: var(--text-primary);
+        padding: 0.7rem 0.55rem;
+        text-align: left;
+        white-space: nowrap;
+    }
+
+    th {
+        background: #071a33;
+        color: white;
+        font-size: 0.72rem;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+    }
+
+    tbody tr:nth-child(even) {
+        background: color-mix(in srgb, var(--league-blue) 6%, transparent);
+    }
+
+    .section-source {
+        font-size: 0.82rem !important;
+        margin-top: 0.7rem !important;
+    }
+
+    .section-source a {
+        color: var(--league-blue);
+        font-weight: 800;
     }
 
     footer {
