@@ -1,5 +1,120 @@
 export const weeklyColumns = [
   {
+    slug: "2026-brandon-229-geno-lamar-trade-week",
+    issue: "2026 Week 10 Recap + Week 11 Outlook",
+    publishedAt: "2026-11-18T16:15:00.000Z",
+    title: "Brandon Scored 229, Bought Geno, and Traded Lamar Before Breakfast.",
+    dek: "Skip’s Picks turned one enormous Sunday into a four-day quarterback fever dream, Casey reached 258.49, and Josh countered with 50.90.",
+    readTime: "11 min read",
+    tags: [
+      "Week 10",
+      "Week 11 Outlook",
+      "Results",
+      "Standings",
+      "Trades",
+      "Transactions",
+      "NFL News",
+    ],
+    sections: [
+      {
+        heading: "Brandon built a 229-point team and then kept shopping",
+        paragraphs: [
+          "Brandon beat Kevin 229.02 to 144.71 behind 64.55 from Christian McCaffrey, 41.95 from Chuba Hubbard, 26.15 from Tony Pollard and 24.50 from Miami’s defense. Skip’s Picks improved to 6-4 and kept control of What’s Your Name Again? with the week’s third-highest score. Calling it third feels insulting until one sees what happened above it.",
+          "The roster did not remain still long enough for the confetti to land. At 1:23 a.m. CST on Saturday, November 14, Brandon received Geno Smith and DK Metcalf from Josh. Sugar Tits received Keaton Mitchell and Brandon’s 2029 first-round pick. The trade completed before Sunday’s games; Smith then injured his ankle against Buffalo and left for imaging.",
+          "Brandon added Jimmy Garoppolo on Monday, then completed another trade at 1:24 a.m. CST Wednesday, November 18. Wesley received Lamar Jackson and the 2027 second-round pick that originally belonged to Tommy. Brandon received Trevor Lawrence. In four days, Skip’s Picks added three quarterbacks, moved one, watched another leave Sunday hurt and somehow made the 229 look like the least frantic part of the week.",
+        ],
+      },
+      {
+        heading: "Casey scored 258.49 because 249 apparently lacked ambition",
+        paragraphs: [
+          "Casey beat Wesley 258.49 to 138.46, improved to 7-3 and posted the season’s second straight Rabbit Walrus score beginning with 24 or 25 and ending with everyone else reconsidering the hobby. Jahmyr Gibbs scored 59.70, Ja’Marr Chase 48.10, Isaiah Likely and Parker Washington 36.70 apiece, and C.J. Stroud 28.69.",
+          "Wesley received 46.86 from Brock Purdy, 21.60 from Garrett Wilson and 18.55 from Breece Hall. Trevor Lawrence scored 39.78 on the bench, but Purdy was the correct call. Warren’s World fell to 3-7 before turning Lawrence into the injured Lamar Jackson and Tommy’s 2027 second. That is not a Week 11 quarterback fix. It is a dynasty bet wearing a cast.",
+          "Rabbit Walrus is now 7-3 with a league-best 1,926.65 points, 64.59 ahead of Brandon. Casey also left 21.80 from Josh Cameron, 18.21 from Justin Herbert, 17.26 from Malik Washington and 16.20 from Mark Andrews on the bench. The points were not needed. They were displayed in the lobby as a warning.",
+        ],
+      },
+      {
+        heading: "Tommy crossed 238; Brittany benched the win",
+        paragraphs: [
+          "Tommy beat Frank 238.47 to 168.43 behind 50.92 from Dak Prescott, 50.50 from George Pickens, 41.10 from Jaxon Smith-Njigba, 29.00 from Omarion Hampton and 27.50 from Seattle’s defense. Sweet Tooth improved to 7-3 and stayed level with Rabbit Walrus atop First Class, trailing only on points. Frank fell to 7-3 despite 46.60 from Emmett Johnson and 32.70 from Cam Skattebo.",
+          "John beat Brittany 149.66 to 126.35 and moved SNAFU to 5-5. The Rams defense scored 31.50, Matthew Stafford 28.06 and Justin Jefferson 16.40. Brittany started Jacoby Brissett for 17.60 while Patrick Mahomes scored 54.62 on the bench. That single switch produces a 163.37-point lineup and a win. Badkittens did not lose in the margins. The winning quarterback was sitting nearby holding a laminated badge.",
+          "Brittany fell to 3-7. John moved into the final wild-card position, ahead of Keller’s fellow 5-5 team by 326.28 points. The game identified in last week’s column as the bubble hinge swung exactly where SNAFU needed it.",
+        ],
+      },
+      {
+        heading: "Jason reached 9-1, Keller reached .500, and Josh reached 50.90",
+        bullets: [
+          "Jason 185.22, Dustin 151.39 — Jared Goff scored 34.67, Amon-Ra St. Brown 28.80, Bhayshul Tuten 27.80 and Nico Collins 24.40. Warren’s Moon Pies reached 9-1. Dustin received 30.80 from Chase Brown and 30.19 from Josh Allen, but Austin’s Finest slipped to 4-6.",
+          "Keller 155.61, Josh 50.90 — Joe Burrow scored 51.41, Blake Corum 32.15 and Seth McGowan 19.75 as Dixienormous improved to 5-5. Josh’s entire lineup lost to Burrow by 0.51. Sugar Tits fell to 1-9 with one starter above 10 points, which is less an offense than a Drew Lock monologue.",
+          "Brandon 229.02, Kevin 144.71 — Kevin received 33.50 from Minnesota’s defense, 31.31 from Jayden Daniels and 19.00 from Cam Little. The 84.31-point loss dropped 5™ to 3-7 and gave Brandon a one-game cushion in the division.",
+        ],
+      },
+      {
+        heading: "Three teams are 7-3; only two currently need wild cards",
+        paragraphs: [
+          "First Class has Rabbit Walrus and Sweet Tooth at 7-3. Casey leads the division on points, 1,926.65 to 1,752.34. SNAFU is 5-5 and Sugar Tits is 1-9. What’s Your Name Again? belongs to Skip’s Picks at 6-4, followed by Austin’s Finest at 4-6 and Warren’s World and Badkittens at 3-7.",
+          "Level 11 has Warren’s Moon Pies at 9-1, Because Casey Said So at 7-3, Dixienormous at 5-5 and 5™ at 3-7. If the season ended now, Jason, Casey and Brandon would hold the three division berths. Tommy and Frank would claim the first two wild cards, while John would take the third over Keller on Points For.",
+          "Casey leads the league in scoring, followed by Brandon at 1,862.06 and Jason at 1,779.09. Frank is 7-3 with 1,606.82 points and 1,603.49 against, the statistical profile of a man who has survived ten weeks by keeping both hands inside the vehicle.",
+        ],
+        source: {
+          label: "League Constitution — Sections 5.1 and 5.2",
+          href: "/constitution#section-5",
+        },
+      },
+      {
+        heading: "The transaction wire had two trades and no indoor voice",
+        paragraphs: [
+          "Both trades are complete. No trade remains in Sleeper’s processing period. Brandon received Geno Smith and DK Metcalf for Keaton Mitchell and his 2029 first, then received Trevor Lawrence for Lamar Jackson and Tommy’s 2027 second. The league’s traded-pick ledger reflects both transfers.",
+        ],
+        bullets: [
+          "Thursday, November 12 — Josh added the Jets defense on a zero-dollar waiver, then added Drew Lock and dropped Gabe Davis. Kevin added Ashton Dulin. Dustin added CJ Daniels. Brandon dropped Devin Singletary, and Jason dropped Washington’s defense.",
+          "Sunday, November 15 — Frank added Jason Sanders and dropped DJ Giddens before Sanders supplied 14.00 points in the starting lineup.",
+          "Monday, November 16 — Brandon added Jimmy Garoppolo and dropped Shedeur Sanders while the quarterback room was still being rewired.",
+          "Wednesday, November 18 — Brandon added Myles Price and dropped Miami’s defense. Wesley added Devin Singletary and dropped Pierre Strong Jr. Josh added Washington’s defense. All three waiver claims cleared for zero dollars at 2:14 a.m. CST.",
+        ],
+      },
+      {
+        heading: "The NFL injury report followed Brandon home",
+        paragraphs: [
+          "Baltimore said Friday that Lamar Jackson underwent surgery on a broken and dislocated right thumb and is expected to miss six to ten weeks. Wesley acquired him five days later with the 2027 second, making the deal a future-facing purchase rather than an answer for the four remaining regular-season games.",
+          "New England fears Drake Maye suffered a fractured ankle Sunday and could miss the rest of the season. Maye remains on Brandon’s roster. Geno Smith also left Sunday with an ankle injury and underwent imaging; Jets coach Aaron Glenn said Smith will remain the starter when healthy. Brandon acquired Smith the day before the injury. Quarterback depth became a medical supply cabinet with Trevor Lawrence standing nearest the exit.",
+          "Detroit also lost Aidan Hutchinson to a torn ACL for the season. The defensive injury carries less direct lineup weight than the quarterback damage, but any offense facing the Lions just lost the league’s most unpleasant houseguest.",
+        ],
+        source: {
+          label: "NFL.com — November 16 league injury roundup",
+          href: "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-monday-nov-16",
+        },
+      },
+      {
+        heading: "Week 11 outlook: the division leaders meet their pursuers",
+        paragraphs: [
+          "Week 11 runs Thursday, November 19 through Monday, November 23, in Central time. All six league matchups were 0.00-0.00 Wednesday morning.",
+        ],
+        bullets: [
+          "Warren’s Moon Pies (9-1) vs. Skip’s Picks (6-4) — the league’s best record meets its second-highest scoring team. Jason can reach ten wins; Brandon can turn his trade week into the result that justifies the smoke damage.",
+          "Dixienormous (5-5) vs. Sweet Tooth (7-3) — Keller needs to keep pace with SNAFU for the final wild card. Tommy needs to stay attached to Casey in First Class and avoid becoming the bridge Keller uses back into the race.",
+          "Warren’s World (3-7) vs. SNAFU (5-5) — Wesley enters without an active Lamar and John enters holding the sixth seed. A SNAFU win protects the bubble; a Wesley win puts Keller and the 4-6 teams back in the conversation.",
+          "Austin’s Finest (4-6) vs. 5™ (3-7) — Dustin is two games behind his division leader but one behind the wild-card line. Kevin can turn the middle of the standings into wet cement.",
+          "Rabbit Walrus (7-3) vs. Badkittens (3-7) — Casey brings 516.52 points from the last two weeks. Brittany brings the knowledge that Mahomes is allowed to start.",
+          "Because Casey Said So (7-3) vs. Sugar Tits (1-9) — Frank draws the league’s lowest-scoring team after allowing 238.47. Josh draws a chance to make 50.90 look like a clerical error instead of a lifestyle.",
+        ],
+      },
+      {
+        heading: "The Week 10 awards",
+        bullets: [
+          "Quarterback Day Trader: Brandon, for adding Geno, adding Garoppolo, trading Lamar and receiving Trevor Lawrence in four days.",
+          "Second Straight Detonation: Casey, for following 249.86 with 258.49 and making 500 points over two weeks look casual.",
+          "Bench-Sponsored Defeat: Brittany, whose 54.62-point Patrick Mahomes would have turned a 23.31-point loss into a 13.71-point win.",
+          "Fifty Burger, Singular: Keller, whose Joe Burrow outscored Josh’s entire lineup by 0.51.",
+          "Nine and One: Jason, for surviving 35.70 from Deebo Samuel on his bench and reaching the league’s best record anyway.",
+          "Five Hundred Club: John, for winning the bubble game and returning SNAFU to .500.",
+        ],
+        paragraphs: [
+          "Week 10 delivered 258 from Casey, 238 from Tommy, 229 from Brandon and 50.90 from Josh, a scoring distribution that resembles three fireworks shows scheduled above one abandoned parking lot. Week 11 now pairs the 9-1 leader with the league’s busiest roster, gives the wild-card line two direct stress tests and asks everyone to check whether their quarterback still possesses the customary number of functional limbs.",
+        ],
+      },
+    ],
+  },
+  {
     slug: "2026-jason-benches-88-casey-249-playoff-race",
     issue: "2026 Week 9 Recap + Week 10 Outlook",
     publishedAt: "2026-11-11T16:02:25.000Z",
