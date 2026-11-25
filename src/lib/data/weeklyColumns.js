@@ -1,5 +1,132 @@
 export const weeklyColumns = [
   {
+    slug: "2026-tommy-pickens-coleman-breece-deadline",
+    issue: "2026 Week 11 Recap + Week 12 Outlook",
+    publishedAt: "2026-11-25T16:10:00.000Z",
+    title: "Tommy Won With Pickens, Then Traded Him for the 48 Points Josh Benched.",
+    dek: "Sweet Tooth bought Breece Hall and Jonah Coleman at the deadline, Brandon handed Jason his second loss, and Josh turned 69.04 into performance art.",
+    readTime: "11 min read",
+    tags: [
+      "Week 11",
+      "Week 12 Outlook",
+      "Results",
+      "Standings",
+      "Trades",
+      "Transactions",
+      "NFL News",
+    ],
+    sections: [
+      {
+        heading: "Tommy used Pickens to win, then spent him on Josh’s bench",
+        paragraphs: [
+          "Tommy beat Keller 161.20 to 111.60 behind 50.70 from Dak Prescott, 31.05 from George Pickens and 24.50 from Bucky Irving. Sweet Tooth improved to 8-3 and stayed tied with Rabbit Walrus atop First Class. Pickens did his job so well that Tommy immediately used him as currency.",
+          "At 1:23 a.m. CST Wednesday, November 25, Tommy sent Pickens and his own 2027 third-round pick to Josh for Jonah Coleman. Coleman had scored 47.90 on Josh’s bench while Sugar Tits assembled 69.04 total points in a 101.74-point loss. Josh found nearly 70 percent of his starting score sitting unused, then sold it before breakfast.",
+          "The deal is wonderful in both directions. Josh receives the receiver who just scored 31.05 plus a third. Tommy receives the runner who just outscored every player in Josh’s lineup by 30.40. One manager bought production. The other bought proof that the production existed.",
+        ],
+      },
+      {
+        heading: "Sweet Tooth also bought Breece Hall because one deadline trade lacked calories",
+        paragraphs: [
+          "The Pickens deal completed in the same 1:23 a.m. CST processing run as Tommy’s trade with Wesley. Sweet Tooth received Breece Hall. Warren’s World received Kyle Monangai and the 2027 second-round pick that originally belonged to Brandon.",
+          "Hall scored 25.00 in Wesley’s starting lineup during a 145.05-137.36 win over John. Brock Purdy added 29.80, Chicago’s defense 26.50 and Tetairoa McMillan 19.10 as Warren’s World improved to 4-7. Tommy acquired a player who had just helped beat the manager currently standing on the wild-card line.",
+          "Across the two completed deals, Tommy added Hall and Coleman while sending Pickens, Monangai, Brandon’s 2027 second and his own 2027 third. Sweet Tooth is 8-3, has scored 1,913.54 points and treated the trade deadline like a grocery run conducted during a tornado warning.",
+        ],
+      },
+      {
+        heading: "Brandon handed Jason his second loss and kept the division under glass",
+        paragraphs: [
+          "Brandon beat Jason 186.84 to 170.96 behind 39.75 from Chuba Hubbard, 26.20 from Chris Olave, 23.25 from Tony Pollard and 21.00 from Denver’s defense. Skip’s Picks improved to 7-4 and maintained a three-game lead in What’s Your Name Again? with three games remaining.",
+          "Jason received 31.11 from Jared Goff, 30.50 from Houston’s defense and 28.60 from Javonte Williams. Warren’s Moon Pies fell to 9-2, still the league’s best record, while Deebo Samuel’s 11.05 and San Francisco’s 24.00 watched from the bench. The lineup was not disastrous. Brandon was simply louder.",
+          "Jason has now mathematically secured one of the six playoff berths. He can still lose Level 11 to Frank, but nine wins cannot be pushed below six teams in the remaining schedule. The first postseason ticket is punched. The division title remains available for theft.",
+        ],
+        source: {
+          label: "League Constitution — Sections 5.1 and 5.2",
+          href: "/constitution#section-5",
+        },
+      },
+      {
+        heading: "Kevin led the league; Frank buried Josh; Casey kept stacking wins",
+        bullets: [
+          "Kevin 188.01, Dustin 131.36 — Ashton Jeanty scored 36.65, David Montgomery 28.90, Buffalo’s defense 23.00, Jayden Daniels 22.36 and Jameson Williams 22.30. The week’s highest score moved 5™ to 4-7 and handed Austin’s Finest a third straight loss.",
+          "Frank 170.78, Josh 69.04 — CeeDee Lamb scored 37.20 and Emmett Johnson 37.05 as Because Casey Said So improved to 8-3. Josh started Joe Milton for 6.19 and Jordan Mason for 7.45 while Coleman’s 47.90 remained safely beyond the reach of victory.",
+          "Casey 163.91, Brittany 143.81 — Jahmyr Gibbs scored 34.55, C.J. Stroud 32.56 and Parker Washington 25.30. Rabbit Walrus reached 8-3 and became the first team past 2,000 points this season. Brittany correctly returned Patrick Mahomes to the lineup for 36.16, but Badkittens fell to 3-8.",
+          "Wesley 145.05, John 137.36 — Wesley won by 7.69 and moved to 4-7. John received 25.40 from Travis Kelce and 21.16 from Bryce Young, but Antonio Williams scored 29.20 on the bench. SNAFU fell to 5-6 and retained the current sixth seed only through the Points For tiebreaker.",
+        ],
+      },
+      {
+        heading: "The playoff line now has two 5-6 teams and one enormous points gap",
+        paragraphs: [
+          "First Class remains Casey and Tommy at 8-3, with Rabbit Walrus ahead 2,090.56 to 1,913.54 in Points For. John is 5-6 and Josh is 1-10. Level 11 has Jason at 9-2, Frank at 8-3, Keller at 5-6 and Kevin at 4-7. What’s Your Name Again? has Brandon at 7-4, Wesley and Dustin at 4-7, and Brittany at 3-8.",
+          "If the season ended now, Jason, Casey and Brandon would take the division berths. Tommy and Frank would own the first two wild cards. John would take the sixth spot over Keller because SNAFU has scored 1,762.41 points to Dixienormous’ 1,410.37, a 352.04-point head start in the constitution’s first tiebreaker.",
+          "Josh is mathematically eliminated. Sugar Tits can finish no better than 4-10, while seven teams already own at least five wins. Everyone else retains a path, although several of those paths now resemble fire escapes installed by a landlord with a sense of humor.",
+        ],
+        source: {
+          label: "League Constitution — Sections 5.1 and 5.2",
+          href: "/constitution#section-5",
+        },
+      },
+      {
+        heading: "Wesley and Kevin opened the deadline with a Friday exchange",
+        paragraphs: [
+          "The week’s first trade completed at 1:23 a.m. CST Friday, November 20. Wesley received Kenny Gainwell. Kevin received Ryan Flournoy and the 2027 third-round pick that originally belonged to Brandon.",
+          "Gainwell started immediately and scored 10.90 in Wesley’s 7.69-point win over John. Flournoy scored 2.10 on Kevin’s bench while 5™ posted the week’s highest total anyway. The trade did not merely process before kickoff. It contributed directly to the result that tightened the wild-card race.",
+          "All three trades are complete, and the traded-pick ledger reflects each transfer. No trade remains in Sleeper’s normal processing period.",
+        ],
+      },
+      {
+        heading: "The rest of the wire prepared for quarterbacks, defenses and Thanksgiving",
+        bullets: [
+          "Thursday, November 19 — Josh added Jalon Daniels. Brittany added Gavin Bartholomew.",
+          "Sunday, November 22 — Josh replaced Daniels with Joe Milton, then added Joey Slye and dropped Washington’s defense. Jason dropped Marquise Brown. Brandon added Marvin Mims Jr. and dropped Jimmy Garoppolo.",
+          "Wednesday, November 25 — Casey spent $17 on Washington’s defense and dropped Audric Estime, then spent $12 on Tai Felton and dropped Savion Williams. Brandon added Harrison Wallace III for zero dollars and dropped Myles Price.",
+        ],
+        paragraphs: [
+          "Casey beat competing bids of $2 from Brandon and Wesley for Washington’s defense, then beat Brandon’s zero-dollar claim for Felton. The waiver run did not match the trade deadline’s volume, but it did establish that a holiday defense costs more than most people’s entire Wednesday breakfast.",
+        ],
+      },
+      {
+        heading: "The NFL replaced one quarterback, released one receiver and suspended one runner",
+        paragraphs: [
+          "Indianapolis waived Daniel Jones and named Anthony Richardson its starter. Jones, rostered by Kevin, cleared waivers Monday and became a free agent. San Francisco released Brandon Aiyuk after a relationship that had kept him away from an NFL game since October 2024; Aiyuk cleared waivers and remains on Frank’s fantasy roster while Washington considers a visit.",
+          "Justin Herbert entered the concussion protocol after Sunday’s loss to the Jets, placing Casey’s quarterback depth under a short-week warning. Baltimore evaluated Brittany’s Derrick Henry for a concussion, although Henry said afterward that he felt fine.",
+          "Denver suspended Dustin’s J.K. Dobbins for Friday’s game for conduct detrimental to the team. Frank received better news on Kenneth Walker: Kansas City returned him to limited practice Tuesday after two missed games. Brandon’s DK Metcalf avoided a suspension after his ejection against Philadelphia, leaving the league’s busiest recent trader with a fine problem instead of a lineup problem.",
+        ],
+        source: {
+          label: "NFL.com — November 24 league news roundup",
+          href: "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-tuesday-nov-24",
+        },
+      },
+      {
+        heading: "Week 12 outlook: football arrives before the leftovers",
+        paragraphs: [
+          "Week 12 runs Wednesday, November 25 through Monday, November 30, in Central time. The Packers and Rams open the NFL week Wednesday evening; all six league matchups were 0.00-0.00 Wednesday morning.",
+        ],
+        bullets: [
+          "Rabbit Walrus (8-3) vs. SNAFU (5-6) — John holds the final wild card by points and immediately draws the league’s scoring leader. Casey can keep pressure on Tommy; John can make the sixth seed feel less rented.",
+          "Dixienormous (5-6) vs. Because Casey Said So (8-3) — Keller is tied with John but trails by 352.04 points. Beating Frank is the cleanest way to make that arithmetic someone else’s problem.",
+          "Austin’s Finest (4-7) vs. Skip’s Picks (7-4) — Brandon can place one hand on the division title. Dustin enters without the suspended Dobbins and with no room left for a fourth straight loss.",
+          "Sweet Tooth (8-3) vs. Sugar Tits (1-10) — Tommy unveils Hall and Coleman against the manager who just traded Coleman away. The schedule has a cruel sense of timing and excellent comedic instincts.",
+          "Warren’s World (4-7) vs. Badkittens (3-8) — Wesley sold Hall after beating John and now tries to keep the late run alive. Brittany needs Mahomes and the rest of the lineup to agree on the same week.",
+          "Warren’s Moon Pies (9-2) vs. 5™ (4-7) — Jason can reach ten wins. Kevin arrives with the league’s highest Week 11 score and the recent experience of making 188 look entirely reasonable.",
+        ],
+      },
+      {
+        heading: "The Week 11 awards",
+        bullets: [
+          "Deadline Double-Dip: Tommy, for adding Breece Hall and Jonah Coleman before most of the league found coffee.",
+          "Bench-to-Blockbuster Pipeline: Josh, for leaving Coleman’s 47.90 unused and converting him into George Pickens plus a third.",
+          "Leader Down: Brandon, for scoring 186.84 and handing Jason only his second loss.",
+          "Week’s High Score: Kevin, whose 188.01 arrived just in time to keep 5™ attached to the race.",
+          "First Ticket Punched: Jason, who lost the week and still mathematically secured a playoff berth.",
+          "Sixty-Nine, Unfortunately: Josh, whose starting lineup scored 69.04 while one bench player scored 47.90.",
+        ],
+        paragraphs: [
+          "Week 11 gave Tommy two new running backs, gave Brandon a win over the league leader, gave Kevin the high score and gave Josh a 69-point lineup with 48 points sitting directly behind it. Three regular-season games remain. One team is in, one team is out, and the middle of the standings is now six managers trying to climb through the same window without removing the screen.",
+        ],
+      },
+    ],
+  },
+  {
     slug: "2026-brandon-229-geno-lamar-trade-week",
     issue: "2026 Week 10 Recap + Week 11 Outlook",
     publishedAt: "2026-11-18T16:15:00.000Z",
