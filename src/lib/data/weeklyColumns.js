@@ -58,12 +58,20 @@ export const weeklyColumns = [
         paragraphs: [
           "First Class remains Casey and Tommy at 8-3, with Rabbit Walrus ahead 2,090.56 to 1,913.54 in Points For. John is 5-6 and Josh is 1-10. Level 11 has Jason at 9-2, Frank at 8-3, Keller at 5-6 and Kevin at 4-7. What’s Your Name Again? has Brandon at 7-4, Wesley and Dustin at 4-7, and Brittany at 3-8.",
           "If the season ended now, Jason, Casey and Brandon would take the division berths. Tommy and Frank would own the first two wild cards. John would take the sixth spot over Keller because SNAFU has scored 1,762.41 points to Dixienormous’ 1,410.37, a 352.04-point head start in the constitution’s first tiebreaker.",
-          "Josh is mathematically eliminated. Sugar Tits can finish no better than 4-10, while seven teams already own at least five wins. Everyone else retains a path, although several of those paths now resemble fire escapes installed by a landlord with a sense of humor.",
+          "Josh is mathematically eliminated from championship contention. Sugar Tits can finish no better than 4-10, while seven teams already own at least five wins. Everyone else retains a path, although several of those paths now resemble fire escapes installed by a landlord with a sense of humor.",
         ],
         source: {
           label: "League Constitution — Sections 5.1 and 5.2",
           href: "/constitution#section-5",
         },
+      },
+      {
+        heading: "Josh’s championship run is wasted",
+        paragraphs: [
+          "Josh is out of the championship bracket, but he isn’t free yet. The Toilet Bowl awaits, and winning it would earn him the 1.13—so there’s still one last chance to turn this season into something useful.",
+          "Unfortunately, that requires doing the exact thing he failed to do this week: putting his best players in the lineup.",
+          "If that sounds like too much work, there is another postseason destination waiting for him: Vice City. GTA 6 won’t give Josh the 1.13, but it also won’t punish him for leaving 48 points on the bench.",
+        ],
       },
       {
         heading: "Wesley and Kevin opened the deadline with a Friday exchange",
